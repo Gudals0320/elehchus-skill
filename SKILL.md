@@ -1,9 +1,39 @@
 ---
 name: elenchus
 description: 명시 호출로 시작한 같은 Codex 작업에서 한국어 심층 인터뷰, 선택적 증거 연구와 Build별 합의를 계속하고 구현을 새 작업으로 분리하는 프로토콜
+metadata:
+  version: "0.1.1"
+  repository: "https://github.com/Gudals0320/elehchus-skill"
 ---
 
 # Elenchus
+
+## 실행 전 Release 확인
+
+새 Codex 작업에서 Elenchus에 최초 진입할 때 첫 질문이나 문서 작성 전에 `scripts/release_update.py --check`를 사용해 최신 정식 GitHub Release를 한 번 확인한다. 같은 작업의 후속 답변과 완료 뒤 계획 재개에서는 다시 확인하지 않는다.
+
+- 현재 버전 이상이면 별도 질문 없이 Elenchus를 시작한다.
+- 확인에 실패하면 실패 이유를 한 줄로 알리고 Elenchus를 계속한다. Release 확인 실패가 인터뷰를 막지 않는다.
+- 새 버전이 있으면 현재 버전, 최신 버전과 Release 링크를 보여 주고 업데이트 여부를 질문 하나로 확인한다.
+- 사용자가 업데이트를 명시적으로 승인하기 전에는 설치 파일을 변경하지 않는다.
+- 사용자가 현재 버전으로 계속하기를 선택하면 같은 작업에서 다시 묻지 않고 Elenchus를 시작한다.
+- 사용자가 업데이트를 승인하면 `scripts/release_update.py --install {tag}`를 실행한다. 성공하면 현재 작업에서 인터뷰를 시작하지 않고 새 Codex 작업에서 `$elenchus`를 호출하도록 안내한다.
+
+업데이트 질문은 다음 형태를 사용한다.
+
+```text
+새 Elenchus Release가 있습니다.
+
+현재: {current}
+최신: {latest}
+Release: {url}
+
+1. 업데이트
+검증 후 새 버전을 설치하고 새 Codex 작업에서 시작
+
+2. 현재 버전으로 계속
+이번 작업에서는 다시 묻지 않고 Elenchus 진행
+```
 
 ## 목적
 
