@@ -2,7 +2,7 @@
 
 ## 정체성
 
-Research는 Idea와 Execution을 바꿀 수 있는 불확실성을 저장소 사실, 외부 근거와 조건부 Lab 관찰로 줄이고 Verdict를 만든다. 자료 수집 자체나 제품 구현이 목적이 아니다.
+Research는 Idea와 Execution을 바꿀 수 있는 불확실성을 저장소 사실, 적응형 Web Evidence, 승인형 Browser 관찰과 조건부 Lab으로 줄이고 Verdict를 만든다. 자료 수집 자체나 제품 구현이 목적이 아니다.
 
 `idea.md`는 프로젝트 전체의 의도 계약이고 Research는 독립된 조사 질문별 파일로 분리한다. 실험이 필요해도 제품 코드·설정·manifest·lockfile은 변경하지 않는다.
 
@@ -174,12 +174,14 @@ Subagent 결과는 Verdict가 아니라 증거 입력이다. 메인 세션이 Id
 | Repository | 필요 |  |  |
 | Independent exploration | 필요 |  |  |
 | External evidence | 필요 |  |  |
+| Browser Evidence | 생략 |  |  |
 | Lab | 생략 |  |  |
 ```
 
 - Repository가 없거나 현재 질문과 무관하면 생략할 수 있다.
 - solution space가 좁고 현재 대화의 앵커링 위험이 없으면 Independent exploration을 생략할 수 있다. Subagent를 제안했지만 사용자가 현재 세션 조사를 선택하면 `생략`과 사용자 결정을 기록하고 메인 세션의 폭넓은 탐색을 External evidence에서 수행한다.
 - 외부 사실이나 solution space가 결론을 바꾸지 않으면 External evidence를 생략할 수 있다.
+- Browser Evidence는 External evidence가 필요한 Research에서 현재 로그인 계정·권한·JavaScript 렌더링 결과를 직접 확인해야 할 때만 필요로 판정한다. 공개 근거가 필요하지 않은 로컬 동작 관찰은 Browser Evidence로 확대하지 않고 Lab 필요성을 판단한다.
 - 실제 관찰이 Verdict나 Execution을 바꿀 수 있을 때만 Lab을 사용한다.
 - 증거원을 생략한 이유가 없으면 Research closure를 통과하지 않는다.
 
@@ -189,20 +191,33 @@ Subagent 결과는 Verdict가 아니라 증거 입력이다. 메인 세션이 Id
 2. 기준선과 Idea intake로 neutral brief를 확정한다.
 3. 시험할 주장과 반증 조건을 적는다.
 4. 독립 탐색 필요성을 판단하고 필요하면 사용자에게 subagent를 제안한다.
-5. 승인된 독립 탐색과 External evidence를 수집한다.
-6. Lab이 필요한 주장을 분리하고 예상 방향과 채택·폐기 기준을 먼저 적는다.
-7. 결과, 반대 근거와 적용 한계를 갱신한다.
-8. 결과가 Idea와 충돌하면 사용자에게 변경 선택을 받는다.
-9. 다음 근거가 Verdict를 바꿀 수 있는지 다시 판단한다.
+5. 승인된 독립 탐색과 External evidence를 수집하고 Claim별 근거 공백을 갱신한다.
+6. Browser Evidence가 필요하면 사용자가 지정한 탭과 Claim 범위에서 메인 세션이 관찰한다.
+7. Lab이 필요한 주장을 분리하고 예상 방향과 채택·폐기 기준을 먼저 적는다.
+8. 결과, 반대 근거와 적용 한계를 갱신한다.
+9. 결과가 Idea와 충돌하면 사용자에게 변경 선택을 받는다.
+10. 다음 근거가 Verdict를 바꿀 수 있는지 다시 판단한다.
 
 ### External evidence
 
-- 기술 사실은 공식 문서와 원문 연구를 우선한다.
-- 가격, 지원 범위와 유지 상태에는 확인 날짜를 붙인다.
-- 현재 주장과 반대되는 자료를 찾는다.
-- 자료의 사용자·언어·데이터·하드웨어·기간이 현재 상황과 같은지 비교한다.
-- 실제 판정에 사용한 후보명과 출처 링크는 남긴다.
-- subagent가 제시한 결정적 사실과 출처는 메인 세션이 직접 확인하고 적용 범위를 다시 판단한다.
+External evidence가 `필요`이면 검색 전에 [Web Evidence Loop](../references/web-evidence-loop.md)를 전부 읽고 현재 `R###`에 적용한다. 이 절차를 별도 `web | mixed | data` 모드나 고정 길이 보고서로 만들지 않는다.
+
+- Claim map을 먼저 만들고 각 Claim의 출처 역할, 최신성, 적용 환경과 반증 조건을 연결한다.
+- 접근 성공과 증거 성공을 분리하고 실제 본문과 Claim의 citation 연결을 확인한다.
+- 한 경로의 실패를 조사 전체의 실패로 확대하지 않고 관련 있는 공개 대체 경로, 실패 이유와 terminal reason을 기록한다.
+- Evidence matrix에서 Verdict 영향이 가장 큰 공백을 다음 대상으로 선택한다.
+- subagent가 제시한 결정적 사실과 출처도 메인 세션이 직접 확인하고 적용 범위를 다시 판단한다.
+- Web closure를 통과하기 전에는 External evidence를 완료로 처리하지 않는다.
+
+### Browser Evidence
+
+Browser Evidence가 `필요`이면 같은 [Web Evidence Loop](../references/web-evidence-loop.md)의 승인·observation-only·탭 보존·민감정보·산출물 계약을 따른다.
+
+- 일반 브라우저 멘션과 사용자가 지정한 로그인 탭의 권한을 구분한다.
+- 특정 탭 지정 없이 기존 로그인 탭을 조회·나열·임의 선택하지 않는다.
+- 같은 탭·Claim의 승인된 비영구적 관찰만 메인 Elenchus 세션이 수행한다.
+- Browser 관찰은 현재 계정·권한·시점에만 적용하고 독립 공개 출처로 계산하지 않는다.
+- 필수 관찰을 할 수 없으면 다른 탭으로 대체하지 않고 `결론 보류`와 다음 행동을 기록한다.
 
 ## Lab
 
@@ -297,6 +312,10 @@ Execution에서 바꿀 Phase·Build
 - 시험할 주장과 반증 조건이 연결되지 않는다.
 - 사용한 사실에 출처나 확인 날짜가 없다.
 - 반대 자료를 찾지 않았고 검색 범위도 적지 않았다.
+- External evidence가 필요한데 Claim map·Retrieval plan·접근 기록·Evidence matrix 중 하나가 없거나 Web closure를 통과하지 않았다.
+- 접근 실패 자료에 시도한 공개 대체 경로, terminal reason 또는 남은 관련 경로의 처리 이유가 없다.
+- 필수 Browser Evidence에 사용자 승인 범위가 없거나 관찰 불가·연결 중단 뒤 다음 행동이 없다.
+- Verdict 영향이 큰 `근거 부족` Claim이 남았는데 Lab, 범위 제외·연기 또는 검증 Build로 연결하지 않았다.
 - 실행한 Lab의 기준선·측정 방향·판정 기준이나 격리 확인이 없다.
 - Idea와 충돌한 근거에 대한 사용자 결정이 없다.
 - Verdict에 근거·반대 근거·한계·신뢰도 중 하나가 없다.
@@ -342,7 +361,16 @@ Execution에서 바꿀 Phase·Build
 ### 접근법 범주와 후보 비교
 ### 권장 방향·근거·신뢰도
 ### Lab에서 검증할 주장
+## Claim map
+## Retrieval plan
+## 접근 기록
 ## External evidence와 반대 근거
+## Evidence matrix와 gap loop
+## Browser Evidence
+### 사용자 승인 범위
+### 관찰
+### 의미
+## Web closure
 ## Lab 관찰 의미
 ## 후보와 핵심 차이
 ## Verdict

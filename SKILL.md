@@ -1,8 +1,8 @@
 ---
 name: elenchus
-description: $elenchus 또는 skill:elenchus의 명시적 호출로 시작해 한국어 심층 인터뷰, 승인형 독립 탐색과 격리 Lab 검증, Phase·Build별 합의로 실행 계획을 확정하고 완료 후 일반 모드로 돌아가는 프로토콜
+description: $elenchus 또는 skill:elenchus의 명시적 호출로 시작해 한국어 심층 인터뷰, 적응형 Web Evidence·승인형 Browser 관찰·격리 Lab 검증과 Phase·Build별 합의로 실행 계획을 확정하고 완료 후 일반 모드로 돌아가는 프로토콜
 metadata:
-  version: "0.2.1"
+  version: "0.3.0"
   repository: "https://github.com/Gudals0320/elehchus-skill"
 ---
 
@@ -42,7 +42,7 @@ Release: {url}
 
 이 스킬은 사용자의 아이디어를 대신 완성하거나 곧바로 구현하지 않는다.
 
-질문 지속성, 가장 약한 영역 추적, 답변 재구조화, 양방향 명료도, closure audit, 증거 반복과 verdict 계약을 하나의 계획 프로토콜로 사용한다. 질문 횟수나 점수로 단계를 닫거나 계획에서 구현으로 자동 전환하지 않는다.
+질문 지속성, 가장 약한 영역 추적, 답변 재구조화, 양방향 명료도, closure audit, 적응형 Web Evidence·승인형 Browser 관찰과 verdict 계약을 하나의 계획 프로토콜로 사용한다. 질문 횟수나 점수로 단계를 닫거나 계획에서 구현으로 자동 전환하지 않는다.
 
 ```text
 idea.md

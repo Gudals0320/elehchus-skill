@@ -15,7 +15,7 @@ Idea
 ```
 
 - Idea는 문제, 해결 방향과 실제 사용자 경험을 하나의 문서에서 다룬다.
-- Research는 독립 질문별 파일에서 저장소·외부 근거와 조건부 Lab 관찰로 실행 계획의 불확실성을 줄인다.
+- Research는 독립 질문별 파일에서 저장소, 적응형 Web Evidence, 승인형 Browser 관찰과 조건부 Lab으로 실행 계획의 불확실성을 줄인다.
 - Execution은 계획을 Phase로 묶고 모든 Build의 사용자 행동과 Approve 조건을 합의한다.
 
 ## 주요 특징
@@ -23,6 +23,8 @@ Idea
 - 사용자에게 한 번에 질문 하나만 제시한다.
 - 목표·제약·성공 기준·맥락 중 가장 약한 부분을 계속 추적한다.
 - 저장소와 문서에서 확인할 수 있는 사실은 먼저 조사한다.
+- External evidence는 결정에 필요한 Claim을 먼저 나누고 공개 접근 경로와 근거 공백을 반복 검증한 뒤 닫는다.
+- 로그인·개인화 환경은 사용자가 지정한 브라우저 탭에서 observation-only로 확인하고 현재 계정·권한·시점에만 적용한다.
 - 비개발자가 화면, 파일, 행동, 비용과 실패 결과를 보고 결정할 수 있게 설명한다.
 - 기능 추가뿐 아니라 유지·축소·연기·제거·만들지 않기를 같은 선택지로 다룬다.
 - 모든 Phase 경계와 Build가 합의되고 전체 closure를 통과하기 전에는 계획을 완료하지 않는다.
@@ -71,7 +73,9 @@ skill:Elenchus 로 기존 계획을 재검토해 줘.
 └─ execution.md
 ```
 
-`research/index.md`에는 각 조사의 ID·중립 질문·상태·영향·파일만 두고 상세 근거와 Verdict는 `R###` 파일에 기록한다. 실제 관찰이 결론을 바꿀 때만 `.elenchus/lab/R###/`에서 제품 파일과 격리된 실험을 수행한다. Lab은 자동 삭제하거나 구현 코드로 승격하지 않으며 사용자가 언제든 삭제할 수 있다.
+`research/index.md`에는 각 조사의 ID·중립 질문·상태·영향·파일만 두고 상세 근거와 Verdict는 `R###` 파일에 기록한다. External evidence가 필요하면 Claim map, Retrieval plan, 접근 기록, Evidence matrix와 Web closure를 사용한다. 로그인된 사용자 환경이 결정에 필요하면 사용자가 지정한 탭에서만 Browser Evidence를 관찰하며 기존 탭을 임의로 탐색하거나 외부 상태를 변경하지 않는다.
+
+실제 데이터·하드웨어·API 동작을 격리해 관찰해야 할 때만 `.elenchus/lab/R###/`에서 제품 파일과 분리된 실험을 수행한다. Browser 시각 자료는 Verdict에 필수이고 사용자가 승인한 경우에만 비식별화해 해당 Lab 아래에 저장한다. Lab은 자동 삭제하거나 구현 코드로 승격하지 않으며 사용자가 언제든 삭제할 수 있다.
 
 procedure·API·라이브러리의 독립 탐색이 필요하면 Elenchus가 입력·출력·UX·확정 제약·객관적 환경 사실만 담은 neutral brief를 먼저 보여 준다. 사용자 승인 후에만 이전 대화 이력이 없는 solution explorer subagent 하나를 호출하며, subagent는 읽기 전용 탐색과 권장안까지만 담당한다. 실제 Lab 검증과 최종 Verdict는 메인 Elenchus 세션이 맡는다.
 
