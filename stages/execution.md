@@ -10,13 +10,13 @@
 
 ## 시작 문서
 
-확정된 `idea.md`와 존재하는 `research.md`를 읽고 `./.elenchus/execution.md`를 만든다.
+확정된 `idea.md`, 존재하는 `research/index.md`와 현재 Execution에 영향을 주는 확정 `R###` 파일을 읽고 `./.elenchus/execution.md`를 만든다. 관련 없는 Research 파일과 기존 Lab은 자동으로 읽지 않는다.
 
 ```markdown
 # Execution: {주제}
 
 - 상태: 작성 중
-- 기준: idea.md{, research.md}
+- 기준: idea.md{, research/R###-neutral-topic.md}
 
 ## Idea 커버리지
 
@@ -33,7 +33,7 @@
 
 ## Phase와 Build 번호
 
-`idea.md`와 존재하는 `research.md`는 프로젝트 전체의 누적 근거로 사용하고 Phase별 사본이나 별도 `contract.md`를 만들지 않는다. 모든 Phase와 Build는 하나의 `execution.md`에 기록한다.
+`idea.md`는 프로젝트 전체의 누적 의도 계약으로 사용하고 Research 근거는 `research/index.md`와 실제 사용한 확정 `R###` 파일을 참조한다. Phase별 문서 사본이나 별도 `contract.md`를 만들지 않는다. 모든 Phase와 Build는 하나의 `execution.md`에 기록한다.
 
 - Phase 제목은 `### Phase #N — 이름`, Build 제목은 해당 Phase 아래의 `#### Build #N — 이름` 형식을 사용한다.
 - Phase 헤더 없이 `### Build #N` 형식만 있는 기존 문서는 전체를 Phase #1로 간주한다. 새 Phase를 추가하며 문서를 수정할 때 기존 Build의 내용·순서·번호를 바꾸지 않고 `### Phase #1 — 기존 계획` 헤더 아래로 옮기며 Build 제목의 깊이만 `####`로 조정한다.
@@ -188,6 +188,7 @@ Phase나 Build를 수정·분리·병합·삭제·재배열하면 영향받는 B
 모든 활성 Build가 `합의 완료`가 된 뒤 다음을 다시 검사한다.
 
 - 모든 Idea 문장이 Phase와 Build에 연결된다.
+- 실제 사용한 Research가 확정 `R###` 파일과 연결되고 Verdict의 영향이 해당 Phase·Build에 반영되었다.
 - 모든 활성 Phase와 Build, 폐기 이력과 각 경계를 검사했다.
 - 모든 활성 Build의 네 차원이 `확정`이다.
 - 사용자 경험을 바꾸는 미확인과 충돌이 없다.
@@ -232,6 +233,7 @@ Closure가 통과하면 다음을 한 번에 보여 준다.
 - 활성 Build의 AI 완료와 사용자 Approve가 분리되지 않았다.
 - 에이전트 제안이 사용자 결정으로 오인되어 있다.
 - 사용자 경험을 바꾸는 구현 결정이 위임되어 있다.
+- Research 참조가 단일 legacy `research.md`, 존재하지 않는 파일 또는 처리되지 않은 `결론 보류` 질문을 가리킨다.
 - Phase나 Build 번호가 중복·재사용되었거나 Feature가 독립 계층으로 남아 있다.
 - 최종 restate gate가 통과하지 않았다.
 
@@ -245,6 +247,9 @@ Closure가 통과하면 다음을 한 번에 보여 준다.
 ## 한 문장 목표
 ## Idea 커버리지
 ## Research에서 사용한 근거
+
+| Research | Verdict | 영향받는 Phase·Build |
+|---|---|---|
 ## 전체 Phase·Build 순서
 
 ### Phase #1 ... Phase #N

@@ -43,7 +43,7 @@ Release: {url}
 
 ```text
 idea.md
-→ research.md (선택)
+→ research/R###-*.md (선택)
 → execution.md
 → 문서 확정
 → Elenchus 계획 완료
@@ -123,11 +123,15 @@ Elenchus를 시작한 첫 응답부터 모든 응답의 첫 줄에 다음 중 �
 ```text
 ./.elenchus/
 ├─ idea.md
-├─ research.md       선택
+├─ research/         선택
+│  ├─ index.md
+│  └─ R###-neutral-topic.md
+├─ lab/              조건부 Research 작업장
+│  └─ R###/
 └─ execution.md
 ```
 
-`idea.md`와 `research.md`는 프로젝트 전체의 누적 근거로 유지하고 Phase별 사본이나 별도 `contract.md`를 만들지 않는다. `execution.md`의 계획 계층은 `Phase → Build` 두 단계만 사용하며 Feature를 독립 계층으로 만들지 않는다. 기존 Feature 계층을 발견하면 Build 번호와 의미를 보존해 [stages/execution.md](stages/execution.md)의 호환 규칙으로 축소한다.
+`idea.md`는 프로젝트 전체의 누적 의도 계약으로 유지하고 Research는 독립 질문별 파일로 나눈다. `research/index.md`는 상태·영향·파일만 연결하며 상세 결론은 각 `R###` 파일에 둔다. `lab/`은 실제 관찰이 필요할 때만 만들고 자동 삭제하지 않는다. Phase별 문서 사본이나 별도 `contract.md`는 만들지 않는다. `execution.md`의 계획 계층은 `Phase → Build` 두 단계만 사용하며 Feature를 독립 계층으로 만들지 않는다. 기존 Feature 계층을 발견하면 Build 번호와 의미를 보존해 [stages/execution.md](stages/execution.md)의 호환 규칙으로 축소한다.
 
 문서 상태는 `작성 중 | 확정 | 중단됨`을 사용한다. 현재 단계 문서만 만들고 미래 단계의 빈 파일은 만들지 않는다.
 

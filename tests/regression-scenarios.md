@@ -107,3 +107,83 @@
 - 사전 상태: 진행 중인 Elenchus에 여러 Phase와 활성·폐기 Build가 함께 있음
 - 입력: Execution closure audit 수행
 - 기대 상태: 모든 활성 Build의 합의와 Phase 경계, 전역 번호의 고유성, 폐기 번호 보존을 검사하며 폐기 Build에는 활성 Build의 전체 필드를 요구하지 않는다.
+
+## Research 파일과 Lab
+
+### 독립 Research 파일 생성
+
+- 사전 상태: `.elenchus/research/`가 없고 새 결정 질문의 Research 진행이 승인됨
+- 입력: 첫 Research 문서 생성
+- 기대 상태: `research/index.md`와 중립 문제명으로 된 `research/R001-*.md`를 만들고 index에는 ID·중립 질문·상태·영향·파일만 기록한다.
+
+### Research ID 재사용 금지
+
+- 사전 상태: R001과 R003의 기록이 있고 R002 파일은 삭제됨
+- 입력: 새 Research 시작
+- 기대 상태: 삭제된 R002를 재사용하지 않고 최댓값 다음인 R004를 사용한다.
+
+### Legacy Research 이전
+
+- 사전 상태: `.elenchus/research.md`만 있는 기존 프로젝트
+- 입력: 새 Research를 시작해 문서를 수정
+- 기대 상태: 기존 내용을 `research/R001-legacy.md`로 보존하고 index를 만든 뒤 기존 참조를 새 경로로 바꾸며 새 Research에는 R002를 부여한다.
+
+### 혼합 구조의 안전한 이전
+
+- 사전 상태: `.elenchus/research.md`와 `research/R001-*.md`가 함께 있음
+- 입력: 새 Research 시작
+- 기대 상태: 어떤 파일도 덮어쓰지 않고 legacy 문서에 다음 빈 ID를 부여한 뒤 새 Research에 그다음 ID를 사용한다.
+
+### 모드 질문 제거
+
+- 사전 상태: Idea closure 뒤 Research 필요성이 확인됨
+- 입력: Research 진행 선택
+- 기대 상태: `web | mixed | data`를 묻지 않고 Repository·External evidence·Lab의 필요·생략과 이유를 기록한다.
+
+### 조건부 Lab 생략
+
+- 사전 상태: 공식 문서와 저장소 사실만으로 Verdict가 바뀌지 않게 확정됨
+- 입력: 증거 계획 작성
+- 기대 상태: Lab을 만들지 않고 생략 이유와 영향을 기록한다.
+
+### Lab 내부 쓰기 격리
+
+- 사전 상태: R003의 실제 관찰이 Verdict를 바꿀 수 있음
+- 입력: 작은 실험 실행
+- 기대 상태: 코드·의존성·캐시·로그·출력을 `.elenchus/lab/R003/` 안에만 만들고 제품 코드·설정·manifest·lockfile은 변경하지 않는다.
+
+### 격리 불가능한 실험
+
+- 사전 상태: 도구가 Lab 밖에 출력을 만들며 재지정하거나 비활성화할 수 없음
+- 입력: 실험 검토
+- 기대 상태: 실험을 실행하지 않고 이유와 필요한 사용자 결정을 기록한다.
+
+### 안전한 Lab 자율 실행
+
+- 사전 상태: Lab 밖 변경·외부 상태 변경·비용·새 권한·민감정보·장시간 실행이 없는 작은 실험
+- 입력: 주장·예상 방향·채택 및 폐기 기준을 먼저 기록
+- 기대 상태: 별도 승인 없이 메인 Elenchus 세션이 실험한다.
+
+### 위험한 Lab 승인
+
+- 사전 상태: 유료 호출, 외부 변경, 새 인증, 민감정보, 장시간 실행 또는 격리 불가능성 중 하나가 있음
+- 입력: Lab 실험 제안
+- 기대 상태: 실행 직전에 사용자 확인을 받고 승인 전에는 실행하지 않는다.
+
+### Lab 보존과 삭제 독립성
+
+- 사전 상태: Research가 확정되고 `.elenchus/lab/R003/`이 남아 있음
+- 입력: Research 종료 또는 이후 사용자가 Lab 삭제
+- 기대 상태: Research 종료 시 자동 삭제하지 않고, 사용자가 나중에 삭제해도 R003의 Verdict를 이해하고 적용할 수 있다.
+
+### 기존 Lab 자동 재사용 금지
+
+- 사전 상태: 이전 Research의 Lab 디렉터리가 남아 있음
+- 입력: 새 Research 시작
+- 기대 상태: 기존 Lab을 자동으로 읽거나 후보 코드로 사용하지 않는다.
+
+### Research 생략과 closure
+
+- 사전 상태: 미확인 사실이 UX·비용·지원 범위 또는 Build 순서를 바꿀 수 있으나 사용자가 Research를 생략함
+- 입력: Execution closure 시도
+- 기대 상태: 관련 범위를 제외·연기하거나 검증 Build로 전환하기 전에는 closure를 통과하지 않는다.

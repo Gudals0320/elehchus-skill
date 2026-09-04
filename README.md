@@ -15,7 +15,7 @@ Idea
 ```
 
 - Idea는 문제, 해결 방향과 실제 사용자 경험을 하나의 문서에서 다룬다.
-- Research는 외부 사실이나 데이터 공백이 실행 순서를 바꿀 때만 진행한다.
+- Research는 독립 질문별 파일에서 저장소·외부 근거와 조건부 Lab 관찰로 실행 계획의 불확실성을 줄인다.
 - Execution은 계획을 Phase로 묶고 모든 Build의 사용자 행동과 Approve 조건을 합의한다.
 
 ## 주요 특징
@@ -63,11 +63,19 @@ skill:Elenchus 로 기존 계획을 재검토해 줘.
 ```text
 ./.elenchus/
 ├─ idea.md
-├─ research.md       선택
+├─ research/         선택
+│  ├─ index.md
+│  └─ R###-neutral-topic.md
+├─ lab/              조건부 Research 작업장
+│  └─ R###/
 └─ execution.md
 ```
 
-`idea.md`와 `research.md`는 프로젝트 전체의 누적 근거이며 Phase별 사본이나 별도 `contract.md`를 만들지 않는다. `execution.md`는 하나의 파일에서 다음 두 단계만 사용한다.
+`research/index.md`에는 각 조사의 ID·중립 질문·상태·영향·파일만 두고 상세 근거와 Verdict는 `R###` 파일에 기록한다. 실제 관찰이 결론을 바꿀 때만 `.elenchus/lab/R###/`에서 제품 파일과 격리된 실험을 수행한다. Lab은 자동 삭제하거나 구현 코드로 승격하지 않으며 사용자가 언제든 삭제할 수 있다.
+
+기존 `.elenchus/research.md`는 새 Research를 시작할 때 내용을 보존해 `research/R001-legacy.md` 또는 다음 빈 ID로 이전하고 기존 참조를 갱신한다. 단순히 프로젝트를 읽는 것만으로는 마이그레이션하지 않는다.
+
+`idea.md`는 프로젝트 전체의 누적 의도 계약이며 Phase별 사본이나 별도 `contract.md`를 만들지 않는다. `execution.md`는 하나의 파일에서 다음 두 단계만 사용한다.
 
 ```text
 Phase #1
