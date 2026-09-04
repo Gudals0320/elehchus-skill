@@ -2,7 +2,7 @@
 name: elenchus
 description: $elenchus 또는 skill:elenchus의 명시적 호출로 시작해 한국어 심층 인터뷰, 적응형 Web Evidence·승인형 Browser 관찰·격리 Lab 검증과 Phase·Build별 합의로 실행 계획을 확정하고 완료 후 일반 모드로 돌아가는 프로토콜
 metadata:
-  version: "0.3.0"
+  version: "0.2.2"
   repository: "https://github.com/Gudals0320/elehchus-skill"
 ---
 

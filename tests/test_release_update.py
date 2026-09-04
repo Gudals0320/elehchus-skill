@@ -60,7 +60,7 @@ class NetworkPermissionDetectionTests(unittest.TestCase):
 
 class MainExitCodeTests(unittest.TestCase):
     def test_check_success_returns_zero(self) -> None:
-        payload = {"status": "up_to_date", "current_version": "0.3.0"}
+        payload = {"status": "up_to_date", "current_version": "0.2.2"}
         with (
             patch.object(release_update, "check_release", return_value=payload),
             patch.object(release_update, "_emit") as emit,
@@ -73,7 +73,7 @@ class MainExitCodeTests(unittest.TestCase):
         failure = release_update.NetworkPermissionError("network approval required")
         with (
             patch.object(release_update, "check_release", side_effect=failure),
-            patch.object(release_update, "_package_version", return_value="0.3.0"),
+            patch.object(release_update, "_package_version", return_value="0.2.2"),
             patch.object(release_update, "_emit") as emit,
         ):
             result = release_update.main(["--check"])
@@ -83,13 +83,13 @@ class MainExitCodeTests(unittest.TestCase):
             emit.call_args.args[0]["exit_code"],
             release_update.EXIT_PERMISSION_REQUIRED,
         )
-        self.assertEqual(emit.call_args.args[0]["current_version"], "0.3.0")
+        self.assertEqual(emit.call_args.args[0]["current_version"], "0.2.2")
 
     def test_check_general_failure_returns_one(self) -> None:
         failure = release_update.UpdateError("GitHub API response failed")
         with (
             patch.object(release_update, "check_release", side_effect=failure),
-            patch.object(release_update, "_package_version", return_value="0.3.0"),
+            patch.object(release_update, "_package_version", return_value="0.2.2"),
             patch.object(release_update, "_emit") as emit,
         ):
             result = release_update.main(["--check"])
@@ -98,12 +98,12 @@ class MainExitCodeTests(unittest.TestCase):
         self.assertEqual(emit.call_args.args[0]["exit_code"], release_update.EXIT_ERROR)
 
     def test_install_success_still_returns_zero(self) -> None:
-        payload = {"status": "updated", "current_version": "0.3.0"}
+        payload = {"status": "updated", "current_version": "0.2.2"}
         with (
             patch.object(release_update, "install_release", return_value=payload),
             patch.object(release_update, "_emit") as emit,
         ):
-            result = release_update.main(["--install", "v0.3.0"])
+            result = release_update.main(["--install", "v0.2.2"])
         self.assertEqual(result, release_update.EXIT_OK)
         emit.assert_called_once_with(payload)
 
@@ -113,7 +113,7 @@ class MainExitCodeTests(unittest.TestCase):
             patch.object(release_update, "install_release", side_effect=failure),
             patch.object(release_update, "_emit") as emit,
         ):
-            result = release_update.main(["--install", "v0.3.0"])
+            result = release_update.main(["--install", "v0.2.2"])
         self.assertEqual(result, release_update.EXIT_ERROR)
         self.assertEqual(emit.call_args.args[0]["status"], "error")
 
