@@ -73,6 +73,8 @@ skill:Elenchus 로 기존 계획을 재검토해 줘.
 
 `research/index.md`에는 각 조사의 ID·중립 질문·상태·영향·파일만 두고 상세 근거와 Verdict는 `R###` 파일에 기록한다. 실제 관찰이 결론을 바꿀 때만 `.elenchus/lab/R###/`에서 제품 파일과 격리된 실험을 수행한다. Lab은 자동 삭제하거나 구현 코드로 승격하지 않으며 사용자가 언제든 삭제할 수 있다.
 
+procedure·API·라이브러리의 독립 탐색이 필요하면 Elenchus가 입력·출력·UX·확정 제약·객관적 환경 사실만 담은 neutral brief를 먼저 보여 준다. 사용자 승인 후에만 이전 대화 이력이 없는 solution explorer subagent 하나를 호출하며, subagent는 읽기 전용 탐색과 권장안까지만 담당한다. 실제 Lab 검증과 최종 Verdict는 메인 Elenchus 세션이 맡는다.
+
 기존 `.elenchus/research.md`는 새 Research를 시작할 때 내용을 보존해 `research/R001-legacy.md` 또는 다음 빈 ID로 이전하고 기존 참조를 갱신한다. 단순히 프로젝트를 읽는 것만으로는 마이그레이션하지 않는다.
 
 `idea.md`는 프로젝트 전체의 누적 의도 계약이며 Phase별 사본이나 별도 `contract.md`를 만들지 않는다. `execution.md`는 하나의 파일에서 다음 두 단계만 사용한다.

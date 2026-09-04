@@ -1,8 +1,8 @@
 ---
 name: elenchus
-description: $elenchus 또는 skill:elenchus의 명시적 호출로 시작해 한국어 심층 인터뷰, 선택적 증거 연구와 Phase·Build별 합의로 실행 계획을 확정하고 완료 후 일반 모드로 돌아가는 프로토콜
+description: $elenchus 또는 skill:elenchus의 명시적 호출로 시작해 한국어 심층 인터뷰, 승인형 독립 탐색과 격리 Lab 검증, Phase·Build별 합의로 실행 계획을 확정하고 완료 후 일반 모드로 돌아가는 프로토콜
 metadata:
-  version: "0.1.1"
+  version: "0.2.0"
   repository: "https://github.com/Gudals0320/elehchus-skill"
 ---
 
