@@ -2,7 +2,7 @@
 name: elenchus
 description: $elenchus 또는 skill:elenchus의 명시적 호출로 시작해 한국어 심층 인터뷰, 승인형 독립 탐색과 격리 Lab 검증, Phase·Build별 합의로 실행 계획을 확정하고 완료 후 일반 모드로 돌아가는 프로토콜
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
   repository: "https://github.com/Gudals0320/elehchus-skill"
 ---
 
@@ -10,10 +10,13 @@ metadata:
 
 ## 실행 전 Release 확인
 
-새 Codex 작업에서 Elenchus에 최초 진입할 때 첫 질문이나 문서 작성 전에 `scripts/release_update.py --check`를 사용해 최신 정식 GitHub Release를 한 번 확인한다. 같은 작업의 후속 답변과 명시적 재진입에서는 다시 확인하지 않는다.
+새 Codex 작업에서 Elenchus에 최초 진입할 때 첫 질문이나 문서 작성 전에 `scripts/release_update.py --check`를 일반 샌드박스에서 한 번 실행해 최신 정식 GitHub Release를 확인한다. 같은 작업의 후속 답변과 명시적 재진입에서는 다시 확인하지 않는다.
 
 - 현재 버전 이상이면 별도 질문 없이 Elenchus를 시작한다.
-- 확인에 실패하면 실패 이유를 한 줄로 알리고 Elenchus를 계속한다. Release 확인 실패가 인터뷰를 막지 않는다.
+- 출력 JSON이 `permission_required`와 `exit_code: 2`를 반환하면 동일한 `--check` 명령에 필요한 네트워크 권한 상승을 요청해 한 번만 재시도한다. 셸 실행 도구가 바깥 종료코드를 일반 실패로 표시해도 JSON 상태를 우선한다.
+- 권한 상승이 거절되거나 재시도도 실패하면 이유를 한 줄로 알리고 현재 버전으로 Elenchus를 계속한다. 같은 작업에서 다시 확인하거나 권한을 재요청하지 않는다.
+- 출력 JSON의 `unavailable`과 `exit_code: 1`은 GitHub 응답·DNS·기타 확인 실패다. 권한 상승으로 재시도하지 않고 이유를 한 줄로 알린 뒤 현재 버전으로 계속한다.
+- Release 확인 실패가 인터뷰를 막지 않는다.
 - 새 버전이 있으면 현재 버전, 최신 버전과 Release 링크를 보여 주고 업데이트 여부를 질문 하나로 확인한다.
 - 사용자가 업데이트를 명시적으로 승인하기 전에는 설치 파일을 변경하지 않는다.
 - 사용자가 현재 버전으로 계속하기를 선택하면 같은 작업에서 다시 묻지 않고 Elenchus를 시작한다.

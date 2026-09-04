@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import errno
 import json
 from pathlib import Path
 import re
@@ -23,9 +24,17 @@ USER_AGENT = "elenchus-release-updater"
 SEMVER_PATTERN = re.compile(r"^v?(\d+)\.(\d+)\.(\d+)$")
 VERSION_PATTERN = re.compile(r'^\s*version:\s*["\']?(\d+\.\d+\.\d+)["\']?\s*$', re.MULTILINE)
 NAME_PATTERN = re.compile(r"^\s*name:\s*elenchus\s*$", re.MULTILINE)
+EXIT_OK = 0
+EXIT_ERROR = 1
+EXIT_PERMISSION_REQUIRED = 2
+WINDOWS_NETWORK_ACCESS_DENIED = 10013
 
 
 class UpdateError(RuntimeError):
+    pass
+
+
+class NetworkPermissionError(UpdateError):
     pass
 
 
@@ -35,6 +44,30 @@ def _emit(payload: dict[str, Any]) -> None:
 
 def _skill_root() -> Path:
     return Path(__file__).resolve().parents[1]
+
+
+def _is_network_permission_error(exc: BaseException) -> bool:
+    pending: list[BaseException] = [exc]
+    seen: set[int] = set()
+    while pending:
+        current = pending.pop()
+        if id(current) in seen:
+            continue
+        seen.add(id(current))
+        if isinstance(current, PermissionError):
+            return True
+        if getattr(current, "winerror", None) == WINDOWS_NETWORK_ACCESS_DENIED:
+            return True
+        if getattr(current, "errno", None) in (errno.EACCES, errno.EPERM):
+            return True
+        for related in (
+            getattr(current, "reason", None),
+            current.__cause__,
+            current.__context__,
+        ):
+            if isinstance(related, BaseException):
+                pending.append(related)
+    return False
 
 
 def _frontmatter(skill_md: Path) -> str:
@@ -80,6 +113,10 @@ def _request_json(url: str) -> dict[str, Any]:
     except HTTPError as exc:
         raise UpdateError(f"GitHub API 응답 오류: HTTP {exc.code}") from exc
     except URLError as exc:
+        if _is_network_permission_error(exc):
+            raise NetworkPermissionError(
+                f"GitHub 네트워크 접근 권한이 필요합니다: {exc.reason}"
+            ) from exc
         raise UpdateError(f"GitHub에 연결할 수 없습니다: {exc.reason}") from exc
 
 
@@ -241,32 +278,51 @@ def install_release(root: Path, tag: str) -> dict[str, Any]:
     }
 
 
-def main() -> int:
+def _check_failure_payload(
+    root: Path, status: str, exit_code: int, exc: Exception
+) -> dict[str, Any]:
+    current = None
+    try:
+        current = _package_version(root)
+    except Exception:
+        pass
+    return {
+        "status": status,
+        "current_version": current,
+        "exit_code": exit_code,
+        "message": str(exc),
+    }
+
+
+def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Check or update the Elenchus skill.")
     action = parser.add_mutually_exclusive_group(required=True)
     action.add_argument("--check", action="store_true", help="Check the latest stable Release.")
     action.add_argument("--install", metavar="TAG", help="Install an explicitly approved stable tag.")
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     root = _skill_root()
 
     if args.check:
         try:
             _emit(check_release(root))
+            return EXIT_OK
+        except NetworkPermissionError as exc:
+            _emit(
+                _check_failure_payload(
+                    root, "permission_required", EXIT_PERMISSION_REQUIRED, exc
+                )
+            )
+            return EXIT_PERMISSION_REQUIRED
         except Exception as exc:
-            current = None
-            try:
-                current = _package_version(root)
-            except Exception:
-                pass
-            _emit({"status": "unavailable", "current_version": current, "message": str(exc)})
-        return 0
+            _emit(_check_failure_payload(root, "unavailable", EXIT_ERROR, exc))
+            return EXIT_ERROR
 
     try:
         _emit(install_release(root, args.install))
-        return 0
+        return EXIT_OK
     except Exception as exc:
         _emit({"status": "error", "message": str(exc)})
-        return 1
+        return EXIT_ERROR
 
 
 if __name__ == "__main__":

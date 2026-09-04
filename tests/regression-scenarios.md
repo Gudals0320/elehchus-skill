@@ -287,3 +287,41 @@
 - 사전 상태: solution explorer가 긴 후보 비교와 출처를 반환함
 - 입력: Research 파일 갱신
 - 기대 상태: 원문을 저장하지 않고 접근법 범주·실제 후보·핵심 차이·채택 및 제외 근거·권장 방향·신뢰도·Lab 대상·출처·사용자 결정만 정제한다.
+
+## Release 확인 네트워크 권한
+
+### Windows 네트워크 권한 감지
+
+- 사전 상태: Windows Codex 샌드박스가 GitHub 네트워크 연결을 `WinError 10013`로 차단함
+- 입력: `scripts/release_update.py --check` 실행
+- 기대 상태: `status: permission_required`, `exit_code: 2`, 현재 버전과 오류 메시지를 JSON으로 출력하고 Python 종료코드 `2`를 반환한다.
+
+### 권한 상승 1회 재시도
+
+- 사전 상태: 첫 확인이 `permission_required`와 종료코드 `2`를 반환함
+- 입력: Elenchus 최초 진입 계속
+- 기대 상태: 셸 실행 도구가 바깥 종료코드를 일반 실패로 표시하더라도 JSON의 `permission_required`를 기준으로 동일한 `--check` 명령에 필요한 네트워크 권한 상승을 요청해 한 번만 재시도한다.
+
+### 권한 요청 거절
+
+- 사전 상태: 사용자가 네트워크 권한 상승을 거절함
+- 입력: Elenchus 최초 진입 계속
+- 기대 상태: 실패 이유를 한 줄로 알리고 현재 버전으로 인터뷰를 시작하며 같은 작업에서 확인이나 권한 요청을 반복하지 않는다.
+
+### 권한 상승 재시도 실패
+
+- 사전 상태: 권한 상승으로 재시도한 `--check`도 실패함
+- 입력: Elenchus 최초 진입 계속
+- 기대 상태: 실패 이유를 한 줄로 알리고 현재 버전으로 인터뷰를 시작하며 세 번째 확인을 실행하지 않는다.
+
+### 일반 GitHub 확인 실패
+
+- 사전 상태: GitHub HTTP 오류, DNS 실패 또는 기타 권한 외 오류가 발생함
+- 입력: `scripts/release_update.py --check` 실행
+- 기대 상태: `status: unavailable`, `exit_code: 1`과 Python 종료코드 `1`을 반환하고 권한 상승 재시도 없이 현재 버전으로 인터뷰를 계속한다.
+
+### 정상 Release 확인
+
+- 사전 상태: 샌드박스에서 GitHub 연결이 가능함
+- 입력: `scripts/release_update.py --check` 실행
+- 기대 상태: `up_to_date` 또는 `update_available`과 종료코드 `0`을 반환하고 권한 상승을 요청하지 않는다.
