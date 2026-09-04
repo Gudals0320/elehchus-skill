@@ -16,7 +16,7 @@ Idea
 
 - Idea는 문제, 해결 방향과 실제 사용자 경험을 하나의 문서에서 다룬다.
 - Research는 외부 사실이나 데이터 공백이 실행 순서를 바꿀 때만 진행한다.
-- Execution은 모든 Build를 작성하고 Build마다 사용자 행동과 Approve 조건을 합의한다.
+- Execution은 계획을 Phase로 묶고 모든 Build의 사용자 행동과 Approve 조건을 합의한다.
 
 ## 주요 특징
 
@@ -25,7 +25,7 @@ Idea
 - 저장소와 문서에서 확인할 수 있는 사실은 먼저 조사한다.
 - 비개발자가 화면, 파일, 행동, 비용과 실패 결과를 보고 결정할 수 있게 설명한다.
 - 기능 추가뿐 아니라 유지·축소·연기·제거·만들지 않기를 같은 선택지로 다룬다.
-- 모든 Build가 합의되고 전체 closure를 통과하기 전에는 계획을 완료하지 않는다.
+- 모든 Phase 경계와 Build가 합의되고 전체 closure를 통과하기 전에는 계획을 완료하지 않는다.
 - `[Elenchus · 진행 중]`인 동안만 계획 전용 상태를 유지하고 완료 뒤에는 같은 작업을 일반 모드로 전환한다.
 
 ## 설치
@@ -66,6 +66,20 @@ skill:Elenchus 로 기존 계획을 재검토해 줘.
 ├─ research.md       선택
 └─ execution.md
 ```
+
+`idea.md`와 `research.md`는 프로젝트 전체의 누적 근거이며 Phase별 사본이나 별도 `contract.md`를 만들지 않는다. `execution.md`는 하나의 파일에서 다음 두 단계만 사용한다.
+
+```text
+Phase #1
+├─ Build #1
+└─ Build #2
+
+Phase #2
+├─ Build #3
+└─ Build #4
+```
+
+Build 번호는 Phase마다 초기화하지 않는 프로젝트 전체 ID다. 기존 Phase 헤더 없는 계획은 Phase #1로 간주하고, 새 Phase의 Build는 기존 활성·폐기 Build 중 가장 큰 번호 다음부터 시작한다. Feature는 별도 계획 계층으로 만들지 않으며 기존 Feature의 의미는 하위 Build의 이름·범위·설계 근거에 보존한다.
 
 ## Release 확인과 업데이트
 

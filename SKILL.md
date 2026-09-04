@@ -1,6 +1,6 @@
 ---
 name: elenchus
-description: $elenchus 또는 skill:elenchus의 명시적 호출로 시작해 한국어 심층 인터뷰, 선택적 증거 연구와 Build별 합의로 실행 계획을 확정하고 완료 후 일반 모드로 돌아가는 프로토콜
+description: $elenchus 또는 skill:elenchus의 명시적 호출로 시작해 한국어 심층 인터뷰, 선택적 증거 연구와 Phase·Build별 합의로 실행 계획을 확정하고 완료 후 일반 모드로 돌아가는 프로토콜
 metadata:
   version: "0.1.1"
   repository: "https://github.com/Gudals0320/elehchus-skill"
@@ -50,7 +50,7 @@ idea.md
 → 일반 모드로 전환
 ```
 
-`idea.md`는 문제와 방향뿐 아니라 사용자 경험 계약까지 포함한다. `execution.md`는 모든 Build를 작성하고 Build별 사용자 합의와 전체 검사를 마친 뒤 닫는다.
+`idea.md`는 문제와 방향뿐 아니라 사용자 경험 계약까지 포함한다. `execution.md`는 `Phase → Build` 두 단계로 전체 계획을 작성하고 Build별 사용자 합의와 전체 검사를 마친 뒤 닫는다.
 
 ## Elenchus 지속 상태
 
@@ -96,7 +96,7 @@ Elenchus를 시작한 첫 응답부터 모든 응답의 첫 줄에 다음 중 �
 - 모호한 개발·연구 아이디어를 질문으로 구체화하려 한다.
 - 사용자 경험, 범위, 제약과 성공 기준을 개발 전에 합의하려 한다.
 - 외부 자료나 데이터 실험으로 전제를 확인한 뒤 실행 계획을 만들려 한다.
-- 모든 Build를 사용자 확인 단위로 설계하고 각 Build의 내용을 합의하려 한다.
+- 계획을 Phase로 묶고 모든 Build를 사용자 확인 단위로 설계해 각 Build의 내용을 합의하려 한다.
 
 다음 요청에는 사용하지 않는다.
 
@@ -126,6 +126,8 @@ Elenchus를 시작한 첫 응답부터 모든 응답의 첫 줄에 다음 중 �
 ├─ research.md       선택
 └─ execution.md
 ```
+
+`idea.md`와 `research.md`는 프로젝트 전체의 누적 근거로 유지하고 Phase별 사본이나 별도 `contract.md`를 만들지 않는다. `execution.md`의 계획 계층은 `Phase → Build` 두 단계만 사용하며 Feature를 독립 계층으로 만들지 않는다. 기존 Feature 계층을 발견하면 Build 번호와 의미를 보존해 [stages/execution.md](stages/execution.md)의 호환 규칙으로 축소한다.
 
 문서 상태는 `작성 중 | 확정 | 중단됨`을 사용한다. 현재 단계 문서만 만들고 미래 단계의 빈 파일은 만들지 않는다.
 
@@ -366,7 +368,7 @@ Closure가 통과하면 모든 활성 구성요소를 덮는 한 문장 목표�
 - Idea closure 뒤 AI가 Research 필요성과 실행 계획에 미치는 영향을 설명하고 사용자가 진행 또는 생략을 선택한다.
 - Research를 선택하면 [stages/research.md](stages/research.md)를 읽는다.
 - Research를 생략하거나 verdict가 합의되면 [stages/execution.md](stages/execution.md)를 읽는다.
-- Execution closure 뒤 전체 Build와 각 Approve를 요약하고 사용자 상태를 `완료`로 바꾼다. 이 응답으로 Elenchus 세션을 끝내며 이후 요청은 일반 모드에서 처리한다.
+- Execution closure 뒤 전체 Phase, Build와 각 Approve를 요약하고 사용자 상태를 `완료`로 바꾼다. 이 응답으로 Elenchus 세션을 끝내며 이후 요청은 일반 모드에서 처리한다.
 
 ## 중단과 재개
 
@@ -377,4 +379,4 @@ Closure가 통과하면 모든 활성 구성요소를 덮는 한 문장 목표�
 - 사용자 확인이 필요한 에이전트 제안
 - 다시 시작할 질문 대상
 
-완료 또는 중단된 계획을 재개·수정·재검토하려면 현재 사용자 메시지에 `$elenchus` 또는 `skill:elenchus` 호출 토큰이 있어야 한다. 명시적으로 재진입하면 초기 질문을 반복하지 않고 기존 문서를 읽은 뒤 현재 가장 낮은 구성요소·차원에서 계속한다.
+완료 또는 중단된 계획을 재개·수정·재검토하려면 현재 사용자 메시지에 `$elenchus` 또는 `skill:elenchus` 호출 토큰이 있어야 한다. 명시적으로 재진입하면 초기 질문을 반복하지 않고 기존 문서를 읽은 뒤 기존 Phase 수정인지 새 Phase 추가인지 판정하고 현재 가장 낮은 구성요소·차원에서 계속한다. Phase와 Build 구조·번호는 [stages/execution.md](stages/execution.md)의 계약을 따른다.
