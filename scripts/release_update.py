@@ -201,13 +201,12 @@ def _validate_package(root: Path, expected_version: str) -> None:
         "stages/idea.md",
         "stages/research.md",
         "stages/execution.md",
+        "stages/web-evidence-loop.md",
         "scripts/release_update.py",
     ]
     missing = [path for path in required if not (root / path).is_file()]
     if missing:
         raise UpdateError(f"Release에 필요한 파일이 없습니다: {', '.join(missing)}")
-    if (root / "references").exists():
-        raise UpdateError("정식 Elenchus Release에는 references 디렉터리를 포함하지 않습니다.")
     if _package_version(root) != expected_version:
         raise UpdateError("Release tag와 SKILL.md metadata.version이 일치하지 않습니다.")
     for entry in root.rglob("*"):

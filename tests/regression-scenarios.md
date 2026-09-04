@@ -222,15 +222,27 @@
 
 ## Web Evidence Loop
 
-### External evidence 필요 시에만 진입
+### Web 또는 Browser Evidence 필요 시 진입
 
 - 사전 상태: 증거 계획에서 External evidence가 `필요`이고 Browser Evidence는 `생략`임
 - 입력: 외부 조사를 시작
 - 기대 상태: 별도 Research 모드를 만들지 않고 Web Evidence Loop 참고 문서를 읽어 현재 R###에 적용한다.
 
-### Claim map 선행
+### 단일 권위 Claim의 간소화 기록
 
-- 사전 상태: 외부 사실이 Verdict를 바꿀 수 있지만 아직 결정 Claim이 분해되지 않음
+- 사전 상태: 공식 원문 하나가 직접 통제하는 저위험 Claim 하나이며 후보 비교·출처 충돌·접근 실패·중요한 공백이 없음
+- 입력: External evidence 기록과 Web closure 수행
+- 기대 상태: Claim map·Retrieval plan·접근 기록·Evidence matrix를 별도 섹션으로 강제하지 않고 근거·본문 확인·적용 범위·생략 이유를 하나의 간소화 Evidence에 기록한다.
+
+### 복합 Claim의 전체 기록
+
+- 사전 상태: 여러 Claim과 후보 비교가 있고 출처 충돌 또는 접근 실패가 Verdict를 바꿀 수 있음
+- 입력: External evidence 조사
+- 기대 상태: 간소화하지 않고 Claim map·Retrieval plan·접근 기록·Evidence matrix를 각각 유지한다.
+
+### 복합 조사에서 Claim map 선행
+
+- 사전 상태: 여러 외부 사실이 Verdict를 바꿀 수 있지만 아직 결정 Claim이 분해되지 않음
 - 입력: Research 계속
 - 기대 상태: 검색어부터 실행하지 않고 Claim별 Verdict 영향·출처 역할·최신성·적용 환경·반증 조건을 먼저 기록한다.
 
@@ -290,7 +302,7 @@
 
 ### 반대 근거 탐색
 
-- 사전 상태: Claim을 지지하는 자료만 수집했고 반대 사례나 실패 조건을 찾지 않음
+- 사전 상태: 전체 기록이 필요한 복합 Claim에서 지지 자료만 수집했고 반대 사례나 실패 조건을 찾지 않음
 - 입력: Web closure 시도
 - 기대 상태: 반대 검색 범위와 결과가 기록되기 전에는 closure를 통과하지 않는다.
 
@@ -319,6 +331,18 @@
 - 기대 상태: 해당 공백을 Lab, 범위 제외·연기 또는 검증 Build 중 하나로 연결하기 전에는 closure를 통과하지 않는다.
 
 ## Browser Evidence
+
+### External evidence와 독립 판정
+
+- 사전 상태: 공개 자료 없이 현재 로그인 계정의 UI 하나만 확인하면 Verdict가 정해짐
+- 입력: 증거 계획 작성
+- 기대 상태: External evidence를 `생략`, Browser Evidence를 `필요`로 독립 판정하고 Web Evidence Loop 참고 문서를 읽는다.
+
+### Browser-only closure
+
+- 사전 상태: External evidence는 `생략`, Browser Evidence는 `필요`이며 지정 탭의 관찰만으로 사용자별 Claim을 직접 판정함
+- 입력: Web closure 검사
+- 기대 상태: 공개 출처·citation·교차 확인·공개 접근 기록을 강제하지 않고 승인 범위·observation-only·적용 범위·다음 관찰의 낮은 Verdict 영향을 확인해 closure를 통과한다.
 
 ### Browser 필요성 선행 설명
 

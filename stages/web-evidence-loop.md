@@ -2,7 +2,7 @@
 
 ## 사용 조건과 경계
 
-`stages/research.md`의 증거 계획에서 External evidence가 `필요`일 때 이 문서를 읽고 현재 `R###`에 적용한다. Web Evidence Loop는 별도 Research 모드나 새 보고서 형식이 아니라 External evidence를 닫기 위한 실행 계약이다.
+`stages/research.md`의 증거 계획에서 External evidence나 Browser Evidence 중 하나가 `필요`일 때 이 문서를 읽고 현재 `R###`에 적용한다. Web Evidence Loop는 별도 Research 모드나 새 보고서 형식이 아니라 필요한 web·Browser 근거를 닫기 위한 실행 계약이다.
 
 - [`insane-search`](https://github.com/fivetaku/insane-search)에서 가벼운 공개 경로부터 단계적으로 시도하고, 접근 성공을 본문으로 검증하며, 미시도 경로와 terminal reason을 남기는 원칙만 사용한다.
 - [`insane-research`](https://github.com/fivetaku/insane-research)에서 질문 분해, 근거 공백 중심 반복, 독립 출처 교차 확인, citation 연결과 completeness 확인 원칙만 사용한다.
@@ -13,9 +13,8 @@
 ```text
 결정에 필요한 주장 분해
 → 출처·검색 계획
-→ 공개 검색과 본문 확보
-→ 내용·적용 범위 검증
-→ 실제 사용자 환경이 필요하면 Browser Evidence 제안
+→ 필요한 공개 검색·본문 확보 또는 Browser Evidence 제안
+→ 내용·화면과 적용 범위 검증
 → Evidence matrix 갱신
 → Verdict 영향이 가장 큰 근거 공백 선택
 → 추가 검색·접근 경로 변경·Lab 연결
@@ -25,7 +24,7 @@
 
 ## Claim map
 
-검색어를 만들기 전에 현재 Verdict와 Execution을 바꿀 수 있는 주장을 분해한다.
+검색어나 Browser 관찰을 시작하기 전에 현재 Verdict와 Execution을 바꿀 수 있는 주장을 분해한다. 간소화 기록에서는 단일 Claim을 간소화 Evidence 표에 바로 기록하고, 전체 기록에서는 아래 Claim map을 유지한다.
 
 - 사실 확인
 - 후보 간 차이
@@ -34,7 +33,7 @@
 - 실패 사례와 한계
 - 실제 사용자 경험
 
-각 주장에는 다음을 연결한다.
+전체 기록에서는 각 주장에 다음을 연결한다.
 
 ```markdown
 | 주장 | Verdict 영향 | 필요한 출처 역할 | 최신성 기준 | 적용 대상·환경 | 반증 조건 |
@@ -46,9 +45,41 @@
 - 사용자가 이미 확정한 값과 저장소에서 확인한 사실을 다시 검색 대상으로 만들지 않는다.
 - 영향이 없는 배경지식은 Claim map에 늘리지 않는다.
 
+## 조사 깊이
+
+조사 깊이는 사용자에게 새 모드로 선택시키지 않고 Claim의 수, 결정 위험, 출처 충돌과 접근 난이도에 맞춰 정한다.
+
+### 간소화 기록
+
+다음 조건을 모두 만족하면 Claim map·Retrieval plan·출처별 접근 기록·Evidence matrix를 각각 별도 섹션으로 만들지 않고 하나의 간소화 기록으로 합칠 수 있다.
+
+- 확인할 핵심 Claim이 하나다.
+- 저위험 사실이며 후보 비교나 복합 적용 범위 판단이 없다.
+- 권위 있는 원문 하나 또는 승인된 Browser 관찰 하나가 Claim을 직접 판정한다.
+- 출처 충돌, 차단 경로, 중요한 반대 사례나 후속 공백이 없다.
+
+```markdown
+### 간소화 Evidence
+
+| Claim | 근거·관찰 | 본문·화면 확인 | 적용 범위·확인 날짜 | 반대·실패 점검 | 상태 |
+|---|---|---|---|---|---|
+|  |  |  |  |  | 확인 \| 반박 \| 범위 제한 \| 근거 부족 |
+
+- 간소화 이유:
+- 다음 조사가 Verdict를 바꿀 가능성이 낮은 이유:
+```
+
+- 유일하고 권위 있는 원문이 직접 통제하는 사실은 불필요한 두 번째 출처나 형식적인 반대 검색을 강제하지 않는다. 생략 이유와 적용 범위는 남긴다.
+- Browser-only 간소화 기록도 아래의 탭 승인·observation-only·증거 강도 계약은 모두 지킨다.
+- 조건에서 벗어나면 즉시 전체 기록으로 전환하고 아래 절차를 따른다.
+
+### 전체 기록
+
+Claim이 여러 개이거나, 후보 비교·출처 충돌·접근 실패·중요한 반대 근거·복잡한 적용 범위·Lab 연결이 있으면 Claim map, Retrieval plan과 Evidence matrix를 각각 유지한다. External evidence가 필요하면 공개 접근 기록도 유지한다.
+
 ## Retrieval plan
 
-각 주장에 대해 다음 의미를 기록한 뒤 검색한다.
+각 주장에 대해 필요한 증거원에 해당하는 의미를 기록한 뒤 조사한다. 사용하지 않는 증거원의 필드는 생략한다.
 
 ```text
 확인할 주장
@@ -59,6 +90,7 @@
 적용 대상·환경
 접근 실패 시 공개 대체 경로
 Browser Evidence 필요 조건
+Browser에서 관찰할 화면·상태와 허용 동작
 ```
 
 ### 적응형 공개 접근
@@ -138,7 +170,7 @@ Browser Evidence 필요 조건
 
 ## Browser Evidence
 
-Browser Evidence는 [OpenAI 브라우저 확장 문서](https://learn.chatgpt.com/ko-KR/docs/chrome-extension)의 브라우저·탭 멘션과 사이트 권한 모델을 따르되 더 좁은 observation-only 경계를 적용한다. 공개 자료가 아니라 사용자가 승인한 실제 브라우저 탭에서 현재 계정·권한·시점의 화면과 동작을 관찰하는 증거원이며, External evidence가 `필요`인 Research 안에서만 `필요 | 생략`을 별도로 판정한다.
+Browser Evidence는 [OpenAI 브라우저 확장 문서](https://learn.chatgpt.com/ko-KR/docs/chrome-extension)의 브라우저·탭 멘션과 사이트 권한 모델을 따르되 더 좁은 observation-only 경계를 적용한다. 공개 자료가 아니라 사용자가 승인한 실제 브라우저 탭에서 현재 계정·권한·시점의 화면과 동작을 관찰하는 독립 증거원이며, External evidence와 별개로 `필요 | 생략`을 판정한다.
 
 ### 필요한 경우
 
@@ -261,16 +293,16 @@ Research의 Browser Evidence에서는 다음을 수행하지 않는다.
 
 ## Web closure
 
-External evidence가 `필요`이면 다음 조건을 충족하기 전에는 Web Evidence Loop를 완료하지 않는다.
+External evidence나 Browser Evidence 중 하나가 `필요`이면 선택한 조사 깊이에 해당하는 다음 조건을 충족하기 전에는 Web Evidence Loop를 완료하지 않는다.
 
 - [ ] 결정에 사용한 모든 핵심 주장에 출처·Browser 관찰 또는 명시적인 `근거 부족` 상태가 있다.
-- [ ] 중요한 일반 주장은 가능한 경우 독립 출처 둘 이상으로 확인했다.
-- [ ] 유일하고 권위 있는 공식 원문만 존재하면 불필요한 두 번째 자료를 강제하지 않았다.
-- [ ] 최소 한 번은 반대 근거·실패 사례를 탐색했다.
-- [ ] 자료의 날짜·버전·대상과 사용자 환경의 적용 가능성을 확인했다.
+- [ ] 간소화 기록이면 간소화 조건, 적용 범위와 추가 조사의 낮은 Verdict 영향을 기록했다.
+- [ ] 전체 기록이면 Claim map·Retrieval plan·Evidence matrix를 갱신하고, External evidence가 필요하면 접근 기록도 갱신했다.
+- [ ] External evidence가 필요하면 실제 본문과 Claim의 citation 연결, 날짜·버전·대상과 적용 가능성을 확인했다.
+- [ ] External evidence의 중요한 일반 주장은 가능한 경우 독립 출처 둘 이상으로 확인하고, 유일하고 권위 있는 원문이면 두 번째 자료와 반대 검색을 생략한 이유를 기록했다.
+- [ ] External evidence에서 의미 있는 반대 근거·실패 사례를 탐색했거나 간소화가 가능한 생략 이유를 기록했다.
 - [ ] 접근 실패 자료에는 시도한 공개 대체 경로, 남은 경로와 terminal reason이 있다.
-- [ ] 실제 본문과 주장 간 citation 연결을 확인했다.
-- [ ] 필요한 Browser Evidence의 승인 범위와 observation-only 경계를 지켰다.
+- [ ] Browser Evidence가 필요하면 사용자 승인 범위와 observation-only 경계를 지켰다.
 - [ ] Browser 관찰을 현재 계정·권한·시점 밖으로 일반화하지 않았다.
 - [ ] 남은 공백은 Lab, 범위 제외·연기 또는 검증 Build에 연결됐다.
 - [ ] 다음 검색이나 Browser 관찰이 Verdict를 바꿀 가능성이 낮은 이유가 기록됐다.

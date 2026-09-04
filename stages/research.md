@@ -181,7 +181,7 @@ Subagent 결과는 Verdict가 아니라 증거 입력이다. 메인 세션이 Id
 - Repository가 없거나 현재 질문과 무관하면 생략할 수 있다.
 - solution space가 좁고 현재 대화의 앵커링 위험이 없으면 Independent exploration을 생략할 수 있다. Subagent를 제안했지만 사용자가 현재 세션 조사를 선택하면 `생략`과 사용자 결정을 기록하고 메인 세션의 폭넓은 탐색을 External evidence에서 수행한다.
 - 외부 사실이나 solution space가 결론을 바꾸지 않으면 External evidence를 생략할 수 있다.
-- Browser Evidence는 External evidence가 필요한 Research에서 현재 로그인 계정·권한·JavaScript 렌더링 결과를 직접 확인해야 할 때만 필요로 판정한다. 공개 근거가 필요하지 않은 로컬 동작 관찰은 Browser Evidence로 확대하지 않고 Lab 필요성을 판단한다.
+- Browser Evidence는 External evidence와 별개로 판정한다. 현재 로그인 계정·권한·JavaScript 렌더링 결과만 확인하면 되는 Research는 External evidence를 생략하고 Browser Evidence만 필요로 둘 수 있다.
 - 실제 관찰이 Verdict나 Execution을 바꿀 수 있을 때만 Lab을 사용한다.
 - 증거원을 생략한 이유가 없으면 Research closure를 통과하지 않는다.
 
@@ -198,11 +198,14 @@ Subagent 결과는 Verdict가 아니라 증거 입력이다. 메인 세션이 Id
 9. 결과가 Idea와 충돌하면 사용자에게 변경 선택을 받는다.
 10. 다음 근거가 Verdict를 바꿀 수 있는지 다시 판단한다.
 
+External evidence나 Browser Evidence 중 하나가 `필요`이면 조사 전에 [Web Evidence Loop](web-evidence-loop.md)를 전부 읽고 현재 `R###`에 적용한다. 이 절차를 별도 `web | mixed | data` 모드나 사용자 선택 모드로 만들지 않는다.
+
 ### External evidence
 
-External evidence가 `필요`이면 검색 전에 [Web Evidence Loop](../references/web-evidence-loop.md)를 전부 읽고 현재 `R###`에 적용한다. 이 절차를 별도 `web | mixed | data` 모드나 고정 길이 보고서로 만들지 않는다.
+External evidence가 `필요`이면 Claim의 수, 결정 위험, 출처 충돌과 접근 난이도에 맞춰 간소화 기록 또는 전체 기록을 사용한다.
 
-- Claim map을 먼저 만들고 각 Claim의 출처 역할, 최신성, 적용 환경과 반증 조건을 연결한다.
+- 단일 권위 원문으로 직접 닫히는 저위험 Claim은 근거·본문 확인·적용 범위·생략 이유를 하나의 간소화 기록에 합칠 수 있다.
+- 복합 Claim, 후보 비교, 출처 충돌, 접근 실패나 중요한 공백이 있으면 Claim map을 먼저 만들고 전체 기록을 유지한다.
 - 접근 성공과 증거 성공을 분리하고 실제 본문과 Claim의 citation 연결을 확인한다.
 - 한 경로의 실패를 조사 전체의 실패로 확대하지 않고 관련 있는 공개 대체 경로, 실패 이유와 terminal reason을 기록한다.
 - Evidence matrix에서 Verdict 영향이 가장 큰 공백을 다음 대상으로 선택한다.
@@ -211,7 +214,7 @@ External evidence가 `필요`이면 검색 전에 [Web Evidence Loop](../referen
 
 ### Browser Evidence
 
-Browser Evidence가 `필요`이면 같은 [Web Evidence Loop](../references/web-evidence-loop.md)의 승인·observation-only·탭 보존·민감정보·산출물 계약을 따른다.
+Browser Evidence가 `필요`이면 [Web Evidence Loop](web-evidence-loop.md)의 승인·observation-only·탭 보존·민감정보·산출물 계약을 따른다. External evidence를 생략했어도 Browser-only 근거와 Web closure를 완결할 수 있다.
 
 - 일반 브라우저 멘션과 사용자가 지정한 로그인 탭의 권한을 구분한다.
 - 특정 탭 지정 없이 기존 로그인 탭을 조회·나열·임의 선택하지 않는다.
@@ -310,9 +313,9 @@ Execution에서 바꿀 Phase·Build
 - subagent 필요성을 판단하지 않았거나 제안에 대한 사용자 결정이 없다.
 - 승인된 subagent 결과를 메인 세션이 검증·정제하지 않았거나 한 Research에서 추가 승인 없이 둘 이상 호출했다.
 - 시험할 주장과 반증 조건이 연결되지 않는다.
-- 사용한 사실에 출처나 확인 날짜가 없다.
-- 반대 자료를 찾지 않았고 검색 범위도 적지 않았다.
-- External evidence가 필요한데 Claim map·Retrieval plan·접근 기록·Evidence matrix 중 하나가 없거나 Web closure를 통과하지 않았다.
+- 사용한 사실에 출처·Browser 관찰 또는 확인 날짜가 없다.
+- 전체 기록에서 반대 자료를 찾지 않았고 검색 범위도 적지 않았거나, 간소화 기록에서 반대·실패 점검의 생략 이유가 없다.
+- External evidence나 Browser Evidence가 필요한데 간소화 조건을 충족한 기록 또는 전체 기록의 Claim map·Retrieval plan·Evidence matrix가 없거나, External evidence 전체 기록에 공개 접근 기록이 없거나, Web closure를 통과하지 않았다.
 - 접근 실패 자료에 시도한 공개 대체 경로, terminal reason 또는 남은 관련 경로의 처리 이유가 없다.
 - 필수 Browser Evidence에 사용자 승인 범위가 없거나 관찰 불가·연결 중단 뒤 다음 행동이 없다.
 - Verdict 영향이 큰 `근거 부족` Claim이 남았는데 Lab, 범위 제외·연기 또는 검증 Build로 연결하지 않았다.
@@ -361,11 +364,14 @@ Execution에서 바꿀 Phase·Build
 ### 접근법 범주와 후보 비교
 ### 권장 방향·근거·신뢰도
 ### Lab에서 검증할 주장
-## Claim map
-## Retrieval plan
-## 접근 기록
+## Web Evidence
+### 조사 깊이와 이유
+### 간소화 Evidence (간소화 기록일 때)
+### Claim map (전체 기록일 때)
+### Retrieval plan (전체 기록일 때)
+### 접근 기록 (External evidence 전체 기록일 때)
 ## External evidence와 반대 근거
-## Evidence matrix와 gap loop
+## Evidence matrix와 gap loop (전체 기록일 때)
 ## Browser Evidence
 ### 사용자 승인 범위
 ### 관찰
