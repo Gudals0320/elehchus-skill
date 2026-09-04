@@ -61,9 +61,19 @@ Research 하나는 독립적인 결정 질문 하나를 다룬다.
 5. `execution.md`와 다른 `.elenchus` 문서의 기존 `research.md` 참조를 새 파일 경로로 갱신한다.
 6. 이전 완료 뒤 새 Research에는 다음 ID를 부여한다.
 
-## Intake와 neutral brief
+## Repository 기준선
 
-Idea의 확정 내용을 다음 구조로 줄여 Research 파일에 먼저 기록한다.
+Idea의 확정 내용을 intake로 사용하고 기술 후보를 탐색하기 전에 현재 질문과 관련된 저장소 사실을 읽기 전용으로 확인한다.
+
+- 관련 파일·심볼·설정·테스트와 현재 동작을 확인한다.
+- 관찰한 사실과 해석을 분리해 Research 파일에 기록한다.
+- neutral brief의 입력·출력·사용자 경험·제약을 바꿀 수 있는 사실을 우선한다.
+- Repository가 없거나 현재 질문과 무관하면 확인을 생략하고 이유를 기록한다.
+- 제품 파일을 수정하거나 Lab 실험을 수행하지 않는다.
+
+## Neutral brief
+
+Repository 기준선을 기록한 뒤 Idea의 확정 내용과 객관적인 저장소·환경 사실을 다음 구조로 줄인다.
 
 ```text
 중립 질문
@@ -82,10 +92,11 @@ Idea의 확정 내용을 다음 구조로 줄여 Research 파일에 먼저 기�
 - 필수 제약과 현재 환경만 neutral brief의 조건으로 사용한다.
 - 후보와 예시는 확정 방향처럼 쓰지 않고 후보 비교 전제에서도 제거한다.
 - 분류가 불명확하고 결과를 바꿀 수 있으면 사용자에게 확인한다.
+- Repository 기준선이나 사용자 답으로 입력·출력·사용자 경험·성공·실패 조건·제약이 바뀌면 neutral brief를 즉시 갱신한다.
 
 ## 독립 solution explorer
 
-메인 Elenchus 세션은 다음 중 하나가 성립하면 독립 solution explorer subagent가 결론의 신뢰도를 높일지 판단하고 사용자에게 먼저 제안한다.
+메인 Elenchus 세션은 Repository 기준선과 neutral brief가 일치하는지 다시 확인한 뒤, 다음 중 하나가 성립하면 독립 solution explorer subagent가 결론의 신뢰도를 높일지 판단하고 사용자에게 먼저 제안한다.
 
 - procedure·아키텍처·API·라이브러리 선택이 Execution을 크게 바꿀 수 있음
 - 가능한 접근법이 여러 개이고 현재 대화가 한 후보에 치우쳐 있음
@@ -111,6 +122,7 @@ Subagent 호출 | 현재 세션에서 조사 | Brief 수정
 - 사용자가 `Subagent 호출`을 선택한 경우에만 새 agent를 만든다.
 - `현재 세션에서 조사`를 선택하면 같은 Research에서 동일한 제안을 반복하지 않는다.
 - `Brief 수정`을 선택하면 사용자가 수정한 내용을 다시 보여 주고 승인받기 전에는 호출하지 않는다.
+- Subagent 승인 뒤 Repository 사실이나 입력·출력·사용자 경험·성공·실패 조건·제약이 달라지면 기존 승인을 확대하지 않는다. 수정한 brief를 다시 보여 주고 재승인받은 뒤 호출한다.
 
 ### 호출 계약
 
@@ -173,20 +185,15 @@ Subagent 결과는 Verdict가 아니라 증거 입력이다. 메인 세션이 Id
 
 ## 증거 루프
 
-1. 시험할 주장과 반증 조건을 적는다.
-2. Repository 기준선과 현재 알려진 근거를 기록한다.
-3. 독립 탐색 필요성을 판단하고 필요하면 사용자에게 subagent를 제안한다.
-4. 승인된 독립 탐색과 External evidence를 수집한다.
-5. Lab이 필요한 주장을 분리하고 예상 방향과 채택·폐기 기준을 먼저 적는다.
-6. 결과, 반대 근거와 적용 한계를 갱신한다.
-7. 결과가 Idea와 충돌하면 사용자에게 변경 선택을 받는다.
-8. 다음 근거가 Verdict를 바꿀 수 있는지 다시 판단한다.
-
-### Repository
-
-- 관련 파일·심볼·설정·테스트와 현재 동작을 먼저 확인한다.
-- 관찰한 사실과 해석을 구분한다.
-- 제품 파일은 읽기 전용으로 다루며 Research 중 제품 변경을 근거로 만들지 않는다.
+1. 현재 질문과 관련된 Repository 기준선을 읽기 전용으로 확인한다.
+2. 기준선과 Idea intake로 neutral brief를 확정한다.
+3. 시험할 주장과 반증 조건을 적는다.
+4. 독립 탐색 필요성을 판단하고 필요하면 사용자에게 subagent를 제안한다.
+5. 승인된 독립 탐색과 External evidence를 수집한다.
+6. Lab이 필요한 주장을 분리하고 예상 방향과 채택·폐기 기준을 먼저 적는다.
+7. 결과, 반대 근거와 적용 한계를 갱신한다.
+8. 결과가 Idea와 충돌하면 사용자에게 변경 선택을 받는다.
+9. 다음 근거가 Verdict를 바꿀 수 있는지 다시 판단한다.
 
 ### External evidence
 
@@ -316,6 +323,7 @@ Execution에서 바꿀 Phase·Build
 - 확인 날짜: {날짜}
 - 영향: Phase 후보 | Phase #N | Build #N
 
+## Repository 기준선
 ## Neutral brief
 ### 입력
 ### 출력
@@ -328,7 +336,6 @@ Execution에서 바꿀 Phase·Build
 ## 사용자 기술 언급 분류
 ## 증거 계획
 ## 시험한 주장과 반증 조건
-## Repository 기준선
 ## 독립 solution explorer
 ### 제안 이유와 사용자 결정
 ### 승인된 neutral brief

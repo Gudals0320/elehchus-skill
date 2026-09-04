@@ -188,6 +188,38 @@
 - 입력: Execution closure 시도
 - 기대 상태: 관련 범위를 제외·연기하거나 검증 Build로 전환하기 전에는 closure를 통과하지 않는다.
 
+## Research 컨텍스트와 brief 순서
+
+### 현재·직접 참조된 Research만 로딩
+
+- 사전 상태: index에 확정 R001·R003, 작성 중 R002가 있고 현재 `execution.md`는 R001을 직접 참조함
+- 입력: R002 Research 재개
+- 기대 상태: `idea.md`와 index를 먼저 읽고 작성 중 R002와 직접 참조된 R001만 읽으며 R003은 읽지 않는다.
+
+### 과거 Research와 Lab 자동 로딩 금지
+
+- 사전 상태: 여러 확정 `R###` 파일과 이전 `.elenchus/lab/R###/` 디렉터리가 남아 있음
+- 입력: 새 Idea 또는 Research 시작
+- 기대 상태: 관련 없는 과거 Research와 Lab을 자동으로 읽지 않으며 사용자가 ID·경로를 지정하거나 현재 단계가 직접 참조한 경우에만 해당 Research를 읽는다.
+
+### Repository 기준선 선행
+
+- 사전 상태: Brownfield 프로젝트에서 새 Research를 시작함
+- 입력: neutral brief 작성
+- 기대 상태: 후보 탐색 전에 관련 파일·설정·테스트·현재 동작을 읽기 전용으로 확인하고 관찰과 해석을 분리한 뒤 객관적 사실을 포함해 brief를 확정한다.
+
+### Repository 생략
+
+- 사전 상태: 저장소가 없거나 현재 조사 질문과 저장소가 무관함
+- 입력: Repository 기준선 준비
+- 기대 상태: 저장소 사실을 추정하지 않고 Repository를 생략한 이유를 기록한 뒤 Idea와 확인된 환경 사실로 neutral brief를 작성한다.
+
+### 승인 후 brief 변경
+
+- 사전 상태: 사용자가 solution explorer 호출을 승인한 뒤 Repository 사실 또는 입력·출력·UX·성공·실패 조건·제약이 변경됨
+- 입력: subagent 호출 시도
+- 기대 상태: 기존 승인을 확대하지 않고 변경된 brief를 다시 보여 주며 사용자 재승인 전에는 호출하지 않는다.
+
 ## 독립 solution explorer
 
 ### 후보를 제거한 neutral brief
