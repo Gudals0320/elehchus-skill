@@ -2,7 +2,7 @@
 name: elenchus
 description: $elenchus 또는 skill:elenchus로 명시적으로 시작하는 한국어 계획 인터뷰. 사용자 의도와 필요한 근거를 확인해 Phase·Build 실행 계획을 합의하고, 완료 후 일반 요청으로 돌아간다.
 metadata:
-  version: "1.0.0"
+  version: "0.3.0"
   repository: "https://github.com/Gudals0320/elehchus-skill"
 ---
 

@@ -165,7 +165,7 @@ class PackageValidationTests(unittest.TestCase):
         self.assertIn("stages/web-evidence-loop.md", str(raised.exception))
 
     def test_current_package_validates(self) -> None:
-        release_update._validate_package(REPO_ROOT, "1.0.0")
+        release_update._validate_package(REPO_ROOT, "0.3.0")
 
     def test_current_layout_remains_compatible_with_v021_updater(self) -> None:
         self.assertFalse((REPO_ROOT / "references").exists())
