@@ -202,25 +202,11 @@ External evidence나 Browser Evidence 중 하나가 `필요`이면 조사 전에
 
 ### External evidence
 
-External evidence가 `필요`이면 Claim의 수, 결정 위험, 출처 충돌과 접근 난이도에 맞춰 간소화 기록 또는 전체 기록을 사용한다.
-
-- 단일 권위 원문으로 직접 닫히는 저위험 Claim은 근거·본문 확인·적용 범위·생략 이유를 하나의 간소화 기록에 합칠 수 있다.
-- 복합 Claim, 후보 비교, 출처 충돌, 접근 실패나 중요한 공백이 있으면 Claim map을 먼저 만들고 전체 기록을 유지한다.
-- 접근 성공과 증거 성공을 분리하고 실제 본문과 Claim의 citation 연결을 확인한다.
-- 한 경로의 실패를 조사 전체의 실패로 확대하지 않고 관련 있는 공개 대체 경로, 실패 이유와 terminal reason을 기록한다.
-- Evidence matrix에서 Verdict 영향이 가장 큰 공백을 다음 대상으로 선택한다.
-- subagent가 제시한 결정적 사실과 출처도 메인 세션이 직접 확인하고 적용 범위를 다시 판단한다.
-- Web closure를 통과하기 전에는 External evidence를 완료로 처리하지 않는다.
+[Web Evidence Loop](web-evidence-loop.md)의 조사 깊이·본문 검증·접근 기록·gap loop와 Web closure를 따른다. subagent가 제시한 결정적 사실과 출처도 메인 세션이 직접 확인해 적용 범위를 판단한다.
 
 ### Browser Evidence
 
-Browser Evidence가 `필요`이면 [Web Evidence Loop](web-evidence-loop.md)의 승인·observation-only·탭 보존·민감정보·산출물 계약을 따른다. External evidence를 생략했어도 Browser-only 근거와 Web closure를 완결할 수 있다.
-
-- 일반 브라우저 멘션과 사용자가 지정한 로그인 탭의 권한을 구분한다.
-- 특정 탭 지정 없이 기존 로그인 탭을 조회·나열·임의 선택하지 않는다.
-- 같은 탭·Claim의 승인된 비영구적 관찰만 메인 Elenchus 세션이 수행한다.
-- Browser 관찰은 현재 계정·권한·시점에만 적용하고 독립 공개 출처로 계산하지 않는다.
-- 필수 관찰을 할 수 없으면 다른 탭으로 대체하지 않고 `결론 보류`와 다음 행동을 기록한다.
+[Web Evidence Loop의 Browser 계약](web-evidence-loop.md#browser-evidence)에 따라 메인 세션이 사용자가 지정한 탭·Claim만 관찰한다. 승인·관찰 경계·탭 보존·민감정보·실패 처리와 Web closure는 그 문서에서 관리한다. External evidence를 생략했어도 Browser-only 근거로 Web closure를 완결할 수 있다.
 
 ## Lab
 
@@ -279,12 +265,7 @@ Lab은 문서와 저장소 분석만으로 판정할 수 없고 실제 관찰이
 
 ## 내부 검토 관점
 
-- researcher: 출처, 반대 자료와 적용 범위를 확인한다.
-- contrarian: 반대 결과가 사실일 때 Verdict가 바뀌는지 본다.
-- simplifier: 추가 조사 없이 결론 가능한지, 조사 범위를 줄일 수 있는지 본다.
-- architect: 근거가 Idea나 Execution의 구성요소·책임·연동을 바꾸는지 본다.
-
-contrarian은 메인 세션의 내부 관점이며 별도 critic 역할이나 독립 산출물로 만들지 않는다.
+[공통 질문 선택의 내부 관점](../SKILL.md#2-다음-질문-선택)을 Verdict에 적용한다. 출처·반대 자료·적용 범위, 추가 조사가 결론을 바꿀 가능성, Idea·Execution의 경계와 순서에 미치는 영향을 검사한다.
 
 ## Verdict
 
