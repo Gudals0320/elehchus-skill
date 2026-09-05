@@ -4,6 +4,8 @@
 
 `stages/research.md`의 증거 계획에서 External evidence나 Browser Evidence 중 하나가 `필요`일 때 이 문서를 읽고 현재 `R###`에 적용한다. Web Evidence Loop는 별도 Research 모드나 새 보고서 형식이 아니라 필요한 web·Browser 근거를 닫기 위한 실행 계약이다.
 
+조사 자체를 시작할 수 없는 조건은 [Research의 대기 기록](research.md#증거-루프)으로 남긴다. 이는 아래 간소화 Evidence나 Web closure를 통과한 상태가 아니다.
+
 - [`insane-search`](https://github.com/fivetaku/insane-search)에서 가벼운 공개 경로부터 단계적으로 시도하고, 접근 성공을 본문으로 검증하며, 미시도 경로와 terminal reason을 남기는 원칙만 사용한다.
 - [`insane-research`](https://github.com/fivetaku/insane-research)에서 질문 분해, 근거 공백 중심 반복, 독립 출처 교차 확인, citation 연결과 completeness 확인 원칙만 사용한다.
 - 두 프로젝트의 코드·플러그인·다중 agent 구조·고정 보고서 형식·스크래핑 엔진을 가져오지 않는다.
@@ -215,6 +217,8 @@ Browser Evidence는 [OpenAI 브라우저 확장 문서](https://learn.chatgpt.co
 - 지정 Claim을 확인하기 위한 화면 전환
 - 화면에 표시된 값과 API·문서 결과 비교
 - DOM·접근성 트리·렌더링 결과 확인
+
+메뉴 이름만으로 비영구적 동작을 판정하지 않는다. 필터·정렬처럼 보여도 서버 설정을 저장할 수 있다. 현재 도구와 화면에서 외부 상태를 바꾸지 않음을 확인할 수 없으면 동작을 실행하지 말고 이미 보이는 정보·mock·사용자의 수동 확인을 사용한다. 필요한 기능·스키마·권한의 확인과 미지원 처리는 [Research 실행 환경 확인](research.md#실행-환경-확인)을 따른다.
 
 공개 링크는 로그인 탭의 승인을 승계하지 않는 별도 임시 탭에서 공개 browsing으로 열 수 있다. 그 탭이나 다른 도메인의 로그인 상태를 Browser Evidence로 사용하려면 다시 승인받는다.
 
