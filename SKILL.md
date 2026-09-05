@@ -12,7 +12,7 @@ metadata:
 
 새 Codex 작업에서 Elenchus에 최초 진입할 때 첫 질문이나 문서 작성 전에 `scripts/release_update.py --check`를 일반 샌드박스에서 한 번 실행해 최신 정식 GitHub Release를 확인한다. 같은 작업의 후속 답변과 명시적 재진입에서는 다시 확인하지 않는다.
 
-- 현재 버전 이상이면 별도 질문 없이 Elenchus를 시작한다.
+- 설치 버전이 최신 Release 이상이면 별도 질문 없이 Elenchus를 시작한다.
 - 출력 JSON이 `permission_required`와 `exit_code: 2`를 반환하면 동일한 `--check` 명령에 필요한 네트워크 권한 상승을 요청해 한 번만 재시도한다. 셸 실행 도구가 바깥 종료코드를 일반 실패로 표시해도 JSON 상태를 우선한다.
 - 권한 상승이 거절되거나 재시도도 실패하면 이유를 한 줄로 알리고 현재 버전으로 Elenchus를 계속한다. 같은 작업에서 다시 확인하거나 권한을 재요청하지 않는다.
 - 출력 JSON의 `unavailable`과 `exit_code: 1`은 GitHub 응답·DNS·기타 확인 실패다. 권한 상승으로 재시도하지 않고 이유를 한 줄로 알린 뒤 현재 버전으로 계속한다.
