@@ -111,6 +111,12 @@ Elenchus는 새 Codex 작업에서 시작될 때 최신 정식 Release를 한 �
 
 Elenchus는 아이디어와 실행 계획을 확정하는 데서 끝난다. `[Elenchus · 진행 중]`인 동안에는 제품 코드 구현과 개발 진행 추적을 수행하지 않는다. `[Elenchus · 완료]` 응답 뒤에는 상태 표식을 제거하고 같은 작업의 후속 요청을 일반 모드로 처리한다.
 
+## 개발 검증
+
+기존 Python 패키지·업데이트 검사는 `python -B -m unittest discover -s tests`로 실행한다. 실제 대화 동작은 [평가 절차](tests/evaluation.md)와 [합성 입력](tests/evaluation-fixtures.md)으로 재실행할 수 있다.
+
+[평가 결과](tests/evaluation-results.md)는 동작 판정과 효용·비용 비교를 구분하며, [실행 기록](tests/evaluation-records.md)에 응답·호출·파일 변화를 연결한다. 시나리오 목록, 실제 모델 실행, 모의 도구와 호스트 검증을 서로의 증거로 대체하지 않는다.
+
 ## 라이선스
 
 MIT License
