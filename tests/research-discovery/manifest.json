@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "protocol_version": "2026-09-07.1",
+  "baseline_revision": "132eea57d10baa68cd6482a9d0d2e170afd7357e",
+  "runtime_paths": ["SKILL.md", "stages", "scripts", "agents"],
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "controlled": {
+    "cases": ["casino", "photo-organizer"],
+    "variants": ["baseline", "candidate"],
+    "samples_per_cell": 2,
+    "max_responses": 8,
+    "max_seconds": 600,
+    "network": "disabled",
+    "delegation": "unavailable",
+    "evidence": "explicitly synthetic fixed raw documents",
+    "followups": "first full preferences packet, then the same scoped continuation"
+  },
+  "live": {
+    "cases": ["casino", "photo-organizer"],
+    "max_responses": 12,
+    "max_seconds": 1200,
+    "runner": "separately coordinated real web/subagent sessions",
+    "included_in_controlled_totals": false
+  },
+  "publication": {
+    "exclude": ["authentication", "user configuration", "hidden reasoning"],
+    "preserve": ["input hashes", "source hashes", "visible replies", "public tool events", "artifacts", "elapsed time", "usage", "timeouts and errors"]
+  }
+}
