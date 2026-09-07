@@ -21,8 +21,11 @@ import zipfile
 REPOSITORY = "Gudals0320/elehchus-skill"
 API_ROOT = f"https://api.github.com/repos/{REPOSITORY}"
 USER_AGENT = "elenchus-release-updater"
-SEMVER_PATTERN = re.compile(r"^v?(\d+)\.(\d+)\.(\d+)$")
-VERSION_PATTERN = re.compile(r'^\s*version:\s*["\']?(\d+\.\d+\.\d+)["\']?\s*$', re.MULTILINE)
+SEMVER_PATTERN = re.compile(
+    r"^v?(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)"
+    r"(?:-([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?$"
+)
+VERSION_PATTERN = re.compile(r'^\s*version:\s*["\']?([0-9][^\s"\']*)["\']?\s*$', re.MULTILINE)
 NAME_PATTERN = re.compile(r"^\s*name:\s*elenchus\s*$", re.MULTILINE)
 EXIT_OK = 0
 EXIT_ERROR = 1
@@ -88,14 +91,34 @@ def _package_version(root: Path) -> str:
     match = VERSION_PATTERN.search(frontmatter)
     if not match:
         raise UpdateError("SKILL.md metadata.version을 찾을 수 없습니다.")
-    return match.group(1)
+    version = match.group(1)
+    _semver(version)
+    return version
 
 
-def _semver(value: str) -> tuple[int, int, int]:
+def _semver(value: str) -> tuple:
     match = SEMVER_PATTERN.fullmatch(value.strip())
     if not match:
         raise UpdateError(f"지원하지 않는 버전 형식입니다: {value}")
-    return tuple(int(part) for part in match.groups())
+    major, minor, patch, prerelease = match.groups()
+    identifiers = []
+    for part in prerelease.split(".") if prerelease else []:
+        if part.isdigit():
+            if len(part) > 1 and part.startswith("0"):
+                raise UpdateError(f"지원하지 않는 버전 형식입니다: {value}")
+            identifiers.append((0, int(part)))
+        else:
+            identifiers.append((1, part))
+    # Stable follows every prerelease of the same core version. Numeric
+    # identifiers sort numerically and before nonnumeric identifiers.
+    return (int(major), int(minor), int(patch), int(prerelease is None), tuple(identifiers))
+
+
+def _require_stable_release(release: dict[str, Any]) -> None:
+    if release.get("draft") or release.get("prerelease"):
+        raise UpdateError("정식 Release만 확인하거나 설치할 수 있습니다.")
+    if not _semver(str(release.get("tag_name", "")))[3]:
+        raise UpdateError("prerelease 버전 태그는 정식 업데이트 대상이 아닙니다.")
 
 
 def _request_json(url: str) -> dict[str, Any]:
@@ -122,15 +145,13 @@ def _request_json(url: str) -> dict[str, Any]:
 
 def _latest_release() -> dict[str, Any]:
     release = _request_json(f"{API_ROOT}/releases/latest")
-    if release.get("draft") or release.get("prerelease"):
-        raise UpdateError("최신 Release가 정식 배포 상태가 아닙니다.")
+    _require_stable_release(release)
     return release
 
 
 def _release_by_tag(tag: str) -> dict[str, Any]:
     release = _request_json(f"{API_ROOT}/releases/tags/{quote(tag, safe='')}")
-    if release.get("draft") or release.get("prerelease"):
-        raise UpdateError("정식 Release만 설치할 수 있습니다.")
+    _require_stable_release(release)
     if release.get("tag_name") != tag:
         raise UpdateError("요청한 tag와 GitHub Release가 일치하지 않습니다.")
     return release
@@ -142,7 +163,7 @@ def check_release(root: Path) -> dict[str, Any]:
     tag = str(release.get("tag_name", ""))
     latest_tuple = _semver(tag)
     current_tuple = _semver(current)
-    latest = ".".join(str(part) for part in latest_tuple)
+    latest = ".".join(str(part) for part in latest_tuple[:3])
     return {
         "status": "update_available" if latest_tuple > current_tuple else "up_to_date",
         "current_version": current,
@@ -258,7 +279,7 @@ def install_release(root: Path, tag: str) -> dict[str, Any]:
     current_tuple = _semver(current)
     release = _release_by_tag(tag)
     target_tuple = _semver(tag)
-    target_version = ".".join(str(part) for part in target_tuple)
+    target_version = ".".join(str(part) for part in target_tuple[:3])
     if target_tuple <= current_tuple:
         raise UpdateError(f"현재 버전보다 새로운 Release만 설치할 수 있습니다: {current} → {target_version}")
 

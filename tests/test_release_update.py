@@ -145,7 +145,96 @@ class MainExitCodeTests(unittest.TestCase):
         self.assertEqual(emit.call_args.args[0]["status"], "error")
 
 
+class StableReleasePolicyTests(unittest.TestCase):
+    def test_prerelease_ordering(self) -> None:
+        ordered = ["1.0.0", "1.1.0-alpha", "1.1.0-alpha.1", "1.1.0-beta.1",
+                   "1.1.0-beta.2", "1.1.0-beta.10", "1.1.0-rc.1", "1.1.0", "1.1.1"]
+        self.assertEqual(sorted(ordered, key=release_update._semver), ordered)
+        self.assertEqual(release_update._semver("v1.1.0-beta.1"), release_update._semver("1.1.0-beta.1"))
+
+    def test_invalid_versions_rejected(self) -> None:
+        for value in ("1.1", "1.1.0-", "1.1.0-beta..1", "1.1.0-beta.01", "01.1.0", "1２.1.0", "1.1.0 beta", "1.1.0+build"):
+            with self.subTest(value=value), self.assertRaises(release_update.UpdateError):
+                release_update._semver(value)
+
+    def test_latest_endpoint_only_and_beta_not_suggested(self) -> None:
+        with TemporaryDirectory() as folder:
+            root = Path(folder)
+            _write_valid_package(root, "1.0.0")
+            for release in ({"tag_name": "v1.1.0-beta.1", "prerelease": True},
+                            {"tag_name": "v1.1.0-beta.1", "prerelease": False},
+                            {"tag_name": "v1.1.0", "draft": True}):
+                with patch.object(release_update, "_request_json", return_value=release) as request:
+                    with self.assertRaises(release_update.UpdateError):
+                        release_update.check_release(root)
+                    request.assert_called_once_with(release_update.API_ROOT + "/releases/latest")
+
+    def test_beta_installation_only_offered_newer_stable(self) -> None:
+        with TemporaryDirectory() as folder:
+            root = Path(folder)
+            _write_valid_package(root, "1.1.0-beta.1")
+            for tag, status in (("v1.0.0", "up_to_date"), ("v1.1.0", "update_available")):
+                with patch.object(release_update, "_request_json", return_value={"tag_name": tag}):
+                    result = release_update.check_release(root)
+                    self.assertEqual(result["status"], status)
+                    self.assertEqual(result["current_version"], "1.1.0-beta.1")
+                    self.assertEqual(result["latest_version"], tag[1:])
+
+    def test_explicit_beta_install_rejected_before_download(self) -> None:
+        with TemporaryDirectory() as folder:
+            root = Path(folder)
+            _write_valid_package(root, "1.0.0")
+            for flagged in (True, False):
+                with patch.object(release_update, "_request_json", return_value={"tag_name": "v1.1.0-beta.1", "prerelease": flagged}), \
+                     patch.object(release_update, "_download_archive") as download:
+                    with self.assertRaises(release_update.UpdateError):
+                        release_update.install_release(root, "v1.1.0-beta.1")
+                    download.assert_not_called()
+
+    def test_stable_upgrade_from_beta_and_downgrade_rejection(self) -> None:
+        with TemporaryDirectory() as folder:
+            root = Path(folder) / "installed"
+            new = Path(folder) / "downloaded"
+            _write_valid_package(root, "1.1.0-beta.1")
+            _write_valid_package(new, "1.1.0")
+            with patch.object(release_update, "_request_json", return_value={"tag_name": "v1.1.0"}), \
+                 patch.object(release_update, "_download_archive", return_value=new):
+                result = release_update.install_release(root, "v1.1.0")
+                self.assertEqual(result["current_version"], "1.1.0")
+                self.assertEqual(release_update._package_version(root), "1.1.0")
+            with patch.object(release_update, "_request_json", return_value={"tag_name": "v1.0.0"}), \
+                 patch.object(release_update, "_download_archive") as download:
+                with self.assertRaises(release_update.UpdateError):
+                    release_update.install_release(root, "v1.0.0")
+                download.assert_not_called()
+
+    def test_tag_mismatch_rejected(self) -> None:
+        with patch.object(release_update, "_request_json", return_value={"tag_name": "v1.2.0"}):
+            with self.assertRaises(release_update.UpdateError):
+                release_update._release_by_tag("v1.1.0")
+
+    def test_replacement_failure_restores_installed_bytes(self) -> None:
+        with TemporaryDirectory() as folder:
+            root = Path(folder) / "installed"
+            new = Path(folder) / "downloaded"
+            _write_valid_package(root, "1.1.0-beta.1")
+            _write_valid_package(new, "1.1.0")
+            before = {p.relative_to(root): p.read_bytes() for p in root.rglob("*") if p.is_file()}
+            with patch.object(release_update, "_validate_package", side_effect=release_update.UpdateError("validation failure")):
+                with self.assertRaises(release_update.UpdateError):
+                    release_update._replace_package(root, new, "1.1.0")
+            self.assertEqual(before, {p.relative_to(root): p.read_bytes() for p in root.rglob("*") if p.is_file()})
+
+
 class PackageValidationTests(unittest.TestCase):
+    def test_beta_package_version_must_match_exactly(self) -> None:
+        with TemporaryDirectory() as folder:
+            root = Path(folder)
+            _write_valid_package(root, "1.1.0-beta.1")
+            release_update._validate_package(root, "1.1.0-beta.1")
+            with self.assertRaises(release_update.UpdateError):
+                release_update._validate_package(root, "1.1.0")
+
     def test_validate_package_accepts_web_evidence_guide(self) -> None:
         with TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
@@ -165,7 +254,7 @@ class PackageValidationTests(unittest.TestCase):
         self.assertIn("stages/web-evidence-loop.md", str(raised.exception))
 
     def test_current_package_validates(self) -> None:
-        release_update._validate_package(REPO_ROOT, "1.0.0")
+        release_update._validate_package(REPO_ROOT, "1.1.0-beta.1")
 
     def test_current_layout_remains_compatible_with_v021_updater(self) -> None:
         self.assertFalse((REPO_ROOT / "references").exists())

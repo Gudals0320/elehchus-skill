@@ -2,7 +2,7 @@
 name: elenchus
 description: $elenchus 또는 skill:elenchus로 명시적으로 시작하는 한국어 계획 인터뷰. 사용자 의도와 필요한 근거를 확인해 Phase·Build 실행 계획을 합의하고, 완료 후 일반 요청으로 돌아간다.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0-beta.1"
   repository: "https://github.com/Gudals0320/elehchus-skill"
 ---
 
@@ -26,7 +26,9 @@ metadata:
 - `좋아`, `진행`, `확정`, `계속`, `이대로 해`, `해줘`는 제시한 현재 질문·내용의 답이다. 보이지 않은 내용, 재진입, 구현·도구 권한으로 확대하지 않는다. 계획 합의와 도구 실행 권한은 별개다.
 - `중단`·`취소`가 기능·Build·선택지를 가리키면 범위 변경이다. 인터뷰 자체를 가리킬 때만 현재 문서를 `중단됨`으로 바꾸고 완료 표식과 확정 결정·미해결 사항·미승인 제안·다음 질문을 남긴다.
 
-## 최초 Release 확인
+## 최초 정식 Release 확인
+
+업데이트 확인·안내·설치는 정식 Release만 대상으로 한다. prerelease는 명시적 수동 설치로만 사용하며, 베타 설치본에서도 더 새로운 정식 버전만 안내한다.
 
 새 작업에서 최초 진입할 때 첫 질문·문서 작성 전에 `scripts/release_update.py --check`를 일반 sandbox에서 한 번 실행한다. 후속 답변·재진입에서는 반복하지 않는다.
 

@@ -50,6 +50,16 @@ py "$env:USERPROFILE\.codex\skills\.system\skill-installer\scripts\install-skill
 
 기존 `~/.codex/skills/elenchus`가 있으면 설치 스크립트는 덮어쓰지 않고 중단한다.
 
+### 1.1.0-beta.1 시험 배포
+
+Research 개선은 `codex/research-discovery-12` 브랜치의 `v1.1.0-beta.1` prerelease로 제공한다. main의 정식 버전은 `1.0.0`이며 이 기능은 아직 병합하지 않았다. [베타 릴리스](https://github.com/Gudals0320/elehchus-skill/releases/tag/v1.1.0-beta.1)의 태그 소스를 사용하거나 위 설치 명령에 `--ref v1.1.0-beta.1`을 추가한다. 기존 설치본이 있다면 스킬 검색 경로 밖에 백업한 뒤 명시적으로 교체하고 새 작업에서 호출한다.
+
+최초 업데이트 확인과 `scripts/release_update.py --install`은 **정식 릴리스만** 대상으로 한다. 베타를 자동 안내·설치하지 않으며, 베타 설치본에서도 자신보다 새로운 정식 버전만 안내한다. 예를 들어 `1.1.0-beta.1`에서 정식 `1.0.0`으로 내려가지 않고, 정식 `1.1.0`이 나오면 업데이트를 제안한다. 베타 설치에 `--install`을 사용하지 않는다.
+
+과거 `3.0.0`은 정식 버전 번호 오타로 `1.0.0`으로 정정했다. 당시 설치본은 낮은 번호를 업데이트로 인식하지 않으므로 백업 후 정정 버전 또는 명시적으로 선택한 베타를 수동 재설치한다.
+
+고정 자료의 기본 비교 8회는 모두 결과를 전달했지만, 실제 웹·시각 검증의 남은 조건과 일관된 품질·효율 우위의 근거 부족은 남아 있다. [평가 결과](tests/research-discovery/untimed/RESULTS.md)를 확인한 뒤 시험 사용한다.
+
 ## 사용
 
 새 세션을 시작하거나 완료된 세션에 재진입할 때 명시적으로 호출한다. 호출 토큰은 대소문자를 구분하지 않는다.
