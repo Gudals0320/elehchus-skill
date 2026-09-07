@@ -1,0 +1,6 @@
+2026-09-07T09:03:40.051311Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+2026-09-07T09:05:27.284920Z ERROR codex_core::tools::router: error=apply_patch verification failed: Failed to find expected lines in <fixture>\.elenchus\idea.md:
+下記
+2026-09-07T09:05:43.287915Z ERROR codex_core::tools::router: error=apply_patch verification failed: Failed to find expected lines in <fixture>\.elenchus\idea.md:
+| T1. 세 게임의 규칙·카지노 로직 | 활성 | 룰렛·바카라·블랙잭의 진행과 결과·정산, 카드게임 6덱 | 사용자 요청: “룰렛 바카라 블랙잭”, “카드게임은 6덱 구성” |
+| T2. 터미널 싱글 플레이 | 활성 | 초기 자금 설정 → 플레이 → 파산 시 게임 오버 또는 계속 진행 | 사용자 요청: “터미널 기반 구현 -> 애니메이션 구현된 웹앱 게임 구현” |

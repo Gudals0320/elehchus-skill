@@ -1,0 +1,36 @@
+{
+  "run": "untimed-candidate-v2-casino-sample2",
+  "reviewed_utc": "2026-09-07T09:12:59.649060+00:00",
+  "reviewed_turn": 2,
+  "first_comparison_turn": 2,
+  "first_comparison_evidence": "turn-02/answer.md",
+  "execution_outcome": "research_result_delivered",
+  "scope": "문서 범위 비교·조건부 제안 전달. 실제 시각·제작 검증과 전체 Research closure는 보류",
+  "published_answer_sha256": "5dc195b29be82cad4a73e3b191d0234506cc4ca6cff5a9c13e25e07163c9845f",
+  "criteria": {
+    "approach_comparison": "충족: 3D+HTML·이미지/CSS·인접 테이블·홀/캐릭터의 차이와 적용 판단",
+    "evidence_fit": "부분 충족: 합성 원문·재게시·1.4/2.0 계약·시각 부재·측정 구간 차이 구분. 직접 화면·실행은 미관찰",
+    "applicability": "충족: 규칙/상태와 표현, 현재 확정된 블랙잭 변화, 휠 각도와 공 궤도 차이, 이용 허가·유지보수 한계",
+    "decision_impact": "충족: 조건부 우선 비교안과 제외·보류, 미승인 구도·조작·엔진 선택을 보존",
+    "closure_reason": "충족: 문서 결과 전달과 전체 검증 보류를 분리하고 추가 관찰이 필요한 이유 제시"
+  },
+  "evidence": [
+    "turn-02/answer.md",
+    "turn-02/artifacts/.elenchus/research/R001-table-presentation.md"
+  ],
+  "remaining_checks": [],
+  "final_checks": {
+    "artifact_collection": "complete",
+    "product_unchanged": true,
+    "out_of_plan_changes": [],
+    "processing_seconds": 642.578,
+    "operator_wait_seconds": 69.562,
+    "cleanup": {
+      "status": "retained_on_error",
+      "started_utc": "2026-09-07T09:13:00.023321+00:00",
+      "finished_utc": "2026-09-07T09:13:00.023321+00:00",
+      "error": "[WinError 5] 액세스가 거부되었습니다: '<user>\\\\AppData\\\\Local\\\\Temp\\\\elenchus-research-eval-f9q9_lzg\\\\project\\\\.elenchus\\\\research\\\\index.md'",
+      "retained_temp": "<os-temp>/elenchus-research-eval-f9q9_lzg"
+    }
+  }
+}

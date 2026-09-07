@@ -1,0 +1,5 @@
+{
+  "action": "stop",
+  "outcome": "research_result_delivered",
+  "reason": "최종 Research 응답에서 저장 접근·오프라인/SSD 조건·Indexlens 버전과 원천 중복·날짜/중복/파일 적용 경계·실제 검증 공백을 전달했다. 다음 제품 선택은 미정으로 남겨 비교 결과 전달을 확인한다."
+}

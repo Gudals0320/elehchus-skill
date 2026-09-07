@@ -1,0 +1,305 @@
+{
+  "kind": "controlled",
+  "status": "operator_stopped",
+  "variant": "candidate",
+  "case": "photo-organizer",
+  "sample": 2,
+  "snapshot": {
+    "schema_version": 1,
+    "variant": "candidate",
+    "label": "candidate-v2",
+    "revision": "655f1c53342abdc8254f354ded168ebf17c6bf22",
+    "files": {
+      "SKILL.md": "1379018328aab9de08514659010faa464e6eca19465d34fdd44e5706a7df70c4",
+      "agents/openai.yaml": "d06dc00cbc87ee576a54a9442f6dc97f2496a22e9a9bff7caf3f8230524357cd",
+      "scripts/release_update.py": "e2702947f6914344d7a7ab6fa96b2c494cfc1496f99ca9707d56c348fe89a046",
+      "stages/discovery.md": "30ce4cd891f0e342b58f239a8ce822d2d7a8c98a6907aad4c494b8f5da84edf8",
+      "stages/execution.md": "04711713e1a6c17d0310d95fcaa234c37d8c59e5df22ccbca43597df0c28402c",
+      "stages/idea.md": "abcd6a105a17e2908bd596b8cd6ff71963cd287391a9c52fa86fb8195616bf14",
+      "stages/research.md": "06583ad7d17aa56108718471c1e82e827f06811a62a1f8e96fe0c1ef856cd260",
+      "stages/web-evidence-loop.md": "5dd02265d4c1833b3585c3902a3142caf222d98db68eaafa53343454614855c1"
+    },
+    "source_sha256": "13de96a0bd8188edc207f99efa426a1aacf48f3f2a925b40470d72d9baf17e5a",
+    "head_revision": "655f1c53342abdc8254f354ded168ebf17c6bf22",
+    "normalized_lf_files": {
+      "SKILL.md": "fbd16f85d5fb817721443982d04be874d79054209171f2e0e68a66961ab12feb",
+      "agents/openai.yaml": "7ceb1a978de063e6a866d1a68c0b9f5ed2695481a251edb609e83436d8290714",
+      "scripts/release_update.py": "f6c53862b549ec3ec86031371bf70850a824d47861e545e6198124928cc8b6f2",
+      "stages/discovery.md": "b549925232009a3bb607600ca7fe0a45c1ac7a52fb32bdac194728b4da7279c5",
+      "stages/execution.md": "d4902a21b7b63c46b3060fc90fb5502b74433779c71a1a8f0d588b78fa011a78",
+      "stages/idea.md": "2486dc7891239871c090f56f32fa716f5223dea42dc80906196775cafe6497c9",
+      "stages/research.md": "7bee614b1c74b0724abbb3a77a8f139d6d6b7e0973617027e897d9feadb40ffe",
+      "stages/web-evidence-loop.md": "6b4a6dcf61e9e53cfbd14efe802aba60225cb82350fef1f8ca1431311599d626"
+    },
+    "manifest_sha256": "87a8d41311fe9e5a4acc7f05171a4617c7941e78895005ac341274f018a44d89",
+    "fixture_hashes": {
+      "casino/evidence/01-tablehaven-product.md": "1cb1efbbfe2fa95d45a8092fddb04a67579789e7909e52fca122270ecd560008",
+      "casino/evidence/02-tablehaven-developer.md": "d9c049d165f87375e482b75d56439fea7017248705efd7447bdb674767a29ce1",
+      "casino/evidence/03-arcade-weekly.md": "445b6068b63421046a68276c3219065fa8b257bd3d03c294b044d817bf4d1bc1",
+      "casino/evidence/04-flatfelt-manual.md": "8c2ca4a2cb9590fd59b053537c39250de75fb8063d867bfc9198a61f0019bdbb",
+      "casino/evidence/05-orbitroom-notes.md": "732dba63a2a6cd2256b7a1596651698ac499ce5f24f6970f838f0ce8d9cfe4e0",
+      "casino/evidence/06-pileplay-devlog.md": "903a39a64cea8050faba09508b781421a99476b8d8536e047d45e5ee9453bad5",
+      "casino/evidence/07-wheelkit-v1.md": "1fc3e76ea5b0bc98644cdd9f7df8d8bdaee6f4545eab07452d36b21889606b2c",
+      "casino/evidence/08-wheelkit-v2.md": "199b349cefe79bc9ce4979823ce254f17549eeed83df1679fb3d70d229422458",
+      "casino/evidence/README.md": "086b19e37c9d360f09d2eadccfe66b6cfbea81b909d72cde5bb041f2426f1de3",
+      "casino/preferences.md": "184ca38f9e0b0f54f8362f78a8d3756cb11f5c734ad17b84bf3406cfd592e6f6",
+      "casino/request.md": "aac0ee360f6ecada135df6f9b1d0ae4d596d609f8c5cb7888f9233d479192cf0",
+      "continuation.md": "c8b54845ef02c9b0c650c1150291b64de26d0255610719e4880380be020ed9d8",
+      "photo-organizer/evidence/01-pathframe-guide.md": "4ea3c72a71da93ed82d2fd02e62ccd8ff2d5ac6fe1172312143971ec8fa481f9",
+      "photo-organizer/evidence/02-pathframe-transaction.md": "1dd0b51877547106bba4dff9001b703efc25aa0dbb714cf9efe680384bfe72d0",
+      "photo-organizer/evidence/03-albumvault-guide.md": "9e6eb3b0e2dac906ddbc670039965e4f3e487b9c9b676caa1eda74db15e57a27",
+      "photo-organizer/evidence/04-indexlens-guide.md": "adf0c8e44a1aef8575aea5fdec78660164fa8001c1a6edff48019e3663b3876d",
+      "photo-organizer/evidence/05-photo-digest.md": "ab3e68f9f78d8b861222147bbe112b5d21c4c16f23e86b88f7ba777d3468a199",
+      "photo-organizer/evidence/06-indexlens-v3.md": "6426fe5e716f151e5d8cf654260a43a2a5ab5cb41c3985ddea730ce848138343",
+      "photo-organizer/evidence/07-pairboard-devlog.md": "8c99fad364899b0ed53d2c454c90e9ddc3b6fb56f83dad09bb0bd15990fbb37c",
+      "photo-organizer/evidence/08-metadata-notes.md": "7e63b334be3ab3710aaded6fda4a7832233c5c63a587f560dd4c39504cdb49f3",
+      "photo-organizer/evidence/README.md": "7cb7bd044324cf5bdd4dd77bcb375de88055c87bbbb675666ab152bd5e7f8b33",
+      "photo-organizer/preferences.md": "5f9ebd9d6646df77c03bbe2d53ff699212dbba8929d8425d454fbd16d204a9db",
+      "photo-organizer/request.md": "65090c64a41116500369515046848c8c1173276c48263df71b6bf6722820693d"
+    },
+    "fixtures_sha256": "78b53ae78a1ce4f5fa4d0e66b7bd327b01b2d096e56527feb03c1d6dc90653ac"
+  },
+  "cli_version": "codex-cli 0.153.4",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "runner_sha256": "63500f3c0f407b0db217a20e26b7963ffd0d45321b13d37a0a03600ad2c449ca",
+  "protocol_sha256": "b16a73d6b57e4afc42e2e2b65086db7596b177fb01fb063fc21de061aade63b5",
+  "started_utc": "2026-09-07T08:43:00.573328+00:00",
+  "limits": {
+    "max_responses": null,
+    "max_seconds": null
+  },
+  "operator_review": true,
+  "operator_wait_seconds": 82.078,
+  "turns": [
+    {
+      "number": 1,
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 422.687,
+      "input_sha256": "65090c64a41116500369515046848c8c1173276c48263df71b6bf6722820693d",
+      "preferences_delivered": false,
+      "published_input_sha256": "65090c64a41116500369515046848c8c1173276c48263df71b6bf6722820693d",
+      "answer_sha256": "6d5a9516db27bb9ab2e35cda93b0be0327c7df0402bb9634c83f77e4aa3f4f79",
+      "published_answer_sha256": "0712546f8b692aed539a2e084b64ea144ecf88148d148aae24ff986aa8d127ca",
+      "published_events_sha256": "0ef250b2686ea367ccc93424e70f8acfc3f376a7fdb8a0b2db930a7e7783970f",
+      "excluded_event_types": {},
+      "usage": [
+        {
+          "input_tokens": 317293,
+          "cached_input_tokens": 267136,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 12226,
+          "reasoning_output_tokens": 2346
+        }
+      ],
+      "tool_calls": 12,
+      "question_line_candidates": 1,
+      "command": [
+        "<user>/AppData/Local/OpenAI/Codex/bin/8e5b6932251c2c1c/codex.exe",
+        "-a",
+        "never",
+        "exec",
+        "--ignore-user-config",
+        "--ignore-rules",
+        "--ephemeral",
+        "--skip-git-repo-check",
+        "--sandbox",
+        "workspace-write",
+        "-c",
+        "web_search=\"disabled\"",
+        "-c",
+        "features.multi_agent=false",
+        "-m",
+        "gpt-6-astra",
+        "-c",
+        "model_reasoning_effort=\"xhigh\"",
+        "-C",
+        "<fixture>",
+        "--json",
+        "-o",
+        "<run-temp>\\final-1.md",
+        "-c",
+        "windows.sandbox=\"elevated\"",
+        "-c",
+        "skills.config=[{path=\"<user>/.codex/skills/elenchus/SKILL.md\",enabled=false},{path=\"<user>/.codex/skills/elenchus-benchmark/SKILL.md\",enabled=false},{path=\"<user>/.codex/skills/elenchus-test/SKILL.md\",enabled=false}]",
+        "-"
+      ],
+      "artifacts": {
+        ".elenchus/idea.md": {
+          "sha256": "de73af2803e39b576376972b1fe91b28f1abb463c65dd29268bb488347798be9",
+          "bytes": 5972,
+          "published": true,
+          "published_sha256": "de73af2803e39b576376972b1fe91b28f1abb463c65dd29268bb488347798be9"
+        },
+        ".elenchus/research/index.md": {
+          "sha256": "c95a35141355574cb5f27a9217f5c17a12e3af55ad0fa7f3f49edaa8cf74dc92",
+          "bytes": 326,
+          "published": true,
+          "published_sha256": "c95a35141355574cb5f27a9217f5c17a12e3af55ad0fa7f3f49edaa8cf74dc92"
+        },
+        ".elenchus/research/R001-photo-organization-approaches.md": {
+          "sha256": "9c3c5f5e692920935cff759ec9ed5bb39a4261035f2bb0768e4453eaae9c6a83",
+          "bytes": 21768,
+          "published": true,
+          "published_sha256": "9c3c5f5e692920935cff759ec9ed5bb39a4261035f2bb0768e4453eaae9c6a83"
+        }
+      },
+      "artifact_collection": "complete",
+      "reported_verdict_hint": false
+    },
+    {
+      "number": 2,
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 637.844,
+      "input_sha256": "89ee0cfbf95ca9825ca4531d27d9ca6e10f71890f8f058ce3e5449cc1e1e1ee1",
+      "preferences_delivered": true,
+      "published_input_sha256": "d27f9378836c3c394f38f08cd566e9a568fb740d6206b56dcef68e0405235373",
+      "answer_sha256": "2a33af5a00bec47b0e8aba4fcfa4aae1072af6fcae79bdde19f3046c7971f554",
+      "published_answer_sha256": "eb5f8f5835b02a7a120b23639e84adfb31e5cb60d4c4d9f4d609b1ff4fd3da28",
+      "published_events_sha256": "d0fa8be0e6c2075489c36c3005cab09ffb0d89b4dbe201079a766039bb236d4d",
+      "excluded_event_types": {},
+      "usage": [
+        {
+          "input_tokens": 799805,
+          "cached_input_tokens": 731904,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 18944,
+          "reasoning_output_tokens": 2475
+        }
+      ],
+      "tool_calls": 33,
+      "question_line_candidates": 1,
+      "command": [
+        "<user>/AppData/Local/OpenAI/Codex/bin/8e5b6932251c2c1c/codex.exe",
+        "-a",
+        "never",
+        "exec",
+        "--ignore-user-config",
+        "--ignore-rules",
+        "--ephemeral",
+        "--skip-git-repo-check",
+        "--sandbox",
+        "workspace-write",
+        "-c",
+        "web_search=\"disabled\"",
+        "-c",
+        "features.multi_agent=false",
+        "-m",
+        "gpt-6-astra",
+        "-c",
+        "model_reasoning_effort=\"xhigh\"",
+        "-C",
+        "<fixture>",
+        "--json",
+        "-o",
+        "<run-temp>\\final-2.md",
+        "-c",
+        "windows.sandbox=\"elevated\"",
+        "-c",
+        "skills.config=[{path=\"<user>/.codex/skills/elenchus/SKILL.md\",enabled=false},{path=\"<user>/.codex/skills/elenchus-benchmark/SKILL.md\",enabled=false},{path=\"<user>/.codex/skills/elenchus-test/SKILL.md\",enabled=false}]",
+        "-"
+      ],
+      "artifacts": {
+        ".elenchus/idea.md": {
+          "sha256": "5eaca87c481e2ce5228f0a24ee3f339287c72f9b27a1999d68fcf621455a13dd",
+          "bytes": 10242,
+          "published": true,
+          "published_sha256": "5eaca87c481e2ce5228f0a24ee3f339287c72f9b27a1999d68fcf621455a13dd"
+        },
+        ".elenchus/research/index.md": {
+          "sha256": "c95a35141355574cb5f27a9217f5c17a12e3af55ad0fa7f3f49edaa8cf74dc92",
+          "bytes": 326,
+          "published": true,
+          "published_sha256": "c95a35141355574cb5f27a9217f5c17a12e3af55ad0fa7f3f49edaa8cf74dc92"
+        },
+        ".elenchus/research/R001-photo-organization-approaches.md": {
+          "sha256": "477359e24771d54e6c58ec30454ecaadbe7a3c7fa9be210ee80c17685a3a0ed5",
+          "bytes": 31760,
+          "published": true,
+          "published_sha256": "477359e24771d54e6c58ec30454ecaadbe7a3c7fa9be210ee80c17685a3a0ed5"
+        }
+      },
+      "artifact_collection": "complete",
+      "reported_verdict_hint": false,
+      "operator_wait_seconds": 82.078,
+      "operator_control": {
+        "action": "stop",
+        "outcome": "research_result_delivered",
+        "reason": "최종 응답과 R001이 네 접근·버전 및 패치 종료·재게시·SSD 정보와 원본 비교의 차이·날짜/후보/파일 안전성과 후속 검증을 전달했다. 합성 비교 결론과 실제 제품/실행 검증 보류를 명확히 구분했다."
+      }
+    }
+  ],
+  "quality_verdict": "not_automatically_graded",
+  "digest_basis": {
+    "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+    "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+    "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+    "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+    "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+    "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+  },
+  "host_read_setup": {
+    "status": "host_read_ace_prepared",
+    "scope": "temporary project root, inheritable host read only",
+    "before_model_start": true,
+    "started_utc": "2026-09-07T08:43:00.578409+00:00",
+    "finished_utc": "2026-09-07T08:43:00.611231+00:00",
+    "exit_code": 0
+  },
+  "temporary_workspace": "<os-temp>/elenchus-research-eval-h9epc0sl",
+  "elapsed_seconds": 1142.703,
+  "operator_outcome": "research_result_delivered",
+  "artifacts": {
+    ".elenchus/idea.md": {
+      "sha256": "5eaca87c481e2ce5228f0a24ee3f339287c72f9b27a1999d68fcf621455a13dd",
+      "bytes": 10242,
+      "published": true,
+      "published_sha256": "5eaca87c481e2ce5228f0a24ee3f339287c72f9b27a1999d68fcf621455a13dd"
+    },
+    ".elenchus/research/index.md": {
+      "sha256": "c95a35141355574cb5f27a9217f5c17a12e3af55ad0fa7f3f49edaa8cf74dc92",
+      "bytes": 326,
+      "published": true,
+      "published_sha256": "c95a35141355574cb5f27a9217f5c17a12e3af55ad0fa7f3f49edaa8cf74dc92"
+    },
+    ".elenchus/research/R001-photo-organization-approaches.md": {
+      "sha256": "477359e24771d54e6c58ec30454ecaadbe7a3c7fa9be210ee80c17685a3a0ed5",
+      "bytes": 31760,
+      "published": true,
+      "published_sha256": "477359e24771d54e6c58ec30454ecaadbe7a3c7fa9be210ee80c17685a3a0ed5"
+    }
+  },
+  "artifact_collection": "complete",
+  "file_changes": [
+    {
+      "path": ".elenchus/idea.md",
+      "before": null,
+      "after": "5eaca87c481e2ce5228f0a24ee3f339287c72f9b27a1999d68fcf621455a13dd"
+    },
+    {
+      "path": ".elenchus/research/R001-photo-organization-approaches.md",
+      "before": null,
+      "after": "477359e24771d54e6c58ec30454ecaadbe7a3c7fa9be210ee80c17685a3a0ed5"
+    },
+    {
+      "path": ".elenchus/research/index.md",
+      "before": null,
+      "after": "c95a35141355574cb5f27a9217f5c17a12e3af55ad0fa7f3f49edaa8cf74dc92"
+    }
+  ],
+  "product_unchanged": true,
+  "out_of_plan_changes": [],
+  "model_processing_seconds": 1060.531,
+  "finished_utc": "2026-09-07T09:02:03.357312+00:00",
+  "cleanup": {
+    "status": "retained_on_error",
+    "started_utc": "2026-09-07T09:02:03.357312+00:00",
+    "finished_utc": "2026-09-07T09:02:03.357312+00:00",
+    "error": "[WinError 5] 액세스가 거부되었습니다: '<user>\\\\AppData\\\\Local\\\\Temp\\\\elenchus-research-eval-h9epc0sl\\\\project\\\\.elenchus\\\\research\\\\index.md'",
+    "retained_temp": "<os-temp>/elenchus-research-eval-h9epc0sl"
+  },
+  "cleanup_status": "retained_on_error",
+  "retained_temp": "<os-temp>/elenchus-research-eval-h9epc0sl"
+}
