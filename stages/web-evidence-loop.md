@@ -190,7 +190,7 @@ Browser Evidence는 [OpenAI 브라우저 확장 문서](https://learn.chatgpt.co
 - 실제 로그인 계정에서만 보이는 화면
 - 공식 문서·공개 자료와 실제 UI가 일치하는지 확인
 - API 응답과 웹 화면 비교
-- JavaScript 렌더링 후에만 나타나는 데이터
+- 사용자 로그인·개인화 환경에서 JavaScript 렌더링 후에만 나타나는 데이터. 일반 공개 데모는 위 공개 시각 자료 관찰 경로 사용
 - 현재 사용자 권한·무료 플랜에서 보이는 기능 확인
 - 페이지네이션·필터·탭 전환에 따른 결과 비교
 
@@ -203,7 +203,7 @@ Browser Evidence는 [OpenAI 브라우저 확장 문서](https://learn.chatgpt.co
 - 지정 탭이 없거나 식별값이 일치하지 않거나 연결이 끊기면 다른 탭으로 대체하지 않고 사용자에게 같은 탭을 다시 멘션하도록 요청한다.
 - 특정 탭 승인은 현재 `R###`의 지정 탭·Claim·비영구적 관찰 범위에서만 유지하며 Research 종료 시 만료된다.
 - 같은 탭·Claim 범위의 읽기·스크롤·비영구적 탐색에는 반복 확인을 요구하지 않는다.
-- solution explorer subagent에는 브라우저 제어를 맡기지 않는다. Browser Evidence는 메인 Elenchus 세션만 수행한다.
+- Research subagent에는 브라우저 제어를 맡기지 않는다. 공개 시각 관찰과 Browser Evidence는 메인 Elenchus 세션만 수행한다.
 
 다음 경우에는 기존 승인을 확대하지 않고 다시 확인한다.
 
