@@ -110,13 +110,14 @@ class ExecutionTests(unittest.TestCase):
             self.assertEqual(result["status"], "host_read_ace_prepared")
             self.assertTrue(all("text" not in call.kwargs for call in run.call_args_list))
 
-    def _exercise_sample_cleanup(self, incomplete=False):
+    def _exercise_sample_cleanup(self, incomplete=False, unlimited=False, reviewed=False):
         with tempfile.TemporaryDirectory() as temporary:
             base = Path(temporary)
             fixture = base / "fixtures/casino"
             (fixture / "evidence").mkdir(parents=True)
             (fixture / "request.md").write_text("original request", encoding="utf-8")
             (fixture / "preferences.md").write_text("preferences", encoding="utf-8")
+            (base / "fixtures/continuation.md").write_text("continue", encoding="utf-8")
             (base / "README.md").write_text("test protocol", encoding="utf-8")
             snapshot = base / "snapshot.json"
             runner.write_json(snapshot, {"variant": "candidate", "label": "unit"})
@@ -126,6 +127,10 @@ class ExecutionTests(unittest.TestCase):
             result = {"stdout": json.dumps({"type": "item.completed", "item": {"type": "agent_message", "text": "visible"}}),
                       "stderr": "", "exit_code": 0, "timed_out": False, "elapsed_seconds": 0.01}
             args = SimpleNamespace(snapshot=snapshot, case="casino", sample=1, label=None, cli="fake-cli")
+            if unlimited or reviewed:
+                args.no_time_limit = True
+                args.max_responses = 0
+            args.operator_review = reviewed
             original_hashes = runner.tree_hashes
             original_cleanup = runner.cleanup_temporary
             tree_calls = []
@@ -144,13 +149,24 @@ class ExecutionTests(unittest.TestCase):
             with patch.object(runner, "HERE", base), patch.object(runner, "MANIFEST", config), \
                  patch.object(runner, "verify_snapshot", return_value={"SKILL.md": b"sample"}), \
                  patch.object(runner, "prepare_host_read", return_value={"status": "test_only"}), \
-                 patch.object(runner, "call_cli", return_value=result), \
+                 patch.object(runner, "call_cli", side_effect=lambda *args: dict(result)) as model_call, \
+                 patch.object(runner, "reported_verdict", side_effect=[True] * 3 if reviewed else [False] * 8 + [True]), \
+                 patch.object(runner, "await_operator_control", side_effect=[
+                     {"action": "continue", "reason": "PRIVATE_OPERATOR_QUALITY_NOTE"},
+                     {"action": "stop", "reason": "operator reviewed documents", "outcome": "research_result_delivered"}]) as gate, \
                  patch.object(runner, "tree_hashes", side_effect=observed_hashes), \
                  patch.object(runner.subprocess, "run", return_value=subprocess.CompletedProcess([], 0, "fake", "")), \
                  patch.object(runner.tempfile, "mkdtemp", return_value=str(model_root)), \
                  patch.object(runner.tempfile, "TemporaryDirectory", side_effect=AssertionError("automatic cleanup is forbidden")), \
                  patch.object(runner, "cleanup_temporary", side_effect=attempted_cleanup) as cleanup:
                 output = runner.run_sample(args)
+            if unlimited:
+                self.assertEqual(model_call.call_count, 9)
+                self.assertTrue(all(call.args[2] is None for call in model_call.call_args_list))
+            if reviewed:
+                self.assertEqual(model_call.call_count, 3)
+                self.assertEqual(gate.call_count, 2)
+                self.assertTrue(all("PRIVATE_OPERATOR_QUALITY_NOTE" not in call.args[1] for call in model_call.call_args_list))
             summary = json.loads((output / "summary.json").read_text(encoding="utf-8"))
             return summary, model_root.exists(), cleanup.call_count
 
@@ -162,6 +178,51 @@ class ExecutionTests(unittest.TestCase):
         self.assertEqual(summary["status"], "response_limit")
         self.assertTrue(exists)
         self.assertEqual(calls, 1)
+
+    def test_unlimited_sample_continues_past_eight_responses_and_exports_each_turn(self):
+        summary, _, _ = self._exercise_sample_cleanup(unlimited=True)
+        self.assertEqual(summary["status"], "reported_research_verdict")
+        self.assertEqual(summary["limits"], {"max_responses": None, "max_seconds": None})
+        self.assertEqual(len(summary["turns"]), 9)
+        self.assertTrue(all(turn["artifact_collection"] == "complete" for turn in summary["turns"]))
+        self.assertEqual(summary["quality_verdict"], "not_automatically_graded")
+
+    def test_operator_gate_ignores_verdict_hint_and_keeps_notes_out_of_input(self):
+        summary, _, _ = self._exercise_sample_cleanup(reviewed=True)
+        self.assertEqual(summary["status"], "operator_stopped")
+        self.assertEqual(summary["operator_outcome"], "research_result_delivered")
+        self.assertEqual(len(summary["turns"]), 3)
+        self.assertTrue(summary["turns"][1]["reported_verdict_hint"])
+        self.assertEqual(summary["turns"][1]["operator_control"]["action"], "continue")
+        self.assertNotIn("operator_control", summary["turns"][0])
+        self.assertEqual(summary["model_processing_seconds"], 0.03)
+
+    def test_operator_gate_waits_without_deadline_and_retains_control(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            turn_dir = Path(temporary)
+            control = {"action": "stop", "reason": "genuine missing preference", "outcome": "needs_user_input"}
+            with patch.object(runner.time, "sleep", side_effect=lambda _: runner.write_json(turn_dir / "control.json", control)) as sleep:
+                self.assertEqual(runner.await_operator_control(turn_dir), control)
+            sleep.assert_called_once_with(0.5)
+            self.assertTrue((turn_dir / "control.json").exists())
+            for invalid in ({"action": "stop", "reason": "reason"}, {"action": "continue", "reason": ""}, []):
+                runner.write_json(turn_dir / "control.json", invalid)
+                with self.assertRaises(ValueError):
+                    runner.await_operator_control(turn_dir)
+
+    def test_limits_require_separate_explicit_opt_ins(self):
+        defaults = runner.MANIFEST["controlled"]
+        self.assertEqual(runner.sample_limits(SimpleNamespace()),
+                         {"max_responses": defaults["max_responses"], "max_seconds": defaults["max_seconds"]})
+        self.assertEqual(runner.sample_limits(SimpleNamespace(no_time_limit=True)),
+                         {"max_responses": defaults["max_responses"], "max_seconds": None})
+        self.assertEqual(runner.sample_limits(SimpleNamespace(max_responses=0)),
+                         {"max_responses": None, "max_seconds": defaults["max_seconds"]})
+        self.assertEqual(runner.sample_limits(SimpleNamespace(max_responses=12))["max_responses"], 12)
+        with self.assertRaisesRegex(ValueError, "nonnegative"):
+            runner.sample_limits(SimpleNamespace(max_responses=-1))
+        with self.assertRaisesRegex(ValueError, "requires no-time-limit"):
+            runner.sample_limits(SimpleNamespace(operator_review=True))
 
     def test_incomplete_collection_preserves_workspace_without_attempting_cleanup(self):
         summary, exists, calls = self._exercise_sample_cleanup(incomplete=True)
@@ -238,6 +299,22 @@ class ExecutionTests(unittest.TestCase):
         timed = runner.call_cli([sys.executable, "-c", "import time; time.sleep(20)"], "", 0.15)
         self.assertTrue(timed["timed_out"])
         self.assertNotEqual(timed["exit_code"], 0)
+
+    def test_untimed_child_receives_none_deadline_without_termination(self):
+        process = SimpleNamespace(communicate=lambda *args, **kwargs: ("READY", ""), returncode=0)
+        with patch.object(process, "communicate", return_value=("READY", "")) as communicate, \
+             patch.object(runner.subprocess, "Popen", return_value=process), \
+             patch.object(runner.subprocess, "run") as external:
+            result = runner.call_cli(["fake-cli"], "prompt", None)
+        communicate.assert_called_once_with("prompt", timeout=None)
+        external.assert_not_called()
+        self.assertFalse(result["timed_out"])
+
+    def test_real_untimed_child_finishes_normally(self):
+        result = runner.call_cli([sys.executable, "-c", "print('UNTIMED_READY')"], "", None)
+        self.assertEqual(result["stdout"].strip(), "UNTIMED_READY")
+        self.assertEqual(result["exit_code"], 0)
+        self.assertFalse(result["timed_out"])
 
 
 class PackagingTests(unittest.TestCase):

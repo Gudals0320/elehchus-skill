@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bounded, isolated CLI comparisons. Public events only; no credentials/reasoning."""
+"""Isolated CLI comparisons, bounded by default. Public events only; no credentials/reasoning."""
 from __future__ import annotations
 
 import argparse
@@ -266,7 +266,7 @@ def cli_command(cli: str, project: Path, output: Path, model: str, effort: str) 
     return cmd + ["-"]
 
 
-def call_cli(command: list[str], prompt: str, timeout: float) -> dict:
+def call_cli(command: list[str], prompt: str, timeout: float | None) -> dict:
     started = time.monotonic()
     flags = subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0
     environment = os.environ.copy()
@@ -283,7 +283,7 @@ def call_cli(command: list[str], prompt: str, timeout: float) -> dict:
                 "startup_error": True, "elapsed_seconds": round(time.monotonic() - started, 3)}
     timed_out = False
     try:
-        stdout, stderr = process.communicate(prompt, timeout=max(0.1, timeout))
+        stdout, stderr = process.communicate(prompt, timeout=None if timeout is None else max(0.1, timeout))
     except subprocess.TimeoutExpired:
         timed_out = True
         if os.name == "nt":
@@ -398,7 +398,35 @@ def collect_artifacts(project: Path, output: Path, redactor: Redactor) -> dict:
     return artifacts
 
 
+def sample_limits(args) -> dict:
+    """Unbounded operation is explicit; historical manifest limits stay unchanged."""
+    if getattr(args, "operator_review", False) and not getattr(args, "no_time_limit", False):
+        raise ValueError("operator-review requires no-time-limit")
+    responses = getattr(args, "max_responses", None)
+    if responses is None:
+        responses = MANIFEST["controlled"]["max_responses"]
+    if responses < 0:
+        raise ValueError("max-responses must be nonnegative; 0 means unlimited")
+    return {"max_responses": responses or None,
+            "max_seconds": None if getattr(args, "no_time_limit", False) else MANIFEST["controlled"]["max_seconds"]}
+
+
+def await_operator_control(turn_dir: Path) -> dict:
+    """Wait for an atomic operator control file; never infer approval from elapsed time."""
+    path = turn_dir / "control.json"
+    while not path.exists():
+        time.sleep(0.5)
+    control = json.loads(path.read_text(encoding="utf-8"))
+    if (not isinstance(control, dict) or control.get("action") not in {"continue", "stop"}
+            or not isinstance(control.get("reason"), str) or not control["reason"].strip()
+            or (control["action"] == "stop" and
+                (not isinstance(control.get("outcome"), str) or not control["outcome"].strip()))):
+        raise ValueError("Operator control requires action continue/stop, nonempty reason, and outcome for stop")
+    return control
+
+
 def run_sample(args) -> Path:
+    limits = sample_limits(args)
     snapshot = json.loads(args.snapshot.read_text(encoding="utf-8"))
     source = verify_snapshot(snapshot)
     output = HERE / "results" / f'{args.label or snapshot["label"]}-{args.case}-sample{args.sample}'
@@ -411,8 +439,9 @@ def run_sample(args) -> Path:
                "runner_sha256": sha(Path(__file__).read_bytes()),
                "protocol_sha256": sha((HERE / "README.md").read_bytes()),
                "started_utc": datetime.now(timezone.utc).isoformat(),
-               "limits": {"max_responses": MANIFEST["controlled"]["max_responses"],
-                          "max_seconds": MANIFEST["controlled"]["max_seconds"]},
+               "limits": limits,
+               "operator_review": bool(getattr(args, "operator_review", False)),
+               "operator_wait_seconds": 0,
                "turns": [], "quality_verdict": "not_automatically_graded"}
     summary["digest_basis"] = DIGEST_BASIS
     write_json(output / "summary.json", summary)
@@ -432,9 +461,11 @@ def run_sample(args) -> Path:
                              str(REPO): "<repository>", str(Path.home()): "<user>"})
         started = time.monotonic()
         status = "response_limit"
-        for turn_number in range(1, MANIFEST["controlled"]["max_responses"] + 1):
-            remaining = MANIFEST["controlled"]["max_seconds"] - (time.monotonic() - started)
-            if remaining <= 0:
+        turn_number = 0
+        while limits["max_responses"] is None or turn_number < limits["max_responses"]:
+            turn_number += 1
+            remaining = None if limits["max_seconds"] is None else limits["max_seconds"] - (time.monotonic() - started - summary["operator_wait_seconds"])
+            if remaining is not None and remaining <= 0:
                 status = "timeout"
                 break
             turn_dir = output / f"turn-{turn_number:02d}"
@@ -469,6 +500,12 @@ def run_sample(args) -> Path:
                     "question_line_candidates": sum(bool(re.search(r"[?？]|까요|인가요", line)) for line in answer.splitlines()),
                     "command": redactor.apply(command)}
             summary["turns"].append(turn)
+            try:
+                turn["artifacts"] = collect_artifacts(project, turn_dir, redactor)
+                turn["artifact_collection"] = "complete"
+            except OSError as error:
+                turn["artifact_collection"] = "incomplete"
+                turn["collection_error"] = redactor.text(str(error))
             summary["elapsed_seconds"] = round(time.monotonic() - started, 3)
             write_json(output / "summary.json", summary)
             print(json.dumps({"run": output.name, "turn": turn_number, "elapsed_seconds": summary["elapsed_seconds"],
@@ -484,12 +521,29 @@ def run_sample(args) -> Path:
                 break
             history.append(("assistant", answer))
             try:
-                if reported_verdict(project, answer, preferences_delivered=turn_number > 1):
-                    status = "reported_research_verdict"
-                    break
+                turn["reported_verdict_hint"] = reported_verdict(project, answer, preferences_delivered=turn_number > 1)
             except OSError as error:
+                turn["reported_verdict_hint"] = None
                 summary.setdefault("collection_warnings", []).append(
                     {"turn": turn_number, "error": redactor.text(str(error))})
+            if summary["operator_review"] and turn_number > 1:
+                summary["status"] = "awaiting_operator_review"
+                write_json(output / "summary.json", summary)
+                print(json.dumps({"run": output.name, "turn": turn_number, "status": summary["status"]}), flush=True)
+                review_started = time.monotonic()
+                control = await_operator_control(turn_dir)
+                turn["operator_wait_seconds"] = round(time.monotonic() - review_started, 3)
+                summary["operator_wait_seconds"] += turn["operator_wait_seconds"]
+                turn["operator_control"] = redactor.apply(control)
+                summary["status"] = "running"
+                write_json(output / "summary.json", summary)
+                if control["action"] == "stop":
+                    status = "operator_stopped"
+                    summary["operator_outcome"] = redactor.text(control["outcome"])
+                    break
+            elif not summary["operator_review"] and turn["reported_verdict_hint"]:
+                status = "reported_research_verdict"
+                break
             next_input = (case_root / "preferences.md" if turn_number == 1 else HERE / "fixtures" / "continuation.md")
             history.append(("user", next_input.read_text(encoding="utf-8")))
         try:
@@ -505,11 +559,12 @@ def run_sample(args) -> Path:
                             "collection_error": redactor.text(str(error)),
                             "retained_temp": "<os-temp>/" + temp_root.name})
         summary.update({"status": status, "elapsed_seconds": round(time.monotonic() - started, 3),
+                        "model_processing_seconds": round(sum(turn["elapsed_seconds"] for turn in summary["turns"]), 3),
                         "finished_utc": datetime.now(timezone.utc).isoformat()})
         write_json(output / "summary.json", summary)
     except BaseException as error:
         summary["host_infrastructure_error"] = redactor.text(str(error))
-        if summary["status"] == "running":
+        if summary["status"] in {"running", "awaiting_operator_review"}:
             summary["status"] = "infrastructure_error"
         raise
     finally:
@@ -658,6 +713,9 @@ def main() -> None:
     run_parser.add_argument("--sample", type=int, choices=(1, 2), required=True)
     run_parser.add_argument("--cli", default="codex")
     run_parser.add_argument("--label", help="New result label for explicitly separated retests")
+    run_parser.add_argument("--no-time-limit", action="store_true", help="Explicitly disable the sample wall-clock deadline; does not change response limits")
+    run_parser.add_argument("--max-responses", type=int, help="Override response limit; 0 removes the response count limit; use --operator-review for manually checked completion")
+    run_parser.add_argument("--operator-review", action="store_true", help="Requires --no-time-limit; after preferences, wait for atomic control.json (continue/stop, reason, stop outcome); verdict detection is only a hint")
     args = parser.parse_args()
     if args.command == "run" and args.label and not re.fullmatch(r"[a-zA-Z0-9_-]+", args.label):
         raise ValueError("Use a plain result label identifier")
