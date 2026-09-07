@@ -1,0 +1,8 @@
+# Evaluation records retain exact publication bytes across platforms and clones.
+tests/research-discovery/** -text whitespace=cr-at-eol
+# Captured output and historical snapshots preserve their original whitespace.
+tests/research-discovery/results/** -whitespace
+tests/research-discovery/targeted/results/** -whitespace
+tests/research-discovery/phase-isolation/results/** -whitespace
+tests/research-discovery/live/** -whitespace
+tests/research-discovery/infrastructure/** -whitespace

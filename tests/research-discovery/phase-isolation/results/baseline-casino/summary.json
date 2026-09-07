@@ -1,0 +1,189 @@
+{
+  "kind": "phase_isolation_diagnostic",
+  "status": "timeout",
+  "source_label": "baseline",
+  "case": "casino",
+  "source_revision": "132eea57d10baa68cd6482a9d0d2e170afd7357e",
+  "source_sha256": "77cfae07e38f6c0f21671888c3c4ede389d3dae97fa99fb61b9e06e894ff4ac6",
+  "source_files": {
+    "SKILL.md": "98dd89b337190d6127e273b2ef0b89c271590f0f44afc8097150445b42093bb0",
+    "agents/openai.yaml": "d06dc00cbc87ee576a54a9442f6dc97f2496a22e9a9bff7caf3f8230524357cd",
+    "scripts/release_update.py": "e2702947f6914344d7a7ab6fa96b2c494cfc1496f99ca9707d56c348fe89a046",
+    "stages/execution.md": "3d3ff3090e87cb5870171b38c7fae67cafd2b3af6920fc77af60e1670ff8c24b",
+    "stages/idea.md": "b90e514340f5a1678bd93946f41938ae952c7c7b1ecf423ee1b161ad98f0fc91",
+    "stages/research.md": "94c8a967f9bdf89d13f095d1be68e0dd9829702c5abeeb0c37703e78f20f7853",
+    "stages/web-evidence-loop.md": "d4b514197f0183113a3e448e3bfbb8b56e45ae264b025c14b77a50d49b5c162f"
+  },
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "limits": {
+    "max_seconds": 600,
+    "max_responses": 1
+  },
+  "preparation_sha256": "f4c35845b8e0a04a42c597a02fe8f07a1b9d86697b971a4a5b800179803aa408",
+  "started_utc": "2026-09-07T07:11:54.896976+00:00",
+  "quality_verdict": "not_automatically_graded",
+  "temporary_workspace": "<os-temp>/elenchus-research-eval-phase-casino-vd28ulgf",
+  "host_read_setup": {
+    "status": "host_read_ace_prepared",
+    "scope": "temporary project root, inheritable host read only",
+    "before_model_start": true,
+    "started_utc": "2026-09-07T07:11:54.897983+00:00",
+    "finished_utc": "2026-09-07T07:11:54.934546+00:00",
+    "exit_code": 0
+  },
+  "initial_files": {
+    ".elenchus/idea.md": "0a6983e21d7438cc0e7aa6109e687d84277538b368e1a2fba738227972171502",
+    "AGENTS.md": "6026092fe3a7949eec27eeba1eb4aaa5250b2de3e59200c759ee7674b59c6c42",
+    "app.txt": "d9f3330449c6b6026dcd24b656892bf6440ccf8011d73f4651bec865ec39f04e",
+    "evidence/01-tablehaven-product.md": "1cb1efbbfe2fa95d45a8092fddb04a67579789e7909e52fca122270ecd560008",
+    "evidence/02-tablehaven-developer.md": "d9c049d165f87375e482b75d56439fea7017248705efd7447bdb674767a29ce1",
+    "evidence/03-arcade-weekly.md": "445b6068b63421046a68276c3219065fa8b257bd3d03c294b044d817bf4d1bc1",
+    "evidence/04-flatfelt-manual.md": "8c2ca4a2cb9590fd59b053537c39250de75fb8063d867bfc9198a61f0019bdbb",
+    "evidence/05-orbitroom-notes.md": "732dba63a2a6cd2256b7a1596651698ac499ce5f24f6970f838f0ce8d9cfe4e0",
+    "evidence/06-pileplay-devlog.md": "903a39a64cea8050faba09508b781421a99476b8d8536e047d45e5ee9453bad5",
+    "evidence/07-wheelkit-v1.md": "1fc3e76ea5b0bc98644cdd9f7df8d8bdaee6f4545eab07452d36b21889606b2c",
+    "evidence/08-wheelkit-v2.md": "199b349cefe79bc9ce4979823ce254f17549eeed83df1679fb3d70d229422458",
+    "evidence/README.md": "086b19e37c9d360f09d2eadccfe66b6cfbea81b909d72cde5bb041f2426f1de3",
+    "skill/SKILL.md": "98dd89b337190d6127e273b2ef0b89c271590f0f44afc8097150445b42093bb0",
+    "skill/agents/openai.yaml": "d06dc00cbc87ee576a54a9442f6dc97f2496a22e9a9bff7caf3f8230524357cd",
+    "skill/scripts/release_update.py": "e2702947f6914344d7a7ab6fa96b2c494cfc1496f99ca9707d56c348fe89a046",
+    "skill/stages/execution.md": "3d3ff3090e87cb5870171b38c7fae67cafd2b3af6920fc77af60e1670ff8c24b",
+    "skill/stages/idea.md": "b90e514340f5a1678bd93946f41938ae952c7c7b1ecf423ee1b161ad98f0fc91",
+    "skill/stages/research.md": "94c8a967f9bdf89d13f095d1be68e0dd9829702c5abeeb0c37703e78f20f7853",
+    "skill/stages/web-evidence-loop.md": "d4b514197f0183113a3e448e3bfbb8b56e45ae264b025c14b77a50d49b5c162f"
+  },
+  "input_sha256": "da06b2ddaf49cc2f26eb0ee6add18a5dd7c6ab8dd9c689bbed9480b16d8acb50",
+  "idea_seed_sha256": "0a6983e21d7438cc0e7aa6109e687d84277538b368e1a2fba738227972171502",
+  "cli_version": "codex-cli 0.153.4",
+  "exit_code": 1,
+  "timed_out": true,
+  "elapsed_seconds": 600.172,
+  "command": [
+    "<user>/AppData/Local/OpenAI/Codex/bin/8e5b6932251c2c1c/codex.exe",
+    "-a",
+    "never",
+    "exec",
+    "--ignore-user-config",
+    "--ignore-rules",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "workspace-write",
+    "-c",
+    "web_search=\"disabled\"",
+    "-c",
+    "features.multi_agent=false",
+    "-m",
+    "gpt-6-astra",
+    "-c",
+    "model_reasoning_effort=\"xhigh\"",
+    "-C",
+    "<fixture>",
+    "--json",
+    "-o",
+    "<diagnostic-temp>\\final.md",
+    "-c",
+    "windows.sandbox=\"elevated\"",
+    "-c",
+    "skills.config=[{path=\"<user>/.codex/skills/elenchus/SKILL.md\",enabled=false},{path=\"<user>/.codex/skills/elenchus-benchmark/SKILL.md\",enabled=false},{path=\"<user>/.codex/skills/elenchus-test/SKILL.md\",enabled=false}]",
+    "-"
+  ],
+  "excluded_event_types": {},
+  "answer_sha256": "c4f602958b0ee066192c09f517c34f387dbe07506d491b88bb2af78ceb957992",
+  "published_answer_sha256": "c4f602958b0ee066192c09f517c34f387dbe07506d491b88bb2af78ceb957992",
+  "events_sha256": "0df6517cf6e1becf7f401a638cebd2ddb90fa10a7c99a12bd812e7b2fd7cf719",
+  "usage": [],
+  "tool_calls": 15,
+  "artifact_collection": "complete",
+  "artifacts": {
+    ".elenchus/idea.md": {
+      "sha256": "7758349f3d95f8ddf448f759f09bc86ea37b5cef5fb37fbd925211ddc8a0a918",
+      "bytes": 6077,
+      "published": true,
+      "published_sha256": "7758349f3d95f8ddf448f759f09bc86ea37b5cef5fb37fbd925211ddc8a0a918"
+    },
+    ".elenchus/research/index.md": {
+      "sha256": "e2ebcc664f92e07f3e7f8c329b4d9661d7890955e8d7a309e4c47bb37c0c5c09",
+      "bytes": 497,
+      "published": true,
+      "published_sha256": "e2ebcc664f92e07f3e7f8c329b4d9661d7890955e8d7a309e4c47bb37c0c5c09"
+    },
+    ".elenchus/research/R001-table-experience.md": {
+      "sha256": "5a95de3273d119f14facaa205372ef36f9b0ba7d68859d7da4be40a91d8fa3de",
+      "bytes": 16787,
+      "published": true,
+      "published_sha256": "5a95de3273d119f14facaa205372ef36f9b0ba7d68859d7da4be40a91d8fa3de"
+    },
+    ".elenchus/research/R002-result-presentation.md": {
+      "sha256": "837861458bc8e90ac6b25fabdc9f33d48b5550e6d8e4e98697a8db860fbc6c92",
+      "bytes": 22498,
+      "published": true,
+      "published_sha256": "837861458bc8e90ac6b25fabdc9f33d48b5550e6d8e4e98697a8db860fbc6c92"
+    }
+  },
+  "final_files": {
+    ".elenchus/idea.md": "7758349f3d95f8ddf448f759f09bc86ea37b5cef5fb37fbd925211ddc8a0a918",
+    ".elenchus/research/R001-table-experience.md": "5a95de3273d119f14facaa205372ef36f9b0ba7d68859d7da4be40a91d8fa3de",
+    ".elenchus/research/R002-result-presentation.md": "837861458bc8e90ac6b25fabdc9f33d48b5550e6d8e4e98697a8db860fbc6c92",
+    ".elenchus/research/index.md": "e2ebcc664f92e07f3e7f8c329b4d9661d7890955e8d7a309e4c47bb37c0c5c09",
+    "AGENTS.md": "6026092fe3a7949eec27eeba1eb4aaa5250b2de3e59200c759ee7674b59c6c42",
+    "app.txt": "d9f3330449c6b6026dcd24b656892bf6440ccf8011d73f4651bec865ec39f04e",
+    "evidence/01-tablehaven-product.md": "1cb1efbbfe2fa95d45a8092fddb04a67579789e7909e52fca122270ecd560008",
+    "evidence/02-tablehaven-developer.md": "d9c049d165f87375e482b75d56439fea7017248705efd7447bdb674767a29ce1",
+    "evidence/03-arcade-weekly.md": "445b6068b63421046a68276c3219065fa8b257bd3d03c294b044d817bf4d1bc1",
+    "evidence/04-flatfelt-manual.md": "8c2ca4a2cb9590fd59b053537c39250de75fb8063d867bfc9198a61f0019bdbb",
+    "evidence/05-orbitroom-notes.md": "732dba63a2a6cd2256b7a1596651698ac499ce5f24f6970f838f0ce8d9cfe4e0",
+    "evidence/06-pileplay-devlog.md": "903a39a64cea8050faba09508b781421a99476b8d8536e047d45e5ee9453bad5",
+    "evidence/07-wheelkit-v1.md": "1fc3e76ea5b0bc98644cdd9f7df8d8bdaee6f4545eab07452d36b21889606b2c",
+    "evidence/08-wheelkit-v2.md": "199b349cefe79bc9ce4979823ce254f17549eeed83df1679fb3d70d229422458",
+    "evidence/README.md": "086b19e37c9d360f09d2eadccfe66b6cfbea81b909d72cde5bb041f2426f1de3",
+    "skill/SKILL.md": "98dd89b337190d6127e273b2ef0b89c271590f0f44afc8097150445b42093bb0",
+    "skill/agents/openai.yaml": "d06dc00cbc87ee576a54a9442f6dc97f2496a22e9a9bff7caf3f8230524357cd",
+    "skill/scripts/release_update.py": "e2702947f6914344d7a7ab6fa96b2c494cfc1496f99ca9707d56c348fe89a046",
+    "skill/stages/execution.md": "3d3ff3090e87cb5870171b38c7fae67cafd2b3af6920fc77af60e1670ff8c24b",
+    "skill/stages/idea.md": "b90e514340f5a1678bd93946f41938ae952c7c7b1ecf423ee1b161ad98f0fc91",
+    "skill/stages/research.md": "94c8a967f9bdf89d13f095d1be68e0dd9829702c5abeeb0c37703e78f20f7853",
+    "skill/stages/web-evidence-loop.md": "d4b514197f0183113a3e448e3bfbb8b56e45ae264b025c14b77a50d49b5c162f"
+  },
+  "product_unchanged": true,
+  "file_changes": [
+    {
+      "path": ".elenchus/idea.md",
+      "before": "0a6983e21d7438cc0e7aa6109e687d84277538b368e1a2fba738227972171502",
+      "after": "7758349f3d95f8ddf448f759f09bc86ea37b5cef5fb37fbd925211ddc8a0a918"
+    },
+    {
+      "path": ".elenchus/research/R001-table-experience.md",
+      "before": null,
+      "after": "5a95de3273d119f14facaa205372ef36f9b0ba7d68859d7da4be40a91d8fa3de"
+    },
+    {
+      "path": ".elenchus/research/R002-result-presentation.md",
+      "before": null,
+      "after": "837861458bc8e90ac6b25fabdc9f33d48b5550e6d8e4e98697a8db860fbc6c92"
+    },
+    {
+      "path": ".elenchus/research/index.md",
+      "before": null,
+      "after": "e2ebcc664f92e07f3e7f8c329b4d9661d7890955e8d7a309e4c47bb37c0c5c09"
+    }
+  ],
+  "finished_utc": "2026-09-07T07:21:55.369418+00:00",
+  "cleanup": {
+    "status": "retained_on_error",
+    "started_utc": "2026-09-07T07:21:55.370420+00:00",
+    "finished_utc": "2026-09-07T07:21:55.370420+00:00",
+    "error": "[WinError 5] 액세스가 거부되었습니다: '<user>\\\\AppData\\\\Local\\\\Temp\\\\elenchus-research-eval-phase-casino-vd28ulgf\\\\project\\\\.elenchus\\\\research\\\\index.md'",
+    "retained_temp": "<os-temp>/elenchus-research-eval-phase-casino-vd28ulgf"
+  },
+  "published_input_sha256": "da06b2ddaf49cc2f26eb0ee6add18a5dd7c6ab8dd9c689bbed9480b16d8acb50",
+  "digest_basis": {
+    "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+    "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+    "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+    "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+    "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+    "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "kind": "targeted-candidate-only",
+  "source_snapshot": "snapshots/candidate-v1.json",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "max_responses": 1,
+  "max_seconds": 180,
+  "cases": ["inactive-document", "active-plan-write", "completed-write", "single-fact", "version-conflict", "delegation-unavailable"],
+  "network": "disabled",
+  "delegation": "unavailable",
+  "included_in_controlled_comparison": false
+}

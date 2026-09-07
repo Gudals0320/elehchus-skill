@@ -1,0 +1,158 @@
+{
+  "kind": "phase_isolation_diagnostic",
+  "not_primary_comparison": true,
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "max_responses": 1,
+  "max_seconds": 600,
+  "max_concurrent_subprocesses": 2,
+  "source_snapshots": {
+    "baseline": {
+      "schema_version": 1,
+      "variant": "baseline",
+      "label": "baseline",
+      "revision": "132eea57d10baa68cd6482a9d0d2e170afd7357e",
+      "files": {
+        "SKILL.md": "98dd89b337190d6127e273b2ef0b89c271590f0f44afc8097150445b42093bb0",
+        "agents/openai.yaml": "d06dc00cbc87ee576a54a9442f6dc97f2496a22e9a9bff7caf3f8230524357cd",
+        "scripts/release_update.py": "e2702947f6914344d7a7ab6fa96b2c494cfc1496f99ca9707d56c348fe89a046",
+        "stages/execution.md": "3d3ff3090e87cb5870171b38c7fae67cafd2b3af6920fc77af60e1670ff8c24b",
+        "stages/idea.md": "b90e514340f5a1678bd93946f41938ae952c7c7b1ecf423ee1b161ad98f0fc91",
+        "stages/research.md": "94c8a967f9bdf89d13f095d1be68e0dd9829702c5abeeb0c37703e78f20f7853",
+        "stages/web-evidence-loop.md": "d4b514197f0183113a3e448e3bfbb8b56e45ae264b025c14b77a50d49b5c162f"
+      },
+      "source_sha256": "77cfae07e38f6c0f21671888c3c4ede389d3dae97fa99fb61b9e06e894ff4ac6",
+      "head_revision": "0217658b6626bce91c3973e6aac2ec1df9b9bb77",
+      "normalized_lf_files": {
+        "SKILL.md": "18a3220aae3b5889f454651acd660fdfebc5ad0ec2263fb1b608be28aee484fc",
+        "agents/openai.yaml": "7ceb1a978de063e6a866d1a68c0b9f5ed2695481a251edb609e83436d8290714",
+        "scripts/release_update.py": "f6c53862b549ec3ec86031371bf70850a824d47861e545e6198124928cc8b6f2",
+        "stages/execution.md": "87bbb7a2ebc2f0e266b6470fa1f6fb30caea94701645e31ffdc0a15c781b3827",
+        "stages/idea.md": "f24af2a322443c5d40212387b8f96f6339c46715e3cc6656227b340a41d28121",
+        "stages/research.md": "0c0e96a0380359c69a73d0b1c5fa6584479d6be3cd8b2120279a5bf017f502a6",
+        "stages/web-evidence-loop.md": "ef50b5af2841406debf3e0480fad61c9e0eeed671eac2c3010c95c75a0b862cb"
+      },
+      "manifest_sha256": "87a8d41311fe9e5a4acc7f05171a4617c7941e78895005ac341274f018a44d89",
+      "fixture_hashes": {
+        "casino/evidence/01-tablehaven-product.md": "1cb1efbbfe2fa95d45a8092fddb04a67579789e7909e52fca122270ecd560008",
+        "casino/evidence/02-tablehaven-developer.md": "d9c049d165f87375e482b75d56439fea7017248705efd7447bdb674767a29ce1",
+        "casino/evidence/03-arcade-weekly.md": "445b6068b63421046a68276c3219065fa8b257bd3d03c294b044d817bf4d1bc1",
+        "casino/evidence/04-flatfelt-manual.md": "8c2ca4a2cb9590fd59b053537c39250de75fb8063d867bfc9198a61f0019bdbb",
+        "casino/evidence/05-orbitroom-notes.md": "732dba63a2a6cd2256b7a1596651698ac499ce5f24f6970f838f0ce8d9cfe4e0",
+        "casino/evidence/06-pileplay-devlog.md": "903a39a64cea8050faba09508b781421a99476b8d8536e047d45e5ee9453bad5",
+        "casino/evidence/07-wheelkit-v1.md": "1fc3e76ea5b0bc98644cdd9f7df8d8bdaee6f4545eab07452d36b21889606b2c",
+        "casino/evidence/08-wheelkit-v2.md": "199b349cefe79bc9ce4979823ce254f17549eeed83df1679fb3d70d229422458",
+        "casino/evidence/README.md": "086b19e37c9d360f09d2eadccfe66b6cfbea81b909d72cde5bb041f2426f1de3",
+        "casino/preferences.md": "184ca38f9e0b0f54f8362f78a8d3756cb11f5c734ad17b84bf3406cfd592e6f6",
+        "casino/request.md": "aac0ee360f6ecada135df6f9b1d0ae4d596d609f8c5cb7888f9233d479192cf0",
+        "continuation.md": "c8b54845ef02c9b0c650c1150291b64de26d0255610719e4880380be020ed9d8",
+        "photo-organizer/evidence/01-pathframe-guide.md": "4ea3c72a71da93ed82d2fd02e62ccd8ff2d5ac6fe1172312143971ec8fa481f9",
+        "photo-organizer/evidence/02-pathframe-transaction.md": "1dd0b51877547106bba4dff9001b703efc25aa0dbb714cf9efe680384bfe72d0",
+        "photo-organizer/evidence/03-albumvault-guide.md": "9e6eb3b0e2dac906ddbc670039965e4f3e487b9c9b676caa1eda74db15e57a27",
+        "photo-organizer/evidence/04-indexlens-guide.md": "adf0c8e44a1aef8575aea5fdec78660164fa8001c1a6edff48019e3663b3876d",
+        "photo-organizer/evidence/05-photo-digest.md": "ab3e68f9f78d8b861222147bbe112b5d21c4c16f23e86b88f7ba777d3468a199",
+        "photo-organizer/evidence/06-indexlens-v3.md": "6426fe5e716f151e5d8cf654260a43a2a5ab5cb41c3985ddea730ce848138343",
+        "photo-organizer/evidence/07-pairboard-devlog.md": "8c99fad364899b0ed53d2c454c90e9ddc3b6fb56f83dad09bb0bd15990fbb37c",
+        "photo-organizer/evidence/08-metadata-notes.md": "7e63b334be3ab3710aaded6fda4a7832233c5c63a587f560dd4c39504cdb49f3",
+        "photo-organizer/evidence/README.md": "7cb7bd044324cf5bdd4dd77bcb375de88055c87bbbb675666ab152bd5e7f8b33",
+        "photo-organizer/preferences.md": "5f9ebd9d6646df77c03bbe2d53ff699212dbba8929d8425d454fbd16d204a9db",
+        "photo-organizer/request.md": "65090c64a41116500369515046848c8c1173276c48263df71b6bf6722820693d"
+      },
+      "fixtures_sha256": "78b53ae78a1ce4f5fa4d0e66b7bd327b01b2d096e56527feb03c1d6dc90653ac"
+    },
+    "candidate-v2": {
+      "schema_version": 1,
+      "variant": "candidate",
+      "label": "candidate-v2",
+      "revision": "655f1c53342abdc8254f354ded168ebf17c6bf22",
+      "files": {
+        "SKILL.md": "1379018328aab9de08514659010faa464e6eca19465d34fdd44e5706a7df70c4",
+        "agents/openai.yaml": "d06dc00cbc87ee576a54a9442f6dc97f2496a22e9a9bff7caf3f8230524357cd",
+        "scripts/release_update.py": "e2702947f6914344d7a7ab6fa96b2c494cfc1496f99ca9707d56c348fe89a046",
+        "stages/discovery.md": "30ce4cd891f0e342b58f239a8ce822d2d7a8c98a6907aad4c494b8f5da84edf8",
+        "stages/execution.md": "04711713e1a6c17d0310d95fcaa234c37d8c59e5df22ccbca43597df0c28402c",
+        "stages/idea.md": "abcd6a105a17e2908bd596b8cd6ff71963cd287391a9c52fa86fb8195616bf14",
+        "stages/research.md": "06583ad7d17aa56108718471c1e82e827f06811a62a1f8e96fe0c1ef856cd260",
+        "stages/web-evidence-loop.md": "5dd02265d4c1833b3585c3902a3142caf222d98db68eaafa53343454614855c1"
+      },
+      "source_sha256": "13de96a0bd8188edc207f99efa426a1aacf48f3f2a925b40470d72d9baf17e5a",
+      "head_revision": "655f1c53342abdc8254f354ded168ebf17c6bf22",
+      "normalized_lf_files": {
+        "SKILL.md": "fbd16f85d5fb817721443982d04be874d79054209171f2e0e68a66961ab12feb",
+        "agents/openai.yaml": "7ceb1a978de063e6a866d1a68c0b9f5ed2695481a251edb609e83436d8290714",
+        "scripts/release_update.py": "f6c53862b549ec3ec86031371bf70850a824d47861e545e6198124928cc8b6f2",
+        "stages/discovery.md": "b549925232009a3bb607600ca7fe0a45c1ac7a52fb32bdac194728b4da7279c5",
+        "stages/execution.md": "d4902a21b7b63c46b3060fc90fb5502b74433779c71a1a8f0d588b78fa011a78",
+        "stages/idea.md": "2486dc7891239871c090f56f32fa716f5223dea42dc80906196775cafe6497c9",
+        "stages/research.md": "7bee614b1c74b0724abbb3a77a8f139d6d6b7e0973617027e897d9feadb40ffe",
+        "stages/web-evidence-loop.md": "6b4a6dcf61e9e53cfbd14efe802aba60225cb82350fef1f8ca1431311599d626"
+      },
+      "manifest_sha256": "87a8d41311fe9e5a4acc7f05171a4617c7941e78895005ac341274f018a44d89",
+      "fixture_hashes": {
+        "casino/evidence/01-tablehaven-product.md": "1cb1efbbfe2fa95d45a8092fddb04a67579789e7909e52fca122270ecd560008",
+        "casino/evidence/02-tablehaven-developer.md": "d9c049d165f87375e482b75d56439fea7017248705efd7447bdb674767a29ce1",
+        "casino/evidence/03-arcade-weekly.md": "445b6068b63421046a68276c3219065fa8b257bd3d03c294b044d817bf4d1bc1",
+        "casino/evidence/04-flatfelt-manual.md": "8c2ca4a2cb9590fd59b053537c39250de75fb8063d867bfc9198a61f0019bdbb",
+        "casino/evidence/05-orbitroom-notes.md": "732dba63a2a6cd2256b7a1596651698ac499ce5f24f6970f838f0ce8d9cfe4e0",
+        "casino/evidence/06-pileplay-devlog.md": "903a39a64cea8050faba09508b781421a99476b8d8536e047d45e5ee9453bad5",
+        "casino/evidence/07-wheelkit-v1.md": "1fc3e76ea5b0bc98644cdd9f7df8d8bdaee6f4545eab07452d36b21889606b2c",
+        "casino/evidence/08-wheelkit-v2.md": "199b349cefe79bc9ce4979823ce254f17549eeed83df1679fb3d70d229422458",
+        "casino/evidence/README.md": "086b19e37c9d360f09d2eadccfe66b6cfbea81b909d72cde5bb041f2426f1de3",
+        "casino/preferences.md": "184ca38f9e0b0f54f8362f78a8d3756cb11f5c734ad17b84bf3406cfd592e6f6",
+        "casino/request.md": "aac0ee360f6ecada135df6f9b1d0ae4d596d609f8c5cb7888f9233d479192cf0",
+        "continuation.md": "c8b54845ef02c9b0c650c1150291b64de26d0255610719e4880380be020ed9d8",
+        "photo-organizer/evidence/01-pathframe-guide.md": "4ea3c72a71da93ed82d2fd02e62ccd8ff2d5ac6fe1172312143971ec8fa481f9",
+        "photo-organizer/evidence/02-pathframe-transaction.md": "1dd0b51877547106bba4dff9001b703efc25aa0dbb714cf9efe680384bfe72d0",
+        "photo-organizer/evidence/03-albumvault-guide.md": "9e6eb3b0e2dac906ddbc670039965e4f3e487b9c9b676caa1eda74db15e57a27",
+        "photo-organizer/evidence/04-indexlens-guide.md": "adf0c8e44a1aef8575aea5fdec78660164fa8001c1a6edff48019e3663b3876d",
+        "photo-organizer/evidence/05-photo-digest.md": "ab3e68f9f78d8b861222147bbe112b5d21c4c16f23e86b88f7ba777d3468a199",
+        "photo-organizer/evidence/06-indexlens-v3.md": "6426fe5e716f151e5d8cf654260a43a2a5ab5cb41c3985ddea730ce848138343",
+        "photo-organizer/evidence/07-pairboard-devlog.md": "8c99fad364899b0ed53d2c454c90e9ddc3b6fb56f83dad09bb0bd15990fbb37c",
+        "photo-organizer/evidence/08-metadata-notes.md": "7e63b334be3ab3710aaded6fda4a7832233c5c63a587f560dd4c39504cdb49f3",
+        "photo-organizer/evidence/README.md": "7cb7bd044324cf5bdd4dd77bcb375de88055c87bbbb675666ab152bd5e7f8b33",
+        "photo-organizer/preferences.md": "5f9ebd9d6646df77c03bbe2d53ff699212dbba8929d8425d454fbd16d204a9db",
+        "photo-organizer/request.md": "65090c64a41116500369515046848c8c1173276c48263df71b6bf6722820693d"
+      },
+      "fixtures_sha256": "78b53ae78a1ce4f5fa4d0e66b7bd327b01b2d096e56527feb03c1d6dc90653ac"
+    }
+  },
+  "cases": {
+    "casino": {
+      "combined_input_sha256": "da06b2ddaf49cc2f26eb0ee6add18a5dd7c6ab8dd9c689bbed9480b16d8acb50",
+      "idea_seed_sha256": "0a6983e21d7438cc0e7aa6109e687d84277538b368e1a2fba738227972171502",
+      "request_sha256": "aac0ee360f6ecada135df6f9b1d0ae4d596d609f8c5cb7888f9233d479192cf0",
+      "preferences_sha256": "184ca38f9e0b0f54f8362f78a8d3756cb11f5c734ad17b84bf3406cfd592e6f6",
+      "corpus_hashes": {
+        "01-tablehaven-product.md": "1cb1efbbfe2fa95d45a8092fddb04a67579789e7909e52fca122270ecd560008",
+        "02-tablehaven-developer.md": "d9c049d165f87375e482b75d56439fea7017248705efd7447bdb674767a29ce1",
+        "03-arcade-weekly.md": "445b6068b63421046a68276c3219065fa8b257bd3d03c294b044d817bf4d1bc1",
+        "04-flatfelt-manual.md": "8c2ca4a2cb9590fd59b053537c39250de75fb8063d867bfc9198a61f0019bdbb",
+        "05-orbitroom-notes.md": "732dba63a2a6cd2256b7a1596651698ac499ce5f24f6970f838f0ce8d9cfe4e0",
+        "06-pileplay-devlog.md": "903a39a64cea8050faba09508b781421a99476b8d8536e047d45e5ee9453bad5",
+        "07-wheelkit-v1.md": "1fc3e76ea5b0bc98644cdd9f7df8d8bdaee6f4545eab07452d36b21889606b2c",
+        "08-wheelkit-v2.md": "199b349cefe79bc9ce4979823ce254f17549eeed83df1679fb3d70d229422458",
+        "README.md": "086b19e37c9d360f09d2eadccfe66b6cfbea81b909d72cde5bb041f2426f1de3"
+      }
+    },
+    "photo-organizer": {
+      "combined_input_sha256": "2150524b2363a428430e6fa599454cb745c1d60dd3f60135f0efde84e2d74e79",
+      "idea_seed_sha256": "3b8cbf98e8ebabafa1a39d695e1f376d5736c4fa260d7d7230dc48e14b3f361e",
+      "request_sha256": "65090c64a41116500369515046848c8c1173276c48263df71b6bf6722820693d",
+      "preferences_sha256": "5f9ebd9d6646df77c03bbe2d53ff699212dbba8929d8425d454fbd16d204a9db",
+      "corpus_hashes": {
+        "01-pathframe-guide.md": "4ea3c72a71da93ed82d2fd02e62ccd8ff2d5ac6fe1172312143971ec8fa481f9",
+        "02-pathframe-transaction.md": "1dd0b51877547106bba4dff9001b703efc25aa0dbb714cf9efe680384bfe72d0",
+        "03-albumvault-guide.md": "9e6eb3b0e2dac906ddbc670039965e4f3e487b9c9b676caa1eda74db15e57a27",
+        "04-indexlens-guide.md": "adf0c8e44a1aef8575aea5fdec78660164fa8001c1a6edff48019e3663b3876d",
+        "05-photo-digest.md": "ab3e68f9f78d8b861222147bbe112b5d21c4c16f23e86b88f7ba777d3468a199",
+        "06-indexlens-v3.md": "6426fe5e716f151e5d8cf654260a43a2a5ab5cb41c3985ddea730ce848138343",
+        "07-pairboard-devlog.md": "8c99fad364899b0ed53d2c454c90e9ddc3b6fb56f83dad09bb0bd15990fbb37c",
+        "08-metadata-notes.md": "7e63b334be3ab3710aaded6fda4a7832233c5c63a587f560dd4c39504cdb49f3",
+        "README.md": "7cb7bd044324cf5bdd4dd77bcb375de88055c87bbbb675666ab152bd5e7f8b33"
+      }
+    }
+  },
+  "script_sha256": "17c5f3077ea6b2cc62982ae5cfa104914a1441766c3b14f11a44d2a9890ce76f",
+  "shared_runner_sha256": "d32a585aabb1abb987773f8de3e1d47619f4177971bea1d7e3aea290c3ab5d2c",
+  "protocol_sha256": "f4cc11bc80ec1e44f1f2425eddb085d48fe7c4954e57174b5a40e1da7c1dcb04"
+}

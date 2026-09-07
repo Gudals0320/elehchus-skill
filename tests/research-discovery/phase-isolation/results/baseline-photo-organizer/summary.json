@@ -1,0 +1,208 @@
+{
+  "kind": "phase_isolation_diagnostic",
+  "status": "timeout",
+  "source_label": "baseline",
+  "case": "photo-organizer",
+  "source_revision": "132eea57d10baa68cd6482a9d0d2e170afd7357e",
+  "source_sha256": "77cfae07e38f6c0f21671888c3c4ede389d3dae97fa99fb61b9e06e894ff4ac6",
+  "source_files": {
+    "SKILL.md": "98dd89b337190d6127e273b2ef0b89c271590f0f44afc8097150445b42093bb0",
+    "agents/openai.yaml": "d06dc00cbc87ee576a54a9442f6dc97f2496a22e9a9bff7caf3f8230524357cd",
+    "scripts/release_update.py": "e2702947f6914344d7a7ab6fa96b2c494cfc1496f99ca9707d56c348fe89a046",
+    "stages/execution.md": "3d3ff3090e87cb5870171b38c7fae67cafd2b3af6920fc77af60e1670ff8c24b",
+    "stages/idea.md": "b90e514340f5a1678bd93946f41938ae952c7c7b1ecf423ee1b161ad98f0fc91",
+    "stages/research.md": "94c8a967f9bdf89d13f095d1be68e0dd9829702c5abeeb0c37703e78f20f7853",
+    "stages/web-evidence-loop.md": "d4b514197f0183113a3e448e3bfbb8b56e45ae264b025c14b77a50d49b5c162f"
+  },
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "limits": {
+    "max_seconds": 600,
+    "max_responses": 1
+  },
+  "preparation_sha256": "f4c35845b8e0a04a42c597a02fe8f07a1b9d86697b971a4a5b800179803aa408",
+  "started_utc": "2026-09-07T07:21:06.370807+00:00",
+  "quality_verdict": "not_automatically_graded",
+  "temporary_workspace": "<os-temp>/elenchus-research-eval-phase-photo-organizer-rjxr35bg",
+  "host_read_setup": {
+    "status": "host_read_ace_prepared",
+    "scope": "temporary project root, inheritable host read only",
+    "before_model_start": true,
+    "started_utc": "2026-09-07T07:21:06.371980+00:00",
+    "finished_utc": "2026-09-07T07:21:06.399811+00:00",
+    "exit_code": 0
+  },
+  "initial_files": {
+    ".elenchus/idea.md": "3b8cbf98e8ebabafa1a39d695e1f376d5736c4fa260d7d7230dc48e14b3f361e",
+    "AGENTS.md": "6026092fe3a7949eec27eeba1eb4aaa5250b2de3e59200c759ee7674b59c6c42",
+    "app.txt": "d9f3330449c6b6026dcd24b656892bf6440ccf8011d73f4651bec865ec39f04e",
+    "evidence/01-pathframe-guide.md": "4ea3c72a71da93ed82d2fd02e62ccd8ff2d5ac6fe1172312143971ec8fa481f9",
+    "evidence/02-pathframe-transaction.md": "1dd0b51877547106bba4dff9001b703efc25aa0dbb714cf9efe680384bfe72d0",
+    "evidence/03-albumvault-guide.md": "9e6eb3b0e2dac906ddbc670039965e4f3e487b9c9b676caa1eda74db15e57a27",
+    "evidence/04-indexlens-guide.md": "adf0c8e44a1aef8575aea5fdec78660164fa8001c1a6edff48019e3663b3876d",
+    "evidence/05-photo-digest.md": "ab3e68f9f78d8b861222147bbe112b5d21c4c16f23e86b88f7ba777d3468a199",
+    "evidence/06-indexlens-v3.md": "6426fe5e716f151e5d8cf654260a43a2a5ab5cb41c3985ddea730ce848138343",
+    "evidence/07-pairboard-devlog.md": "8c99fad364899b0ed53d2c454c90e9ddc3b6fb56f83dad09bb0bd15990fbb37c",
+    "evidence/08-metadata-notes.md": "7e63b334be3ab3710aaded6fda4a7832233c5c63a587f560dd4c39504cdb49f3",
+    "evidence/README.md": "7cb7bd044324cf5bdd4dd77bcb375de88055c87bbbb675666ab152bd5e7f8b33",
+    "skill/SKILL.md": "98dd89b337190d6127e273b2ef0b89c271590f0f44afc8097150445b42093bb0",
+    "skill/agents/openai.yaml": "d06dc00cbc87ee576a54a9442f6dc97f2496a22e9a9bff7caf3f8230524357cd",
+    "skill/scripts/release_update.py": "e2702947f6914344d7a7ab6fa96b2c494cfc1496f99ca9707d56c348fe89a046",
+    "skill/stages/execution.md": "3d3ff3090e87cb5870171b38c7fae67cafd2b3af6920fc77af60e1670ff8c24b",
+    "skill/stages/idea.md": "b90e514340f5a1678bd93946f41938ae952c7c7b1ecf423ee1b161ad98f0fc91",
+    "skill/stages/research.md": "94c8a967f9bdf89d13f095d1be68e0dd9829702c5abeeb0c37703e78f20f7853",
+    "skill/stages/web-evidence-loop.md": "d4b514197f0183113a3e448e3bfbb8b56e45ae264b025c14b77a50d49b5c162f"
+  },
+  "input_sha256": "2150524b2363a428430e6fa599454cb745c1d60dd3f60135f0efde84e2d74e79",
+  "idea_seed_sha256": "3b8cbf98e8ebabafa1a39d695e1f376d5736c4fa260d7d7230dc48e14b3f361e",
+  "cli_version": "codex-cli 0.153.4",
+  "exit_code": 1,
+  "timed_out": true,
+  "elapsed_seconds": 600.156,
+  "command": [
+    "<user>/AppData/Local/OpenAI/Codex/bin/8e5b6932251c2c1c/codex.exe",
+    "-a",
+    "never",
+    "exec",
+    "--ignore-user-config",
+    "--ignore-rules",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "workspace-write",
+    "-c",
+    "web_search=\"disabled\"",
+    "-c",
+    "features.multi_agent=false",
+    "-m",
+    "gpt-6-astra",
+    "-c",
+    "model_reasoning_effort=\"xhigh\"",
+    "-C",
+    "<fixture>",
+    "--json",
+    "-o",
+    "<diagnostic-temp>\\final.md",
+    "-c",
+    "windows.sandbox=\"elevated\"",
+    "-c",
+    "skills.config=[{path=\"<user>/.codex/skills/elenchus/SKILL.md\",enabled=false},{path=\"<user>/.codex/skills/elenchus-benchmark/SKILL.md\",enabled=false},{path=\"<user>/.codex/skills/elenchus-test/SKILL.md\",enabled=false}]",
+    "-"
+  ],
+  "excluded_event_types": {},
+  "answer_sha256": "d3a67e14e1fd590e9b6f53984f66698c6f5645b6f27c400a639e2012774f87f9",
+  "published_answer_sha256": "d3a67e14e1fd590e9b6f53984f66698c6f5645b6f27c400a639e2012774f87f9",
+  "events_sha256": "837ca33f2e73aaaca5814ba0da1e19990b88269acc013c2d283916a01be111ce",
+  "usage": [],
+  "tool_calls": 14,
+  "artifact_collection": "complete",
+  "artifacts": {
+    ".elenchus/idea.md": {
+      "sha256": "3b8cbf98e8ebabafa1a39d695e1f376d5736c4fa260d7d7230dc48e14b3f361e",
+      "bytes": 2845,
+      "published": true,
+      "published_sha256": "3b8cbf98e8ebabafa1a39d695e1f376d5736c4fa260d7d7230dc48e14b3f361e"
+    },
+    ".elenchus/research/index.md": {
+      "sha256": "b17a6316cbc95152f4e313886d3f6d9d01ea7dbc7af40713c50dc2f8013beb20",
+      "bytes": 914,
+      "published": true,
+      "published_sha256": "b17a6316cbc95152f4e313886d3f6d9d01ea7dbc7af40713c50dc2f8013beb20"
+    },
+    ".elenchus/research/R001-photo-organization.md": {
+      "sha256": "f234431ad1f3db8aa83af5205ea427a47af37a8ccba67b028214bece0ceecb90",
+      "bytes": 18520,
+      "published": true,
+      "published_sha256": "f234431ad1f3db8aa83af5205ea427a47af37a8ccba67b028214bece0ceecb90"
+    },
+    ".elenchus/research/R002-date-interpretation.md": {
+      "sha256": "7b000333c1ef74bfe6351a667013050d200f0613c005d171b5189436f5f962ff",
+      "bytes": 13962,
+      "published": true,
+      "published_sha256": "7b000333c1ef74bfe6351a667013050d200f0613c005d171b5189436f5f962ff"
+    },
+    ".elenchus/research/R003-photo-comparison.md": {
+      "sha256": "1264f6d2e6c3c2fc2afbe20a8888b1445c7bed1d2bf232d0f5d1b0a59f7aa6b5",
+      "bytes": 5911,
+      "published": true,
+      "published_sha256": "1264f6d2e6c3c2fc2afbe20a8888b1445c7bed1d2bf232d0f5d1b0a59f7aa6b5"
+    },
+    ".elenchus/research/R004-file-operation-safety.md": {
+      "sha256": "57a173b9fb42e28df971a4decb4474420c0a9859aab1b2ef0503350cfe035534",
+      "bytes": 6162,
+      "published": true,
+      "published_sha256": "57a173b9fb42e28df971a4decb4474420c0a9859aab1b2ef0503350cfe035534"
+    }
+  },
+  "final_files": {
+    ".elenchus/idea.md": "3b8cbf98e8ebabafa1a39d695e1f376d5736c4fa260d7d7230dc48e14b3f361e",
+    ".elenchus/research/R001-photo-organization.md": "f234431ad1f3db8aa83af5205ea427a47af37a8ccba67b028214bece0ceecb90",
+    ".elenchus/research/R002-date-interpretation.md": "7b000333c1ef74bfe6351a667013050d200f0613c005d171b5189436f5f962ff",
+    ".elenchus/research/R003-photo-comparison.md": "1264f6d2e6c3c2fc2afbe20a8888b1445c7bed1d2bf232d0f5d1b0a59f7aa6b5",
+    ".elenchus/research/R004-file-operation-safety.md": "57a173b9fb42e28df971a4decb4474420c0a9859aab1b2ef0503350cfe035534",
+    ".elenchus/research/index.md": "b17a6316cbc95152f4e313886d3f6d9d01ea7dbc7af40713c50dc2f8013beb20",
+    "AGENTS.md": "6026092fe3a7949eec27eeba1eb4aaa5250b2de3e59200c759ee7674b59c6c42",
+    "app.txt": "d9f3330449c6b6026dcd24b656892bf6440ccf8011d73f4651bec865ec39f04e",
+    "evidence/01-pathframe-guide.md": "4ea3c72a71da93ed82d2fd02e62ccd8ff2d5ac6fe1172312143971ec8fa481f9",
+    "evidence/02-pathframe-transaction.md": "1dd0b51877547106bba4dff9001b703efc25aa0dbb714cf9efe680384bfe72d0",
+    "evidence/03-albumvault-guide.md": "9e6eb3b0e2dac906ddbc670039965e4f3e487b9c9b676caa1eda74db15e57a27",
+    "evidence/04-indexlens-guide.md": "adf0c8e44a1aef8575aea5fdec78660164fa8001c1a6edff48019e3663b3876d",
+    "evidence/05-photo-digest.md": "ab3e68f9f78d8b861222147bbe112b5d21c4c16f23e86b88f7ba777d3468a199",
+    "evidence/06-indexlens-v3.md": "6426fe5e716f151e5d8cf654260a43a2a5ab5cb41c3985ddea730ce848138343",
+    "evidence/07-pairboard-devlog.md": "8c99fad364899b0ed53d2c454c90e9ddc3b6fb56f83dad09bb0bd15990fbb37c",
+    "evidence/08-metadata-notes.md": "7e63b334be3ab3710aaded6fda4a7832233c5c63a587f560dd4c39504cdb49f3",
+    "evidence/README.md": "7cb7bd044324cf5bdd4dd77bcb375de88055c87bbbb675666ab152bd5e7f8b33",
+    "skill/SKILL.md": "98dd89b337190d6127e273b2ef0b89c271590f0f44afc8097150445b42093bb0",
+    "skill/agents/openai.yaml": "d06dc00cbc87ee576a54a9442f6dc97f2496a22e9a9bff7caf3f8230524357cd",
+    "skill/scripts/release_update.py": "e2702947f6914344d7a7ab6fa96b2c494cfc1496f99ca9707d56c348fe89a046",
+    "skill/stages/execution.md": "3d3ff3090e87cb5870171b38c7fae67cafd2b3af6920fc77af60e1670ff8c24b",
+    "skill/stages/idea.md": "b90e514340f5a1678bd93946f41938ae952c7c7b1ecf423ee1b161ad98f0fc91",
+    "skill/stages/research.md": "94c8a967f9bdf89d13f095d1be68e0dd9829702c5abeeb0c37703e78f20f7853",
+    "skill/stages/web-evidence-loop.md": "d4b514197f0183113a3e448e3bfbb8b56e45ae264b025c14b77a50d49b5c162f"
+  },
+  "product_unchanged": true,
+  "file_changes": [
+    {
+      "path": ".elenchus/research/R001-photo-organization.md",
+      "before": null,
+      "after": "f234431ad1f3db8aa83af5205ea427a47af37a8ccba67b028214bece0ceecb90"
+    },
+    {
+      "path": ".elenchus/research/R002-date-interpretation.md",
+      "before": null,
+      "after": "7b000333c1ef74bfe6351a667013050d200f0613c005d171b5189436f5f962ff"
+    },
+    {
+      "path": ".elenchus/research/R003-photo-comparison.md",
+      "before": null,
+      "after": "1264f6d2e6c3c2fc2afbe20a8888b1445c7bed1d2bf232d0f5d1b0a59f7aa6b5"
+    },
+    {
+      "path": ".elenchus/research/R004-file-operation-safety.md",
+      "before": null,
+      "after": "57a173b9fb42e28df971a4decb4474420c0a9859aab1b2ef0503350cfe035534"
+    },
+    {
+      "path": ".elenchus/research/index.md",
+      "before": null,
+      "after": "b17a6316cbc95152f4e313886d3f6d9d01ea7dbc7af40713c50dc2f8013beb20"
+    }
+  ],
+  "finished_utc": "2026-09-07T07:31:06.817210+00:00",
+  "cleanup": {
+    "status": "retained_on_error",
+    "started_utc": "2026-09-07T07:31:06.818213+00:00",
+    "finished_utc": "2026-09-07T07:31:06.819210+00:00",
+    "error": "[WinError 5] 액세스가 거부되었습니다: '<user>\\\\AppData\\\\Local\\\\Temp\\\\elenchus-research-eval-phase-photo-organizer-rjxr35bg\\\\project\\\\.elenchus\\\\research\\\\index.md'",
+    "retained_temp": "<os-temp>/elenchus-research-eval-phase-photo-organizer-rjxr35bg"
+  },
+  "published_input_sha256": "2150524b2363a428430e6fa599454cb745c1d60dd3f60135f0efde84e2d74e79",
+  "digest_basis": {
+    "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+    "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+    "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+    "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+    "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+    "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+  }
+}

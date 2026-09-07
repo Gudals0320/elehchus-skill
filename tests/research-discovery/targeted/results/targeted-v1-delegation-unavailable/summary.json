@@ -1,0 +1,159 @@
+{
+  "kind": "targeted-candidate-only",
+  "case": "delegation-unavailable",
+  "status": "timeout",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "started_utc": "2026-09-07T06:36:57.666787+00:00",
+  "limits": {
+    "max_seconds": 180,
+    "max_responses": 1
+  },
+  "source_revision": "0217658b6626bce91c3973e6aac2ec1df9b9bb77",
+  "source_sha256": "ac3edb881eda879a8c7fe3effb91513b84770b67aee7795800da9d27f6dc690a",
+  "source_files": {
+    "SKILL.md": "1379018328aab9de08514659010faa464e6eca19465d34fdd44e5706a7df70c4",
+    "agents/openai.yaml": "d06dc00cbc87ee576a54a9442f6dc97f2496a22e9a9bff7caf3f8230524357cd",
+    "scripts/release_update.py": "e2702947f6914344d7a7ab6fa96b2c494cfc1496f99ca9707d56c348fe89a046",
+    "stages/discovery.md": "30ce4cd891f0e342b58f239a8ce822d2d7a8c98a6907aad4c494b8f5da84edf8",
+    "stages/execution.md": "04711713e1a6c17d0310d95fcaa234c37d8c59e5df22ccbca43597df0c28402c",
+    "stages/idea.md": "abcd6a105a17e2908bd596b8cd6ff71963cd287391a9c52fa86fb8195616bf14",
+    "stages/research.md": "46c0d300f86525cc5c5954b8ca1705cd1a2c26c92a63c0cd4be663f214d15650",
+    "stages/web-evidence-loop.md": "412b2a5165b54850cb7811a769a7ac7cb9cc50fe33ddf6acd9c98622232b9752"
+  },
+  "host_read_setup": {
+    "status": "host_read_ace_prepared",
+    "scope": "temporary project root, inheritable host read only",
+    "before_model_start": true,
+    "started_utc": "2026-09-07T06:36:57.590707+00:00",
+    "finished_utc": "2026-09-07T06:36:57.616469+00:00",
+    "exit_code": 0
+  },
+  "preparation_sha256": "177dad382d2e3c60d815e2622d1be1c45c9def73a178ef2ac6d82900f6f9ed08",
+  "input_sha256": "7789372a643657a0a8a7906e38fb55646607cdc9930b975203cb23c01948794d",
+  "initial_files": {
+    "AGENTS.md": "7a5130e6657c5dec54d620ee7ae9c53a6d44d1e517ec18ede9d734b475860fdb",
+    "app.txt": "144b85c70a192b8c9e428e83cf57eae38bb98495b59a7c6e2108fd0f18b908a1",
+    ".elenchus/idea.md": "af13809957edebaeb0804ff9799387ad5e5e6c6484fedb03be8e5ae890e6a309",
+    "evidence/folder-scan.md": "906d89c9e4a524458e8b94b37adce9b83a7a1974a8e5b5b98904fd5c8fdae012",
+    "evidence/local-index.md": "3bd1b8eedb228dae937784618ba4fcb2f6f593c000bc5a38947b92b5728e9cea",
+    "skill/SKILL.md": "1379018328aab9de08514659010faa464e6eca19465d34fdd44e5706a7df70c4",
+    "skill/agents/openai.yaml": "d06dc00cbc87ee576a54a9442f6dc97f2496a22e9a9bff7caf3f8230524357cd",
+    "skill/scripts/release_update.py": "e2702947f6914344d7a7ab6fa96b2c494cfc1496f99ca9707d56c348fe89a046",
+    "skill/stages/discovery.md": "30ce4cd891f0e342b58f239a8ce822d2d7a8c98a6907aad4c494b8f5da84edf8",
+    "skill/stages/execution.md": "04711713e1a6c17d0310d95fcaa234c37d8c59e5df22ccbca43597df0c28402c",
+    "skill/stages/idea.md": "abcd6a105a17e2908bd596b8cd6ff71963cd287391a9c52fa86fb8195616bf14",
+    "skill/stages/research.md": "46c0d300f86525cc5c5954b8ca1705cd1a2c26c92a63c0cd4be663f214d15650",
+    "skill/stages/web-evidence-loop.md": "412b2a5165b54850cb7811a769a7ac7cb9cc50fe33ddf6acd9c98622232b9752"
+  },
+  "quality_verdict": "not_automatically_graded",
+  "cli_version": "codex-cli 0.153.4",
+  "exit_code": 1,
+  "timed_out": true,
+  "elapsed_seconds": 180.157,
+  "command": [
+    "<user>/AppData/Local/OpenAI/Codex/bin/8e5b6932251c2c1c/codex.exe",
+    "-a",
+    "never",
+    "exec",
+    "--ignore-user-config",
+    "--ignore-rules",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "workspace-write",
+    "-c",
+    "web_search=\"disabled\"",
+    "-c",
+    "features.multi_agent=false",
+    "-m",
+    "gpt-6-astra",
+    "-c",
+    "model_reasoning_effort=\"xhigh\"",
+    "-C",
+    "<fixture>",
+    "--json",
+    "-o",
+    "<probe-temp>\\final.md",
+    "-c",
+    "windows.sandbox=\"elevated\"",
+    "-c",
+    "skills.config=[{path=\"<user>/.codex/skills/elenchus/SKILL.md\",enabled=false},{path=\"<user>/.codex/skills/elenchus-benchmark/SKILL.md\",enabled=false},{path=\"<user>/.codex/skills/elenchus-test/SKILL.md\",enabled=false}]",
+    "-"
+  ],
+  "excluded_event_types": {},
+  "usage": [],
+  "tool_calls": 12,
+  "answer_sha256": "e44905c9b8866bdf8a4ddd6c178c2d34d7fd3b10f958ffb7f21a52f686285ee3",
+  "published_answer_sha256": "236b26f5a32416b4f2f46c70e8ab4d4de6a10b37df8b18460821c728be6bc995",
+  "events_sha256": "5d5cdef334200adecea20b640a2a07ad6b6ee31ea121af36ad63afe9c59942b3",
+  "final_files": {
+    "AGENTS.md": "7a5130e6657c5dec54d620ee7ae9c53a6d44d1e517ec18ede9d734b475860fdb",
+    "app.txt": "144b85c70a192b8c9e428e83cf57eae38bb98495b59a7c6e2108fd0f18b908a1",
+    ".elenchus/idea.md": "af13809957edebaeb0804ff9799387ad5e5e6c6484fedb03be8e5ae890e6a309",
+    ".elenchus/research/index.md": "dd1f650891c00128edf27c26ef673fafa3d9cab5f7498e285649f5c421acae47",
+    ".elenchus/research/R001-photo-list-storage.md": "b7463c227c85ce363e9a116453bf16320a72dded1aaadc0559cb6166e418c4e2",
+    "evidence/folder-scan.md": "906d89c9e4a524458e8b94b37adce9b83a7a1974a8e5b5b98904fd5c8fdae012",
+    "evidence/local-index.md": "3bd1b8eedb228dae937784618ba4fcb2f6f593c000bc5a38947b92b5728e9cea",
+    "skill/SKILL.md": "1379018328aab9de08514659010faa464e6eca19465d34fdd44e5706a7df70c4",
+    "skill/agents/openai.yaml": "d06dc00cbc87ee576a54a9442f6dc97f2496a22e9a9bff7caf3f8230524357cd",
+    "skill/scripts/release_update.py": "e2702947f6914344d7a7ab6fa96b2c494cfc1496f99ca9707d56c348fe89a046",
+    "skill/stages/discovery.md": "30ce4cd891f0e342b58f239a8ce822d2d7a8c98a6907aad4c494b8f5da84edf8",
+    "skill/stages/execution.md": "04711713e1a6c17d0310d95fcaa234c37d8c59e5df22ccbca43597df0c28402c",
+    "skill/stages/idea.md": "abcd6a105a17e2908bd596b8cd6ff71963cd287391a9c52fa86fb8195616bf14",
+    "skill/stages/research.md": "46c0d300f86525cc5c5954b8ca1705cd1a2c26c92a63c0cd4be663f214d15650",
+    "skill/stages/web-evidence-loop.md": "412b2a5165b54850cb7811a769a7ac7cb9cc50fe33ddf6acd9c98622232b9752"
+  },
+  "file_changes": [
+    {
+      "path": ".elenchus/research/R001-photo-list-storage.md",
+      "before": null,
+      "after": "b7463c227c85ce363e9a116453bf16320a72dded1aaadc0559cb6166e418c4e2"
+    },
+    {
+      "path": ".elenchus/research/index.md",
+      "before": null,
+      "after": "dd1f650891c00128edf27c26ef673fafa3d9cab5f7498e285649f5c421acae47"
+    }
+  ],
+  "app_after_text": "OLD\n",
+  "app_after_sha256": "144b85c70a192b8c9e428e83cf57eae38bb98495b59a7c6e2108fd0f18b908a1",
+  "artifact_collection": "complete",
+  "artifacts": {
+    ".elenchus/idea.md": {
+      "sha256": "af13809957edebaeb0804ff9799387ad5e5e6c6484fedb03be8e5ae890e6a309",
+      "bytes": 398,
+      "published": true,
+      "published_sha256": "af13809957edebaeb0804ff9799387ad5e5e6c6484fedb03be8e5ae890e6a309"
+    },
+    ".elenchus/research/index.md": {
+      "sha256": "dd1f650891c00128edf27c26ef673fafa3d9cab5f7498e285649f5c421acae47",
+      "bytes": 294,
+      "published": true,
+      "published_sha256": "dd1f650891c00128edf27c26ef673fafa3d9cab5f7498e285649f5c421acae47"
+    },
+    ".elenchus/research/R001-photo-list-storage.md": {
+      "sha256": "b7463c227c85ce363e9a116453bf16320a72dded1aaadc0559cb6166e418c4e2",
+      "bytes": 4858,
+      "published": true,
+      "published_sha256": "b7463c227c85ce363e9a116453bf16320a72dded1aaadc0559cb6166e418c4e2"
+    }
+  },
+  "finished_utc": "2026-09-07T06:39:58.039146+00:00",
+  "cleanup": {
+    "status": "retained_on_error",
+    "started_utc": "2026-09-07T06:39:58.039609+00:00",
+    "finished_utc": "2026-09-07T06:39:58.039609+00:00",
+    "error": "[WinError 5] 액세스가 거부되었습니다: '<user>\\\\AppData\\\\Local\\\\Temp\\\\elenchus-research-eval-targeted-delegation-unavailable-3j2xwgib\\\\project\\\\.elenchus\\\\research\\\\index.md'",
+    "retained_temp": "<os-temp>/elenchus-research-eval-targeted-delegation-unavailable-3j2xwgib"
+  },
+  "published_input_sha256": "7789372a643657a0a8a7906e38fb55646607cdc9930b975203cb23c01948794d",
+  "digest_basis": {
+    "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+    "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+    "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+    "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+    "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+    "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+  }
+}

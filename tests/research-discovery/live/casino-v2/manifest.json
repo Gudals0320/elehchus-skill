@@ -1,0 +1,67 @@
+{
+  "source_revision": "655f1c53342abdc8254f354ded168ebf17c6bf22",
+  "source_hashes": {
+    "agents/openai.yaml": "d06dc00cbc87ee576a54a9442f6dc97f2496a22e9a9bff7caf3f8230524357cd",
+    "LICENSE": "6bdb34f11ff8fcc0bd702d1c946b41c6a5f2c0cf1e8104d8465b55936ae4fdb2",
+    "README.md": "38e941b83e679ef2570fab6df5c0ef3edae866b09b358ebb86f24a48b7443d26",
+    "scripts/release_update.py": "e2702947f6914344d7a7ab6fa96b2c494cfc1496f99ca9707d56c348fe89a046",
+    "SKILL.md": "1379018328aab9de08514659010faa464e6eca19465d34fdd44e5706a7df70c4",
+    "stages/discovery.md": "30ce4cd891f0e342b58f239a8ce822d2d7a8c98a6907aad4c494b8f5da84edf8",
+    "stages/execution.md": "04711713e1a6c17d0310d95fcaa234c37d8c59e5df22ccbca43597df0c28402c",
+    "stages/idea.md": "abcd6a105a17e2908bd596b8cd6ff71963cd287391a9c52fa86fb8195616bf14",
+    "stages/research.md": "06583ad7d17aa56108718471c1e82e827f06811a62a1f8e96fe0c1ef856cd260",
+    "stages/web-evidence-loop.md": "5dd02265d4c1833b3585c3902a3142caf222d98db68eaafa53343454614855c1"
+  },
+  "case": "casino",
+  "kind": "labeled_retry_after_v1_time_overrun_and_record_consolidation",
+  "max_responses": 12,
+  "max_seconds": 1200,
+  "context": "fresh native agent; same original+preferences; no previous result or preferred solution",
+  "evidence": "live public web; no fixed corpus",
+  "release_check": "pre-completed fixture outside measured Research",
+  "input_sha256": "aac0ee360f6ecada135df6f9b1d0ae4d596d609f8c5cb7888f9233d479192cf0",
+  "product_before_sha256": "2dc35057849e6a96a97b94e8b6528ec9377fb77837d433e1163d502284766c53",
+  "product_before_hex": "554e494d504c454d454e5445440d0a",
+  "product_initial_hash_basis": "measured before session launch",
+  "started_utc": "2026-09-07T06:52:35+00:00",
+  "deadline_utc": "2026-09-07T07:12:35+00:00",
+  "last_time_check_before_interrupt_utc": "2026-09-07T07:13:56+00:00",
+  "elapsed_lower_bound_at_interrupt_seconds": 1281,
+  "deadline_enforcement": "operator interrupted after deadline; strict1200s enforcement not achieved",
+  "status": "time_limit_exceeded_interrupted_incomplete",
+  "completed_responses": 1,
+  "post_timeout_archive": "administrative summary of existing evidence only; excluded from timed response count",
+  "product_after_sha256": "2dc35057849e6a96a97b94e8b6528ec9377fb77837d433e1163d502284766c53",
+  "product_unchanged": true,
+  "artifacts": {
+    "response-1.md": {
+      "raw_sha256": "7f19c9135049270d446fdefd629f5fe9e96df2c4459bf4113be2d5cc81a43bde",
+      "published_sha256": "7f19c9135049270d446fdefd629f5fe9e96df2c4459bf4113be2d5cc81a43bde"
+    },
+    "observations.md": {
+      "raw_sha256": "28356f0ba93e30c9abfeb0fe9e41c201dd9a9df15194fdc7370894b4b5b29fe7",
+      "published_sha256": "e4312f3d13af2a7eee0ff9a4c18eff53a3d964a3b9a999b9256866bac5eb0d0b"
+    },
+    "post-timeout-archive.md": {
+      "raw_sha256": "b37042dee7b73ef210c2ff9f358e408f7da3d5ce71a0828941a51d3f595be25f",
+      "published_sha256": "b5d8a7e8c0bc33e662e497758660ccebec684497c526b65ff0c24ebc570d7b15"
+    },
+    ".elenchus/idea.md": {
+      "raw_sha256": "cd8c47b5cf9750ac5df67ae84bfa656c09c68ff796566b9505b8520ac5df5a8b",
+      "published_sha256": "cd8c47b5cf9750ac5df67ae84bfa656c09c68ff796566b9505b8520ac5df5a8b"
+    },
+    ".elenchus/research/index.md": {
+      "raw_sha256": "eeddfcfe8f5ea24c04d3413c3f312f259069ad465732dcdde4f2381b040ea9e5",
+      "published_sha256": "eeddfcfe8f5ea24c04d3413c3f312f259069ad465732dcdde4f2381b040ea9e5"
+    },
+    ".elenchus/research/R001-table-presentation.md": {
+      "raw_sha256": "bdb4e6dc11374e3aaf7f7fa0aba4990576dc96da9171f52d7212fd890c9f2942",
+      "published_sha256": "bdb4e6dc11374e3aaf7f7fa0aba4990576dc96da9171f52d7212fd890c9f2942"
+    }
+  },
+  "subagents_observed": [
+    "implementation_research"
+  ],
+  "usage": "not exposed by native collaboration tool",
+  "trace_kind": "actor-authored observations and artifacts; not complete host tool trace"
+}

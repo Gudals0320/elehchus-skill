@@ -1,0 +1,35 @@
+{
+  "kind": "phase_isolation_diagnostic",
+  "outcomes": [
+    {
+      "result": "candidate-v2-casino",
+      "status": "response_observed",
+      "elapsed_seconds": 551.125,
+      "artifact_collection": "complete",
+      "cleanup": "retained_on_error"
+    },
+    {
+      "result": "baseline-casino",
+      "status": "timeout",
+      "elapsed_seconds": 600.172,
+      "artifact_collection": "complete",
+      "cleanup": "retained_on_error"
+    },
+    {
+      "result": "baseline-photo-organizer",
+      "status": "timeout",
+      "elapsed_seconds": 600.156,
+      "artifact_collection": "complete",
+      "cleanup": "retained_on_error"
+    },
+    {
+      "result": "candidate-v2-photo-organizer",
+      "status": "timeout",
+      "elapsed_seconds": 600.156,
+      "artifact_collection": "complete",
+      "cleanup": "retained_on_error"
+    }
+  ],
+  "finished_utc": "2026-09-07T07:31:55.866530+00:00",
+  "semantic_grading": "not_performed"
+}

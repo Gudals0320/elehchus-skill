@@ -4,7 +4,7 @@
 
 ## 고정 조건과 해석
 
-- 기준은 `132eea57d10baa68cd6482a9d0d2e170afd7357e`의 스킬 runtime이다. `freeze`가 Git archive에서 추출한 파일별 SHA-256을 고정한다. 후보도 실행 전 작업 트리의 runtime 파일 해시를 고정한다.
+- 기준은 `132eea57d10baa68cd6482a9d0d2e170afd7357e`의 스킬 runtime이다. `freeze`가 Git archive에서 추출한 파일별 SHA-256을 고정한다. 후보도 실행 전 runtime을 커밋하고 해당 커밋의 Git archive·파일별 SHA-256을 고정한다. runtime에 미커밋 변경이 있으면 후보 freeze를 거부한다. Windows 체크아웃의 CRLF는 이 확인에만 LF로 정규화하며 두 평가군의 실행 사본은 모두 Git의 원래 바이트를 사용한다.
 - 통제 비교는 카지노·로컬 사진 정리 도구 × 기준/후보 × 독립 표본 두 개, 총 8회다. 모델은 `gpt-6-astra`, reasoning `xhigh`, 회당 최대 8개 응답·600초다. 같은 사례의 원요구·선호·근거·사용자 후속 응답은 동일하다.
 - 카지노 입력은 첫 실사용의 **최초 사용자 요청만** 재현한다. 이후 리뷰·예상 해법·개선 이슈·판정 기준은 평가 모델에 전달하지 않는다. 사진 정리 도구는 새로운 합성 요구다.
 - 고정 근거는 **가상의 제품·개발 문서**다. 비교·적용·직접 관찰 범위·출처 중복·상충 조건을 통제할 수 있지만, 실제 제품의 존재나 웹에서 사례를 발견하는 능력을 입증하지 않는다. 링크는 예약 도메인 `.example`이며 접근하지 않는다. 시각 자료는 제공되지 않았다는 원문 사실이 있다.
@@ -18,9 +18,9 @@ Python 3.10 이상과 인증된 Codex CLI만 사용한다. 계정 인증은 기�
 ```powershell
 python tests/research-discovery/runner.py freeze --variant baseline
 python tests/research-discovery/runner.py freeze --variant candidate --label candidate-v1
-python tests/research-discovery/runner.py probe --cli <Codex実行ファイル>
-python tests/research-discovery/runner.py run --snapshot tests/research-discovery/snapshots/baseline.json --case casino --sample 1 --cli <Codex実行ファイル>
-python tests/research-discovery/runner.py run --snapshot tests/research-discovery/snapshots/candidate-v1.json --case casino --sample 1 --cli <Codex実行ファイル>
+python tests/research-discovery/runner.py probe --cli <Codex실행파일>
+python tests/research-discovery/runner.py run --snapshot tests/research-discovery/snapshots/baseline.json --case casino --sample 1 --cli <Codex실행파일>
+python tests/research-discovery/runner.py run --snapshot tests/research-discovery/snapshots/candidate-v1.json --case casino --sample 1 --cli <Codex실행파일>
 python -m unittest discover -s tests/research-discovery -p "test_*.py"
 ```
 
@@ -28,9 +28,11 @@ python -m unittest discover -s tests/research-discovery -p "test_*.py"
 
 임시 프로젝트와 runtime 사본·사용자 대화·제품 stub은 OS 임시 디렉터리에 만든다. 후속 응답은 같은 파일 상태와 **공개된 이전 사용자/assistant 대화**를 새 ephemeral CLI에 제공한다. 원래 agent의 숨은 상태를 복원하는 CLI resume 평가는 아니다. 초기에는 원요구, 첫 후속에는 고정 선호 packet, 이후에는 같은 범위의 확인·진행 응답을 사용한다. 제시하지 않은 새 선택이나 기능을 자동 승인하지 않는다.
 
-Research 문서가 `확정`과 Verdict를 함께 기록하거나 최종 응답에서 근거 공백 때문에 결론을 보류한다고 보고하면 `reported_research_verdict`로 종료할 수 있다. 이는 실행 구간을 자르는 관찰 신호이며 품질 통과가 아니다. 그 외에는 응답·시간 상한에서 종료한다. 에러·시간 초과·제품 수정·소스 오염을 보존하고 자동으로 성공 처리하거나 재시도하지 않는다.
+첫 선호 packet을 전달한 뒤, Research 문서에 선택된 결론이 있고 공개 응답도 결론을 명시하면 `reported_research_verdict`로 종료할 수 있다. `Verdict`뿐 아니라 `결론과 다음 행동` 같은 한국어 기록도 허용하지만, 미선택 enum·TODO 틀이나 단순히 `공백`을 언급한 응답은 종료 신호가 아니다. 이는 실행 구간을 자르는 보고 경계 추정이며 품질 통과가 아니다. 최초로 사용자에게 보인 Research 결과는 별도 수동 지표로 확인해 자동 경계 누락으로 늘어난 후속 처리 시간과 구분한다. 그 외에는 응답·시간 상한에서 종료한다. 에러·시간 초과·제품 수정·소스 오염을 보존하고 자동으로 성공 처리하거나 재시도하지 않는다.
 
 각 실행은 manifest·fixture·source·실제 입력 해시, 공개 응답·도구 이벤트, 문서 산출물, 제품 파일 전후 해시, 종료 사유, host usage와 시간을 남긴다. hidden reasoning 이벤트는 읽어 분류한 뒤 버리고 공개 로그에 쓰지 않는다. 사용자 경로·인증 관련 문자열은 저장 전에 비식별화한다. JSONL에 기록되지 않은 도구 내부 행동은 관찰했다고 주장하지 않는다. 질문 수는 후보 문장 자동 집계이며 실질 결정·재확인·수정은 수동 검토한다.
+
+Windows 첫 카지노 두 실행에서는 sandbox가 만든 문서 디렉터리를 host가 읽지 못했다. 원래 collector의 빈 결과는 파일 불변·문서 부재의 증거가 아니다. [복구 시도와 원래 runner](infrastructure/host-read-repair.json)를 별도로 보존했다. 이후 새 임시 프로젝트에는 모델 실행 전에 해당 host의 읽기 상속 ACE만 준비한다. 모델 권한이나 지침은 바꾸지 않는다. 접근 오류는 strict walk로 검출해 `artifact_collection: incomplete`로 기록하고 파일 변경 여부를 미관찰로 남긴다. 수집이 미완료이면 정리 시도를 건너뛰고 해당 작업장을 보존한다. 실행별 `runner_sha256`·`host_read_setup`과 [수집·종료 경계 보완](infrastructure/closure-and-retention-repair.json)에 기록한 차이를 비교할 때 확인한다.
 
 ## 사전 판정 기준 — 평가자 전용
 

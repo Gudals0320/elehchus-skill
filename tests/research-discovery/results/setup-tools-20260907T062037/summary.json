@@ -1,0 +1,101 @@
+{
+  "kind": "setup",
+  "mode": "korean_tools_and_artifact_roundtrip",
+  "stderr": "2026-09-07T06:20:37.577891Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell\n",
+  "exit_code": 0,
+  "timed_out": false,
+  "elapsed_seconds": 20.875,
+  "runner_sha256": "4d3c4527d260cff8470d1c22c1f46f5c2fc228ac9510ecf097a666436f2e82a1",
+  "host_read_setup": {
+    "status": "host_read_ace_prepared",
+    "scope": "temporary project root, inheritable host read only",
+    "before_model_start": true,
+    "started_utc": "2026-09-07T06:20:37.273014+00:00",
+    "finished_utc": "2026-09-07T06:20:37.305510+00:00",
+    "exit_code": 0
+  },
+  "explicit_encoding": "UTF-8 stdin/stdout; Python UTF8/IO env; Windows console CP 65001",
+  "input_sha256": "e8e0b908992f5c88278e5cfa53c4e8d3ac89c48b1806aea3ad0e92436da036e4",
+  "fixture_sha256": "b4143b3692da2dd7d866898e36294462c651bad30a704b8a39a76bfdee3b031f",
+  "events_sha256": "37a978d024597e659b4f17317a8fc409f37e50b7b00132e36656d8256215e01d",
+  "excluded_event_types": {},
+  "usage": [
+    {
+      "input_tokens": 39062,
+      "cached_input_tokens": 34816,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 318,
+      "reasoning_output_tokens": 0
+    }
+  ],
+  "command": [
+    "<user>/AppData/Local/OpenAI/Codex/bin/8e5b6932251c2c1c/codex.exe",
+    "-a",
+    "never",
+    "exec",
+    "--ignore-user-config",
+    "--ignore-rules",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "workspace-write",
+    "-c",
+    "web_search=\"disabled\"",
+    "-c",
+    "features.multi_agent=false",
+    "-m",
+    "gpt-6-astra",
+    "-c",
+    "model_reasoning_effort=\"xhigh\"",
+    "-C",
+    "<fixture>",
+    "--json",
+    "-o",
+    "<probe-temp>\\final.md",
+    "-c",
+    "windows.sandbox=\"elevated\"",
+    "-c",
+    "skills.config=[{path=\"<user>/.codex/skills/elenchus/SKILL.md\",enabled=false},{path=\"<user>/.codex/skills/elenchus-benchmark/SKILL.md\",enabled=false},{path=\"<user>/.codex/skills/elenchus-test/SKILL.md\",enabled=false}]",
+    "-"
+  ],
+  "checks": {
+    "model_completed": true,
+    "actual_shell_commands": 2,
+    "korean_in_tool_output": true,
+    "no_replacement_characters": true,
+    "korean_in_final_answer": true,
+    "host_can_read_new_artifact": true,
+    "artifact_bytes_match": true
+  },
+  "temporary_workspace": "<os-temp>/elenchus-research-eval-setup-irhrqzqy",
+  "files": {
+    ".elenchus/research/probe-ko.txt": "b4143b3692da2dd7d866898e36294462c651bad30a704b8a39a76bfdee3b031f",
+    "fixture-ko.txt": "b4143b3692da2dd7d866898e36294462c651bad30a704b8a39a76bfdee3b031f"
+  },
+  "artifacts": {
+    ".elenchus/research/probe-ko.txt": {
+      "sha256": "b4143b3692da2dd7d866898e36294462c651bad30a704b8a39a76bfdee3b031f",
+      "bytes": 87,
+      "published": true,
+      "published_sha256": "b4143b3692da2dd7d866898e36294462c651bad30a704b8a39a76bfdee3b031f"
+    }
+  },
+  "setup_passed": true,
+  "cleanup": {
+    "status": "retained_on_error",
+    "started_utc": "2026-09-07T06:23:40.346176+00:00",
+    "finished_utc": "2026-09-07T06:23:40.346176+00:00",
+    "error": "[WinError 5] 액세스가 거부되었습니다: '<user>\\\\AppData\\\\Local\\\\Temp\\\\elenchus-research-eval-setup-irhrqzqy\\\\project\\\\.elenchus\\\\research\\\\probe-ko.txt'",
+    "retained_temp": "<os-temp>/elenchus-research-eval-setup-irhrqzqy"
+  },
+  "published_input_sha256": "e8e0b908992f5c88278e5cfa53c4e8d3ac89c48b1806aea3ad0e92436da036e4",
+  "published_answer_sha256": "a77630c17a044a3b51e693df578caf66e44290ff4653791a64690eb3677ace4c",
+  "digest_basis": {
+    "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+    "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+    "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+    "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+    "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+    "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+  }
+}
