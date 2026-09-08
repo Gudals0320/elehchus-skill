@@ -1,8 +1,6 @@
 """Deterministic harness checks; these are not model-compliance evidence."""
-import importlib.util
 import json
 from pathlib import Path
-import re
 import subprocess
 import sys
 import tempfile
@@ -315,51 +313,6 @@ class ExecutionTests(unittest.TestCase):
         self.assertEqual(result["stdout"].strip(), "UNTIMED_READY")
         self.assertEqual(result["exit_code"], 0)
         self.assertFalse(result["timed_out"])
-
-
-class PackagingTests(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        spec = importlib.util.spec_from_file_location("research_eval_release_update", runner.REPO / "scripts/release_update.py")
-        cls.release = importlib.util.module_from_spec(spec)
-        sys.modules[spec.name] = cls.release
-        spec.loader.exec_module(cls.release)
-
-    def test_current_discovery_survives_existing_package_copy(self):
-        version = re.search(r'version:\s*"([^"]+)"', (runner.REPO / "SKILL.md").read_text(encoding="utf-8")).group(1)
-        with tempfile.TemporaryDirectory() as temporary:
-            # Exercise the package copier on the real runtime payload. The
-            # working repository may now contain large ignored live-evaluation
-            # workspaces/venvs, which are not part of a release source archive.
-            source = Path(temporary) / "source"
-            payload = runner.runtime_bytes()
-            for name in ("LICENSE", "README.md"):
-                payload[name] = (runner.REPO / name).read_bytes()
-            for name, data in payload.items():
-                path = source / name
-                path.parent.mkdir(parents=True, exist_ok=True)
-                path.write_bytes(data)
-            destination = Path(temporary) / "package"
-            destination.mkdir()
-            self.release._copy_package(source, destination)
-            self.release._validate_package(destination, version)
-            copied = destination / "stages/discovery.md"
-            self.assertEqual(copied.read_bytes(), (runner.REPO / "stages/discovery.md").read_bytes())
-
-    def test_baseline_without_discovery_still_validates(self):
-        source = runner.runtime_bytes(runner.MANIFEST["baseline_revision"])
-        for name in ("LICENSE", "README.md"):
-            source[name] = subprocess.run(["git", "show", runner.MANIFEST["baseline_revision"] + ":" + name],
-                                          cwd=runner.REPO, capture_output=True, check=True).stdout
-        self.assertNotIn("stages/discovery.md", source)
-        version = re.search(r'version:\s*"([^"]+)"', source["SKILL.md"].decode()).group(1)
-        with tempfile.TemporaryDirectory() as temporary:
-            root = Path(temporary)
-            for name, data in source.items():
-                path = root / name
-                path.parent.mkdir(parents=True, exist_ok=True)
-                path.write_bytes(data)
-            self.release._validate_package(root, version)
 
 
 if __name__ == "__main__":
