@@ -1,0 +1,4 @@
+# Evidence and fixture digests refer to exact file bytes on every platform.
+** -text
+results/** -whitespace
+baseline/** -whitespace

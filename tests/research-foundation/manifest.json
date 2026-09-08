@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "protocol_version": "2026-09-08.1",
+  "model_requested": "gpt-6-astra",
+  "reasoning_effort_requested": "xhigh",
+  "context": "native fresh actor context; no prior turns or evaluator files",
+  "session_limits": {"seconds": null, "responses": null},
+  "runtime_paths": ["SKILL.md", "stages", "scripts", "agents"],
+  "runs": [
+    {"id": "weather-sample1", "case": "weather", "sample": 1},
+    {"id": "photos-sample1", "case": "photos", "sample": 1},
+    {"id": "weather-sample2", "case": "weather", "sample": 2},
+    {"id": "photos-sample2", "case": "photos", "sample": 2}
+  ],
+  "tools_required": ["public web search and original-source retrieval", "native delegation", "local code execution"],
+  "evidence": "live public sources and actor-created executable materials; no fixed reference candidate list",
+  "comparison": "four beta.2 samples; historical beta.1 comparisons are not pooled",
+  "trace": "separate actor-authored records and directly observed host events; neither implies full trace coverage",
+  "usage": "null when unavailable; reported, directly observed and measured values distinguished",
+  "publication": "explicit reviewed relative-path allowlist; no .git, host configuration, credentials or hidden reasoning"
+}
