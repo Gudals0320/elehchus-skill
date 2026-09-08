@@ -8,7 +8,7 @@ Topology ↔ Research
 → 일반 Codex 작업
 ```
 
-## 1.1.0-beta.2의 방향
+## 2.0.0의 방향
 
 - **Topology — 탐구의 지형:** 목적·기능·입출력·환경 제약·연구 질문·달성 조건과 조사/실험 방향을 준비한다.
 - **넓은 Research:** 비단순 조사에서는 실제 웹과 독립 질문을 맡은 탐색 agent 두 명을 기본으로 직접 해법·다른 방식/인접 분야·실패 경험을 찾는다. 좁은 사실 확인과 실제 도구 미지원은 구분한다.
@@ -21,11 +21,11 @@ Topology ↔ Research
 설치 대상은 저장소 루트가 아닌 **`skills/elenchus`**다. Codex의 skill-installer에 다음과 같이 요청한다.
 
 ```text
-Gudals0320/elehchus-skill 저장소의 codex/research-foundation-beta2 브랜치에서
+Gudals0320/elehchus-skill 저장소의 v2.0.0 태그에서
 skills/elenchus 경로를 elenchus 스킬로 설치해 줘.
 ```
 
-설치기 인자는 `--repo Gudals0320/elehchus-skill --path skills/elenchus --ref codex/research-foundation-beta2`다. 수동 설치도 해당 폴더만 Codex 스킬 경로의 `elenchus/`에 복사한다. 설치 후 새 작업에서 호출한다.
+설치기 인자는 `--repo Gudals0320/elehchus-skill --path skills/elenchus --ref v2.0.0`다. 수동 설치도 해당 폴더만 Codex 스킬 경로의 `elenchus/`에 복사한다. 설치 후 새 작업에서 호출한다.
 
 ```text
 skills/elenchus/     # 설치 대상
@@ -39,9 +39,9 @@ tests/              # 개발 검사·평가 기록
 
 `docs/`와 `tests/`는 설치 대상 폴더 밖에 있으므로 설치본에 포함되지 않는다. 설치기의 다운로드 단계에서는 저장소 전체를 임시로 받을 수 있지만 실제 설치 폴더에는 지정한 경로만 복사한다.
 
-이 브랜치에는 자동 업데이트가 없다. 버전 교체는 원하는 소스를 직접 설치한다. 기존 설치가 있으면 스킬 검색 경로 밖에 백업한 뒤 폴더를 교체한다.
+자동 업데이트는 제공하지 않는다. 버전 교체는 원하는 소스를 직접 설치한다. 기존 설치가 있으면 스킬 검색 경로 밖에 백업한 뒤 폴더를 교체한다.
 
-게시된 [Releases](https://github.com/Gudals0320/elehchus-skill/releases)는 각 태그 당시의 소스다. 설치 경로 분리와 자동 업데이트·구버전 호환 제거는 `v1.1.0-beta.2` 게시 이후의 브랜치 변경이며 해당 태그에는 포함되지 않는다.
+[정식 릴리스](https://github.com/Gudals0320/elehchus-skill/releases/tag/v2.0.0)의 `elenchus-v2.0.0.zip`에는 설치 대상만 담는다. ZIP의 `elenchus/` 폴더를 스킬 경로에 복사해도 된다.
 
 ## 사용
 
@@ -72,7 +72,7 @@ skill:Elenchus 로 기존 탐구를 재개해 줘.
 
 ## 개발과 평가
 
-[beta.2 아키텍처](docs/research-foundation-beta2.md)와 [평가 결과·수정·중단 범위](tests/research-foundation/RESULTS.md)를 참고한다. 네 실제 시도 중 세 세션을 종료했고, 외부 재현 두 번에서 발견한 재현 비교 문제를 별도 수정본으로 보완했다. 사용자의 요청으로 잔여 실제 평가·독립 검토를 중단하고 시험 배포한다. 전체 네 회차가 독립 검증을 통과했다고 주장하지 않는다.
+[beta.2 아키텍처](docs/research-foundation-beta2.md)와 [평가 결과·수정·중단 범위](tests/research-foundation/RESULTS.md)를 참고한다. 네 실제 시도 중 세 세션을 종료했고, 외부 재현 두 번에서 발견한 재현 비교 문제를 별도 수정본으로 보완했다. 잔여 실제 평가·독립 검토는 사용자 요청으로 중단했다. 2.0.0은 이 한계를 공개한 상태로 배포한다. 전체 네 회차가 독립 검증을 통과했다고 주장하지 않는다.
 
 기존 [beta.1 무제한 비교](tests/research-discovery/untimed/RESULTS.md) 및 [이전 전체 결과](tests/research-discovery/RESULTS.md)는 당시 소스·조건의 기록으로 보존한다. 고정 합성 자료 비교를 실제 웹 발견 능력이나 beta.2의 성공 근거로 대체하지 않는다.
 
