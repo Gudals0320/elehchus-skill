@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "review_findings": [],
+  "review_scope": "Selected Seoul dates, UTC labels, requested variables, not_requested vs missing, exact-file and changed-byte snapshot policy",
+  "unittest_count": 22,
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "tzdata": "2026.3",
+  "runtime_path": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\weather-sample1\\project\\.elenchus\\lab\\R001\\source-research\\reproduction\\lab\\R002\\.venv\\Scripts\\python.exe",
+  "imported_source_path": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\weather-sample1\\project\\.elenchus\\lab\\R001\\source-research\\reproduction-september\\lab\\R002\\weather_pipeline.py",
+  "dependency_environment": "Reused earlier source-research independent venv; main venv not used",
+  "new_weather_gets": 0,
+  "source_patches": 0,
+  "first_epoch": 1788188400,
+  "last_epoch": 1788357600,
+  "exclusive_upper_epoch": 1788361200,
+  "requested_variables": [
+    "temperature_2m",
+    "precipitation"
+  ],
+  "not_requested_wind_rows": 144,
+  "snapshot_count": 3,
+  "snapshot_rows": [
+    48,
+    48,
+    48
+  ],
+  "same_file_replay_inserted": false,
+  "actual_refetch_weather_arrays_equal": true,
+  "actual_refetch_changed_top_level_keys": [
+    "generationtime_ms"
+  ],
+  "mean_temperature_c": 24.25,
+  "precipitation_label_sum_mm": 94.7,
+  "max_unit_conversion_error": {
+    "temperature_c": 0.06666666666666288,
+    "precipitation_mm": 0.01159999999999961
+  },
+  "db_integrity": [
+    [
+      "ok"
+    ]
+  ],
+  "foreign_key_errors": [],
+  "copied_inputs_unchanged": true,
+  "limitations": [
+    "No new live availability check performed by this agent.",
+    "No general security or high-volume/concurrent-writer audit.",
+    "Preceding-hour label sum is not a local calendar-day precipitation total."
+  ]
+}

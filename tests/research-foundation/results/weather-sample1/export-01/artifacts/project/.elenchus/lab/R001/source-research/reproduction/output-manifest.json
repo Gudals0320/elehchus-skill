@@ -1,0 +1,26 @@
+[
+  {
+    "path": "summary.json",
+    "sha256": "ee93c938d6d11bfdb580154b41bbbb025eec4c5c231142b8e54b7147ae299dad"
+  },
+  {
+    "path": "test.log",
+    "sha256": "9c1047f8f3b0a7ebf8799355d27e63b7d28d57619589d27d66606f4a6f3fe6c0"
+  },
+  {
+    "path": "input-manifest.json",
+    "sha256": "99cfa362c8c181fc90949ee2d039d42a2a6aa411e27826d8d03dc035429932ae"
+  },
+  {
+    "path": "input-after-manifest.json",
+    "sha256": "b1eee0d5188e395df632e7b5c114b1e0b95b20abf330af30b5665316a2994bc2"
+  },
+  {
+    "path": "query-seoul.json",
+    "sha256": "8446a6648305ec9ea259dfe0ebb387ff379ac2c426f932456e9b8e2fa7603365"
+  },
+  {
+    "path": "lab/R002/output/replay.sqlite",
+    "sha256": "8f8c011e6ff51748c97cd80ed37715ab79c20cdb95be577d5284217f89e73c48"
+  }
+]

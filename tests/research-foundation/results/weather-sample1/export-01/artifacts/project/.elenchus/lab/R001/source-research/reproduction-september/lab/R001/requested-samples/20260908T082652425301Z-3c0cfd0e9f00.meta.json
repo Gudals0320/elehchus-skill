@@ -1,0 +1,10 @@
+{
+  "time": "2026-09-08T08:26:51.233754+00:00",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.5665&longitude=126.978&start_date=2026-09-01&end_date=2026-09-02&hourly=temperature_2m%2Cprecipitation&timezone=Asia%2FSeoul&timeformat=unixtime&models=era5&temperature_unit=celsius&wind_speed_unit=ms&precipitation_unit=mm",
+  "attempt": 1,
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "sha256": "3c0cfd0e9f00ddea36b5ad53a940afd23c14ff8c0367e2be2f2640e5c1576f91",
+  "bytes": 1321,
+  "artifact": "20260908T082652425301Z-3c0cfd0e9f00.json"
+}

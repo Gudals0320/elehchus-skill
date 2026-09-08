@@ -1,0 +1,45 @@
+{
+  "preset": "requested",
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "runs": [
+    {
+      "import_id": 1,
+      "processed": 96,
+      "rows_total": 96,
+      "missing": 0,
+      "series_key": "173328d2b3b877ffbb0f7629ef9b37bd164de44dae8aa4301214013e6df2db5f"
+    },
+    {
+      "import_id": 1,
+      "processed": 96,
+      "rows_total": 96,
+      "missing": 0,
+      "series_key": "173328d2b3b877ffbb0f7629ef9b37bd164de44dae8aa4301214013e6df2db5f"
+    }
+  ],
+  "measurements": 96,
+  "summaries": [
+    {
+      "series_key": "173328d2b3b877ffbb0f7629ef9b37bd164de44dae8aa4301214013e6df2db5f",
+      "variable": "precipitation",
+      "unit": "mm",
+      "rows": 48,
+      "valid": 48,
+      "missing": 0,
+      "mean": 1.9729166666666667,
+      "sum_available": 94.7
+    },
+    {
+      "series_key": "173328d2b3b877ffbb0f7629ef9b37bd164de44dae8aa4301214013e6df2db5f",
+      "variable": "temperature_2m",
+      "unit": "degC",
+      "rows": 48,
+      "valid": 48,
+      "missing": 0,
+      "mean": 24.25,
+      "sum_available": null
+    }
+  ],
+  "database": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\weather-sample2\\project\\.elenchus\\lab\\R002\\alternatives\\requested-reproduction\\output\\weather.sqlite"
+}

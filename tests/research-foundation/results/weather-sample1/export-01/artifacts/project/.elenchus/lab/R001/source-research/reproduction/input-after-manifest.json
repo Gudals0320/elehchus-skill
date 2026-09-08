@@ -1,0 +1,51 @@
+[
+  {
+    "path": "lab/R002/weather_pipeline.py",
+    "before_sha256": "2140e63efe1975adb22bad60ad9d5f9baecc3c2bf11eb08b9aa36a8c3184adc1",
+    "original_after_sha256": "2140e63efe1975adb22bad60ad9d5f9baecc3c2bf11eb08b9aa36a8c3184adc1",
+    "copy_after_sha256": "2140e63efe1975adb22bad60ad9d5f9baecc3c2bf11eb08b9aa36a8c3184adc1",
+    "unchanged": true
+  },
+  {
+    "path": "lab/R002/test_weather_pipeline.py",
+    "before_sha256": "e6c6f7e86924561d4a22eefbd21fa7f50330b4bd25ab5bf0872821e907ae156b",
+    "original_after_sha256": "e6c6f7e86924561d4a22eefbd21fa7f50330b4bd25ab5bf0872821e907ae156b",
+    "copy_after_sha256": "e6c6f7e86924561d4a22eefbd21fa7f50330b4bd25ab5bf0872821e907ae156b",
+    "unchanged": true
+  },
+  {
+    "path": "lab/R002/requirements.txt",
+    "before_sha256": "8dd83c2d028575f95534079e2b1c85ed34e2e841647293426e961a03282b10f1",
+    "original_after_sha256": "8dd83c2d028575f95534079e2b1c85ed34e2e841647293426e961a03282b10f1",
+    "copy_after_sha256": "8dd83c2d028575f95534079e2b1c85ed34e2e841647293426e961a03282b10f1",
+    "unchanged": true
+  },
+  {
+    "path": "lab/R001/samples/seoul-era5-si.json",
+    "before_sha256": "d61b475d8f383a628b75bfe9dcdc905a37e6ea3c889d9226b8f5cdfc5dada4cb",
+    "original_after_sha256": "d61b475d8f383a628b75bfe9dcdc905a37e6ea3c889d9226b8f5cdfc5dada4cb",
+    "copy_after_sha256": "d61b475d8f383a628b75bfe9dcdc905a37e6ea3c889d9226b8f5cdfc5dada4cb",
+    "unchanged": true
+  },
+  {
+    "path": "lab/R001/samples/seoul-era5-si.meta.json",
+    "before_sha256": "f6190cd25eecbf8b8ffc2da30aa2dab7b6eb8471b111286af39296f9ca0d6229",
+    "original_after_sha256": "f6190cd25eecbf8b8ffc2da30aa2dab7b6eb8471b111286af39296f9ca0d6229",
+    "copy_after_sha256": "f6190cd25eecbf8b8ffc2da30aa2dab7b6eb8471b111286af39296f9ca0d6229",
+    "unchanged": true
+  },
+  {
+    "path": "lab/R001/adapter-samples/20260908T081157522643Z-cd887096aaff.json",
+    "before_sha256": "cd887096aafff9926fbee5db6a61407d4ceea7271a2599b77591bab1b8e64497",
+    "original_after_sha256": "cd887096aafff9926fbee5db6a61407d4ceea7271a2599b77591bab1b8e64497",
+    "copy_after_sha256": "cd887096aafff9926fbee5db6a61407d4ceea7271a2599b77591bab1b8e64497",
+    "unchanged": true
+  },
+  {
+    "path": "lab/R001/adapter-samples/20260908T081157522643Z-cd887096aaff.meta.json",
+    "before_sha256": "16a942f63a919a5613bfd9d3a51ab0f69acfa893447da7dd5dd9dbd6013d7b58",
+    "original_after_sha256": "16a942f63a919a5613bfd9d3a51ab0f69acfa893447da7dd5dd9dbd6013d7b58",
+    "copy_after_sha256": "16a942f63a919a5613bfd9d3a51ab0f69acfa893447da7dd5dd9dbd6013d7b58",
+    "unchanged": true
+  }
+]

@@ -1,0 +1,64 @@
+{
+  "started_utc": "2026-09-08T10:23:57.687489+00:00",
+  "finished_utc": "2026-09-08T10:24:27.776953+00:00",
+  "exit_code": 0,
+  "timed_out": false,
+  "elapsed_seconds": 30.093,
+  "command": [
+    "<user>/AppData/Local/OpenAI/Codex/bin/8e5b6932251c2c1c/codex.exe",
+    "-a",
+    "never",
+    "exec",
+    "--ignore-user-config",
+    "--ignore-rules",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "workspace-write",
+    "-c",
+    "web_search=\"disabled\"",
+    "-c",
+    "features.multi_agent=false",
+    "-m",
+    "gpt-6-astra",
+    "-c",
+    "model_reasoning_effort=\"xhigh\"",
+    "-C",
+    "<probe-workspace>",
+    "--json",
+    "-o",
+    "<probe-workspace>\\final.md",
+    "-c",
+    "windows.sandbox=\"elevated\"",
+    "-c",
+    "skills.config=[{path=\"<user>/.codex/skills/elenchus/SKILL.md\",enabled=false},{path=\"<user>/.codex/skills/elenchus-benchmark/SKILL.md\",enabled=false},{path=\"<user>/.codex/skills/elenchus-test/SKILL.md\",enabled=false}]",
+    "-"
+  ],
+  "before": {
+    "contract.py": "3e62f8684928747ba266068b25327e4f8978f49d97bbbf692d20e98d2192e43b"
+  },
+  "after": {
+    "contract.py": "3e62f8684928747ba266068b25327e4f8978f49d97bbbf692d20e98d2192e43b"
+  },
+  "artifacts": {
+    "contract.py": {
+      "source_sha256": "3e62f8684928747ba266068b25327e4f8978f49d97bbbf692d20e98d2192e43b",
+      "published_sha256": "3e62f8684928747ba266068b25327e4f8978f49d97bbbf692d20e98d2192e43b"
+    }
+  },
+  "excluded_event_types": {},
+  "usage": [
+    {
+      "input_tokens": 48348,
+      "cached_input_tokens": 36992,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 645,
+      "reasoning_output_tokens": 231
+    }
+  ],
+  "published_input_sha256": "d3b747dd306947097382f23360c1182b63f301df722b2d0815a7d58eb0b56e3c",
+  "published_answer_sha256": "752d5c5656d1c954c8008720bc24b3f552ffa892478613267248fe1aaef9c30a",
+  "published_events_sha256": "0b8c9d1c7b509ef89a66c0e8cba2321ca328d65a499214d386f27f3759aea525",
+  "quality": "manual review pending",
+  "workspace_retained": true
+}

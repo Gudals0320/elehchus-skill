@@ -1,0 +1,60 @@
+--- original/project/.elenchus/lab/R001/main/probe_local_review.py
++++ repair/project/.elenchus/lab/R001/main/probe_local_review.py
+@@ -11,6 +11,7 @@
+ import photo_materials
+ from render_review import render_review, orientation_interpretation
+ from generate_fixtures import generate
++from review_contract import compare_reports
+ 
+ HERE=Path(__file__).resolve().parent
+ PROJECT=HERE.parents[3]
+@@ -34,9 +35,11 @@
+         'candidates':photo_materials.build_candidates([fraction_row],[])}
+     fraction_rendered=render_review(fraction_report)
+ rows={row['path']:row for row in report['records']}
++comparison=compare_reports(report,json.loads((HERE/'sample-report-final.json').read_text(encoding='utf-8')))
+ checks={
+     'no_python_network_entry_points_used':not calls,
+-    'same_scanner_output_as_verified_sample':report==json.loads((HERE/'sample-report-final.json').read_text(encoding='utf-8')),
++    'portable_scanner_output_matches_verified_sample':comparison['portable_equal'],
++    'filesystem_mtime_values_reflect_current_inputs':all(row['filesystem_mtime_ns']==(PROJECT/'inputs'/row['path']).stat().st_mtime_ns for row in report['records']),
+     'local_review_deterministic':rendered==repeated,
+     'matches_saved_review':rendered==(HERE/'review.md').read_text(encoding='utf-8'),
+     'original_ten_files_unchanged':before==originals()==baseline,
+@@ -49,6 +52,7 @@
+     'synthetic_subsecond_evidence_visible':'subsec=123456789' in fraction_rendered,
+ }
+ result={'checks':checks,'network_calls':calls,'summary':report['summary'],
++        'snapshot_comparison':comparison,
+         'review_sha256':hashlib.sha256(rendered.encode('utf-8')).hexdigest(),
+         'scope':'Python socket entry points denied during existing local scan and Markdown rendering; not OS network isolation proof'}
+ (HERE/'local-review-results.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
+--- original/project/.elenchus/lab/R001/main/README.md
++++ repair/project/.elenchus/lab/R001/main/README.md
+@@ -47,3 +47,16 @@
+ - `original-before.json`: 입력8개 및 sentinel/manifest 파일2개 SHA-256. 원본 보존 검증 기준이다. `probe.py`를 다시 실행하면 이 기준도 다시 기록되므로 원본 보존 비교용 baseline 재생성에 쓰지 않는다.
+ 
+ 설치된 Pillow 12.3.0의 LICENSE 본문은 MIT-CMU License를 명시한다. 배포 시 해당 원문과 wheel에 포함된 의존성별 고지를 보존한다. 이번 기능 코드는 연구 중 작성했고 외부 프로젝트 코드는 복사하지 않았다. 설치된 배포본 라이선스 경로는 `.venv/Lib/site-packages/pillow-12.3.0.dist-info/licenses/LICENSE`다. [Pillow 라이선스 원문](https://github.com/python-pillow/Pillow/blob/12.3.0/LICENSE)을 참조한다.
++
++## 전달 후 수정: 복사된 파일의 시각과 재현 비교
++
++최초 독립 재현에서 기존 28개 중 27개 통과·symlink 1 skip 및 핵심 CLI/Markdown 생성은 성공했으나, 로컬 검증은 11/12로 실패했다. 복사/압축 해제 뒤 달라지는 filesystem_mtime_ns 8개까지 저장된 JSON과 일치해야 한다는 비교가 원인이었다. 원래 출력과 실패 기록은 원래 평가 export에 보존한다.
++
++이 수정본은 operator가 별도 작업장에서 보완했다. photo_materials.py와 render_review.py, 원본 입력의 bytes는 변경하지 않았다. review_contract.py는 기존 결과와 비교할 때만 filesystem_mtime_ns의 값을 환경 의존 값으로 구분한다. 필드 자체, 파일 내용/해시, EXIF 의미, 날짜 후보와 다른 출력은 계속 비교하며 실제 수정 시각은 report와 차이 기록에 그대로 남는다. probe는 현재 파일 시각과 보고값의 일치 및 원본 내용 보존도 따로 검사한다.
++
++```powershell
++.venv/Scripts/python.exe -B -m unittest -v test_photo_materials test_review_portability
++.venv/Scripts/python.exe -B probe_local_review.py
++```
++
++수정 작업장의 검사 결과는 31개 중 30 통과·symlink 1 skip, 로컬 검증 13/13이다. 실제 파일을 복사하고 mtime만 바꾸는 회귀와 같은 길이의 내용 변경, 날짜 후보/필드 누락 회귀를 포함한다. 별도 새 컨텍스트 재현은 평가 기록에서 확인한다.
+--- original/project/.elenchus/HANDOFF.md
++++ repair/project/.elenchus/HANDOFF.md
+@@ -26,3 +26,7 @@
+ 후속 제작자는 임시 스키마·함수/폴더 이름·저장소/캐시·병렬 처리·화면을 재구성할 수 있다. 보존해야 할 것은 사용자 원본 보호 조건과 동일 byte/표시 픽셀/유사 사진 구분, 날짜 출처/불확실성, 오류를 숨기지 않는 동작이다. 파일당16MiB·총64MiB·누적20M픽셀·64프레임은 연구 구현의 한도이며 대량 성능 보장이 아니다. HEIC/RAW·실물 카메라·고급 MakerNote/sidecar·색/알파/고비트 의미·유사도 정확도·동시 변경의 원자적 snapshot은 검증하지 않았다.
+ 
+ 라이선스는 각 채택 배포본 고지를 유지한다. Pillow12.3의 실제 LICENSE는 MIT-CMU와 번들 의존성별 조건, ExifRead3.5.1은 BSD-3-Clause다. 자료는 로컬에만 남겼고 외부 게시·업로드·개인 사진/계정/유료 서비스 사용은 없다. 실행자 공개 활동은 작업 루트 `records/activity.jsonl`와 조사자별 activity 파일에 기록한다. 전체 host trace나 숨겨진 추론이 아니다.
++
++## Operator 수정본
++
++이 자료는 원래 사진 표본의 독립 재현에서 발견한 mtime 비교 문제를 별도 작업장에서 수정한 사본이다. 최초 평가 실패를 소급 통과로 바꾸지 않는다. [수정 범위와 새 검사](lab/R001/main/README.md#전달-후-수정-복사된-파일의-시각과-재현-비교)를 따른다. 핵심 스캐너·렌더러·원본 입력 bytes는 보존했다.

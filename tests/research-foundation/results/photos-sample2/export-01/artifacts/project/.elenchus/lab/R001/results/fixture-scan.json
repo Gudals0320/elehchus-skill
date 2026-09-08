@@ -1,0 +1,1309 @@
+{
+  "schema": "photo-research-v1",
+  "read_only": true,
+  "pillow_version": "12.3.0",
+  "scope": "JPEG PNG TIFF; snapshots are not an atomic filesystem view",
+  "limits": {
+    "file_bytes": 67108864,
+    "total_bytes": 268435456,
+    "pixels_per_file": 20000000,
+    "frames_per_file": 32
+  },
+  "files": [
+    {
+      "path": "base.png",
+      "size": 77,
+      "sha256": "59eb093a0909bb0e649564a0eb69950a7b05131876d890cfe4ec83112222978f",
+      "file_identity": [
+        4785643169335545083,
+        562949954829352
+      ],
+      "filesystem_mtime_ns": 1788863042855480700,
+      "filesystem_time_is_capture_date": false,
+      "format": "PNG",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": null,
+      "stored_size": [
+        3,
+        2
+      ],
+      "display_size": [
+        3,
+        2
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "metadata_status": "passed",
+      "header_size": [
+        3,
+        2
+      ],
+      "display_rgba_sha256": "d6ec25ca9092f8baad542cfee9de335c7c45c716a0e5bb0181f1038d899430c4"
+    },
+    {
+      "path": "conflicting_dates.jpg",
+      "size": 813,
+      "sha256": "33fbb04b8bfb9e1edfe1491ea079c8904e95b1e746c87d2de632f4cc7a079c02",
+      "file_identity": [
+        4785643169335545083,
+        562949954829374
+      ],
+      "filesystem_mtime_ns": 1788863042871481000,
+      "filesystem_time_is_capture_date": false,
+      "format": "JPEG",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [
+        {
+          "tag": "DateTimeOriginal",
+          "source": "IFD0:DateTimeOriginal",
+          "raw": "2023:01:01 00:00:00",
+          "offset_raw": null,
+          "subsecond_raw": null,
+          "status": "valid",
+          "local": "2023-01-01T00:00:00",
+          "utc": null,
+          "timezone": "unknown",
+          "issues": []
+        },
+        {
+          "tag": "DateTimeOriginal",
+          "source": "ExifIFD:DateTimeOriginal",
+          "raw": "2024:01:01 00:00:00",
+          "offset_raw": null,
+          "subsecond_raw": null,
+          "status": "valid",
+          "local": "2024-01-01T00:00:00",
+          "utc": null,
+          "timezone": "unknown",
+          "issues": []
+        }
+      ],
+      "capture_date": null,
+      "capture_conflict": true,
+      "orientation": null,
+      "stored_size": [
+        3,
+        2
+      ],
+      "display_size": [
+        3,
+        2
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "metadata_status": "passed",
+      "header_size": [
+        3,
+        2
+      ],
+      "display_rgba_sha256": "73b1af3f49b9a6704f93f5b9d7853f11531c8ba61b6a70da58fac0beff8d25bc"
+    },
+    {
+      "path": "disguised.jpg",
+      "size": 187,
+      "sha256": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+      "file_identity": [
+        4785643169335545083,
+        562949954829350
+      ],
+      "filesystem_mtime_ns": 1788863042854481100,
+      "filesystem_time_is_capture_date": false,
+      "format": "PNG",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [
+        "extension_format_mismatch"
+      ],
+      "errors": [],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": null,
+      "stored_size": [
+        8,
+        6
+      ],
+      "display_size": [
+        8,
+        6
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "metadata_status": "passed",
+      "header_size": [
+        8,
+        6
+      ],
+      "display_rgba_sha256": "cd561ee63e4a500564b3eae740d060009611e813a27d64f35e57f22bf9e736b2"
+    },
+    {
+      "path": "empty.jpg",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "file_identity": [
+        4785643169335545083,
+        562949954829351
+      ],
+      "filesystem_mtime_ns": 1788863042855480700,
+      "filesystem_time_is_capture_date": false,
+      "format": null,
+      "status": "unidentified_image",
+      "decode_status": "not_attempted",
+      "verify_status": "not_attempted",
+      "warnings": [],
+      "errors": [
+        {
+          "stage": "open",
+          "type": "UnidentifiedImageError",
+          "message": "cannot identify image file <_io.BytesIO object at <address>>"
+        }
+      ],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": null,
+      "stored_size": null,
+      "display_size": null,
+      "frame_count": null,
+      "decoded_frames": 0,
+      "metadata_status": "not_attempted"
+    },
+    {
+      "path": "invalid_date.jpg",
+      "size": 801,
+      "sha256": "6634b7b334f1a201fbb7c1205c458f4fbcb5b71c11e7458c64a42469fbed2fa4",
+      "file_identity": [
+        4785643169335545083,
+        562949954829370
+      ],
+      "filesystem_mtime_ns": 1788863042869480900,
+      "filesystem_time_is_capture_date": false,
+      "format": "JPEG",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [
+        {
+          "tag": "DateTimeOriginal",
+          "source": "ExifIFD:DateTimeOriginal",
+          "raw": "2024:02:30 10:20:30",
+          "offset_raw": "+09:00",
+          "subsecond_raw": null,
+          "status": "invalid",
+          "local": null,
+          "utc": null,
+          "timezone": "unknown",
+          "issues": [
+            "invalid_date"
+          ]
+        }
+      ],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": null,
+      "stored_size": [
+        3,
+        2
+      ],
+      "display_size": [
+        3,
+        2
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "metadata_status": "passed",
+      "header_size": [
+        3,
+        2
+      ],
+      "display_rgba_sha256": "73b1af3f49b9a6704f93f5b9d7853f11531c8ba61b6a70da58fac0beff8d25bc"
+    },
+    {
+      "path": "invalid_offset.jpg",
+      "size": 801,
+      "sha256": "2d89ec6577a2eea8f475174e034c88e1029930ff569767072ec8f5e848a37ede",
+      "file_identity": [
+        4785643169335545083,
+        562949954829373
+      ],
+      "filesystem_mtime_ns": 1788863042871481000,
+      "filesystem_time_is_capture_date": false,
+      "format": "JPEG",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [
+        {
+          "tag": "DateTimeOriginal",
+          "source": "ExifIFD:DateTimeOriginal",
+          "raw": "2024:07:15 10:20:30",
+          "offset_raw": "+25:00",
+          "subsecond_raw": null,
+          "status": "valid",
+          "local": "2024-07-15T10:20:30",
+          "utc": null,
+          "timezone": "unknown",
+          "issues": [
+            "invalid_offset"
+          ]
+        }
+      ],
+      "capture_date": {
+        "tag": "DateTimeOriginal",
+        "source": "ExifIFD:DateTimeOriginal",
+        "raw": "2024:07:15 10:20:30",
+        "offset_raw": "+25:00",
+        "subsecond_raw": null,
+        "status": "valid",
+        "local": "2024-07-15T10:20:30",
+        "utc": null,
+        "timezone": "unknown",
+        "issues": [
+          "invalid_offset"
+        ]
+      },
+      "capture_conflict": false,
+      "orientation": null,
+      "stored_size": [
+        3,
+        2
+      ],
+      "display_size": [
+        3,
+        2
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "metadata_status": "passed",
+      "header_size": [
+        3,
+        2
+      ],
+      "display_rgba_sha256": "73b1af3f49b9a6704f93f5b9d7853f11531c8ba61b6a70da58fac0beff8d25bc"
+    },
+    {
+      "path": "invalid_orientation.jpg",
+      "status": "read_error",
+      "errors": [
+        {
+          "stage": "snapshot",
+          "type": "ValueError",
+          "message": "file changed before read"
+        }
+      ]
+    },
+    {
+      "path": "manifest.json",
+      "size": 2890,
+      "sha256": "7da05b3f0024eb1cd14afede32557faf3e695b6508d62eb0af597a86df6213f9",
+      "file_identity": [
+        4785643169335545083,
+        562949954829378
+      ],
+      "filesystem_mtime_ns": 1788863042957523300,
+      "filesystem_time_is_capture_date": false,
+      "format": null,
+      "status": "not_image_or_unknown",
+      "decode_status": "not_attempted",
+      "verify_status": "not_attempted",
+      "warnings": [],
+      "errors": [
+        {
+          "stage": "open",
+          "type": "UnidentifiedImageError",
+          "message": "cannot identify image file <_io.BytesIO object at <address>>"
+        }
+      ],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": null,
+      "stored_size": null,
+      "display_size": null,
+      "frame_count": null,
+      "decoded_frames": 0,
+      "metadata_status": "not_attempted"
+    },
+    {
+      "path": "metadata_changed.png",
+      "size": 146,
+      "sha256": "9d02ae9f8197608486fd6798ae35fb49b701dabc7b758065a0d5f63f8f322782",
+      "file_identity": [
+        4785643169335545083,
+        562949954829353
+      ],
+      "filesystem_mtime_ns": 1788863042856480500,
+      "filesystem_time_is_capture_date": false,
+      "format": "PNG",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": null,
+      "stored_size": [
+        3,
+        2
+      ],
+      "display_size": [
+        3,
+        2
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "metadata_status": "passed",
+      "header_size": [
+        3,
+        2
+      ],
+      "display_rgba_sha256": "d6ec25ca9092f8baad542cfee9de335c7c45c716a0e5bb0181f1038d899430c4"
+    },
+    {
+      "path": "modify_date.jpg",
+      "size": 801,
+      "sha256": "7ab694c3afdbbc70dc05c277404c4e24f568d5c7404b83b490e03f28f3aaa559",
+      "file_identity": [
+        4785643169335545083,
+        562949954829375
+      ],
+      "filesystem_mtime_ns": 1788863042872481200,
+      "filesystem_time_is_capture_date": false,
+      "format": "JPEG",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [
+        {
+          "tag": "DateTime",
+          "source": "IFD0:DateTime",
+          "raw": "2024:01:01 00:15:00",
+          "offset_raw": "+09:00",
+          "subsecond_raw": null,
+          "status": "valid",
+          "local": "2024-01-01T00:15:00",
+          "utc": "2023-12-31T15:15:00+00:00",
+          "timezone": "explicit_offset",
+          "issues": []
+        }
+      ],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": null,
+      "stored_size": [
+        3,
+        2
+      ],
+      "display_size": [
+        3,
+        2
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "metadata_status": "passed",
+      "header_size": [
+        3,
+        2
+      ],
+      "display_rgba_sha256": "73b1af3f49b9a6704f93f5b9d7853f11531c8ba61b6a70da58fac0beff8d25bc"
+    },
+    {
+      "path": "multi.tiff",
+      "size": 320,
+      "sha256": "d63540e39003e2365a80747257171517fb0a66190d0dd2e1faf03698307dcb11",
+      "file_identity": [
+        4785643169335545083,
+        562949954829377
+      ],
+      "filesystem_mtime_ns": 1788863042873481100,
+      "filesystem_time_is_capture_date": false,
+      "format": "TIFF",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": null,
+      "stored_size": [
+        3,
+        2
+      ],
+      "display_size": [
+        3,
+        2
+      ],
+      "frame_count": 2,
+      "decoded_frames": 2,
+      "metadata_status": "passed",
+      "header_size": [
+        3,
+        2
+      ],
+      "display_rgba_sha256": "d6ec25ca9092f8baad542cfee9de335c7c45c716a0e5bb0181f1038d899430c4"
+    },
+    {
+      "path": "naive_date.jpg",
+      "size": 781,
+      "sha256": "104c00cfe37f084d22c1af20af87d830158dc9c06a1528fbe0b78af7a6d849a3",
+      "file_identity": [
+        4785643169335545083,
+        562949954829371
+      ],
+      "filesystem_mtime_ns": 1788863042870480800,
+      "filesystem_time_is_capture_date": false,
+      "format": "JPEG",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [
+        {
+          "tag": "DateTimeOriginal",
+          "source": "ExifIFD:DateTimeOriginal",
+          "raw": "2024:07:15 10:20:30",
+          "offset_raw": null,
+          "subsecond_raw": null,
+          "status": "valid",
+          "local": "2024-07-15T10:20:30",
+          "utc": null,
+          "timezone": "unknown",
+          "issues": []
+        }
+      ],
+      "capture_date": {
+        "tag": "DateTimeOriginal",
+        "source": "ExifIFD:DateTimeOriginal",
+        "raw": "2024:07:15 10:20:30",
+        "offset_raw": null,
+        "subsecond_raw": null,
+        "status": "valid",
+        "local": "2024-07-15T10:20:30",
+        "utc": null,
+        "timezone": "unknown",
+        "issues": []
+      },
+      "capture_conflict": false,
+      "orientation": null,
+      "stored_size": [
+        3,
+        2
+      ],
+      "display_size": [
+        3,
+        2
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "metadata_status": "passed",
+      "header_size": [
+        3,
+        2
+      ],
+      "display_rgba_sha256": "73b1af3f49b9a6704f93f5b9d7853f11531c8ba61b6a70da58fac0beff8d25bc"
+    },
+    {
+      "path": "offset_subsecond.jpg",
+      "status": "read_error",
+      "errors": [
+        {
+          "stage": "snapshot",
+          "type": "ValueError",
+          "message": "file changed before read"
+        }
+      ]
+    },
+    {
+      "path": "orientation_1.png",
+      "status": "read_error",
+      "errors": [
+        {
+          "stage": "snapshot",
+          "type": "ValueError",
+          "message": "file changed before read"
+        }
+      ]
+    },
+    {
+      "path": "orientation_1.tiff",
+      "status": "read_error",
+      "errors": [
+        {
+          "stage": "snapshot",
+          "type": "ValueError",
+          "message": "file changed before read"
+        }
+      ]
+    },
+    {
+      "path": "orientation_2.png",
+      "size": 115,
+      "sha256": "1eb419215f6e1f46e3a001c69bb7d5c513cc0e5ff467d0fb20792745e3fa9bb6",
+      "file_identity": [
+        4785643169335545083,
+        562949954829356
+      ],
+      "filesystem_mtime_ns": 1788863042859480800,
+      "filesystem_time_is_capture_date": false,
+      "format": "PNG",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": 2,
+      "stored_size": [
+        3,
+        2
+      ],
+      "display_size": [
+        3,
+        2
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "metadata_status": "passed",
+      "header_size": [
+        3,
+        2
+      ],
+      "display_rgba_sha256": "ab486e5ffdf079c2f86a24bcf8d3def73c0e4c4300de1f3b85ac14c678a1645a"
+    },
+    {
+      "path": "orientation_2.tiff",
+      "status": "read_error",
+      "errors": [
+        {
+          "stage": "snapshot",
+          "type": "ValueError",
+          "message": "file changed before read"
+        }
+      ]
+    },
+    {
+      "path": "orientation_3.png",
+      "size": 115,
+      "sha256": "6a5d6c8391407b0266f125dd02a0df06a0b2f1b5a8f1ea973fa4216b7d17ce9d",
+      "file_identity": [
+        4785643169335545083,
+        562949954829358
+      ],
+      "filesystem_mtime_ns": 1788863042860480700,
+      "filesystem_time_is_capture_date": false,
+      "format": "PNG",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": 3,
+      "stored_size": [
+        3,
+        2
+      ],
+      "display_size": [
+        3,
+        2
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "metadata_status": "passed",
+      "header_size": [
+        3,
+        2
+      ],
+      "display_rgba_sha256": "9ab2bdfedf79a403e88e0ff36759154e5ed8dd75b0c7067078603d4bf38d2fbb"
+    },
+    {
+      "path": "orientation_3.tiff",
+      "status": "read_error",
+      "errors": [
+        {
+          "stage": "snapshot",
+          "type": "ValueError",
+          "message": "file changed before read"
+        }
+      ]
+    },
+    {
+      "path": "orientation_4.png",
+      "size": 115,
+      "sha256": "3a4b36d2d71efaa2380d5b91f1492a35fc57e73367d877bab18bf3216b15560b",
+      "file_identity": [
+        4785643169335545083,
+        562949954829360
+      ],
+      "filesystem_mtime_ns": 1788863042861480400,
+      "filesystem_time_is_capture_date": false,
+      "format": "PNG",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": 4,
+      "stored_size": [
+        3,
+        2
+      ],
+      "display_size": [
+        3,
+        2
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "metadata_status": "passed",
+      "header_size": [
+        3,
+        2
+      ],
+      "display_rgba_sha256": "27d404e24626579857d024bb18cafed8ed387d10eac11719ebf5aa5ae229103b"
+    },
+    {
+      "path": "orientation_4.tiff",
+      "size": 170,
+      "sha256": "7a18a3e1184bb1fb4bca54edf818160addee696761a0412e0c7de734dfc748be",
+      "file_identity": [
+        4785643169335545083,
+        562949954829361
+      ],
+      "filesystem_mtime_ns": 1788863042861480400,
+      "filesystem_time_is_capture_date": false,
+      "format": "TIFF",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": 4,
+      "stored_size": [
+        3,
+        2
+      ],
+      "display_size": [
+        3,
+        2
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "metadata_status": "passed",
+      "header_size": [
+        3,
+        2
+      ],
+      "display_rgba_sha256": "27d404e24626579857d024bb18cafed8ed387d10eac11719ebf5aa5ae229103b"
+    },
+    {
+      "path": "orientation_5.png",
+      "size": 115,
+      "sha256": "109e0c2372906ac1327df0bcf122f3b7fb498036e018c9d65d5082ca1c6b498c",
+      "file_identity": [
+        4785643169335545083,
+        562949954829362
+      ],
+      "filesystem_mtime_ns": 1788863042862480700,
+      "filesystem_time_is_capture_date": false,
+      "format": "PNG",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": 5,
+      "stored_size": [
+        3,
+        2
+      ],
+      "display_size": [
+        2,
+        3
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "metadata_status": "passed",
+      "header_size": [
+        3,
+        2
+      ],
+      "display_rgba_sha256": "df94508023ba9453479d2dd5b852236ecbe1b471734f830d08c4391c2787c4a1"
+    },
+    {
+      "path": "orientation_5.tiff",
+      "size": 170,
+      "sha256": "e2ba277c93dba68059b0c8b93bc1b2f8eb5dee43cb0b9435fceaf30e9e4aa1ea",
+      "file_identity": [
+        4785643169335545083,
+        562949954829363
+      ],
+      "filesystem_mtime_ns": 1788863042862480700,
+      "filesystem_time_is_capture_date": false,
+      "format": "TIFF",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": 5,
+      "stored_size": [
+        3,
+        2
+      ],
+      "display_size": [
+        2,
+        3
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "metadata_status": "passed",
+      "header_size": [
+        2,
+        3
+      ],
+      "display_rgba_sha256": "df94508023ba9453479d2dd5b852236ecbe1b471734f830d08c4391c2787c4a1"
+    },
+    {
+      "path": "orientation_6.png",
+      "size": 115,
+      "sha256": "f8910ae51d39c209cc998d3e652b0bfc550d47e72ec6742667ef34e556aa7c04",
+      "file_identity": [
+        4785643169335545083,
+        562949954829364
+      ],
+      "filesystem_mtime_ns": 1788863042863481200,
+      "filesystem_time_is_capture_date": false,
+      "format": "PNG",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": 6,
+      "stored_size": [
+        3,
+        2
+      ],
+      "display_size": [
+        2,
+        3
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "metadata_status": "passed",
+      "header_size": [
+        3,
+        2
+      ],
+      "display_rgba_sha256": "6eeb104513baf757fa3fa9ec77067eacad4638b94c5a403be4f4faf43dd6804e"
+    },
+    {
+      "path": "orientation_6.tiff",
+      "size": 170,
+      "sha256": "66a3cdac4570ba359d02a05e0192d6659b9b378acee3783709b2ffa5195bd6fd",
+      "file_identity": [
+        4785643169335545083,
+        562949954829365
+      ],
+      "filesystem_mtime_ns": 1788863042863481200,
+      "filesystem_time_is_capture_date": false,
+      "format": "TIFF",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": 6,
+      "stored_size": [
+        3,
+        2
+      ],
+      "display_size": [
+        2,
+        3
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "metadata_status": "passed",
+      "header_size": [
+        2,
+        3
+      ],
+      "display_rgba_sha256": "6eeb104513baf757fa3fa9ec77067eacad4638b94c5a403be4f4faf43dd6804e"
+    },
+    {
+      "path": "orientation_7.png",
+      "size": 115,
+      "sha256": "5bb652e198e7f3c116648898ea035da56437df32fa07db74f93df9359ad0b738",
+      "file_identity": [
+        4785643169335545083,
+        562949954829366
+      ],
+      "filesystem_mtime_ns": 1788863042864480700,
+      "filesystem_time_is_capture_date": false,
+      "format": "PNG",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": 7,
+      "stored_size": [
+        3,
+        2
+      ],
+      "display_size": [
+        2,
+        3
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "metadata_status": "passed",
+      "header_size": [
+        3,
+        2
+      ],
+      "display_rgba_sha256": "6e578210ad31bd9e2baf0ccd4aeb1d50909591516189eb915d380e248c0c8c6f"
+    },
+    {
+      "path": "orientation_7.tiff",
+      "size": 170,
+      "sha256": "59a496d19405ac13c4b614ea4e964b58aef5f6be417fe3dba64d504f500a9d76",
+      "file_identity": [
+        4785643169335545083,
+        562949954829367
+      ],
+      "filesystem_mtime_ns": 1788863042864480700,
+      "filesystem_time_is_capture_date": false,
+      "format": "TIFF",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": 7,
+      "stored_size": [
+        3,
+        2
+      ],
+      "display_size": [
+        2,
+        3
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "metadata_status": "passed",
+      "header_size": [
+        2,
+        3
+      ],
+      "display_rgba_sha256": "6e578210ad31bd9e2baf0ccd4aeb1d50909591516189eb915d380e248c0c8c6f"
+    },
+    {
+      "path": "orientation_8.png",
+      "size": 115,
+      "sha256": "5c071f4e4a3842ef783002ca0901bbfb8ff2a0740bc2ae5cd7941ef60763d7b2",
+      "file_identity": [
+        4785643169335545083,
+        562949954829368
+      ],
+      "filesystem_mtime_ns": 1788863042865482100,
+      "filesystem_time_is_capture_date": false,
+      "format": "PNG",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": 8,
+      "stored_size": [
+        3,
+        2
+      ],
+      "display_size": [
+        2,
+        3
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "metadata_status": "passed",
+      "header_size": [
+        3,
+        2
+      ],
+      "display_rgba_sha256": "4ff4f7180939fcf80cb60be06e42e93c10087909d3efdcabfbe5846eec87d9e1"
+    },
+    {
+      "path": "orientation_8.tiff",
+      "size": 170,
+      "sha256": "220f5aac43c562e3b0c343bfd4baa11734f673de0f972104048769fdafd46c49",
+      "file_identity": [
+        4785643169335545083,
+        562949954829369
+      ],
+      "filesystem_mtime_ns": 1788863042865482100,
+      "filesystem_time_is_capture_date": false,
+      "format": "TIFF",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": 8,
+      "stored_size": [
+        3,
+        2
+      ],
+      "display_size": [
+        2,
+        3
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "metadata_status": "passed",
+      "header_size": [
+        2,
+        3
+      ],
+      "display_rgba_sha256": "4ff4f7180939fcf80cb60be06e42e93c10087909d3efdcabfbe5846eec87d9e1"
+    },
+    {
+      "path": "tail_truncated.jpg",
+      "size": 743,
+      "sha256": "5e080c21acd23379d18c4499f33d592693c842ad2c330f0cfdf9ac84a8eeec2b",
+      "file_identity": [
+        4785643169335545083,
+        844424931540005
+      ],
+      "filesystem_mtime_ns": 1788863042854481100,
+      "filesystem_time_is_capture_date": false,
+      "format": "JPEG",
+      "status": "damaged",
+      "decode_status": "failed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [
+        {
+          "stage": "decode",
+          "type": "OSError",
+          "message": "image file is truncated (9 bytes not processed)"
+        }
+      ],
+      "dates": [
+        {
+          "tag": "DateTimeOriginal",
+          "source": "ExifIFD:DateTimeOriginal",
+          "raw": "2024:07:15 10:20:30",
+          "offset_raw": "+09:00",
+          "subsecond_raw": null,
+          "status": "valid",
+          "local": "2024-07-15T10:20:30",
+          "utc": "2024-07-15T01:20:30+00:00",
+          "timezone": "explicit_offset",
+          "issues": []
+        }
+      ],
+      "capture_date": {
+        "tag": "DateTimeOriginal",
+        "source": "ExifIFD:DateTimeOriginal",
+        "raw": "2024:07:15 10:20:30",
+        "offset_raw": "+09:00",
+        "subsecond_raw": null,
+        "status": "valid",
+        "local": "2024-07-15T10:20:30",
+        "utc": "2024-07-15T01:20:30+00:00",
+        "timezone": "explicit_offset",
+        "issues": []
+      },
+      "capture_conflict": false,
+      "orientation": 1,
+      "stored_size": [
+        8,
+        6
+      ],
+      "display_size": null,
+      "frame_count": 1,
+      "decoded_frames": 0,
+      "metadata_status": "passed",
+      "header_size": [
+        8,
+        6
+      ]
+    }
+  ],
+  "scan_errors": [],
+  "exact_duplicates": [],
+  "candidates": [
+    {
+      "kind": "metadata_review",
+      "path": "base.png",
+      "reasons": [
+        "no_valid_capture_date"
+      ]
+    },
+    {
+      "kind": "metadata_review",
+      "path": "conflicting_dates.jpg",
+      "reasons": [
+        "conflicting_capture_dates"
+      ]
+    },
+    {
+      "kind": "metadata_review",
+      "path": "disguised.jpg",
+      "reasons": [
+        "extension_format_mismatch",
+        "no_valid_capture_date"
+      ]
+    },
+    {
+      "kind": "input_review",
+      "path": "empty.jpg",
+      "reason": "unidentified_image"
+    },
+    {
+      "kind": "metadata_review",
+      "path": "invalid_date.jpg",
+      "reasons": [
+        "invalid_date:ExifIFD:DateTimeOriginal",
+        "no_valid_capture_date"
+      ]
+    },
+    {
+      "kind": "date_bucket_candidate",
+      "path": "invalid_offset.jpg",
+      "bucket": "2024/07/15",
+      "basis": "ExifIFD:DateTimeOriginal",
+      "calendar_basis": "recorded_local_date",
+      "timezone": "unknown",
+      "sha256": "2d89ec6577a2eea8f475174e034c88e1029930ff569767072ec8f5e848a37ede"
+    },
+    {
+      "kind": "metadata_review",
+      "path": "invalid_offset.jpg",
+      "reasons": [
+        "capture_timezone_unknown",
+        "invalid_offset"
+      ]
+    },
+    {
+      "kind": "input_review",
+      "path": "invalid_orientation.jpg",
+      "reason": "read_error"
+    },
+    {
+      "kind": "input_review",
+      "path": "manifest.json",
+      "reason": "not_image_or_unknown"
+    },
+    {
+      "kind": "metadata_review",
+      "path": "metadata_changed.png",
+      "reasons": [
+        "no_valid_capture_date"
+      ]
+    },
+    {
+      "kind": "metadata_review",
+      "path": "modify_date.jpg",
+      "reasons": [
+        "no_valid_capture_date"
+      ]
+    },
+    {
+      "kind": "metadata_review",
+      "path": "multi.tiff",
+      "reasons": [
+        "multiple_frames",
+        "no_valid_capture_date"
+      ]
+    },
+    {
+      "kind": "date_bucket_candidate",
+      "path": "naive_date.jpg",
+      "bucket": "2024/07/15",
+      "basis": "ExifIFD:DateTimeOriginal",
+      "calendar_basis": "recorded_local_date",
+      "timezone": "unknown",
+      "sha256": "104c00cfe37f084d22c1af20af87d830158dc9c06a1528fbe0b78af7a6d849a3"
+    },
+    {
+      "kind": "metadata_review",
+      "path": "naive_date.jpg",
+      "reasons": [
+        "capture_timezone_unknown"
+      ]
+    },
+    {
+      "kind": "input_review",
+      "path": "offset_subsecond.jpg",
+      "reason": "read_error"
+    },
+    {
+      "kind": "input_review",
+      "path": "orientation_1.png",
+      "reason": "read_error"
+    },
+    {
+      "kind": "input_review",
+      "path": "orientation_1.tiff",
+      "reason": "read_error"
+    },
+    {
+      "kind": "metadata_review",
+      "path": "orientation_2.png",
+      "reasons": [
+        "no_valid_capture_date"
+      ]
+    },
+    {
+      "kind": "input_review",
+      "path": "orientation_2.tiff",
+      "reason": "read_error"
+    },
+    {
+      "kind": "metadata_review",
+      "path": "orientation_3.png",
+      "reasons": [
+        "no_valid_capture_date"
+      ]
+    },
+    {
+      "kind": "input_review",
+      "path": "orientation_3.tiff",
+      "reason": "read_error"
+    },
+    {
+      "kind": "metadata_review",
+      "path": "orientation_4.png",
+      "reasons": [
+        "no_valid_capture_date"
+      ]
+    },
+    {
+      "kind": "metadata_review",
+      "path": "orientation_4.tiff",
+      "reasons": [
+        "no_valid_capture_date"
+      ]
+    },
+    {
+      "kind": "metadata_review",
+      "path": "orientation_5.png",
+      "reasons": [
+        "no_valid_capture_date"
+      ]
+    },
+    {
+      "kind": "metadata_review",
+      "path": "orientation_5.tiff",
+      "reasons": [
+        "no_valid_capture_date"
+      ]
+    },
+    {
+      "kind": "metadata_review",
+      "path": "orientation_6.png",
+      "reasons": [
+        "no_valid_capture_date"
+      ]
+    },
+    {
+      "kind": "metadata_review",
+      "path": "orientation_6.tiff",
+      "reasons": [
+        "no_valid_capture_date"
+      ]
+    },
+    {
+      "kind": "metadata_review",
+      "path": "orientation_7.png",
+      "reasons": [
+        "no_valid_capture_date"
+      ]
+    },
+    {
+      "kind": "metadata_review",
+      "path": "orientation_7.tiff",
+      "reasons": [
+        "no_valid_capture_date"
+      ]
+    },
+    {
+      "kind": "metadata_review",
+      "path": "orientation_8.png",
+      "reasons": [
+        "no_valid_capture_date"
+      ]
+    },
+    {
+      "kind": "metadata_review",
+      "path": "orientation_8.tiff",
+      "reasons": [
+        "no_valid_capture_date"
+      ]
+    },
+    {
+      "kind": "input_review",
+      "path": "tail_truncated.jpg",
+      "reason": "damaged"
+    }
+  ]
+}

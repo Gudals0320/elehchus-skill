@@ -1,0 +1,7 @@
+{
+  "requested_at": "2026-09-08T09:39:41.821881+00:00",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.57&longitude=126.98&start_date=2025-01-01&end_date=2025-01-03&hourly=temperature_2m,precipitation,wind_speed_10m&models=era5&timezone=GMT&timeformat=unixtime&temperature_unit=celsius&wind_speed_unit=kmh&precipitation_unit=mm",
+  "error": "URLError",
+  "reason": "<urlopen error [WinError 10013] 액세스 권한에 의해 숨겨진 소켓에 액세스를 시도했습니다>",
+  "completed_at": "2026-09-08T09:39:41.844857+00:00"
+}

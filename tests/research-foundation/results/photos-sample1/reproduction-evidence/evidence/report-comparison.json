@@ -1,0 +1,142 @@
+{
+  "saved_vs_replay_equal": false,
+  "saved_vs_replay_differences": [
+    {
+      "field": "records[0].filesystem_mtime_ns",
+      "saved": 1788854622051326000,
+      "replayed": 1788859362343342700
+    },
+    {
+      "field": "records[1].filesystem_mtime_ns",
+      "saved": 1788854622050291200,
+      "replayed": 1788859362344342200
+    },
+    {
+      "field": "records[2].filesystem_mtime_ns",
+      "saved": 1788854622048222500,
+      "replayed": 1788859362344342200
+    },
+    {
+      "field": "records[3].filesystem_mtime_ns",
+      "saved": 1788854622049776400,
+      "replayed": 1788859362345341800
+    },
+    {
+      "field": "records[4].filesystem_mtime_ns",
+      "saved": 1788854622050810600,
+      "replayed": 1788859362345341800
+    },
+    {
+      "field": "records[5].filesystem_mtime_ns",
+      "saved": 1788854622049260800,
+      "replayed": 1788859362346341500
+    },
+    {
+      "field": "records[6].filesystem_mtime_ns",
+      "saved": 1788854622047703200,
+      "replayed": 1788859362346341500
+    },
+    {
+      "field": "records[7].filesystem_mtime_ns",
+      "saved": 1788854622048740600,
+      "replayed": 1788859362347341600
+    }
+  ],
+  "all_differences_are_filesystem_mtime_ns": true,
+  "local_review_failed_checks": [
+    "same_scanner_output_as_verified_sample"
+  ],
+  "local_review_network_calls": [],
+  "rendered_review_equals_saved_text": true,
+  "input_and_saved_report_mtime": [
+    {
+      "path": "README.md",
+      "source_input_mtime_ns": 1788859362343342700,
+      "copied_input_mtime_ns": 1788859362343342700,
+      "saved_report_mtime_ns": 1788854622051326000
+    },
+    {
+      "path": "broken/truncated.jpg",
+      "source_input_mtime_ns": 1788859362344342200,
+      "copied_input_mtime_ns": 1788859362344342200,
+      "saved_report_mtime_ns": 1788854622050291200
+    },
+    {
+      "path": "copies/duplicate.jpg",
+      "source_input_mtime_ns": 1788859362344342200,
+      "copied_input_mtime_ns": 1788859362344342200,
+      "saved_report_mtime_ns": 1788854622048222500
+    },
+    {
+      "path": "formats/sample.tiff",
+      "source_input_mtime_ns": 1788859362345341800,
+      "copied_input_mtime_ns": 1788859362345341800,
+      "saved_report_mtime_ns": 1788854622049776400
+    },
+    {
+      "path": "notes.txt",
+      "source_input_mtime_ns": 1788859362345341800,
+      "copied_input_mtime_ns": 1788859362345341800,
+      "saved_report_mtime_ns": 1788854622050810600
+    },
+    {
+      "path": "plain.png",
+      "source_input_mtime_ns": 1788859362346341500,
+      "copied_input_mtime_ns": 1788859362346341500,
+      "saved_report_mtime_ns": 1788854622049260800
+    },
+    {
+      "path": "session A/dated.jpg",
+      "source_input_mtime_ns": 1788859362346341500,
+      "copied_input_mtime_ns": 1788859362346341500,
+      "saved_report_mtime_ns": 1788854622047703200
+    },
+    {
+      "path": "회전/rotated.jpg",
+      "source_input_mtime_ns": 1788859362347341600,
+      "copied_input_mtime_ns": 1788859362347341600,
+      "saved_report_mtime_ns": 1788854622048740600
+    }
+  ],
+  "referenced_artifacts_exist": {
+    ".elenchus/lab/R001/main/tests-ifd-final.log": false,
+    ".elenchus/lab/R001/main/tests-first.log": false,
+    ".elenchus/lab/R001/metadata-research/reproduction/notes.md": false,
+    ".elenchus/lab/R001/metadata-research/reproduction/audit-results.json": false,
+    ".elenchus/lab/R001/metadata-research/reproduction/local-review-notes.md": false,
+    ".elenchus/lab/R002/identity-research/junction-fixtures/source/linked-target": false
+  },
+  "representative_summary": {
+    "files": 8,
+    "statuses": {
+      "invalid_image": 1,
+      "non_image_or_unsupported": 2,
+      "ok": 5
+    },
+    "exact_groups": 1,
+    "snapshot_bytes": 3538
+  },
+  "exact_groups": [
+    {
+      "id": "exact-001",
+      "sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "size": 763,
+      "evidence": "sha256_and_equal_bytes",
+      "members": [
+        "copies/duplicate.jpg",
+        "session A/dated.jpg"
+      ]
+    }
+  ],
+  "candidate_date_buckets": {
+    "README.md": null,
+    "broken/truncated.jpg": null,
+    "copies/duplicate.jpg": "2024-07-15",
+    "formats/sample.tiff": null,
+    "notes.txt": null,
+    "plain.png": null,
+    "session A/dated.jpg": "2024-07-15",
+    "회전/rotated.jpg": null
+  },
+  "generated_review_sha256_bytes": "25a72dbe2a427863994a57bcc0efaba6b2f1e115182011393ef05a11812d1a71"
+}

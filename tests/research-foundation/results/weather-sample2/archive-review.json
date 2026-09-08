@@ -1,0 +1,14 @@
+{
+  "archives": [
+    {
+      "archive": "project/.elenchus/lab/R002/delivery/weather-materials-initial.zip",
+      "entries": 85
+    },
+    {
+      "archive": "project/.elenchus/lab/R002/delivery/weather-materials.zip",
+      "entries": 109
+    }
+  ],
+  "flags": [],
+  "scope": "Publication inspection only; internal prior-replay contents are not supplied to independent replayers"
+}

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Codex\Elenchus\tests\research-foundation\.work\photos-sample1-reproduction-clean\execution\project\.elenchus\lab\R001\metadata-research\probe_exifread.py", line 85, in <module>
+    main()
+  File "C:\Codex\Elenchus\tests\research-foundation\.work\photos-sample1-reproduction-clean\execution\project\.elenchus\lab\R001\metadata-research\probe_exifread.py", line 72, in main
+    "python": sys.version, "exifread_version": exifread.__version__,
+                                               ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'exifread' has no attribute '__version__'

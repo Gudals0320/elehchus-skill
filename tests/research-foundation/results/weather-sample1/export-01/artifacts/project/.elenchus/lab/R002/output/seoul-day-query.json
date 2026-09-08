@@ -1,0 +1,277 @@
+{
+  "rows": [
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704121200,
+      "temperature_c": 3.5,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 1.22,
+      "quality": "ok",
+      "time_local": "2024-01-02T00:00:00+09:00",
+      "precipitation_period_start_utc": 1704117600,
+      "precipitation_period_end_utc": 1704121200
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704124800,
+      "temperature_c": 2.6,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 0.98,
+      "quality": "ok",
+      "time_local": "2024-01-02T01:00:00+09:00",
+      "precipitation_period_start_utc": 1704121200,
+      "precipitation_period_end_utc": 1704124800
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704128400,
+      "temperature_c": 2.5,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 0.61,
+      "quality": "ok",
+      "time_local": "2024-01-02T02:00:00+09:00",
+      "precipitation_period_start_utc": 1704124800,
+      "precipitation_period_end_utc": 1704128400
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704132000,
+      "temperature_c": 2.6,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 0.92,
+      "quality": "ok",
+      "time_local": "2024-01-02T03:00:00+09:00",
+      "precipitation_period_start_utc": 1704128400,
+      "precipitation_period_end_utc": 1704132000
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704135600,
+      "temperature_c": 3.1,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 1.3,
+      "quality": "ok",
+      "time_local": "2024-01-02T04:00:00+09:00",
+      "precipitation_period_start_utc": 1704132000,
+      "precipitation_period_end_utc": 1704135600
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704139200,
+      "temperature_c": 3.0,
+      "precipitation_mm": 0.1,
+      "wind_speed_ms": 1.55,
+      "quality": "ok",
+      "time_local": "2024-01-02T05:00:00+09:00",
+      "precipitation_period_start_utc": 1704135600,
+      "precipitation_period_end_utc": 1704139200
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704142800,
+      "temperature_c": 2.9,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 1.36,
+      "quality": "ok",
+      "time_local": "2024-01-02T06:00:00+09:00",
+      "precipitation_period_start_utc": 1704139200,
+      "precipitation_period_end_utc": 1704142800
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704146400,
+      "temperature_c": 2.6,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 1.43,
+      "quality": "ok",
+      "time_local": "2024-01-02T07:00:00+09:00",
+      "precipitation_period_start_utc": 1704142800,
+      "precipitation_period_end_utc": 1704146400
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704150000,
+      "temperature_c": 2.5,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 1.3,
+      "quality": "ok",
+      "time_local": "2024-01-02T08:00:00+09:00",
+      "precipitation_period_start_utc": 1704146400,
+      "precipitation_period_end_utc": 1704150000
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704153600,
+      "temperature_c": 2.8,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 0.92,
+      "quality": "ok",
+      "time_local": "2024-01-02T09:00:00+09:00",
+      "precipitation_period_start_utc": 1704150000,
+      "precipitation_period_end_utc": 1704153600
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704157200,
+      "temperature_c": 3.2,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 1.49,
+      "quality": "ok",
+      "time_local": "2024-01-02T10:00:00+09:00",
+      "precipitation_period_start_utc": 1704153600,
+      "precipitation_period_end_utc": 1704157200
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704160800,
+      "temperature_c": 4.0,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 2.2,
+      "quality": "ok",
+      "time_local": "2024-01-02T11:00:00+09:00",
+      "precipitation_period_start_utc": 1704157200,
+      "precipitation_period_end_utc": 1704160800
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704164400,
+      "temperature_c": 4.6,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 2.36,
+      "quality": "ok",
+      "time_local": "2024-01-02T12:00:00+09:00",
+      "precipitation_period_start_utc": 1704160800,
+      "precipitation_period_end_utc": 1704164400
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704168000,
+      "temperature_c": 5.1,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 2.58,
+      "quality": "ok",
+      "time_local": "2024-01-02T13:00:00+09:00",
+      "precipitation_period_start_utc": 1704164400,
+      "precipitation_period_end_utc": 1704168000
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704171600,
+      "temperature_c": 5.3,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 2.88,
+      "quality": "ok",
+      "time_local": "2024-01-02T14:00:00+09:00",
+      "precipitation_period_start_utc": 1704168000,
+      "precipitation_period_end_utc": 1704171600
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704175200,
+      "temperature_c": 5.1,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 2.82,
+      "quality": "ok",
+      "time_local": "2024-01-02T15:00:00+09:00",
+      "precipitation_period_start_utc": 1704171600,
+      "precipitation_period_end_utc": 1704175200
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704178800,
+      "temperature_c": 5.0,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 2.18,
+      "quality": "ok",
+      "time_local": "2024-01-02T16:00:00+09:00",
+      "precipitation_period_start_utc": 1704175200,
+      "precipitation_period_end_utc": 1704178800
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704182400,
+      "temperature_c": 4.6,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 1.2,
+      "quality": "ok",
+      "time_local": "2024-01-02T17:00:00+09:00",
+      "precipitation_period_start_utc": 1704178800,
+      "precipitation_period_end_utc": 1704182400
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704186000,
+      "temperature_c": 3.4,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 1.84,
+      "quality": "ok",
+      "time_local": "2024-01-02T18:00:00+09:00",
+      "precipitation_period_start_utc": 1704182400,
+      "precipitation_period_end_utc": 1704186000
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704189600,
+      "temperature_c": 2.9,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 1.12,
+      "quality": "ok",
+      "time_local": "2024-01-02T19:00:00+09:00",
+      "precipitation_period_start_utc": 1704186000,
+      "precipitation_period_end_utc": 1704189600
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704193200,
+      "temperature_c": 2.2,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 1.91,
+      "quality": "ok",
+      "time_local": "2024-01-02T20:00:00+09:00",
+      "precipitation_period_start_utc": 1704189600,
+      "precipitation_period_end_utc": 1704193200
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704196800,
+      "temperature_c": 2.3,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 2.12,
+      "quality": "ok",
+      "time_local": "2024-01-02T21:00:00+09:00",
+      "precipitation_period_start_utc": 1704193200,
+      "precipitation_period_end_utc": 1704196800
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704200400,
+      "temperature_c": 2.2,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 1.86,
+      "quality": "ok",
+      "time_local": "2024-01-02T22:00:00+09:00",
+      "precipitation_period_start_utc": 1704196800,
+      "precipitation_period_end_utc": 1704200400
+    },
+    {
+      "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+      "epoch_utc": 1704204000,
+      "temperature_c": 2.3,
+      "precipitation_mm": 0.0,
+      "wind_speed_ms": 1.64,
+      "quality": "ok",
+      "time_local": "2024-01-02T23:00:00+09:00",
+      "precipitation_period_start_utc": 1704200400,
+      "precipitation_period_end_utc": 1704204000
+    }
+  ],
+  "summary": {
+    "row_count": 24,
+    "expected_hours": 24.0,
+    "temperature_valid_count": 24,
+    "temperature_mean_c": 3.345833333333333,
+    "precipitation_valid_count": 24,
+    "precipitation_observed_sum_mm": 0.1,
+    "precipitation_labels_complete": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "time": "2026-09-08T08:20:38.864377+00:00",
+  "event": "main_isolated_replay",
+  "command": "python -B project/.elenchus/lab/R002/verify_materials.py",
+  "result": "NOAA archive replay and synthetic probes passed; protected originals unchanged",
+  "noaa_rows": 8430,
+  "original_files_unchanged": 2,
+  "copied_input_hashes": {
+    "archive_sqlite.py": "cf23a2bdf80f2735e410453b7c6381aa0b8d59dd4c503692578ca71eb5cf21b5",
+    "failure_probes.py": "1f0024c621fcd9360da6e37c3f0f6d8c853b8324c03fc35d8984fa0c9c58c32e",
+    "fetch_probe.py": "21cbe2c8cc2e49ad2e45131227b6cc0fc8dec896a84867fed35ddda12ff0536a",
+    "471080-99999-2024.gz": "2619321a2fbaf7a472757b9de2b4d777d3c0b2a89d5ee4886a4dd2b5f886c220"
+  },
+  "artifact": "project/.elenchus/lab/R002/verification/noaa-replay/"
+}

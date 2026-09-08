@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "same_input_paths": true,
+    "same_core_observations": true,
+    "same_exact_groups": true,
+    "all_candidates_review_only": true,
+    "dated_pair_bucket_uses_capture": true,
+    "tiff_ifd0_date_preserved_not_capture": true,
+    "missing_capture_not_assigned_day": true,
+    "tiff_and_jpeg_transforms_explicit": true,
+    "variants_agree_on_format_decode_display": true,
+    "junction_has_reparse_attribute": true,
+    "junction_skipped": true,
+    "junction_target_not_traversed": true,
+    "junction_root_rejected": true,
+    "target_contents_unchanged": true,
+    "main_code_unchanged_during_review": true
+  },
+  "differences": []
+}

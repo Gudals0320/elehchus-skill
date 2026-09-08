@@ -1,0 +1,21 @@
+{
+  "recorded_at": "2026-09-08T09:55:13.183738+00:00",
+  "recorded_after_actual_execution": true,
+  "python": "C:\\Program Files\\Python312\\python.exe",
+  "prefix": "C:\\Program Files\\Python312",
+  "base_prefix": "C:\\Program Files\\Python312",
+  "pandas_available": false,
+  "tzdata_available": false,
+  "files": {
+    "reproduce.py": "536b7e84c33b0293e74baf428154b09702e3ee14330bd16fdd84f0ec24296e39",
+    "weather_path.py": "eb3ec468efab7470f273384c2a4dc0ac8453945d2a06c5cad95443368c073ab6",
+    "fixtures\\seoul-era5-imperial.json": "a2763cedd57330897589aeee15725f2da2bf63c690436797193b055bc7825517",
+    "fixtures\\seoul-era5-imperial.meta.json": "5b51f154ce37f3b0baddcc2ad907ee7be322ed78b0d085aafcf8fd98ed669d70",
+    "fixtures\\seoul-era5.json": "a8cc853f5c2ef64618cf2eaf05e61a6135dd023efe89fa8717585c1c95e1031f",
+    "fixtures\\seoul-era5.meta.json": "7a12d58a06ffe4a6954046362cc71dab8b7d9c9563c2db7a8e0439b673207fe4",
+    "output\\query.json": "ee350f969e8ef688ba0e517d960fcf50a27d48d25bcc51d3ee470c0e0444f033",
+    "output\\reproduction.json": "698d9c89cc2e95f8692fd9e5ce897628296a92c45e201ca2f9a746dbef5b4c82",
+    "output\\weather.sqlite": "a23f9caf42d7f2e1e9c45e152cf21fecbce97f8781dff147a2dfc7df12f6d157"
+  },
+  "source_fixture_preserved": true
+}

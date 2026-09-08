@@ -1,0 +1,185 @@
+{
+  "checked_utc": "2026-09-08T09:27:34.510050+00:00",
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\weather-sample1-reproduction-clean\\run\\project\\.elenchus\\lab\\R002\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "sqlite": "3.49.1",
+    "prefix": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\weather-sample1-reproduction-clean\\run\\project\\.elenchus\\lab\\R002\\.venv",
+    "base_prefix": "C:\\Program Files\\Python312",
+    "isolated_venv": true,
+    "packages": {
+      "pip": "25.0.1",
+      "tzdata": "2026.3"
+    }
+  },
+  "copied_source_files_checked": 15,
+  "changed_source_files": [],
+  "live": {
+    "raw_file": "run/project/.elenchus/lab/R001/new-samples/20260908T092429641359Z-9ed6bff1463c.json",
+    "http_status": 200,
+    "fetch_time_utc": "2026-09-08T09:24:28.457413+00:00",
+    "request_url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.5665&longitude=126.978&start_date=2026-09-01&end_date=2026-09-02&hourly=temperature_2m%2Cprecipitation&timezone=Asia%2FSeoul&timeformat=unixtime&models=era5&temperature_unit=celsius&wind_speed_unit=ms&precipitation_unit=mm",
+    "bytes": 1322,
+    "sha256": "9ed6bff1463caa178287706287077391b4b23130d2118e099f0325917baa2eb1",
+    "requested_coordinates": [
+      37.5665,
+      126.978
+    ],
+    "grid_coordinates": [
+      37.5,
+      127.0
+    ],
+    "weather_matches_preserved_si_fixture": true,
+    "raw_matches_preserved_si_fixture": false,
+    "summary": {
+      "row_count": 48,
+      "expected_hours": 48.0,
+      "temperature_valid_count": 48,
+      "temperature_mean_c": 24.25,
+      "precipitation_valid_count": 48,
+      "precipitation_observed_sum_mm": 94.7,
+      "precipitation_labels_complete": true
+    },
+    "first_label": "2026-09-01T00:00:00+09:00",
+    "last_label": "2026-09-02T23:00:00+09:00",
+    "db": {
+      "integrity_check": [
+        [
+          "ok"
+        ]
+      ],
+      "foreign_key_check": [],
+      "datasets": 1,
+      "hourly_rows": 48
+    },
+    "reingest": {
+      "dataset_id": "26f3e14a2e18fc0d853e51be6b44705eb7c0146d24e69f0874262a1aa59abeb7",
+      "rows": 48,
+      "inserted": false,
+      "missing_rows": 0
+    }
+  },
+  "offline": {
+    "db": {
+      "integrity_check": [
+        [
+          "ok"
+        ]
+      ],
+      "foreign_key_check": [],
+      "datasets": 3,
+      "hourly_rows": 144
+    },
+    "summary": {
+      "row_count": 48,
+      "expected_hours": 48.0,
+      "temperature_valid_count": 48,
+      "temperature_mean_c": 24.25,
+      "precipitation_valid_count": 48,
+      "precipitation_observed_sum_mm": 94.7,
+      "precipitation_labels_complete": true
+    },
+    "max_unit_conversion_error": {
+      "temperature_c": 0.06666666666666288,
+      "precipitation_mm": 0.01159999999999961
+    },
+    "noaa": {
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "sqlite": "3.49.1",
+      "input_sha256": "2619321a2fbaf7a472757b9de2b4d777d3c0b2a89d5ee4886a4dd2b5f886c220",
+      "input_rows": 8430,
+      "db_rows_before": 0,
+      "rows_after_first": 8430,
+      "rows_after_repeat": 8430,
+      "summary": {
+        "rows": 8430,
+        "first_epoch": 1704067200,
+        "last_epoch": 1735686000,
+        "temperature_valid": 8430,
+        "temperature_missing": 0,
+        "wind_valid": 8394,
+        "wind_missing": 36,
+        "rain_missing": 7824,
+        "rain_trace": 130,
+        "rain_measured": 476,
+        "min_temp_c": -14.0,
+        "max_temp_c": 36.2,
+        "expected_year_hours": 8784,
+        "missing_hour_rows": 354,
+        "missing_hour_examples_utc": [
+          "2024-01-03T09:00:00+00:00",
+          "2024-01-04T05:00:00+00:00",
+          "2024-01-21T01:00:00+00:00",
+          "2024-01-23T02:00:00+00:00",
+          "2024-02-15T23:00:00+00:00"
+        ],
+        "outside_year_rows": 0
+      },
+      "first_three": [
+        {
+          "station": "471080-99999",
+          "time_utc": 1704067200,
+          "temperature_c": 0.6,
+          "wind_m_s": 1.5,
+          "precipitation_1h_mm": null,
+          "precipitation_1h_status": "missing"
+        },
+        {
+          "station": "471080-99999",
+          "time_utc": 1704070800,
+          "temperature_c": 2.4,
+          "wind_m_s": 1.5,
+          "precipitation_1h_mm": null,
+          "precipitation_1h_status": "missing"
+        },
+        {
+          "station": "471080-99999",
+          "time_utc": 1704074400,
+          "temperature_c": 4.4,
+          "wind_m_s": 2.1,
+          "precipitation_1h_mm": null,
+          "precipitation_1h_status": "missing"
+        }
+      ],
+      "first_48h_query_rows": 48,
+      "raw_unchanged": true
+    },
+    "pandas": {
+      "pandas_version": "3.0.3",
+      "rows": 8430,
+      "wind_nulls": 36,
+      "rain_nulls": 7824,
+      "rain_trace": 130,
+      "naive_precipitation_min_mm": -0.1,
+      "to_sql_auto_schema": "CREATE TABLE \"obs\" (\n\"station\" TEXT,\n  \"time\" INTEGER,\n  \"temperature_c\" REAL\n)",
+      "to_sql_append_repeat_rows": 2,
+      "to_sql_after_caller_rollback_rows": 1,
+      "mixed_offsets_default_error": "Mixed timezones detected. Pass utc=True in to_datetime or tz='UTC' in DatetimeIndex to convert to a common timezone.",
+      "mixed_offsets_utc": [
+        "2024-11-03 05:30:00+00:00",
+        "2024-11-03 06:30:00+00:00"
+      ],
+      "unit_epoch_ms_misread_as_ns": "1970-01-01 00:28:24.067200+00:00",
+      "unit_epoch_ms_explicit": "2024-01-01 00:00:00+00:00"
+    },
+    "ghcnh": {
+      "bytes_saved": 65536,
+      "sha256": "0ac539ecb8180585ea6c107b5d468f3e64bf5f7b32d13949da3fcfd1b895b0b4",
+      "complete_rows_in_prefix": 63,
+      "nonzero_minute_rows": 60,
+      "temperature_missing_rows": 1,
+      "precipitation_missing_rows": 51
+    }
+  },
+  "original_product_files": {
+    "README.md": {
+      "bytes": 125,
+      "sha256": "41d7512f7506b4b0191b7ba61d94fa488cee97d66c2def128f40f644d7a71122"
+    },
+    "existing-product.txt": {
+      "bytes": 50,
+      "sha256": "53f0c7f7a926d9252540a73f22338b37ab5d4323fdc4c68041a7ac7ad795fb71"
+    }
+  }
+}

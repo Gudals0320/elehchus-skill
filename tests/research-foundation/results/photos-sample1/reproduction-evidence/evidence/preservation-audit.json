@@ -1,0 +1,15 @@
+{
+  "source_file_count": 114,
+  "source_unchanged_content_size_mtime": true,
+  "source_differences": [],
+  "copied_existing_files_with_content_changes": [
+    ".elenchus/lab/R001/main/local-review-results.json",
+    ".elenchus/lab/R001/metadata-research/probe-results.json",
+    ".elenchus/lab/R002/identity-research/main-review.json",
+    ".elenchus/lab/R002/identity-research/observations.json"
+  ],
+  "copied_protected_files": 10,
+  "copied_protected_sha_matches_source": true,
+  "core_sha256": "263c4e70a5d638e4667b03c5fe87d4f0cbc6f06120304d7b52ee6631541d50be",
+  "copied_core_unchanged": true
+}

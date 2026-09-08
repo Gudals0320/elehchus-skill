@@ -1,0 +1,22 @@
+{
+  "requested_at": "2026-09-08T09:41:40.694088+00:00",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.57&longitude=126.98&start_date=2025-07-16&end_date=2025-07-18&hourly=temperature_2m,precipitation,wind_speed_10m&models=era5&timezone=GMT&timeformat=unixtime&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "final_url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.57&longitude=126.98&start_date=2025-07-16&end_date=2025-07-18&hourly=temperature_2m,precipitation,wind_speed_10m&models=era5&timezone=GMT&timeformat=unixtime&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch",
+  "bytes": 2221,
+  "sha256": "a2763cedd57330897589aeee15725f2da2bf63c690436797193b055bc7825517",
+  "json_type": "dict",
+  "keys": [
+    "latitude",
+    "longitude",
+    "generationtime_ms",
+    "utc_offset_seconds",
+    "timezone",
+    "timezone_abbreviation",
+    "elevation",
+    "hourly_units",
+    "hourly"
+  ],
+  "completed_at": "2026-09-08T09:41:41.883353+00:00"
+}

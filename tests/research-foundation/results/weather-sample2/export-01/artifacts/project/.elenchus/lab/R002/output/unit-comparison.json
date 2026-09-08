@@ -1,0 +1,28 @@
+{
+  "metric_url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.57&longitude=126.98&start_date=2025-07-16&end_date=2025-07-18&hourly=temperature_2m%2Cprecipitation%2Cwind_speed_10m&models=era5&timezone=GMT&timeformat=unixtime&temperature_unit=celsius&wind_speed_unit=kmh&precipitation_unit=mm",
+  "imperial_url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.57&longitude=126.98&start_date=2025-07-16&end_date=2025-07-18&hourly=temperature_2m,precipitation,wind_speed_10m&models=era5&timezone=GMT&timeformat=unixtime&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch",
+  "interpretation": "Separate API requests round their output differently; conversion is not an accuracy benchmark.",
+  "variables": {
+    "temperature_2m": {
+      "samples": 72,
+      "max_abs_difference": 0.055555555555557135,
+      "unit": "degC",
+      "sum_imperial_normalized": 1692.2777777777778,
+      "sum_metric": 1691.9
+    },
+    "precipitation": {
+      "samples": 72,
+      "max_abs_difference": 0.012600000000000056,
+      "unit": "mm",
+      "sum_imperial_normalized": 190.2968,
+      "sum_metric": 190.3
+    },
+    "wind_speed_10m": {
+      "samples": 72,
+      "max_abs_difference": 0.03468088888888854,
+      "unit": "m/s",
+      "sum_imperial_normalized": 206.934816,
+      "sum_metric": 206.75
+    }
+  }
+}

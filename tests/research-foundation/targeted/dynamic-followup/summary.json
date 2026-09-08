@@ -1,0 +1,63 @@
+{
+  "exit_code": 0,
+  "timed_out": false,
+  "elapsed_seconds": 149.281,
+  "finished_utc": "2026-09-08T10:36:44.908984+00:00",
+  "before": {
+    ".elenchus/research/R004-fields.md": "f22b31a34ae3be9a54645a069daa48c635fe440772994f1c9c5069508aaef7b6",
+    ".elenchus/research/index.md": "cbf542100c972d8eddde640f3bdb7892e608a0a9cad8e05606e6c61db9801c48",
+    ".elenchus/topology.md": "04a0eb2fb381141cb1ee4ecfbd2f8b2c4afcd452a7808133c8dcc69dfbeb654c",
+    "new-contract.md": "75f6f592e2624021d430a6af98e3f7329825627ee30e722fad246080baf1fe8f"
+  },
+  "after": {
+    ".elenchus/research/R004-fields.md": "f22b31a34ae3be9a54645a069daa48c635fe440772994f1c9c5069508aaef7b6",
+    ".elenchus/research/R005-access-feasibility.md": "4658e7fb35168802eb34dbcb16884cc07358306c60755f1fa90d8c8ed2c05817",
+    ".elenchus/research/index.md": "042a06977daf33af50fb572086614334552a2993a22ca8bcfb6488911c6dbf03",
+    ".elenchus/topology.md": "e88f7082918600b825841901b5397bd5418e32ab087d89aa9bd5effd993ff8f7",
+    "new-contract.md": "75f6f592e2624021d430a6af98e3f7329825627ee30e722fad246080baf1fe8f"
+  },
+  "published_input_sha256": "ea1fb619a84504dd13040bc63c0e5d4adc7538cee38dc6afb7e05479b0607df3",
+  "published_answer_sha256": "33a38a450ab76c16e7ac640cfdcac475ca5a78d2462102a49cec3fd42f823870",
+  "published_events_sha256": "415c11b4eeac53c159e486358420d71b04f32ba14fed5cdbc53e247ddc5bcfdb",
+  "usage": [
+    {
+      "input_tokens": 119201,
+      "cached_input_tokens": 86144,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 4115,
+      "reasoning_output_tokens": 654
+    }
+  ],
+  "command": [
+    "<user>/AppData/Local/OpenAI/Codex/bin/8e5b6932251c2c1c/codex.exe",
+    "-a",
+    "never",
+    "exec",
+    "--ignore-user-config",
+    "--ignore-rules",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "workspace-write",
+    "-c",
+    "web_search=\"disabled\"",
+    "-c",
+    "features.multi_agent=false",
+    "-m",
+    "gpt-6-astra",
+    "-c",
+    "model_reasoning_effort=\"xhigh\"",
+    "-C",
+    "<probe-workspace>",
+    "--json",
+    "-o",
+    "<probe-workspace>\\final.md",
+    "-c",
+    "windows.sandbox=\"elevated\"",
+    "-c",
+    "skills.config=[{path=\"<user>/.codex/skills/elenchus/SKILL.md\",enabled=false},{path=\"<user>/.codex/skills/elenchus-benchmark/SKILL.md\",enabled=false},{path=\"<user>/.codex/skills/elenchus-test/SKILL.md\",enabled=false}]",
+    "-"
+  ],
+  "excluded_event_types": {},
+  "quality": "manual review pending"
+}

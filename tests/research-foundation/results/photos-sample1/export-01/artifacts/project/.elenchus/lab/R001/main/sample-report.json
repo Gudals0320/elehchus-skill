@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "engine": {
+    "name": "Pillow",
+    "version": "12.3.0"
+  },
+  "policy": {
+    "identity": "size+sha256+byte_comparison",
+    "date_bucket": "valid DateTimeOriginal local day only",
+    "writes_to_input": false,
+    "max_file_bytes": 16777216,
+    "max_total_bytes": 67108864,
+    "max_pixels": 20000000,
+    "max_frames": 64
+  },
+  "summary": {
+    "files": 8,
+    "statuses": {
+      "changed_during_read": 8
+    },
+    "exact_groups": 0,
+    "snapshot_bytes": 0
+  },
+  "records": [
+    {
+      "path": "README.md",
+      "size": 744,
+      "sha256": null,
+      "filesystem_mtime_ns": 1788854622051326000,
+      "status": "changed_during_read",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "broken/truncated.jpg",
+      "size": 32,
+      "sha256": null,
+      "filesystem_mtime_ns": 1788854622050291200,
+      "status": "changed_during_read",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "copies/duplicate.jpg",
+      "size": 763,
+      "sha256": null,
+      "filesystem_mtime_ns": 1788854622048222500,
+      "status": "changed_during_read",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "formats/sample.tiff",
+      "size": 328,
+      "sha256": null,
+      "filesystem_mtime_ns": 1788854622049776400,
+      "status": "changed_during_read",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "notes.txt",
+      "size": 27,
+      "sha256": null,
+      "filesystem_mtime_ns": 1788854622050810600,
+      "status": "changed_during_read",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "plain.png",
+      "size": 187,
+      "sha256": null,
+      "filesystem_mtime_ns": 1788854622049260800,
+      "status": "changed_during_read",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "session A/dated.jpg",
+      "size": 763,
+      "sha256": null,
+      "filesystem_mtime_ns": 1788854622047703200,
+      "status": "changed_during_read",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "path": "회전/rotated.jpg",
+      "size": 694,
+      "sha256": null,
+      "filesystem_mtime_ns": 1788854622048740600,
+      "status": "changed_during_read",
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "exact_groups": [],
+  "candidates": [
+    {
+      "path": "README.md",
+      "date_bucket": null,
+      "date_source": null,
+      "exact_group": null,
+      "review_reasons": [
+        "changed_during_read"
+      ],
+      "action": "review_only"
+    },
+    {
+      "path": "broken/truncated.jpg",
+      "date_bucket": null,
+      "date_source": null,
+      "exact_group": null,
+      "review_reasons": [
+        "changed_during_read"
+      ],
+      "action": "review_only"
+    },
+    {
+      "path": "copies/duplicate.jpg",
+      "date_bucket": null,
+      "date_source": null,
+      "exact_group": null,
+      "review_reasons": [
+        "changed_during_read"
+      ],
+      "action": "review_only"
+    },
+    {
+      "path": "formats/sample.tiff",
+      "date_bucket": null,
+      "date_source": null,
+      "exact_group": null,
+      "review_reasons": [
+        "changed_during_read"
+      ],
+      "action": "review_only"
+    },
+    {
+      "path": "notes.txt",
+      "date_bucket": null,
+      "date_source": null,
+      "exact_group": null,
+      "review_reasons": [
+        "changed_during_read"
+      ],
+      "action": "review_only"
+    },
+    {
+      "path": "plain.png",
+      "date_bucket": null,
+      "date_source": null,
+      "exact_group": null,
+      "review_reasons": [
+        "changed_during_read"
+      ],
+      "action": "review_only"
+    },
+    {
+      "path": "session A/dated.jpg",
+      "date_bucket": null,
+      "date_source": null,
+      "exact_group": null,
+      "review_reasons": [
+        "changed_during_read"
+      ],
+      "action": "review_only"
+    },
+    {
+      "path": "회전/rotated.jpg",
+      "date_bucket": null,
+      "date_source": null,
+      "exact_group": null,
+      "review_reasons": [
+        "changed_during_read"
+      ],
+      "action": "review_only"
+    }
+  ]
+}

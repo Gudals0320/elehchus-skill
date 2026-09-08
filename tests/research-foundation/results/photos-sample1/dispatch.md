@@ -1,0 +1,1 @@
+작업 디렉터리는 C:/Codex/Elenchus/tests/research-foundation/.work/photos-sample1 입니다. 그 디렉터리의 input.md를 읽고 요청을 실제로 수행하세요. input.md에 지정된 skill/와 project/ 및 records/만 로컬 작업 대상으로 사용하세요. 이 작업의 사용자 응답은 부모가 전달합니다. 질문이 필요하면 실제 사용자에게 입력 도구를 띄우지 말고 최종 응답에 질문을 남기세요. 부모가 후속 답변을 전달합니다. 작업 경로와 내용은 하위 조사자에게도 전달하세요.

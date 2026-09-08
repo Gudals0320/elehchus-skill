@@ -1,0 +1,89 @@
+{
+  "status": "passed",
+  "environment": {
+    "python": "3.12.10",
+    "sqlite": "3.49.1",
+    "tzdata": "2026.3",
+    "executable": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\weather-sample1\\project\\.elenchus\\lab\\R001\\source-research\\reproduction\\lab\\R002\\.venv\\Scripts\\python.exe",
+    "tzdata_path": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\weather-sample1\\project\\.elenchus\\lab\\R001\\source-research\\reproduction\\lab\\R002\\.venv\\Lib\\site-packages\\tzdata\\__init__.py",
+    "independent_venv": true
+  },
+  "unittest_count": 17,
+  "unittest_status": "OK",
+  "si_ingest": {
+    "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+    "rows": 48,
+    "inserted": true,
+    "missing_rows": 0
+  },
+  "si_reingest": {
+    "dataset_id": "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50",
+    "rows": 48,
+    "inserted": false,
+    "missing_rows": 0
+  },
+  "imperial_ingest": {
+    "dataset_id": "4e2282f15dfdbb7516efe19250f830b0d0df032c346b0c297894b2d5cba35df1",
+    "rows": 48,
+    "inserted": true,
+    "missing_rows": 0
+  },
+  "seoul_query": {
+    "row_count": 24,
+    "expected_hours": 24.0,
+    "temperature_valid_count": 24,
+    "temperature_mean_c": 3.345833333333333,
+    "precipitation_valid_count": 24,
+    "precipitation_observed_sum_mm": 0.1,
+    "precipitation_labels_complete": true
+  },
+  "seoul_first_label": "2024-01-02T00:00:00+09:00",
+  "seoul_last_label": "2024-01-02T23:00:00+09:00",
+  "database_counts": {
+    "4e2282f15dfdbb7516efe19250f830b0d0df032c346b0c297894b2d5cba35df1": 48,
+    "7ec4d012ac07418d6d97db828de9754899b5fe638b69cc14854475bc713c1c50": 48
+  },
+  "database_integrity": [
+    [
+      "ok"
+    ]
+  ],
+  "foreign_key_issues": [],
+  "data_kinds": [
+    [
+      "reanalysis"
+    ]
+  ],
+  "copied_inputs_unchanged": true,
+  "file_hashes": [
+    {
+      "path": "lab/R002/weather_pipeline.py",
+      "sha256": "2140e63efe1975adb22bad60ad9d5f9baecc3c2bf11eb08b9aa36a8c3184adc1"
+    },
+    {
+      "path": "lab/R002/test_weather_pipeline.py",
+      "sha256": "e6c6f7e86924561d4a22eefbd21fa7f50330b4bd25ab5bf0872821e907ae156b"
+    },
+    {
+      "path": "lab/R002/requirements.txt",
+      "sha256": "8dd83c2d028575f95534079e2b1c85ed34e2e841647293426e961a03282b10f1"
+    },
+    {
+      "path": "lab/R001/samples/seoul-era5-si.json",
+      "sha256": "d61b475d8f383a628b75bfe9dcdc905a37e6ea3c889d9226b8f5cdfc5dada4cb"
+    },
+    {
+      "path": "lab/R001/samples/seoul-era5-si.meta.json",
+      "sha256": "f6190cd25eecbf8b8ffc2da30aa2dab7b6eb8471b111286af39296f9ca0d6229"
+    },
+    {
+      "path": "lab/R001/adapter-samples/20260908T081157522643Z-cd887096aaff.json",
+      "sha256": "cd887096aafff9926fbee5db6a61407d4ceea7271a2599b77591bab1b8e64497"
+    },
+    {
+      "path": "lab/R001/adapter-samples/20260908T081157522643Z-cd887096aaff.meta.json",
+      "sha256": "16a942f63a919a5613bfd9d3a51ab0f69acfa893447da7dd5dd9dbd6013d7b58"
+    }
+  ],
+  "network_scope": "Only public PyPI setup; weather tests and replay use copied preserved samples. No fresh weather GET."
+}

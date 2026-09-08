@@ -1,0 +1,17 @@
+{
+  "same_versions": true,
+  "same_original_hashes": true,
+  "same_orientation_results": true,
+  "all_statuses_and_fields_agree": true,
+  "same_row_count": true,
+  "pillow_comparison_fields": [
+    "format",
+    "size",
+    "frames",
+    "ifd0",
+    "exif_ifd",
+    "metadata_status",
+    "verify",
+    "load"
+  ]
+}

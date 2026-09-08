@@ -1,0 +1,6 @@
+{
+  "sha256": "6d4cfd6809898e83464621405dc9473f3b9a8c806e8ec8fc4c7109a4e1ab195d",
+  "source_revision": "7f60615183899d6fdfa47c8391688df600010b02",
+  "files": 10,
+  "scope": "Exact frozen source bytes archived for publication; unpack runtime.zip into runtime/ to inspect. Plain runtime directory excluded from Git/install payload."
+}

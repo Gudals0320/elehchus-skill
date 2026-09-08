@@ -1,0 +1,58 @@
+{
+  "verified_at": "2026-09-08T10:01:40.985186+00:00",
+  "actual_source": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\weather-sample2\\project\\.elenchus\\lab\\R001\\responses\\seoul-requested-20260901.json",
+  "sha256": "b416268fc89fd4feae86714a082ee1180bbf611712adb57704a5a3317ac3b3c1",
+  "fetch_completed_at": "2026-09-08T09:59:41.081736+00:00",
+  "request": {
+    "latitude": "37.5665",
+    "longitude": "126.9780",
+    "start_date": "2026-09-01",
+    "end_date": "2026-09-02",
+    "hourly": "temperature_2m,precipitation",
+    "models": "era5",
+    "timezone": "Asia/Seoul",
+    "timeformat": "unixtime",
+    "temperature_unit": "celsius",
+    "precipitation_unit": "mm"
+  },
+  "returned_grid": {
+    "latitude": 37.5,
+    "longitude": 127.0,
+    "elevation": 34.0
+  },
+  "time": {
+    "count": 48,
+    "utc_start": "2026-08-31T15:00:00+00:00",
+    "utc_last": "2026-09-02T14:00:00+00:00",
+    "utc_exclusive_stop": "2026-09-02T15:00:00+00:00",
+    "local_start": "2026-09-01T00:00:00+09:00",
+    "local_last": "2026-09-02T23:00:00+09:00",
+    "local_exclusive_stop": "2026-09-03T00:00:00+09:00",
+    "cadence_seconds": 3600,
+    "absent_timestamps": 0,
+    "precipitation_interval_start_local": "2026-08-31T23:00:00+09:00",
+    "precipitation_interval_end_local": "2026-09-02T23:00:00+09:00"
+  },
+  "values": {
+    "temperature_2m": {
+      "count": 48,
+      "source_null": 0,
+      "nonfinite_or_nonnumeric": 0,
+      "unit": "°C",
+      "minimum": 21.6,
+      "maximum": 29.0
+    },
+    "precipitation": {
+      "count": 48,
+      "source_null": 0,
+      "nonfinite_or_nonnumeric": 0,
+      "unit": "mm",
+      "minimum": 0.0,
+      "maximum": 22.5,
+      "sum_of_available_end_labeled_hours": 94.7
+    }
+  },
+  "caution": "The precipitation sum is over 48 preceding-hour intervals ending at the returned timestamps; it is not the complete Sep 1-2 local-calendar total.",
+  "response_revision_fields": {},
+  "raw_preserved": true
+}

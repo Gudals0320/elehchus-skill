@@ -1,0 +1,33 @@
+{
+  "verified_at": "2026-09-08T10:02:43.438037+00:00",
+  "measurements": 96,
+  "unique_times": 48,
+  "variables": [
+    "precipitation",
+    "temperature_2m"
+  ],
+  "local_start": "2026-09-01T00:00:00+09:00",
+  "local_last": "2026-09-02T23:00:00+09:00",
+  "null_count": 0,
+  "imports_after_replay": 1,
+  "series": {
+    "provider": "open-meteo",
+    "kind": "reanalysis",
+    "model": "era5",
+    "requested_latitude": 37.5665,
+    "requested_longitude": 126.978,
+    "grid_latitude": 37.5,
+    "grid_longitude": 127.0,
+    "elevation_m": 34.0
+  },
+  "files": {
+    "reproduce.py": "ca3cd19fa79d6ecc03956e28c35cb4f483cc8fb334ea58af0d0fc3d6edbc40b7",
+    "weather_path.py": "9f9c59d44fa18ce2ce34aaca6e9f9a90f46676249689b29199fb399eb78a5ef3",
+    "fixtures\\seoul-requested-20260901.json": "b416268fc89fd4feae86714a082ee1180bbf611712adb57704a5a3317ac3b3c1",
+    "fixtures\\seoul-requested-20260901.meta.json": "90e3d79f0c894fc2981f319d77043de9a333c13e4ba8f8c5135ee97f175cd1f8",
+    "output\\query.json": "5d5e53afabe10292313431d608e9eaab1cdd2cd4ed6450b356b98255f14377ba",
+    "output\\reproduction.json": "72c88830e343eb279bc965c5528a8987a0315d45e97ac07cf6e5c38c1d6ffb1b",
+    "output\\weather.sqlite": "72e02a242f4095417309e5f822b31b30c90f694616f02a0ec17dd3b7115e53f4"
+  },
+  "raw_preserved": true
+}

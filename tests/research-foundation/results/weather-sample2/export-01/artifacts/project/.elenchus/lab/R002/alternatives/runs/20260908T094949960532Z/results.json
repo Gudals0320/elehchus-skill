@@ -1,0 +1,259 @@
+{
+  "recorded_at": "2026-09-08T09:49:50.323390+00:00",
+  "environment": {
+    "python": "3.12.10",
+    "sqlite": "3.49.1",
+    "pandas": "3.0.5"
+  },
+  "module_sha256": "67bff36ca201c9aa4334469118b34ff67fbf6ef1c4eafe374d76336fb2602b3a",
+  "module_snapshot": "runs\\20260908T094949960532Z\\weather_path_reviewed.py",
+  "probes": {
+    "real_metric_pandas": {
+      "status": "observed",
+      "result": {
+        "actual_response": "seoul-era5.json",
+        "sha256": "a8cc853f5c2ef64618cf2eaf05e61a6135dd023efe89fa8717585c1c95e1031f",
+        "hour_count": 72,
+        "compared_values": 216,
+        "maximum_absolute_difference": 4.440892098500626e-16,
+        "time_start": "2025-01-01 00:00:00+00:00",
+        "source_units": {
+          "time": "unixtime",
+          "temperature_2m": "°C",
+          "precipitation": "mm",
+          "wind_speed_10m": "km/h"
+        }
+      }
+    },
+    "real_imperial_pandas": {
+      "status": "observed",
+      "result": {
+        "actual_response": "seoul-era5-imperial.json",
+        "sha256": "a2763cedd57330897589aeee15725f2da2bf63c690436797193b055bc7825517",
+        "hour_count": 72,
+        "compared_values": 216,
+        "maximum_absolute_difference": 3.552713678800501e-15,
+        "time_start": "2025-07-16 00:00:00+00:00",
+        "source_units": {
+          "time": "unixtime",
+          "temperature_2m": "°F",
+          "precipitation": "inch",
+          "wind_speed_10m": "mp/h"
+        }
+      }
+    },
+    "dst": {
+      "status": "observed",
+      "result": {
+        "safe_utc_conversions": [
+          {
+            "utc": "2025-11-02T05:30:00+00:00",
+            "local": "2025-11-02T01:30:00-04:00",
+            "fold": 0
+          },
+          {
+            "utc": "2025-11-02T06:30:00+00:00",
+            "local": "2025-11-02T01:30:00-05:00",
+            "fold": 1
+          }
+        ],
+        "naive_local_hazards": [
+          {
+            "input": "2025-11-02 01:30",
+            "pandas_error": "ValueError",
+            "message": "Cannot infer dst time from 2025-11-02 01:30:00, try using the 'ambiguous' argument",
+            "stdlib_attach_without_validation": "2025-11-02T01:30:00-04:00",
+            "roundtrip_local": "2025-11-02T01:30:00-04:00"
+          },
+          {
+            "input": "2025-03-09 02:30",
+            "pandas_error": "ValueError",
+            "message": "2025-03-09 02:30:00 is a nonexistent time due to daylight savings time. Try using the 'nonexistent' argument.",
+            "stdlib_attach_without_validation": "2025-03-09T02:30:00-05:00",
+            "roundtrip_local": "2025-03-09T03:30:00-04:00"
+          }
+        ]
+      }
+    },
+    "sqlite_timestamp_converter_before_to_sql": {
+      "status": "observed",
+      "result": {
+        "input": "2025-01-01T00:00:00.123456+09:00",
+        "roundtrip": "2025-01-01T00:00:00.123456",
+        "timezone_preserved": false,
+        "warnings": [
+          "The default datetime adapter is deprecated as of Python 3.12; see the sqlite3 documentation for suggested replacement recipes",
+          "The default timestamp converter is deprecated as of Python 3.12; see the sqlite3 documentation for suggested replacement recipes"
+        ]
+      }
+    },
+    "missing": {
+      "status": "observed",
+      "result": {
+        "input": [
+          "1.0",
+          "None",
+          "NaN",
+          "0.0",
+          "-999.0"
+        ],
+        "pandas_isna": [
+          false,
+          true,
+          true,
+          false,
+          false
+        ],
+        "to_sql_roundtrip": [
+          [
+            1.0,
+            "real"
+          ],
+          [
+            null,
+            "null"
+          ],
+          [
+            null,
+            "null"
+          ],
+          [
+            0.0,
+            "real"
+          ],
+          [
+            -999.0,
+            "real"
+          ]
+        ],
+        "sqlite_native_nonfinite": [
+          [
+            "None",
+            "null"
+          ],
+          [
+            "None",
+            "null"
+          ],
+          [
+            "inf",
+            "real"
+          ]
+        ],
+        "all_null": {
+          "pandas_default_sum": 0.0,
+          "pandas_min_count_1": "<NA>",
+          "sqlite_sum": null
+        },
+        "lesson": "Sentinel -999 remains numeric unless its provider contract maps it explicitly."
+      }
+    },
+    "sqlite_timestamp_converter_after_to_sql": {
+      "status": "observed",
+      "result": {
+        "input": "2025-01-01T00:00:00.123456+09:00",
+        "roundtrip": "2025-01-01T00:00:00.123456+09:00",
+        "timezone_preserved": true,
+        "warnings": []
+      }
+    },
+    "recollection_order": {
+      "status": "observed",
+      "result": {
+        "synthetic": true,
+        "steps": [
+          {
+            "step": "old",
+            "rows_total": 216,
+            "first_temperature": -1.4,
+            "returned_import_id": 1,
+            "measurement_import_id": 1,
+            "measurement_fetched_at": "2026-09-01T00:00:00.000000+00:00"
+          },
+          {
+            "step": "same_old_again",
+            "rows_total": 216,
+            "first_temperature": -1.4,
+            "returned_import_id": 1,
+            "measurement_import_id": 1,
+            "measurement_fetched_at": "2026-09-01T00:00:00.000000+00:00"
+          },
+          {
+            "step": "newer_revision",
+            "rows_total": 216,
+            "first_temperature": 0.6000000000000001,
+            "returned_import_id": 2,
+            "measurement_import_id": 2,
+            "measurement_fetched_at": "2026-09-02T00:00:00.000000+00:00"
+          },
+          {
+            "step": "replay_old",
+            "rows_total": 216,
+            "first_temperature": 0.6000000000000001,
+            "returned_import_id": 1,
+            "measurement_import_id": 2,
+            "measurement_fetched_at": "2026-09-02T00:00:00.000000+00:00"
+          },
+          {
+            "step": "original_payload_freshly_collected_later",
+            "rows_total": 216,
+            "first_temperature": 0.6000000000000001,
+            "returned_import_id": 1,
+            "measurement_import_id": 2,
+            "measurement_fetched_at": "2026-09-02T00:00:00.000000+00:00"
+          }
+        ],
+        "old_replay_overwrote_newer": false,
+        "fresh_later_same_bytes_applied": false
+      }
+    },
+    "validation": {
+      "status": "observed",
+      "result": {
+        "synthetic": true,
+        "cases": {
+          "nan_temperature": {
+            "accepted": false,
+            "error": "ContractError",
+            "message": "Non-finite/non-numeric value: temperature_2m"
+          },
+          "negative_precipitation": {
+            "accepted": false,
+            "error": "ContractError",
+            "message": "Negative physical quantity: precipitation; unknown sentinel is not silently accepted"
+          },
+          "unknown_temperature_unit": {
+            "accepted": false,
+            "error": "ContractError",
+            "message": "Unsupported source unit: temperature_2m"
+          },
+          "timestamp_removed": {
+            "accepted": true,
+            "quality_counts": {
+              "valid": 213,
+              "source_null": 0,
+              "absent_timestamp": 3
+            }
+          },
+          "source_null": {
+            "accepted": true,
+            "quality_counts": {
+              "valid": 215,
+              "source_null": 1,
+              "absent_timestamp": 0
+            }
+          }
+        }
+      }
+    }
+  },
+  "input_hashes_before": {
+    "seoul-era5-imperial.json": "a2763cedd57330897589aeee15725f2da2bf63c690436797193b055bc7825517",
+    "seoul-era5-imperial.meta.20260908T094141883353Z.json": "5b51f154ce37f3b0baddcc2ad907ee7be322ed78b0d085aafcf8fd98ed669d70",
+    "seoul-era5.json": "a8cc853f5c2ef64618cf2eaf05e61a6135dd023efe89fa8717585c1c95e1031f",
+    "seoul-era5.meta.20260908T093941844857Z.json": "39b4de2259c899ba006640498942b762b0615340e956d970612a95af4c94cdb2",
+    "seoul-era5.meta.20260908T093958420174Z.json": "7a12d58a06ffe4a6954046362cc71dab8b7d9c9563c2db7a8e0439b673207fe4"
+  },
+  "input_preserved": true,
+  "finished_at": "2026-09-08T09:49:50.393920+00:00"
+}

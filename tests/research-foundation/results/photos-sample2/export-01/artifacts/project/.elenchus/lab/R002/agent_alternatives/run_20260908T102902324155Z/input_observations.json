@@ -1,0 +1,117 @@
+[
+  {
+    "path": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample2\\project\\.elenchus\\lab\\R002\\agent_alternatives\\run_20260908T102902324155Z\\input_copies\\broken\\truncated.jpg",
+    "byte_sha256": "aa8b4cd7477ed2392383fc1196567875d3d5d6b733739c1ca1c9d866f8e9c0cc",
+    "decode": "failure",
+    "error_type": "OSError",
+    "error": "Truncated File Read"
+  },
+  {
+    "path": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample2\\project\\.elenchus\\lab\\R002\\agent_alternatives\\run_20260908T102902324155Z\\input_copies\\copies\\duplicate.jpg",
+    "byte_sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "format": "JPEG",
+    "mode": "RGB",
+    "size": [
+      8,
+      6
+    ],
+    "frames": 1,
+    "orientation": 1,
+    "datetime_original": {
+      "raw": "2024:07:15 10:20:30",
+      "wall_time": "2024-07-15T10:20:30",
+      "raw_offset": "+09:00",
+      "status": "explicit_offset",
+      "utc": "2024-07-15T01:20:30+00:00"
+    },
+    "decode": "success"
+  },
+  {
+    "path": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample2\\project\\.elenchus\\lab\\R002\\agent_alternatives\\run_20260908T102902324155Z\\input_copies\\formats\\sample.tiff",
+    "byte_sha256": "1f29eec7d335ebdc98d141a01357962565e58413fedc9c6e06773134606b580b",
+    "format": "TIFF",
+    "mode": "RGB",
+    "size": [
+      6,
+      8
+    ],
+    "frames": 1,
+    "orientation": null,
+    "datetime_original": {
+      "status": "missing",
+      "raw": null,
+      "utc": null
+    },
+    "decode": "success"
+  },
+  {
+    "path": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample2\\project\\.elenchus\\lab\\R002\\agent_alternatives\\run_20260908T102902324155Z\\input_copies\\notes.txt",
+    "byte_sha256": "9e504f69e20609699c0a98bafdc24514b658a5da8b3f56138b994bf163e1a39f",
+    "decode": "failure",
+    "error_type": "UnidentifiedImageError",
+    "error": "cannot identify image file 'C:\\\\Codex\\\\Elenchus\\\\tests\\\\research-foundation\\\\.work\\\\photos-sample2\\\\project\\\\.elenchus\\\\lab\\\\R002\\\\agent_alternatives\\\\run_20260908T102902324155Z\\\\input_copies\\\\notes.txt'"
+  },
+  {
+    "path": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample2\\project\\.elenchus\\lab\\R002\\agent_alternatives\\run_20260908T102902324155Z\\input_copies\\plain.png",
+    "byte_sha256": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+    "format": "PNG",
+    "mode": "RGB",
+    "size": [
+      8,
+      6
+    ],
+    "frames": 1,
+    "orientation": null,
+    "datetime_original": {
+      "status": "missing",
+      "raw": null,
+      "utc": null
+    },
+    "decode": "success"
+  },
+  {
+    "path": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample2\\project\\.elenchus\\lab\\R002\\agent_alternatives\\run_20260908T102902324155Z\\input_copies\\README.md",
+    "byte_sha256": "b9e2ca5fe5662df027703234d9f5c56c18e7cab769214b7340b899fc48acc7fd",
+    "decode": "failure",
+    "error_type": "UnidentifiedImageError",
+    "error": "cannot identify image file 'C:\\\\Codex\\\\Elenchus\\\\tests\\\\research-foundation\\\\.work\\\\photos-sample2\\\\project\\\\.elenchus\\\\lab\\\\R002\\\\agent_alternatives\\\\run_20260908T102902324155Z\\\\input_copies\\\\README.md'"
+  },
+  {
+    "path": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample2\\project\\.elenchus\\lab\\R002\\agent_alternatives\\run_20260908T102902324155Z\\input_copies\\session A\\dated.jpg",
+    "byte_sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "format": "JPEG",
+    "mode": "RGB",
+    "size": [
+      8,
+      6
+    ],
+    "frames": 1,
+    "orientation": 1,
+    "datetime_original": {
+      "raw": "2024:07:15 10:20:30",
+      "wall_time": "2024-07-15T10:20:30",
+      "raw_offset": "+09:00",
+      "status": "explicit_offset",
+      "utc": "2024-07-15T01:20:30+00:00"
+    },
+    "decode": "success"
+  },
+  {
+    "path": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample2\\project\\.elenchus\\lab\\R002\\agent_alternatives\\run_20260908T102902324155Z\\input_copies\\회전\\rotated.jpg",
+    "byte_sha256": "c60c3c84e584d5c7c74484eb67f5c9b343f8e63035cf2c3a5c65e2cf6fdf8aed",
+    "format": "JPEG",
+    "mode": "RGB",
+    "size": [
+      8,
+      6
+    ],
+    "frames": 1,
+    "orientation": 6,
+    "datetime_original": {
+      "status": "missing",
+      "raw": null,
+      "utc": null
+    },
+    "decode": "success"
+  }
+]

@@ -1,0 +1,75 @@
+{
+  "checks": {
+    "no_python_network_entry_points_used": true,
+    "portable_scanner_output_matches_verified_sample": true,
+    "filesystem_mtime_values_reflect_current_inputs": true,
+    "local_review_deterministic": true,
+    "matches_saved_review": true,
+    "original_ten_files_unchanged": true,
+    "date_day_groups_present": true,
+    "only_dated_pair_assigned_day": true,
+    "raw6_interpreted_clockwise90": true,
+    "raw8_interpreted_counterclockwise90": true,
+    "tiff_actual_display_and_raw_dimensions_distinct": true,
+    "all_candidates_review_only": true,
+    "synthetic_subsecond_evidence_visible": true
+  },
+  "network_calls": [],
+  "summary": {
+    "files": 8,
+    "statuses": {
+      "invalid_image": 1,
+      "non_image_or_unsupported": 2,
+      "ok": 5
+    },
+    "exact_groups": 1,
+    "snapshot_bytes": 3538
+  },
+  "snapshot_comparison": {
+    "portable_equal": true,
+    "filesystem_mtime_differences": [
+      {
+        "path": "README.md",
+        "saved": 1788854622051326000,
+        "current": 1788860414702551200
+      },
+      {
+        "path": "broken/truncated.jpg",
+        "saved": 1788854622050291200,
+        "current": 1788860414702551200
+      },
+      {
+        "path": "copies/duplicate.jpg",
+        "saved": 1788854622048222500,
+        "current": 1788860414703550700
+      },
+      {
+        "path": "formats/sample.tiff",
+        "saved": 1788854622049776400,
+        "current": 1788860414703550700
+      },
+      {
+        "path": "notes.txt",
+        "saved": 1788854622050810600,
+        "current": 1788860414703550700
+      },
+      {
+        "path": "plain.png",
+        "saved": 1788854622049260800,
+        "current": 1788860414704551800
+      },
+      {
+        "path": "session A/dated.jpg",
+        "saved": 1788854622047703200,
+        "current": 1788860414704551800
+      },
+      {
+        "path": "회전/rotated.jpg",
+        "saved": 1788854622048740600,
+        "current": 1788860414705550700
+      }
+    ]
+  },
+  "review_sha256": "c714ad042c76ac56a137a6ee917768cbdcecf9aea741d68f36047ef4cc48e34a",
+  "scope": "Python socket entry points denied during existing local scan and Markdown rendering; not OS network isolation proof"
+}

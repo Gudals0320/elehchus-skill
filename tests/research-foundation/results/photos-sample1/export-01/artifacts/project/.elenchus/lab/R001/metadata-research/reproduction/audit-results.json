@@ -1,0 +1,80 @@
+{
+  "time_utc": "2026-09-08T09:01:59.390832+00:00",
+  "original_before": {
+    "inputs/notes.txt": "9e504f69e20609699c0a98bafdc24514b658a5da8b3f56138b994bf163e1a39f",
+    "inputs/plain.png": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+    "inputs.sha256.json": "f2b326afdb7243a190767a37d735fff8e5ccab105ca0ac0ded6887b9f54ad398",
+    "inputs/회전/rotated.jpg": "c60c3c84e584d5c7c74484eb67f5c9b343f8e63035cf2c3a5c65e2cf6fdf8aed",
+    "inputs/README.md": "b9e2ca5fe5662df027703234d9f5c56c18e7cab769214b7340b899fc48acc7fd",
+    "inputs/session A/dated.jpg": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "inputs/formats/sample.tiff": "1f29eec7d335ebdc98d141a01357962565e58413fedc9c6e06773134606b580b",
+    "inputs/broken/truncated.jpg": "aa8b4cd7477ed2392383fc1196567875d3d5d6b733739c1ca1c9d866f8e9c0cc",
+    "inputs/copies/duplicate.jpg": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "existing-product.txt": "53f0c7f7a926d9252540a73f22338b37ab5d4323fdc4c68041a7ac7ad795fb71"
+  },
+  "original_after": {
+    "inputs/notes.txt": "9e504f69e20609699c0a98bafdc24514b658a5da8b3f56138b994bf163e1a39f",
+    "inputs/plain.png": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+    "inputs.sha256.json": "f2b326afdb7243a190767a37d735fff8e5ccab105ca0ac0ded6887b9f54ad398",
+    "inputs/회전/rotated.jpg": "c60c3c84e584d5c7c74484eb67f5c9b343f8e63035cf2c3a5c65e2cf6fdf8aed",
+    "inputs/README.md": "b9e2ca5fe5662df027703234d9f5c56c18e7cab769214b7340b899fc48acc7fd",
+    "inputs/session A/dated.jpg": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "inputs/formats/sample.tiff": "1f29eec7d335ebdc98d141a01357962565e58413fedc9c6e06773134606b580b",
+    "inputs/broken/truncated.jpg": "aa8b4cd7477ed2392383fc1196567875d3d5d6b733739c1ca1c9d866f8e9c0cc",
+    "inputs/copies/duplicate.jpg": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "existing-product.txt": "53f0c7f7a926d9252540a73f22338b37ab5d4323fdc4c68041a7ac7ad795fb71"
+  },
+  "replica_after": {
+    "inputs/notes.txt": "9e504f69e20609699c0a98bafdc24514b658a5da8b3f56138b994bf163e1a39f",
+    "inputs/plain.png": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+    "inputs.sha256.json": "f2b326afdb7243a190767a37d735fff8e5ccab105ca0ac0ded6887b9f54ad398",
+    "inputs/회전/rotated.jpg": "c60c3c84e584d5c7c74484eb67f5c9b343f8e63035cf2c3a5c65e2cf6fdf8aed",
+    "inputs/README.md": "b9e2ca5fe5662df027703234d9f5c56c18e7cab769214b7340b899fc48acc7fd",
+    "inputs/session A/dated.jpg": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "inputs/formats/sample.tiff": "1f29eec7d335ebdc98d141a01357962565e58413fedc9c6e06773134606b580b",
+    "inputs/broken/truncated.jpg": "aa8b4cd7477ed2392383fc1196567875d3d5d6b733739c1ca1c9d866f8e9c0cc",
+    "inputs/copies/duplicate.jpg": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "existing-product.txt": "53f0c7f7a926d9252540a73f22338b37ab5d4323fdc4c68041a7ac7ad795fb71"
+  },
+  "original_unchanged": true,
+  "replica_matches_original": true,
+  "copied_code_sha256": {
+    "README.md": {
+      "source_sha256": "0c5419564b7d9113e7557141de716b87b17761918ae0347dab1b06d3113b6197",
+      "replica_sha256": "0c5419564b7d9113e7557141de716b87b17761918ae0347dab1b06d3113b6197"
+    },
+    "photo_materials.py": {
+      "source_sha256": "263c4e70a5d638e4667b03c5fe87d4f0cbc6f06120304d7b52ee6631541d50be",
+      "replica_sha256": "263c4e70a5d638e4667b03c5fe87d4f0cbc6f06120304d7b52ee6631541d50be"
+    },
+    "generate_fixtures.py": {
+      "source_sha256": "ffaa49c3f9b953aa21963748b2cff316084f037500eb56d49eefd40eac21ac9f",
+      "replica_sha256": "ffaa49c3f9b953aa21963748b2cff316084f037500eb56d49eefd40eac21ac9f"
+    },
+    "test_photo_materials.py": {
+      "source_sha256": "193b7224af55c45abddba1bac8075409a78321cbf450a973f3420c9781232472",
+      "replica_sha256": "193b7224af55c45abddba1bac8075409a78321cbf450a973f3420c9781232472"
+    },
+    "requirements.txt": {
+      "source_sha256": "41b54a6fb2918667ca47a61d73b522629d84490f3d78f0f20b21135faba10d35",
+      "replica_sha256": "41b54a6fb2918667ca47a61d73b522629d84490f3d78f0f20b21135faba10d35"
+    },
+    "original-before.json": {
+      "source_sha256": "2f5bb41c780205a123bb5ad5b29c3adf0bf46c1dca39a65c5eadf9b41b4b4273",
+      "replica_sha256": "2f5bb41c780205a123bb5ad5b29c3adf0bf46c1dca39a65c5eadf9b41b4b4273"
+    }
+  },
+  "copied_code_matches_source": true,
+  "independent_output_assertions": "passed",
+  "sample_output_unchanged_by_ifd_fix": true,
+  "summary": {
+    "files": 8,
+    "statuses": {
+      "invalid_image": 1,
+      "non_image_or_unsupported": 2,
+      "ok": 5
+    },
+    "exact_groups": 1,
+    "snapshot_bytes": 3538
+  }
+}

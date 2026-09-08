@@ -1,0 +1,4 @@
+Collecting ExifRead==3.5.1 (from -r C:\Codex\Elenchus\tests\research-foundation\.work\photos-sample1-reproduction-clean\execution\project\.elenchus\lab\R001\metadata-research\requirements.txt (line 1))
+  Downloading exifread-3.5.1-py3-none-any.whl (59 kB)
+Installing collected packages: ExifRead
+Successfully installed ExifRead-3.5.1

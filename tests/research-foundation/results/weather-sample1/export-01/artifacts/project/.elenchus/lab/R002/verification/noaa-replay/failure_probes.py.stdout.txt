@@ -1,0 +1,37 @@
+{
+  "nullable_compound_pk_duplicates": 2,
+  "text_in_real_column": [
+    "text",
+    0.0
+  ],
+  "reject_null_key": "NOT NULL constraint failed: safe.t",
+  "reject_string_temperature": "cannot store TEXT value in REAL column safe.temperature",
+  "mixed_offset_lexical_order": [
+    "2023-12-31T23:00:00+00:00",
+    "2024-01-01T00:30:00+09:00"
+  ],
+  "mixed_offset_actual_order": [
+    "2024-01-01T00:30:00+09:00",
+    "2023-12-31T23:00:00+00:00"
+  ],
+  "legacy_timestamp_adapter": {
+    "input": "2024-01-01T00:00:00.123456+00:00",
+    "output": "2024-01-01T00:00:00.123456",
+    "tzinfo": "None",
+    "warning_count": 2
+  },
+  "synthetic_missing_precipitation": [
+    null,
+    "missing"
+  ],
+  "synthetic_trace_precipitation": [
+    null,
+    "trace"
+  ],
+  "synthetic_zero_precipitation": [
+    0.0,
+    "measured"
+  ],
+  "malformed_row": "invalid literal for int() with base 10: 'BAD'",
+  "invalid_hour": "hour must be in 0..23"
+}

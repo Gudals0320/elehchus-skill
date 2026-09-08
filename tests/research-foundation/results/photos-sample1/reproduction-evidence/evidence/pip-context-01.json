@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample1-reproduction-clean\\execution\\project\\.elenchus\\lab\\R001\\main\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-c",
+    "import os,json; from urllib.parse import urlsplit; print(json.dumps({\"PIP_NO_INDEX\":os.environ.get(\"PIP_NO_INDEX\"), \"PIP_CONFIG_FILE\":os.environ.get(\"PIP_CONFIG_FILE\"), \"index_hosts\":{k:urlsplit(os.environ[k]).hostname for k in (\"PIP_INDEX_URL\",\"PIP_EXTRA_INDEX_URL\") if k in os.environ}, \"venv_isolation\":__import__(\"sys\").prefix != __import__(\"sys\").base_prefix}))"
+  ],
+  "cwd": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample1-reproduction-clean\\execution\\project",
+  "started_utc": "2026-09-08T09:26:35.124892+00:00",
+  "finished_utc": "2026-09-08T09:26:35.169937+00:00",
+  "exit_code": 0,
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONIOENCODING": "utf-8",
+    "TEMP": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample1-reproduction-clean\\execution\\tmp",
+    "TMP": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample1-reproduction-clean\\execution\\tmp"
+  }
+}

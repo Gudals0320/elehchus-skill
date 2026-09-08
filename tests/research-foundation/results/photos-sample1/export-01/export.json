@@ -1,0 +1,1356 @@
+{
+  "errors": [],
+  "exported_utc": "2026-09-08T09:22:41.367420+00:00",
+  "files": {
+    "project/.elenchus/HANDOFF.md": {
+      "bytes": 5934,
+      "published_sha256": "6a88d904ed7999febd0e2604d76dc9bdb02ee52fd96e99898cf4049896439145",
+      "source_sha256": "6a88d904ed7999febd0e2604d76dc9bdb02ee52fd96e99898cf4049896439145",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/README.md": {
+      "bytes": 8509,
+      "published_sha256": "198519ff6cb918775c4121e2e4c491eea9ad0b238338ac3aad4ac3e6a8849506",
+      "source_sha256": "198519ff6cb918775c4121e2e4c491eea9ad0b238338ac3aad4ac3e6a8849506",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/activity.py": {
+      "bytes": 661,
+      "published_sha256": "302bad0e324d33489e33e0602b1f847175f374adfe54101abb0f9b6cd2c6a008",
+      "source_sha256": "302bad0e324d33489e33e0602b1f847175f374adfe54101abb0f9b6cd2c6a008",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/finalize_records.py": {
+      "bytes": 2410,
+      "published_sha256": "00321d144c5e3946b0fe05feb2c059aa2517afe0493c9d1109afcc8978f1ba9e",
+      "source_sha256": "00321d144c5e3946b0fe05feb2c059aa2517afe0493c9d1109afcc8978f1ba9e",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/bad-date.jpg": {
+      "bytes": 737,
+      "published_sha256": "850d50f5018bd4a9c83b861734a0a66ffe7d910a94bfab75e39a00fd651b1c35",
+      "source_sha256": "850d50f5018bd4a9c83b861734a0a66ffe7d910a94bfab75e39a00fd651b1c35",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/bad-offset.jpg": {
+      "bytes": 757,
+      "published_sha256": "048f0f2f99dfe3869f647aecb24974b44ab405f7643ef9583ae6aa3c0028a5d7",
+      "source_sha256": "048f0f2f99dfe3869f647aecb24974b44ab405f7643ef9583ae6aa3c0028a5d7",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/bad-png-crc.png": {
+      "bytes": 86,
+      "published_sha256": "d2b3c3b73548edd17c75346e354d4c73bbabbfd7a87e53c18e2101cf626a453b",
+      "source_sha256": "d2b3c3b73548edd17c75346e354d4c73bbabbfd7a87e53c18e2101cf626a453b",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/conflicting-date.jpg": {
+      "bytes": 769,
+      "published_sha256": "62ea022b6cdf59faefbb71052a8eb934339f360261c8faf163dae3261ba57bf4",
+      "source_sha256": "62ea022b6cdf59faefbb71052a8eb934339f360261c8faf163dae3261ba57bf4",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/digitized-only.jpg": {
+      "bytes": 737,
+      "published_sha256": "03c8c5a0d527833c9e1c90694552e77e02de20111706a5336da870890b568a0d",
+      "source_sha256": "03c8c5a0d527833c9e1c90694552e77e02de20111706a5336da870890b568a0d",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/empty.jpg": {
+      "bytes": 0,
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/filename-is-wrong.jpg": {
+      "bytes": 86,
+      "published_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "source_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/fixture-manifest.json": {
+      "bytes": 4173,
+      "published_sha256": "16d9afe808da8eb5ea5f5e2fa5bffb153b79565464b3c71f932260be2a913bb9",
+      "source_sha256": "16d9afe808da8eb5ea5f5e2fa5bffb153b79565464b3c71f932260be2a913bb9",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/invalid-orientation.png": {
+      "bytes": 124,
+      "published_sha256": "9bcce8a38f952c100540db161c89154772590befc143a1183ee975eddf80527b",
+      "source_sha256": "9bcce8a38f952c100540db161c89154772590befc143a1183ee975eddf80527b",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/metadata-a.png": {
+      "bytes": 134,
+      "published_sha256": "93c84a9af94d460f254fae31d27c0305ea1cd1e6dd3a784a247bb2ff5072d459",
+      "source_sha256": "93c84a9af94d460f254fae31d27c0305ea1cd1e6dd3a784a247bb2ff5072d459",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/metadata-b.png": {
+      "bytes": 134,
+      "published_sha256": "cad7d30285a760de4d42e53668d94350d14da1aba0d806157cdc06526a0b906a",
+      "source_sha256": "cad7d30285a760de4d42e53668d94350d14da1aba0d806157cdc06526a0b906a",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/missing-jpeg-eoi.jpg": {
+      "bytes": 755,
+      "published_sha256": "e705b679796e3fa99db7830f2160f6b2327504a9884bbd3e3a81e4e165c63916",
+      "source_sha256": "e705b679796e3fa99db7830f2160f6b2327504a9884bbd3e3a81e4e165c63916",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/modified-offset.jpg": {
+      "bytes": 769,
+      "published_sha256": "0bb06bccab1627bb394af96dabcd1ad427e6b36398789885a2cc314393548d9c",
+      "source_sha256": "0bb06bccab1627bb394af96dabcd1ad427e6b36398789885a2cc314393548d9c",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/modified-only.tiff": {
+      "bytes": 190,
+      "published_sha256": "7c0871b5efbb73dedeb8aca2793ac72583cca0ee2180c588a6721a3e80d10b5e",
+      "source_sha256": "7c0871b5efbb73dedeb8aca2793ac72583cca0ee2180c588a6721a3e80d10b5e",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/naive-date.jpg": {
+      "bytes": 737,
+      "published_sha256": "820d50fab2ccbd517fc65bb85ce7ef83826a8d2f65e872d9f8c8f804e43acac5",
+      "source_sha256": "820d50fab2ccbd517fc65bb85ce7ef83826a8d2f65e872d9f8c8f804e43acac5",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/offset-date.jpg": {
+      "bytes": 779,
+      "published_sha256": "7952fe024f0d00f6f1aada436c2533b2af6ec263ab5818dd39eeaab98cf2dc40",
+      "source_sha256": "7952fe024f0d00f6f1aada436c2533b2af6ec263ab5818dd39eeaab98cf2dc40",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/orientation-1.png": {
+      "bytes": 124,
+      "published_sha256": "06218fbf24697debe1a65ef1830d06e8a4bf6d30edc8a061d5fe9e6cfcac0a49",
+      "source_sha256": "06218fbf24697debe1a65ef1830d06e8a4bf6d30edc8a061d5fe9e6cfcac0a49",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/orientation-1.tiff": {
+      "bytes": 170,
+      "published_sha256": "a71b7771d01abd40dd2059837b28ad96887160125aa3c8e0d9a395ee431ce99b",
+      "source_sha256": "a71b7771d01abd40dd2059837b28ad96887160125aa3c8e0d9a395ee431ce99b",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/orientation-2.png": {
+      "bytes": 124,
+      "published_sha256": "d4c0cf452d30a7f44bc2d39ec79f9e599b7b5004295065b84452400f63d604be",
+      "source_sha256": "d4c0cf452d30a7f44bc2d39ec79f9e599b7b5004295065b84452400f63d604be",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/orientation-2.tiff": {
+      "bytes": 170,
+      "published_sha256": "da126b2f62c32d0cd1552600e24d9f0c1b40796bfff3642c5d15b25fa369b237",
+      "source_sha256": "da126b2f62c32d0cd1552600e24d9f0c1b40796bfff3642c5d15b25fa369b237",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/orientation-3.png": {
+      "bytes": 124,
+      "published_sha256": "95b5d2d34dbe3d4873bdd20d335f91195e974c84b5a4899ab8e204ba9200cd24",
+      "source_sha256": "95b5d2d34dbe3d4873bdd20d335f91195e974c84b5a4899ab8e204ba9200cd24",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/orientation-3.tiff": {
+      "bytes": 170,
+      "published_sha256": "b449bde068b73dd871a953e3267e081d0baa1b20a531635695442286c061f38e",
+      "source_sha256": "b449bde068b73dd871a953e3267e081d0baa1b20a531635695442286c061f38e",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/orientation-4.png": {
+      "bytes": 124,
+      "published_sha256": "01bd3715cbba5b6ee302da14a548f1596fb1f1eb44b69db4f4cfeedb78fdb312",
+      "source_sha256": "01bd3715cbba5b6ee302da14a548f1596fb1f1eb44b69db4f4cfeedb78fdb312",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/orientation-4.tiff": {
+      "bytes": 170,
+      "published_sha256": "a3c04089e0e2253e5cce8194056f5294fe60542c33755508970fd33072e4e4e7",
+      "source_sha256": "a3c04089e0e2253e5cce8194056f5294fe60542c33755508970fd33072e4e4e7",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/orientation-5.png": {
+      "bytes": 124,
+      "published_sha256": "768e4fbb3a47e14cf6ac64fe6181f4417802ed595f8bd65544a3389085f64fd1",
+      "source_sha256": "768e4fbb3a47e14cf6ac64fe6181f4417802ed595f8bd65544a3389085f64fd1",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/orientation-5.tiff": {
+      "bytes": 170,
+      "published_sha256": "6a709ca331a6747c50d8fa13e802030dd59e03dd406b2be16b14faca41bcf922",
+      "source_sha256": "6a709ca331a6747c50d8fa13e802030dd59e03dd406b2be16b14faca41bcf922",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/orientation-6.png": {
+      "bytes": 124,
+      "published_sha256": "8561d6cef7d6fb0862dc84719610fc1f5c2b871d80c13e317789e04e8eab1f24",
+      "source_sha256": "8561d6cef7d6fb0862dc84719610fc1f5c2b871d80c13e317789e04e8eab1f24",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/orientation-6.tiff": {
+      "bytes": 170,
+      "published_sha256": "07003109e68070acad21b69f779e06bf1ccfb52cfde34c894ed9998a82dab448",
+      "source_sha256": "07003109e68070acad21b69f779e06bf1ccfb52cfde34c894ed9998a82dab448",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/orientation-7.png": {
+      "bytes": 124,
+      "published_sha256": "d082fc062a3bc4138b0a16896a6430a466ee701192bd8a1834465f92f84fa180",
+      "source_sha256": "d082fc062a3bc4138b0a16896a6430a466ee701192bd8a1834465f92f84fa180",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/orientation-7.tiff": {
+      "bytes": 170,
+      "published_sha256": "8af9586e62a8efba41d65f18b82054ab12cdfaf3a8fe1fd68e7dc784ecbda242",
+      "source_sha256": "8af9586e62a8efba41d65f18b82054ab12cdfaf3a8fe1fd68e7dc784ecbda242",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/orientation-8.png": {
+      "bytes": 124,
+      "published_sha256": "629f046186d6355e029f5e5170cc7657e5389534518b1437dc36d46aecc15cc6",
+      "source_sha256": "629f046186d6355e029f5e5170cc7657e5389534518b1437dc36d46aecc15cc6",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/orientation-8.tiff": {
+      "bytes": 170,
+      "published_sha256": "7793b8832678d2506f47d13e9a85e55b9466a1b5a0177eaef7edb27201f7e858",
+      "source_sha256": "7793b8832678d2506f47d13e9a85e55b9466a1b5a0177eaef7edb27201f7e858",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/plain.png": {
+      "bytes": 86,
+      "published_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "source_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/pretend.heic": {
+      "bytes": 50,
+      "published_sha256": "69241388d1db8678daeeb73d0616ef30623ab159214cf33d8643e8fccf8bdf3c",
+      "source_sha256": "69241388d1db8678daeeb73d0616ef30623ab159214cf33d8643e8fccf8bdf3c",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/two-frame.tiff": {
+      "bytes": 320,
+      "published_sha256": "c7fa51335f5a4e764a0396964be1bfcfd81b3138774d01a1711ee3248194757a",
+      "source_sha256": "c7fa51335f5a4e764a0396964be1bfcfd81b3138774d01a1711ee3248194757a",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/fixtures/zero-date.jpg": {
+      "bytes": 737,
+      "published_sha256": "7d4ac2b75c4da860bd436f5fc549c16796d4c3f9052328284b520b3f35eceba0",
+      "source_sha256": "7d4ac2b75c4da860bd436f5fc549c16796d4c3f9052328284b520b3f35eceba0",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/generate_fixtures.py": {
+      "bytes": 3024,
+      "published_sha256": "ffaa49c3f9b953aa21963748b2cff316084f037500eb56d49eefd40eac21ac9f",
+      "source_sha256": "ffaa49c3f9b953aa21963748b2cff316084f037500eb56d49eefd40eac21ac9f",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/local-review-results.json": {
+      "bytes": 1014,
+      "published_sha256": "31122756ce6eb84ce31b84534e00571a1d22a7158cc5916ef7bd18805dac85e2",
+      "source_sha256": "31122756ce6eb84ce31b84534e00571a1d22a7158cc5916ef7bd18805dac85e2",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/original-after.json": {
+      "bytes": 1101,
+      "published_sha256": "20e8b3f3029381e9bb3b4347b4fc1352f4a7843017e517b03b073b15b067840d",
+      "source_sha256": "20e8b3f3029381e9bb3b4347b4fc1352f4a7843017e517b03b073b15b067840d",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/original-before.json": {
+      "bytes": 970,
+      "published_sha256": "2f5bb41c780205a123bb5ad5b29c3adf0bf46c1dca39a65c5eadf9b41b4b4273",
+      "source_sha256": "2f5bb41c780205a123bb5ad5b29c3adf0bf46c1dca39a65c5eadf9b41b4b4273",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/photo_materials.py": {
+      "bytes": 15829,
+      "published_sha256": "263c4e70a5d638e4667b03c5fe87d4f0cbc6f06120304d7b52ee6631541d50be",
+      "source_sha256": "263c4e70a5d638e4667b03c5fe87d4f0cbc6f06120304d7b52ee6631541d50be",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/probe-results.json": {
+      "bytes": 2857,
+      "published_sha256": "77e891bef72e26b0a7c8853d2c8b0a427aea29e6ddc52b794bef9ab2badfb41c",
+      "source_sha256": "77e891bef72e26b0a7c8853d2c8b0a427aea29e6ddc52b794bef9ab2badfb41c",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/probe.py": {
+      "bytes": 1978,
+      "published_sha256": "5aff4ee0a735f76f161144973b906dc911745a7890026f5bd310eaaaacfa2318",
+      "source_sha256": "5aff4ee0a735f76f161144973b906dc911745a7890026f5bd310eaaaacfa2318",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/probe_local_review.py": {
+      "bytes": 3512,
+      "published_sha256": "63a2720312c6d438d644091b5cc8c4e29cfb3009ef2acc980143eb046edbce40",
+      "source_sha256": "63a2720312c6d438d644091b5cc8c4e29cfb3009ef2acc980143eb046edbce40",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/render_review.py": {
+      "bytes": 7922,
+      "published_sha256": "4c02eda034dbeed72181c0b261b0ee4aba4aa3e67b433ee5564ca865ddcd847c",
+      "source_sha256": "4c02eda034dbeed72181c0b261b0ee4aba4aa3e67b433ee5564ca865ddcd847c",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/requirements.txt": {
+      "bytes": 15,
+      "published_sha256": "41b54a6fb2918667ca47a61d73b522629d84490f3d78f0f20b21135faba10d35",
+      "source_sha256": "41b54a6fb2918667ca47a61d73b522629d84490f3d78f0f20b21135faba10d35",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/review.md": {
+      "bytes": 4413,
+      "published_sha256": "1cdaa3ec84948733ce49690df8badb5cbac51c76b00681499aade412a9629287",
+      "source_sha256": "1cdaa3ec84948733ce49690df8badb5cbac51c76b00681499aade412a9629287",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/sample-report-final.json": {
+      "bytes": 10879,
+      "published_sha256": "9dda6cdf625af91a2d19e470893c8c4f30a6d6c73bf254d66c2bc36533aa4b37",
+      "source_sha256": "9dda6cdf625af91a2d19e470893c8c4f30a6d6c73bf254d66c2bc36533aa4b37",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/sample-report-v2.json": {
+      "bytes": 10937,
+      "published_sha256": "7ed2e6852635f650ae0c3756651c71e97e4ced6e1dd08e76de489de6f52e2437",
+      "source_sha256": "7ed2e6852635f650ae0c3756651c71e97e4ced6e1dd08e76de489de6f52e2437",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/sample-report.json": {
+      "bytes": 4260,
+      "published_sha256": "9d1da5fb18dfbc2c09413ccf77c48cf20f23eed0f71992316c28d3258edd34a4",
+      "source_sha256": "9d1da5fb18dfbc2c09413ccf77c48cf20f23eed0f71992316c28d3258edd34a4",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmp0fzhgs5c/a.png": {
+      "bytes": 86,
+      "published_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "source_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmp0fzhgs5c/b.png": {
+      "bytes": 86,
+      "published_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "source_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmp0ktt3fyz/report.json": {
+      "bytes": 548,
+      "published_sha256": "f6a2fd4bc355767c7dd3f25d1527bba5f0cc68c3b563ffd4ed3d5fac503ca111",
+      "source_sha256": "f6a2fd4bc355767c7dd3f25d1527bba5f0cc68c3b563ffd4ed3d5fac503ca111",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmp1d8ttk3q/a.png": {
+      "bytes": 86,
+      "published_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "source_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmp1d8ttk3q/b.png": {
+      "bytes": 86,
+      "published_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "source_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmp1u4zytp6/a.png": {
+      "bytes": 86,
+      "published_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "source_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmp2yxmqxiv/a.png": {
+      "bytes": 134,
+      "published_sha256": "93c84a9af94d460f254fae31d27c0305ea1cd1e6dd3a784a247bb2ff5072d459",
+      "source_sha256": "93c84a9af94d460f254fae31d27c0305ea1cd1e6dd3a784a247bb2ff5072d459",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmp2yxmqxiv/b.png": {
+      "bytes": 134,
+      "published_sha256": "cad7d30285a760de4d42e53668d94350d14da1aba0d806157cdc06526a0b906a",
+      "source_sha256": "cad7d30285a760de4d42e53668d94350d14da1aba0d806157cdc06526a0b906a",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmp8kz43563/a.png": {
+      "bytes": 134,
+      "published_sha256": "93c84a9af94d460f254fae31d27c0305ea1cd1e6dd3a784a247bb2ff5072d459",
+      "source_sha256": "93c84a9af94d460f254fae31d27c0305ea1cd1e6dd3a784a247bb2ff5072d459",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmp8kz43563/b.png": {
+      "bytes": 134,
+      "published_sha256": "cad7d30285a760de4d42e53668d94350d14da1aba0d806157cdc06526a0b906a",
+      "source_sha256": "cad7d30285a760de4d42e53668d94350d14da1aba0d806157cdc06526a0b906a",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmp97ydkec1/a.png": {
+      "bytes": 86,
+      "published_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "source_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmp97ydkec1/b.png": {
+      "bytes": 86,
+      "published_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "source_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmpdjcjehe2/a.png": {
+      "bytes": 86,
+      "published_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "source_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmpdjcjehe2/b.png": {
+      "bytes": 86,
+      "published_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "source_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmpfjpllpgu/a.txt": {
+      "bytes": 14,
+      "published_sha256": "e90da3b1be37666a9409d3a055ab3887cd50beccd641d7ee2e2c3f6f2e575327",
+      "source_sha256": "e90da3b1be37666a9409d3a055ab3887cd50beccd641d7ee2e2c3f6f2e575327",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmpm3wetiwr/a.txt": {
+      "bytes": 14,
+      "published_sha256": "e90da3b1be37666a9409d3a055ab3887cd50beccd641d7ee2e2c3f6f2e575327",
+      "source_sha256": "e90da3b1be37666a9409d3a055ab3887cd50beccd641d7ee2e2c3f6f2e575327",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmppgfg_s5s/a.png": {
+      "bytes": 86,
+      "published_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "source_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmppgfg_s5s/b.png": {
+      "bytes": 86,
+      "published_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "source_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmpqh5zlmtp/report.json": {
+      "bytes": 548,
+      "published_sha256": "f6a2fd4bc355767c7dd3f25d1527bba5f0cc68c3b563ffd4ed3d5fac503ca111",
+      "source_sha256": "f6a2fd4bc355767c7dd3f25d1527bba5f0cc68c3b563ffd4ed3d5fac503ca111",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmpqy7358nv/a.png": {
+      "bytes": 134,
+      "published_sha256": "93c84a9af94d460f254fae31d27c0305ea1cd1e6dd3a784a247bb2ff5072d459",
+      "source_sha256": "93c84a9af94d460f254fae31d27c0305ea1cd1e6dd3a784a247bb2ff5072d459",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmpqy7358nv/b.png": {
+      "bytes": 134,
+      "published_sha256": "cad7d30285a760de4d42e53668d94350d14da1aba0d806157cdc06526a0b906a",
+      "source_sha256": "cad7d30285a760de4d42e53668d94350d14da1aba0d806157cdc06526a0b906a",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmpvx4c0i44/report.json": {
+      "bytes": 548,
+      "published_sha256": "f6a2fd4bc355767c7dd3f25d1527bba5f0cc68c3b563ffd4ed3d5fac503ca111",
+      "source_sha256": "f6a2fd4bc355767c7dd3f25d1527bba5f0cc68c3b563ffd4ed3d5fac503ca111",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmpw8637uwi/a.txt": {
+      "bytes": 14,
+      "published_sha256": "e90da3b1be37666a9409d3a055ab3887cd50beccd641d7ee2e2c3f6f2e575327",
+      "source_sha256": "e90da3b1be37666a9409d3a055ab3887cd50beccd641d7ee2e2c3f6f2e575327",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test-runs/tmpz33hlqrm/a.png": {
+      "bytes": 86,
+      "published_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "source_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/test_photo_materials.py": {
+      "bytes": 10927,
+      "published_sha256": "193b7224af55c45abddba1bac8075409a78321cbf450a973f3420c9781232472",
+      "source_sha256": "193b7224af55c45abddba1bac8075409a78321cbf450a973f3420c9781232472",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/tests-final.log": {
+      "bytes": 3896,
+      "published_sha256": "39e8da8ab1e79a1d2ada412251d81108c1be509729f4e87b99914750f32736fa",
+      "source_sha256": "39e8da8ab1e79a1d2ada412251d81108c1be509729f4e87b99914750f32736fa",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/tests-first.log": {
+      "bytes": 3961,
+      "published_sha256": "3fed0f7d82b5d96369472ba38c306c145944230d1dce23e9d97dc069e9287b2b",
+      "source_sha256": "3fed0f7d82b5d96369472ba38c306c145944230d1dce23e9d97dc069e9287b2b",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/tests-ifd-final.log": {
+      "bytes": 4034,
+      "published_sha256": "0b8df702e4415323928191a261bb0982d36cf0fcca672e5bff539cfdf6a22aab",
+      "source_sha256": "0b8df702e4415323928191a261bb0982d36cf0fcca672e5bff539cfdf6a22aab",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/main/verify_originals.py": {
+      "bytes": 1106,
+      "published_sha256": "7f323810fcd24c29a1096320172aee2d443d8327f75bd46846059b5027b28068",
+      "source_sha256": "7f323810fcd24c29a1096320172aee2d443d8327f75bd46846059b5027b28068",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/bootstrap.ps1": {
+      "bytes": 533,
+      "published_sha256": "9352ed0e2ecfc8ec64b6e40e298959b43aad4e0f7f84d604c274fdda976e2589",
+      "source_sha256": "9352ed0e2ecfc8ec64b6e40e298959b43aad4e0f7f84d604c274fdda976e2589",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/notes.md": {
+      "bytes": 9057,
+      "published_sha256": "cb5a05ce5b0169f1f4987889cd3902777b882c9cf4ef27cdd167522bcc36f177",
+      "source_sha256": "cb5a05ce5b0169f1f4987889cd3902777b882c9cf4ef27cdd167522bcc36f177",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/probe-results.json": {
+      "bytes": 9576,
+      "published_sha256": "611e96a129cf6f8766d4dd1b30cd61baffc93c676dcbdbec46de4312206ba528",
+      "source_sha256": "611e96a129cf6f8766d4dd1b30cd61baffc93c676dcbdbec46de4312206ba528",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/probe_exifread.py": {
+      "bytes": 3182,
+      "published_sha256": "87f1ea24ebfc1b61a67118184c95777bdbe986aef5f29acefa53f9872db1e5e8",
+      "source_sha256": "87f1ea24ebfc1b61a67118184c95777bdbe986aef5f29acefa53f9872db1e5e8",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/activity.jsonl": {
+      "bytes": 4136,
+      "published_sha256": "ec559226f90bfe169a2b6b4a6fd9a3ecab683dfc367db71edea893add8f29360",
+      "source_sha256": "ec559226f90bfe169a2b6b4a6fd9a3ecab683dfc367db71edea893add8f29360",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/audit-results.json": {
+      "bytes": 4855,
+      "published_sha256": "c1b33aa569e030f9501fc4d8242776e017daefaad1b0517deb86a40d6d6e7801",
+      "source_sha256": "c1b33aa569e030f9501fc4d8242776e017daefaad1b0517deb86a40d6d6e7801",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/audit_local_review.py": {
+      "bytes": 3085,
+      "published_sha256": "2cf932f4674ff176ade4f01e451df00a1082f37998e8d3f497b47532000a364f",
+      "source_sha256": "2cf932f4674ff176ade4f01e451df00a1082f37998e8d3f497b47532000a364f",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/audit_reproduction.py": {
+      "bytes": 3442,
+      "published_sha256": "84fca560fb527eef97e168768800d1ae8c8db6e1a466e4bf7cfc3e87e522602a",
+      "source_sha256": "84fca560fb527eef97e168768800d1ae8c8db6e1a466e4bf7cfc3e87e522602a",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/copied-code-sha256-final.json": {
+      "bytes": 642,
+      "published_sha256": "2ff5202be4c0801ae8bddb37b35c60fdc70fc3681cd484199f5979a33769fc84",
+      "source_sha256": "2ff5202be4c0801ae8bddb37b35c60fdc70fc3681cd484199f5979a33769fc84",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/copied-code-sha256.json": {
+      "bytes": 1263,
+      "published_sha256": "ddeeb4da51c17ce0eab2ac586c823f2bb1715599423ae9a55dee68a8ac39ed68",
+      "source_sha256": "ddeeb4da51c17ce0eab2ac586c823f2bb1715599423ae9a55dee68a8ac39ed68",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/local-review-audit-final.log": {
+      "bytes": 283,
+      "published_sha256": "5fc09af9b7dfd7bc467f678fca6f20bd4419ee6649d663438aeb53407f713721",
+      "source_sha256": "5fc09af9b7dfd7bc467f678fca6f20bd4419ee6649d663438aeb53407f713721",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/local-review-audit-results-final.json": {
+      "bytes": 2253,
+      "published_sha256": "9d3c5957f5b461edda88cb120d337938f17286616a7a7b2ca04b98c8dca138d8",
+      "source_sha256": "9d3c5957f5b461edda88cb120d337938f17286616a7a7b2ca04b98c8dca138d8",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/local-review-audit-results.json": {
+      "bytes": 2243,
+      "published_sha256": "8233cfa0c34687b1ec2b97857a720fa10c83ba2545d31e8d06b4676deacc2390",
+      "source_sha256": "8233cfa0c34687b1ec2b97857a720fa10c83ba2545d31e8d06b4676deacc2390",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/local-review-audit.log": {
+      "bytes": 284,
+      "published_sha256": "34543b90a079d7a4a12dc185dfaa6db114f865af559668e621fe20b41068206b",
+      "source_sha256": "34543b90a079d7a4a12dc185dfaa6db114f865af559668e621fe20b41068206b",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/local-review-copied-sha256-final.json": {
+      "bytes": 426,
+      "published_sha256": "6fe75452e8e32deaed142b88f6d91faed5e54c33e017b0966ec26015f56e7a25",
+      "source_sha256": "6fe75452e8e32deaed142b88f6d91faed5e54c33e017b0966ec26015f56e7a25",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/local-review-copied-sha256.json": {
+      "bytes": 844,
+      "published_sha256": "61c2353613a9627ce033338ddd9bb13f46f887f9e76f084ba97613a521ead3fe",
+      "source_sha256": "61c2353613a9627ce033338ddd9bb13f46f887f9e76f084ba97613a521ead3fe",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/local-review-notes.md": {
+      "bytes": 4609,
+      "published_sha256": "c8b53c905da46a0b7c5222070d1c561892a9b3b4a7db95c36b93cb31b3017610",
+      "source_sha256": "c8b53c905da46a0b7c5222070d1c561892a9b3b4a7db95c36b93cb31b3017610",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/notes.md": {
+      "bytes": 6045,
+      "published_sha256": "96f1c7b39775914c8487aa0021997e2209e0ffb2e21331967aa2b89e5fda7b31",
+      "source_sha256": "96f1c7b39775914c8487aa0021997e2209e0ffb2e21331967aa2b89e5fda7b31",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/original-before-reproduction.json": {
+      "bytes": 972,
+      "published_sha256": "606a9d0da2d09121cfa0125a68a76af231d5b7d2bce5503eaad53d989c0e1d05",
+      "source_sha256": "606a9d0da2d09121cfa0125a68a76af231d5b7d2bce5503eaad53d989c0e1d05",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/README.md": {
+      "bytes": 7133,
+      "published_sha256": "0c5419564b7d9113e7557141de716b87b17761918ae0347dab1b06d3113b6197",
+      "source_sha256": "0c5419564b7d9113e7557141de716b87b17761918ae0347dab1b06d3113b6197",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/bad-date.jpg": {
+      "bytes": 737,
+      "published_sha256": "850d50f5018bd4a9c83b861734a0a66ffe7d910a94bfab75e39a00fd651b1c35",
+      "source_sha256": "850d50f5018bd4a9c83b861734a0a66ffe7d910a94bfab75e39a00fd651b1c35",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/bad-offset.jpg": {
+      "bytes": 757,
+      "published_sha256": "048f0f2f99dfe3869f647aecb24974b44ab405f7643ef9583ae6aa3c0028a5d7",
+      "source_sha256": "048f0f2f99dfe3869f647aecb24974b44ab405f7643ef9583ae6aa3c0028a5d7",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/bad-png-crc.png": {
+      "bytes": 86,
+      "published_sha256": "d2b3c3b73548edd17c75346e354d4c73bbabbfd7a87e53c18e2101cf626a453b",
+      "source_sha256": "d2b3c3b73548edd17c75346e354d4c73bbabbfd7a87e53c18e2101cf626a453b",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/conflicting-date.jpg": {
+      "bytes": 769,
+      "published_sha256": "62ea022b6cdf59faefbb71052a8eb934339f360261c8faf163dae3261ba57bf4",
+      "source_sha256": "62ea022b6cdf59faefbb71052a8eb934339f360261c8faf163dae3261ba57bf4",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/digitized-only.jpg": {
+      "bytes": 737,
+      "published_sha256": "03c8c5a0d527833c9e1c90694552e77e02de20111706a5336da870890b568a0d",
+      "source_sha256": "03c8c5a0d527833c9e1c90694552e77e02de20111706a5336da870890b568a0d",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/empty.jpg": {
+      "bytes": 0,
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/filename-is-wrong.jpg": {
+      "bytes": 86,
+      "published_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "source_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/fixture-manifest.json": {
+      "bytes": 4173,
+      "published_sha256": "16d9afe808da8eb5ea5f5e2fa5bffb153b79565464b3c71f932260be2a913bb9",
+      "source_sha256": "16d9afe808da8eb5ea5f5e2fa5bffb153b79565464b3c71f932260be2a913bb9",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/invalid-orientation.png": {
+      "bytes": 124,
+      "published_sha256": "9bcce8a38f952c100540db161c89154772590befc143a1183ee975eddf80527b",
+      "source_sha256": "9bcce8a38f952c100540db161c89154772590befc143a1183ee975eddf80527b",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/metadata-a.png": {
+      "bytes": 134,
+      "published_sha256": "93c84a9af94d460f254fae31d27c0305ea1cd1e6dd3a784a247bb2ff5072d459",
+      "source_sha256": "93c84a9af94d460f254fae31d27c0305ea1cd1e6dd3a784a247bb2ff5072d459",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/metadata-b.png": {
+      "bytes": 134,
+      "published_sha256": "cad7d30285a760de4d42e53668d94350d14da1aba0d806157cdc06526a0b906a",
+      "source_sha256": "cad7d30285a760de4d42e53668d94350d14da1aba0d806157cdc06526a0b906a",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/missing-jpeg-eoi.jpg": {
+      "bytes": 755,
+      "published_sha256": "e705b679796e3fa99db7830f2160f6b2327504a9884bbd3e3a81e4e165c63916",
+      "source_sha256": "e705b679796e3fa99db7830f2160f6b2327504a9884bbd3e3a81e4e165c63916",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/modified-offset.jpg": {
+      "bytes": 769,
+      "published_sha256": "0bb06bccab1627bb394af96dabcd1ad427e6b36398789885a2cc314393548d9c",
+      "source_sha256": "0bb06bccab1627bb394af96dabcd1ad427e6b36398789885a2cc314393548d9c",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/modified-only.tiff": {
+      "bytes": 190,
+      "published_sha256": "7c0871b5efbb73dedeb8aca2793ac72583cca0ee2180c588a6721a3e80d10b5e",
+      "source_sha256": "7c0871b5efbb73dedeb8aca2793ac72583cca0ee2180c588a6721a3e80d10b5e",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/naive-date.jpg": {
+      "bytes": 737,
+      "published_sha256": "820d50fab2ccbd517fc65bb85ce7ef83826a8d2f65e872d9f8c8f804e43acac5",
+      "source_sha256": "820d50fab2ccbd517fc65bb85ce7ef83826a8d2f65e872d9f8c8f804e43acac5",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/offset-date.jpg": {
+      "bytes": 779,
+      "published_sha256": "7952fe024f0d00f6f1aada436c2533b2af6ec263ab5818dd39eeaab98cf2dc40",
+      "source_sha256": "7952fe024f0d00f6f1aada436c2533b2af6ec263ab5818dd39eeaab98cf2dc40",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/orientation-1.png": {
+      "bytes": 124,
+      "published_sha256": "06218fbf24697debe1a65ef1830d06e8a4bf6d30edc8a061d5fe9e6cfcac0a49",
+      "source_sha256": "06218fbf24697debe1a65ef1830d06e8a4bf6d30edc8a061d5fe9e6cfcac0a49",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/orientation-1.tiff": {
+      "bytes": 170,
+      "published_sha256": "a71b7771d01abd40dd2059837b28ad96887160125aa3c8e0d9a395ee431ce99b",
+      "source_sha256": "a71b7771d01abd40dd2059837b28ad96887160125aa3c8e0d9a395ee431ce99b",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/orientation-2.png": {
+      "bytes": 124,
+      "published_sha256": "d4c0cf452d30a7f44bc2d39ec79f9e599b7b5004295065b84452400f63d604be",
+      "source_sha256": "d4c0cf452d30a7f44bc2d39ec79f9e599b7b5004295065b84452400f63d604be",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/orientation-2.tiff": {
+      "bytes": 170,
+      "published_sha256": "da126b2f62c32d0cd1552600e24d9f0c1b40796bfff3642c5d15b25fa369b237",
+      "source_sha256": "da126b2f62c32d0cd1552600e24d9f0c1b40796bfff3642c5d15b25fa369b237",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/orientation-3.png": {
+      "bytes": 124,
+      "published_sha256": "95b5d2d34dbe3d4873bdd20d335f91195e974c84b5a4899ab8e204ba9200cd24",
+      "source_sha256": "95b5d2d34dbe3d4873bdd20d335f91195e974c84b5a4899ab8e204ba9200cd24",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/orientation-3.tiff": {
+      "bytes": 170,
+      "published_sha256": "b449bde068b73dd871a953e3267e081d0baa1b20a531635695442286c061f38e",
+      "source_sha256": "b449bde068b73dd871a953e3267e081d0baa1b20a531635695442286c061f38e",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/orientation-4.png": {
+      "bytes": 124,
+      "published_sha256": "01bd3715cbba5b6ee302da14a548f1596fb1f1eb44b69db4f4cfeedb78fdb312",
+      "source_sha256": "01bd3715cbba5b6ee302da14a548f1596fb1f1eb44b69db4f4cfeedb78fdb312",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/orientation-4.tiff": {
+      "bytes": 170,
+      "published_sha256": "a3c04089e0e2253e5cce8194056f5294fe60542c33755508970fd33072e4e4e7",
+      "source_sha256": "a3c04089e0e2253e5cce8194056f5294fe60542c33755508970fd33072e4e4e7",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/orientation-5.png": {
+      "bytes": 124,
+      "published_sha256": "768e4fbb3a47e14cf6ac64fe6181f4417802ed595f8bd65544a3389085f64fd1",
+      "source_sha256": "768e4fbb3a47e14cf6ac64fe6181f4417802ed595f8bd65544a3389085f64fd1",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/orientation-5.tiff": {
+      "bytes": 170,
+      "published_sha256": "6a709ca331a6747c50d8fa13e802030dd59e03dd406b2be16b14faca41bcf922",
+      "source_sha256": "6a709ca331a6747c50d8fa13e802030dd59e03dd406b2be16b14faca41bcf922",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/orientation-6.png": {
+      "bytes": 124,
+      "published_sha256": "8561d6cef7d6fb0862dc84719610fc1f5c2b871d80c13e317789e04e8eab1f24",
+      "source_sha256": "8561d6cef7d6fb0862dc84719610fc1f5c2b871d80c13e317789e04e8eab1f24",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/orientation-6.tiff": {
+      "bytes": 170,
+      "published_sha256": "07003109e68070acad21b69f779e06bf1ccfb52cfde34c894ed9998a82dab448",
+      "source_sha256": "07003109e68070acad21b69f779e06bf1ccfb52cfde34c894ed9998a82dab448",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/orientation-7.png": {
+      "bytes": 124,
+      "published_sha256": "d082fc062a3bc4138b0a16896a6430a466ee701192bd8a1834465f92f84fa180",
+      "source_sha256": "d082fc062a3bc4138b0a16896a6430a466ee701192bd8a1834465f92f84fa180",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/orientation-7.tiff": {
+      "bytes": 170,
+      "published_sha256": "8af9586e62a8efba41d65f18b82054ab12cdfaf3a8fe1fd68e7dc784ecbda242",
+      "source_sha256": "8af9586e62a8efba41d65f18b82054ab12cdfaf3a8fe1fd68e7dc784ecbda242",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/orientation-8.png": {
+      "bytes": 124,
+      "published_sha256": "629f046186d6355e029f5e5170cc7657e5389534518b1437dc36d46aecc15cc6",
+      "source_sha256": "629f046186d6355e029f5e5170cc7657e5389534518b1437dc36d46aecc15cc6",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/orientation-8.tiff": {
+      "bytes": 170,
+      "published_sha256": "7793b8832678d2506f47d13e9a85e55b9466a1b5a0177eaef7edb27201f7e858",
+      "source_sha256": "7793b8832678d2506f47d13e9a85e55b9466a1b5a0177eaef7edb27201f7e858",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/plain.png": {
+      "bytes": 86,
+      "published_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "source_sha256": "faabbd5f170886dcfc565e37df97dfa8f44519cc8dfb63b821013f5b6f2cd6a5",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/pretend.heic": {
+      "bytes": 50,
+      "published_sha256": "69241388d1db8678daeeb73d0616ef30623ab159214cf33d8643e8fccf8bdf3c",
+      "source_sha256": "69241388d1db8678daeeb73d0616ef30623ab159214cf33d8643e8fccf8bdf3c",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/two-frame.tiff": {
+      "bytes": 320,
+      "published_sha256": "c7fa51335f5a4e764a0396964be1bfcfd81b3138774d01a1711ee3248194757a",
+      "source_sha256": "c7fa51335f5a4e764a0396964be1bfcfd81b3138774d01a1711ee3248194757a",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/fixtures/zero-date.jpg": {
+      "bytes": 737,
+      "published_sha256": "7d4ac2b75c4da860bd436f5fc549c16796d4c3f9052328284b520b3f35eceba0",
+      "source_sha256": "7d4ac2b75c4da860bd436f5fc549c16796d4c3f9052328284b520b3f35eceba0",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/generate_fixtures.py": {
+      "bytes": 3024,
+      "published_sha256": "ffaa49c3f9b953aa21963748b2cff316084f037500eb56d49eefd40eac21ac9f",
+      "source_sha256": "ffaa49c3f9b953aa21963748b2cff316084f037500eb56d49eefd40eac21ac9f",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/independent-cli-final.log": {
+      "bytes": 131,
+      "published_sha256": "c650d796c21df947335ba6ec7043d73262eb4a7592e9989dc9273b6cc14b3c2f",
+      "source_sha256": "c650d796c21df947335ba6ec7043d73262eb4a7592e9989dc9273b6cc14b3c2f",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/independent-cli-report-final.json": {
+      "bytes": 10879,
+      "published_sha256": "9dda6cdf625af91a2d19e470893c8c4f30a6d6c73bf254d66c2bc36533aa4b37",
+      "source_sha256": "9dda6cdf625af91a2d19e470893c8c4f30a6d6c73bf254d66c2bc36533aa4b37",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/independent-cli-report.json": {
+      "bytes": 10879,
+      "published_sha256": "9dda6cdf625af91a2d19e470893c8c4f30a6d6c73bf254d66c2bc36533aa4b37",
+      "source_sha256": "9dda6cdf625af91a2d19e470893c8c4f30a6d6c73bf254d66c2bc36533aa4b37",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/independent-cli.log": {
+      "bytes": 131,
+      "published_sha256": "c650d796c21df947335ba6ec7043d73262eb4a7592e9989dc9273b6cc14b3c2f",
+      "source_sha256": "c650d796c21df947335ba6ec7043d73262eb4a7592e9989dc9273b6cc14b3c2f",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/independent-local-probe-final.log": {
+      "bytes": 50,
+      "published_sha256": "725dd1141270ac3b35ed0792209fa5450002d021844fe98ee9c0f6fda6eefeb4",
+      "source_sha256": "725dd1141270ac3b35ed0792209fa5450002d021844fe98ee9c0f6fda6eefeb4",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/independent-local-probe.log": {
+      "bytes": 50,
+      "published_sha256": "e3089c06232d947b5e32c04f2e888f660598d2fcc8ad23893e10ce0a88947838",
+      "source_sha256": "e3089c06232d947b5e32c04f2e888f660598d2fcc8ad23893e10ce0a88947838",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/independent-local-render-final.log": {
+      "bytes": 51,
+      "published_sha256": "21be9a1a20370738abdf64ea2cf46ba92d319f520fcd237930fdf978b693f437",
+      "source_sha256": "21be9a1a20370738abdf64ea2cf46ba92d319f520fcd237930fdf978b693f437",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/independent-local-render.log": {
+      "bytes": 45,
+      "published_sha256": "eb18549a540360b8079b02665994a8ede68fc9696f8c36f0206b391af59da2ec",
+      "source_sha256": "eb18549a540360b8079b02665994a8ede68fc9696f8c36f0206b391af59da2ec",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/independent-local-review-final.md": {
+      "bytes": 4414,
+      "published_sha256": "25a72dbe2a427863994a57bcc0efaba6b2f1e115182011393ef05a11812d1a71",
+      "source_sha256": "25a72dbe2a427863994a57bcc0efaba6b2f1e115182011393ef05a11812d1a71",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/independent-local-review.md": {
+      "bytes": 4414,
+      "published_sha256": "25a72dbe2a427863994a57bcc0efaba6b2f1e115182011393ef05a11812d1a71",
+      "source_sha256": "25a72dbe2a427863994a57bcc0efaba6b2f1e115182011393ef05a11812d1a71",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/independent-tests-final.log": {
+      "bytes": 4147,
+      "published_sha256": "0ec6bb3ea78e24edcd83bbc3aa5223aa7896fd8de1eb0414bb39da27538fa104",
+      "source_sha256": "0ec6bb3ea78e24edcd83bbc3aa5223aa7896fd8de1eb0414bb39da27538fa104",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/independent-tests.log": {
+      "bytes": 4009,
+      "published_sha256": "da1b54a4f51050f12a41baa5aaf5e56f49c45dd4ceccadab3523b8ca5be922f0",
+      "source_sha256": "da1b54a4f51050f12a41baa5aaf5e56f49c45dd4ceccadab3523b8ca5be922f0",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/local-review-results.json": {
+      "bytes": 1014,
+      "published_sha256": "31122756ce6eb84ce31b84534e00571a1d22a7158cc5916ef7bd18805dac85e2",
+      "source_sha256": "31122756ce6eb84ce31b84534e00571a1d22a7158cc5916ef7bd18805dac85e2",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/original-before.json": {
+      "bytes": 970,
+      "published_sha256": "2f5bb41c780205a123bb5ad5b29c3adf0bf46c1dca39a65c5eadf9b41b4b4273",
+      "source_sha256": "2f5bb41c780205a123bb5ad5b29c3adf0bf46c1dca39a65c5eadf9b41b4b4273",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/photo_materials.py": {
+      "bytes": 15829,
+      "published_sha256": "263c4e70a5d638e4667b03c5fe87d4f0cbc6f06120304d7b52ee6631541d50be",
+      "source_sha256": "263c4e70a5d638e4667b03c5fe87d4f0cbc6f06120304d7b52ee6631541d50be",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/probe_local_review.py": {
+      "bytes": 3512,
+      "published_sha256": "63a2720312c6d438d644091b5cc8c4e29cfb3009ef2acc980143eb046edbce40",
+      "source_sha256": "63a2720312c6d438d644091b5cc8c4e29cfb3009ef2acc980143eb046edbce40",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/render_review.py": {
+      "bytes": 7922,
+      "published_sha256": "4c02eda034dbeed72181c0b261b0ee4aba4aa3e67b433ee5564ca865ddcd847c",
+      "source_sha256": "4c02eda034dbeed72181c0b261b0ee4aba4aa3e67b433ee5564ca865ddcd847c",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/requirements.txt": {
+      "bytes": 15,
+      "published_sha256": "41b54a6fb2918667ca47a61d73b522629d84490f3d78f0f20b21135faba10d35",
+      "source_sha256": "41b54a6fb2918667ca47a61d73b522629d84490f3d78f0f20b21135faba10d35",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/review.md": {
+      "bytes": 4413,
+      "published_sha256": "1cdaa3ec84948733ce49690df8badb5cbac51c76b00681499aade412a9629287",
+      "source_sha256": "1cdaa3ec84948733ce49690df8badb5cbac51c76b00681499aade412a9629287",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/sample-report-final.json": {
+      "bytes": 10879,
+      "published_sha256": "9dda6cdf625af91a2d19e470893c8c4f30a6d6c73bf254d66c2bc36533aa4b37",
+      "source_sha256": "9dda6cdf625af91a2d19e470893c8c4f30a6d6c73bf254d66c2bc36533aa4b37",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/test_photo_materials.py": {
+      "bytes": 10927,
+      "published_sha256": "193b7224af55c45abddba1bac8075409a78321cbf450a973f3420c9781232472",
+      "source_sha256": "193b7224af55c45abddba1bac8075409a78321cbf450a973f3420c9781232472",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/existing-product.txt": {
+      "bytes": 50,
+      "published_sha256": "53f0c7f7a926d9252540a73f22338b37ab5d4323fdc4c68041a7ac7ad795fb71",
+      "source_sha256": "53f0c7f7a926d9252540a73f22338b37ab5d4323fdc4c68041a7ac7ad795fb71",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/inputs.sha256.json": {
+      "bytes": 718,
+      "published_sha256": "f2b326afdb7243a190767a37d735fff8e5ccab105ca0ac0ded6887b9f54ad398",
+      "source_sha256": "f2b326afdb7243a190767a37d735fff8e5ccab105ca0ac0ded6887b9f54ad398",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/inputs/README.md": {
+      "bytes": 744,
+      "published_sha256": "b9e2ca5fe5662df027703234d9f5c56c18e7cab769214b7340b899fc48acc7fd",
+      "source_sha256": "b9e2ca5fe5662df027703234d9f5c56c18e7cab769214b7340b899fc48acc7fd",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/inputs/broken/truncated.jpg": {
+      "bytes": 32,
+      "published_sha256": "aa8b4cd7477ed2392383fc1196567875d3d5d6b733739c1ca1c9d866f8e9c0cc",
+      "source_sha256": "aa8b4cd7477ed2392383fc1196567875d3d5d6b733739c1ca1c9d866f8e9c0cc",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/inputs/copies/duplicate.jpg": {
+      "bytes": 763,
+      "published_sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "source_sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/inputs/formats/sample.tiff": {
+      "bytes": 328,
+      "published_sha256": "1f29eec7d335ebdc98d141a01357962565e58413fedc9c6e06773134606b580b",
+      "source_sha256": "1f29eec7d335ebdc98d141a01357962565e58413fedc9c6e06773134606b580b",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/inputs/notes.txt": {
+      "bytes": 27,
+      "published_sha256": "9e504f69e20609699c0a98bafdc24514b658a5da8b3f56138b994bf163e1a39f",
+      "source_sha256": "9e504f69e20609699c0a98bafdc24514b658a5da8b3f56138b994bf163e1a39f",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/inputs/plain.png": {
+      "bytes": 187,
+      "published_sha256": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+      "source_sha256": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/inputs/session A/dated.jpg": {
+      "bytes": 763,
+      "published_sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "source_sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/reproduction/project/inputs/회전/rotated.jpg": {
+      "bytes": 694,
+      "published_sha256": "c60c3c84e584d5c7c74484eb67f5c9b343f8e63035cf2c3a5c65e2cf6fdf8aed",
+      "source_sha256": "c60c3c84e584d5c7c74484eb67f5c9b343f8e63035cf2c3a5c65e2cf6fdf8aed",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R001/metadata-research/requirements.txt": {
+      "bytes": 95,
+      "published_sha256": "f560abb50ed4bdedf604e9d7d648e7ff493e3b65b3e40da78b635a748f731ed2",
+      "source_sha256": "f560abb50ed4bdedf604e9d7d648e7ff493e3b65b3e40da78b635a748f731ed2",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R002/identity-research/fixtures/jpeg_with_comment.jpg": {
+      "bytes": 813,
+      "published_sha256": "b9e92e2d7c0ef9d9448eb8d70129c4bb0ad34a1e087af34806b4a74fc524918f",
+      "source_sha256": "b9e92e2d7c0ef9d9448eb8d70129c4bb0ad34a1e087af34806b4a74fc524918f",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R002/identity-research/fixtures/jpeg_with_png_extension.png": {
+      "bytes": 763,
+      "published_sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "source_sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R002/identity-research/fixtures/normalized_rotated.png": {
+      "bytes": 192,
+      "published_sha256": "7bb076725cbd18db4bded92da6015aa4b9fac4c01babce3c605c69a5d4d02e6f",
+      "source_sha256": "7bb076725cbd18db4bded92da6015aa4b9fac4c01babce3c605c69a5d4d02e6f",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R002/identity-research/fixtures/solid_blue.png": {
+      "bytes": 83,
+      "published_sha256": "c3bbdeb351869352f2ff61ad9acf7c30e4ffd612a12d5ede4dacc5c6ddc5a965",
+      "source_sha256": "c3bbdeb351869352f2ff61ad9acf7c30e4ffd612a12d5ede4dacc5c6ddc5a965",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R002/identity-research/fixtures/solid_red.png": {
+      "bytes": 81,
+      "published_sha256": "211f24cb4d19fee58970bdd6052ba796ee252e1a7621c839b4dfc27d42b02a7c",
+      "source_sha256": "211f24cb4d19fee58970bdd6052ba796ee252e1a7621c839b4dfc27d42b02a7c",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R002/identity-research/junction-fixtures/source/direct.txt": {
+      "bytes": 25,
+      "published_sha256": "b2fd10d7592744f741758afbd054cfbb50476e753ce21060203384e0cef4b7a9",
+      "source_sha256": "b2fd10d7592744f741758afbd054cfbb50476e753ce21060203384e0cef4b7a9",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R002/identity-research/junction-fixtures/target/target-only.txt": {
+      "bytes": 40,
+      "published_sha256": "2d697ba8aecf0480925bb9b13493cb56cdd53d3234688924dc8621a2729f18b6",
+      "source_sha256": "2d697ba8aecf0480925bb9b13493cb56cdd53d3234688924dc8621a2729f18b6",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R002/identity-research/main-review.json": {
+      "bytes": 3565,
+      "published_sha256": "6f7d22c9f4173af32b08ac31625b07313a3f08d4093162359f619779adfc29bf",
+      "source_sha256": "6f7d22c9f4173af32b08ac31625b07313a3f08d4093162359f619779adfc29bf",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R002/identity-research/notes.md": {
+      "bytes": 17450,
+      "published_sha256": "5ed3bfe677eb8feed9f5d3e8ccc571cd602747e7ab55ff2c4d8717974f003ed5",
+      "source_sha256": "5ed3bfe677eb8feed9f5d3e8ccc571cd602747e7ab55ff2c4d8717974f003ed5",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R002/identity-research/observations-before-tiff-correction.json": {
+      "bytes": 11471,
+      "published_sha256": "c20981a4a90027fc39a71e3c79e14f163426e76f80b9e8323645d5eed5108b3a",
+      "source_sha256": "c20981a4a90027fc39a71e3c79e14f163426e76f80b9e8323645d5eed5108b3a",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R002/identity-research/observations-first-failed.json": {
+      "bytes": 10212,
+      "published_sha256": "708dea88aa81c0fc4a1ee54c8be14068eeab7dbea6398b001fb20fc7ce2a4a03",
+      "source_sha256": "708dea88aa81c0fc4a1ee54c8be14068eeab7dbea6398b001fb20fc7ce2a4a03",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R002/identity-research/observations.json": {
+      "bytes": 11468,
+      "published_sha256": "4a048153ed34dfcde31428ba17a7a16e1656c0c68dc2d6f3846efd9c09d72a73",
+      "source_sha256": "4a048153ed34dfcde31428ba17a7a16e1656c0c68dc2d6f3846efd9c09d72a73",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R002/identity-research/probe_identity.py": {
+      "bytes": 7727,
+      "published_sha256": "9891ad7b449964ceea77b4867b57b6404739afc81c8f7cdf162d33f16da65a50",
+      "source_sha256": "9891ad7b449964ceea77b4867b57b6404739afc81c8f7cdf162d33f16da65a50",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/lab/R002/identity-research/review_main.py": {
+      "bytes": 5203,
+      "published_sha256": "c413cd425f4336aa598f4fc69f3ad04822ef8f53078f1571b8f4cdd65dc44a83",
+      "source_sha256": "c413cd425f4336aa598f4fc69f3ad04822ef8f53078f1571b8f4cdd65dc44a83",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/material-manifest.json": {
+      "bytes": 8306,
+      "published_sha256": "aaa3e26900b42d5d2688e8575618f4be9ee445fa2c5998cdfc6fa2cde4d53930",
+      "source_sha256": "aaa3e26900b42d5d2688e8575618f4be9ee445fa2c5998cdfc6fa2cde4d53930",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/research/R001-metadata-reliability.md": {
+      "bytes": 8358,
+      "published_sha256": "5b366c7cd55dab2f9521c36a31ccda1421376d38cde80a40ccdb865350dbfd67",
+      "source_sha256": "5b366c7cd55dab2f9521c36a31ccda1421376d38cde80a40ccdb865350dbfd67",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/research/R002-identity-candidates.md": {
+      "bytes": 8118,
+      "published_sha256": "fe6cfdc549a500250b6da0ca5debb77c8ac73081c2bc81ba9c58e8dc1d3922b0",
+      "source_sha256": "fe6cfdc549a500250b6da0ca5debb77c8ac73081c2bc81ba9c58e8dc1d3922b0",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/research/index.md": {
+      "bytes": 438,
+      "published_sha256": "a47b3eb715e8ba3f7831e0a65420b61091d806a60801706fe1d6a38a93c1dbc0",
+      "source_sha256": "a47b3eb715e8ba3f7831e0a65420b61091d806a60801706fe1d6a38a93c1dbc0",
+      "transformation": "none; byte copy"
+    },
+    "project/.elenchus/topology.md": {
+      "bytes": 6567,
+      "published_sha256": "f050a251d10750da719e5cbf2bcf1c885c5df03380b9f00ae0466ee7f713014c",
+      "source_sha256": "f050a251d10750da719e5cbf2bcf1c885c5df03380b9f00ae0466ee7f713014c",
+      "transformation": "none; byte copy"
+    },
+    "project/existing-product.txt": {
+      "bytes": 50,
+      "published_sha256": "53f0c7f7a926d9252540a73f22338b37ab5d4323fdc4c68041a7ac7ad795fb71",
+      "source_sha256": "53f0c7f7a926d9252540a73f22338b37ab5d4323fdc4c68041a7ac7ad795fb71",
+      "transformation": "none; byte copy"
+    },
+    "project/inputs.sha256.json": {
+      "bytes": 718,
+      "published_sha256": "f2b326afdb7243a190767a37d735fff8e5ccab105ca0ac0ded6887b9f54ad398",
+      "source_sha256": "f2b326afdb7243a190767a37d735fff8e5ccab105ca0ac0ded6887b9f54ad398",
+      "transformation": "none; byte copy"
+    },
+    "project/inputs/README.md": {
+      "bytes": 744,
+      "published_sha256": "b9e2ca5fe5662df027703234d9f5c56c18e7cab769214b7340b899fc48acc7fd",
+      "source_sha256": "b9e2ca5fe5662df027703234d9f5c56c18e7cab769214b7340b899fc48acc7fd",
+      "transformation": "none; byte copy"
+    },
+    "project/inputs/broken/truncated.jpg": {
+      "bytes": 32,
+      "published_sha256": "aa8b4cd7477ed2392383fc1196567875d3d5d6b733739c1ca1c9d866f8e9c0cc",
+      "source_sha256": "aa8b4cd7477ed2392383fc1196567875d3d5d6b733739c1ca1c9d866f8e9c0cc",
+      "transformation": "none; byte copy"
+    },
+    "project/inputs/copies/duplicate.jpg": {
+      "bytes": 763,
+      "published_sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "source_sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "transformation": "none; byte copy"
+    },
+    "project/inputs/formats/sample.tiff": {
+      "bytes": 328,
+      "published_sha256": "1f29eec7d335ebdc98d141a01357962565e58413fedc9c6e06773134606b580b",
+      "source_sha256": "1f29eec7d335ebdc98d141a01357962565e58413fedc9c6e06773134606b580b",
+      "transformation": "none; byte copy"
+    },
+    "project/inputs/notes.txt": {
+      "bytes": 27,
+      "published_sha256": "9e504f69e20609699c0a98bafdc24514b658a5da8b3f56138b994bf163e1a39f",
+      "source_sha256": "9e504f69e20609699c0a98bafdc24514b658a5da8b3f56138b994bf163e1a39f",
+      "transformation": "none; byte copy"
+    },
+    "project/inputs/plain.png": {
+      "bytes": 187,
+      "published_sha256": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+      "source_sha256": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+      "transformation": "none; byte copy"
+    },
+    "project/inputs/session A/dated.jpg": {
+      "bytes": 763,
+      "published_sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "source_sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "transformation": "none; byte copy"
+    },
+    "project/inputs/회전/rotated.jpg": {
+      "bytes": 694,
+      "published_sha256": "c60c3c84e584d5c7c74484eb67f5c9b343f8e63035cf2c3a5c65e2cf6fdf8aed",
+      "source_sha256": "c60c3c84e584d5c7c74484eb67f5c9b343f8e63035cf2c3a5c65e2cf6fdf8aed",
+      "transformation": "none; byte copy"
+    },
+    "records/activity.jsonl": {
+      "bytes": 31770,
+      "published_sha256": "4deb1117365a4b57686b8168fe3ab03e1315219b845ca3c3a282753d204733c0",
+      "source_sha256": "4deb1117365a4b57686b8168fe3ab03e1315219b845ca3c3a282753d204733c0",
+      "transformation": "none; byte copy"
+    },
+    "records/final.md": {
+      "bytes": 540,
+      "published_sha256": "bf65d058da85330d57bd27914941ab22f9e3e91107c76010eefda754381d3f3e",
+      "source_sha256": "bf65d058da85330d57bd27914941ab22f9e3e91107c76010eefda754381d3f3e",
+      "transformation": "none; byte copy"
+    },
+    "records/identity-activity.jsonl": {
+      "bytes": 4455,
+      "published_sha256": "6f2d49fb16e0abc9ce45fc263e13b9f318ca7ff462a82eb9dfd907ea0addc581",
+      "source_sha256": "6f2d49fb16e0abc9ce45fc263e13b9f318ca7ff462a82eb9dfd907ea0addc581",
+      "transformation": "none; byte copy"
+    },
+    "records/metadata-activity.jsonl": {
+      "bytes": 9036,
+      "published_sha256": "460eea70d4c4449976b1505f7eeaaf59ebd6399358694d6cbe5fa2e32118abe1",
+      "source_sha256": "460eea70d4c4449976b1505f7eeaaf59ebd6399358694d6cbe5fa2e32118abe1",
+      "transformation": "none; byte copy"
+    }
+  },
+  "initial_files": {
+    "input.md": {
+      "after": "e4434c253e82af3de4952984ad8bd18f94592d689a323fab6dc075b9ee9e9a83",
+      "before": "e4434c253e82af3de4952984ad8bd18f94592d689a323fab6dc075b9ee9e9a83",
+      "unchanged": true
+    },
+    "project/existing-product.txt": {
+      "after": "53f0c7f7a926d9252540a73f22338b37ab5d4323fdc4c68041a7ac7ad795fb71",
+      "before": "53f0c7f7a926d9252540a73f22338b37ab5d4323fdc4c68041a7ac7ad795fb71",
+      "unchanged": true
+    },
+    "project/inputs.sha256.json": {
+      "after": "f2b326afdb7243a190767a37d735fff8e5ccab105ca0ac0ded6887b9f54ad398",
+      "before": "f2b326afdb7243a190767a37d735fff8e5ccab105ca0ac0ded6887b9f54ad398",
+      "unchanged": true
+    },
+    "project/inputs/README.md": {
+      "after": "b9e2ca5fe5662df027703234d9f5c56c18e7cab769214b7340b899fc48acc7fd",
+      "before": "b9e2ca5fe5662df027703234d9f5c56c18e7cab769214b7340b899fc48acc7fd",
+      "unchanged": true
+    },
+    "project/inputs/broken/truncated.jpg": {
+      "after": "aa8b4cd7477ed2392383fc1196567875d3d5d6b733739c1ca1c9d866f8e9c0cc",
+      "before": "aa8b4cd7477ed2392383fc1196567875d3d5d6b733739c1ca1c9d866f8e9c0cc",
+      "unchanged": true
+    },
+    "project/inputs/copies/duplicate.jpg": {
+      "after": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "before": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "unchanged": true
+    },
+    "project/inputs/formats/sample.tiff": {
+      "after": "1f29eec7d335ebdc98d141a01357962565e58413fedc9c6e06773134606b580b",
+      "before": "1f29eec7d335ebdc98d141a01357962565e58413fedc9c6e06773134606b580b",
+      "unchanged": true
+    },
+    "project/inputs/notes.txt": {
+      "after": "9e504f69e20609699c0a98bafdc24514b658a5da8b3f56138b994bf163e1a39f",
+      "before": "9e504f69e20609699c0a98bafdc24514b658a5da8b3f56138b994bf163e1a39f",
+      "unchanged": true
+    },
+    "project/inputs/plain.png": {
+      "after": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+      "before": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+      "unchanged": true
+    },
+    "project/inputs/session A/dated.jpg": {
+      "after": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "before": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "unchanged": true
+    },
+    "project/inputs/회전/rotated.jpg": {
+      "after": "c60c3c84e584d5c7c74484eb67f5c9b343f8e63035cf2c3a5c65e2cf6fdf8aed",
+      "before": "c60c3c84e584d5c7c74484eb67f5c9b343f8e63035cf2c3a5c65e2cf6fdf8aed",
+      "unchanged": true
+    },
+    "skill/SKILL.md": {
+      "after": "57b58f13cf7e983bcab8b16dd1c4694f4879784f0e629e4b818c3091bdd090ac",
+      "before": "57b58f13cf7e983bcab8b16dd1c4694f4879784f0e629e4b818c3091bdd090ac",
+      "unchanged": true
+    },
+    "skill/agents/openai.yaml": {
+      "after": "0d0b57c93efe5fe5524c7bddba3789b53fb31b97fc6ed32478577d08f2a3864d",
+      "before": "0d0b57c93efe5fe5524c7bddba3789b53fb31b97fc6ed32478577d08f2a3864d",
+      "unchanged": true
+    },
+    "skill/scripts/release_update.py": {
+      "after": "f228a2e904ba06b02277184c9520e10677677ec5e78322371f9a118998587b12",
+      "before": "f228a2e904ba06b02277184c9520e10677677ec5e78322371f9a118998587b12",
+      "unchanged": true
+    },
+    "skill/stages/discovery.md": {
+      "after": "d064e9b91309c92b55cc340159193620b3b5757fd2ed6d1376803a586043d622",
+      "before": "d064e9b91309c92b55cc340159193620b3b5757fd2ed6d1376803a586043d622",
+      "unchanged": true
+    },
+    "skill/stages/execution.md": {
+      "after": "da4be980b04fc06cd9e94510634f539b4d3572ec6465228d6421d573b663b2e3",
+      "before": "da4be980b04fc06cd9e94510634f539b4d3572ec6465228d6421d573b663b2e3",
+      "unchanged": true
+    },
+    "skill/stages/idea.md": {
+      "after": "da7390eabcb71dab0351e0013c8a4c3ed2c716b80880af31d72d1354af29b8fa",
+      "before": "da7390eabcb71dab0351e0013c8a4c3ed2c716b80880af31d72d1354af29b8fa",
+      "unchanged": true
+    },
+    "skill/stages/lab.md": {
+      "after": "9f2faa694d0a5843c02718eb3fe79622f9f408481914cac00187f803b83e35c8",
+      "before": "9f2faa694d0a5843c02718eb3fe79622f9f408481914cac00187f803b83e35c8",
+      "unchanged": true
+    },
+    "skill/stages/research.md": {
+      "after": "feb023ee5a5683e0cf4736ebfa3d15c2314fb0320df5825e379cf251884a6b74",
+      "before": "feb023ee5a5683e0cf4736ebfa3d15c2314fb0320df5825e379cf251884a6b74",
+      "unchanged": true
+    },
+    "skill/stages/topology.md": {
+      "after": "d03b09b89bd2fd11a85545f58f77c12e2f00a007dc2a6e7bb45306f65e6bdb9a",
+      "before": "d03b09b89bd2fd11a85545f58f77c12e2f00a007dc2a6e7bb45306f65e6bdb9a",
+      "unchanged": true
+    },
+    "skill/stages/web-evidence-loop.md": {
+      "after": "fc92fa0481f575d2989fa728d1dea3e19700eb21405cc3a3490dad9211d12902",
+      "before": "fc92fa0481f575d2989fa728d1dea3e19700eb21405cc3a3490dad9211d12902",
+      "unchanged": true
+    }
+  },
+  "initial_files_unchanged": true,
+  "reproduction_input": {
+    "expected_sha256": "d47b6c0fe6cf67411c348e647ed545a850deec1fdba694529a18c72c673c414e",
+    "path": "reproduction-input.md",
+    "published_sha256": "d47b6c0fe6cf67411c348e647ed545a850deec1fdba694529a18c72c673c414e",
+    "source": "operator snapshot fixed at run preparation",
+    "status": "copied_fixed_input"
+  },
+  "run_id": "photos-sample1",
+  "schema_version": 1,
+  "scope": "explicit operator-reviewed files only; not a complete host trace or automatic privacy audit",
+  "source_workspace_cleanup": "not_attempted; retained for audit/recovery",
+  "status": "complete_allowlist_copy"
+}

@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "exact_original_group_count_one": true,
+    "original_group_has_byte_confirmation": true,
+    "renamed_still_exact_bytes": true,
+    "renamed_detects_jpeg_despite_png_suffix": true,
+    "comment_changes_bytes": true,
+    "comment_keeps_decoded_display_pixels": true,
+    "orientation_normalization_changes_bytes": true,
+    "orientation_normalization_keeps_display_pixels": true,
+    "different_colors_different_pixels": true,
+    "different_colors_same_average_hash": true,
+    "truncated_jpeg_does_not_decode": true,
+    "plain_png_decodes_after_order_fix": true,
+    "inputs_unchanged": true
+  },
+  "groups": [
+    {
+      "sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "paths": [
+        "copies/duplicate.jpg",
+        "session A/dated.jpg"
+      ],
+      "byte_comparison_equal": true
+    }
+  ]
+}

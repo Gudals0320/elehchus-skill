@@ -1,0 +1,659 @@
+{
+  "time_utc": "2026-09-08T10:25:12.275934+00:00",
+  "question": "Dates, orientation, format and corrupt-input behavior for synthetic JPEG/PNG/TIFF",
+  "versions": {
+    "Python": "3.12.10",
+    "Pillow": "12.3.0",
+    "ExifRead": "3.5.1"
+  },
+  "inputs": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample2\\project\\inputs",
+  "input_hashes_before": {
+    "broken/truncated.jpg": "aa8b4cd7477ed2392383fc1196567875d3d5d6b733739c1ca1c9d866f8e9c0cc",
+    "copies/duplicate.jpg": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "formats/sample.tiff": "1f29eec7d335ebdc98d141a01357962565e58413fedc9c6e06773134606b580b",
+    "notes.txt": "9e504f69e20609699c0a98bafdc24514b658a5da8b3f56138b994bf163e1a39f",
+    "plain.png": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+    "README.md": "b9e2ca5fe5662df027703234d9f5c56c18e7cab769214b7340b899fc48acc7fd",
+    "session A/dated.jpg": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "회전/rotated.jpg": "c60c3c84e584d5c7c74484eb67f5c9b343f8e63035cf2c3a5c65e2cf6fdf8aed"
+  },
+  "input_hashes_after": {
+    "broken/truncated.jpg": "aa8b4cd7477ed2392383fc1196567875d3d5d6b733739c1ca1c9d866f8e9c0cc",
+    "copies/duplicate.jpg": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "formats/sample.tiff": "1f29eec7d335ebdc98d141a01357962565e58413fedc9c6e06773134606b580b",
+    "notes.txt": "9e504f69e20609699c0a98bafdc24514b658a5da8b3f56138b994bf163e1a39f",
+    "plain.png": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+    "README.md": "b9e2ca5fe5662df027703234d9f5c56c18e7cab769214b7340b899fc48acc7fd",
+    "session A/dated.jpg": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "회전/rotated.jpg": "c60c3c84e584d5c7c74484eb67f5c9b343f8e63035cf2c3a5c65e2cf6fdf8aed"
+  },
+  "inputs_unchanged": true,
+  "results": [
+    {
+      "origin": "provided",
+      "path": "broken/truncated.jpg",
+      "bytes": 32,
+      "pillow": {
+        "metadata_status": "error",
+        "metadata_error": "OSError: Truncated File Read",
+        "verify": "OSError: Truncated File Read",
+        "load": "OSError: Truncated File Read",
+        "warnings": []
+      },
+      "exifread": {
+        "status": "returned",
+        "tag_count": 0,
+        "fields": {},
+        "messages": []
+      },
+      "exifread_strict": {
+        "status": "returned",
+        "tag_count": 0,
+        "fields": {},
+        "messages": []
+      }
+    },
+    {
+      "origin": "provided",
+      "path": "copies/duplicate.jpg",
+      "bytes": 763,
+      "pillow": {
+        "format": "JPEG",
+        "size": [
+          8,
+          6
+        ],
+        "frames": 1,
+        "ifd0": {
+          "Orientation": 1
+        },
+        "exif_ifd": {
+          "DateTimeOriginal": "2024:07:15 10:20:30",
+          "OffsetTimeOriginal": "+09:00"
+        },
+        "metadata_status": "read",
+        "verify": "ok",
+        "load": "ok",
+        "warnings": []
+      },
+      "exifread": {
+        "status": "returned",
+        "tag_count": 4,
+        "fields": {
+          "Image Orientation": "Horizontal (normal)",
+          "EXIF DateTimeOriginal": "2024:07:15 10:20:30",
+          "EXIF OffsetTimeOriginal": "+09:00"
+        },
+        "messages": []
+      },
+      "exifread_strict": {
+        "status": "returned",
+        "tag_count": 4,
+        "fields": {
+          "Image Orientation": "Horizontal (normal)",
+          "EXIF DateTimeOriginal": "2024:07:15 10:20:30",
+          "EXIF OffsetTimeOriginal": "+09:00"
+        },
+        "messages": []
+      }
+    },
+    {
+      "origin": "provided",
+      "path": "formats/sample.tiff",
+      "bytes": 328,
+      "pillow": {
+        "format": "TIFF",
+        "size": [
+          6,
+          8
+        ],
+        "frames": 1,
+        "ifd0": {
+          "Orientation": 8,
+          "DateTime": "2024:07:15 10:20:30"
+        },
+        "exif_ifd": {},
+        "metadata_status": "read",
+        "verify": "ok",
+        "load": "ok",
+        "warnings": []
+      },
+      "exifread": {
+        "status": "returned",
+        "tag_count": 12,
+        "fields": {
+          "Image Orientation": "Rotated 90 CCW",
+          "Image DateTime": "2024:07:15 10:20:30"
+        },
+        "messages": []
+      },
+      "exifread_strict": {
+        "status": "returned",
+        "tag_count": 12,
+        "fields": {
+          "Image Orientation": "Rotated 90 CCW",
+          "Image DateTime": "2024:07:15 10:20:30"
+        },
+        "messages": []
+      }
+    },
+    {
+      "origin": "provided",
+      "path": "notes.txt",
+      "bytes": 27,
+      "pillow": {
+        "metadata_status": "error",
+        "metadata_error": "UnidentifiedImageError: cannot identify image file 'C:\\\\Codex\\\\Elenchus\\\\tests\\\\research-foundation\\\\.work\\\\photos-sample2\\\\project\\\\inputs\\\\notes.txt'",
+        "verify": "UnidentifiedImageError: cannot identify image file 'C:\\\\Codex\\\\Elenchus\\\\tests\\\\research-foundation\\\\.work\\\\photos-sample2\\\\project\\\\inputs\\\\notes.txt'",
+        "load": "UnidentifiedImageError: cannot identify image file 'C:\\\\Codex\\\\Elenchus\\\\tests\\\\research-foundation\\\\.work\\\\photos-sample2\\\\project\\\\inputs\\\\notes.txt'",
+        "warnings": []
+      },
+      "exifread": {
+        "status": "returned",
+        "tag_count": 0,
+        "fields": {},
+        "messages": [
+          "File format not recognized."
+        ]
+      },
+      "exifread_strict": {
+        "status": "returned",
+        "tag_count": 0,
+        "fields": {},
+        "messages": [
+          "File format not recognized."
+        ]
+      }
+    },
+    {
+      "origin": "provided",
+      "path": "plain.png",
+      "bytes": 187,
+      "pillow": {
+        "format": "PNG",
+        "size": [
+          8,
+          6
+        ],
+        "frames": 1,
+        "ifd0": {},
+        "exif_ifd": {},
+        "metadata_status": "read",
+        "verify": "ok",
+        "load": "ok",
+        "warnings": []
+      },
+      "exifread": {
+        "status": "returned",
+        "tag_count": 0,
+        "fields": {},
+        "messages": [
+          "PNG file does not have exif data."
+        ]
+      },
+      "exifread_strict": {
+        "status": "returned",
+        "tag_count": 0,
+        "fields": {},
+        "messages": [
+          "PNG file does not have exif data."
+        ]
+      }
+    },
+    {
+      "origin": "provided",
+      "path": "README.md",
+      "bytes": 744,
+      "pillow": {
+        "metadata_status": "error",
+        "metadata_error": "UnidentifiedImageError: cannot identify image file 'C:\\\\Codex\\\\Elenchus\\\\tests\\\\research-foundation\\\\.work\\\\photos-sample2\\\\project\\\\inputs\\\\README.md'",
+        "verify": "UnidentifiedImageError: cannot identify image file 'C:\\\\Codex\\\\Elenchus\\\\tests\\\\research-foundation\\\\.work\\\\photos-sample2\\\\project\\\\inputs\\\\README.md'",
+        "load": "UnidentifiedImageError: cannot identify image file 'C:\\\\Codex\\\\Elenchus\\\\tests\\\\research-foundation\\\\.work\\\\photos-sample2\\\\project\\\\inputs\\\\README.md'",
+        "warnings": []
+      },
+      "exifread": {
+        "status": "returned",
+        "tag_count": 0,
+        "fields": {},
+        "messages": [
+          "File format not recognized."
+        ]
+      },
+      "exifread_strict": {
+        "status": "returned",
+        "tag_count": 0,
+        "fields": {},
+        "messages": [
+          "File format not recognized."
+        ]
+      }
+    },
+    {
+      "origin": "provided",
+      "path": "session A/dated.jpg",
+      "bytes": 763,
+      "pillow": {
+        "format": "JPEG",
+        "size": [
+          8,
+          6
+        ],
+        "frames": 1,
+        "ifd0": {
+          "Orientation": 1
+        },
+        "exif_ifd": {
+          "DateTimeOriginal": "2024:07:15 10:20:30",
+          "OffsetTimeOriginal": "+09:00"
+        },
+        "metadata_status": "read",
+        "verify": "ok",
+        "load": "ok",
+        "warnings": []
+      },
+      "exifread": {
+        "status": "returned",
+        "tag_count": 4,
+        "fields": {
+          "Image Orientation": "Horizontal (normal)",
+          "EXIF DateTimeOriginal": "2024:07:15 10:20:30",
+          "EXIF OffsetTimeOriginal": "+09:00"
+        },
+        "messages": []
+      },
+      "exifread_strict": {
+        "status": "returned",
+        "tag_count": 4,
+        "fields": {
+          "Image Orientation": "Horizontal (normal)",
+          "EXIF DateTimeOriginal": "2024:07:15 10:20:30",
+          "EXIF OffsetTimeOriginal": "+09:00"
+        },
+        "messages": []
+      }
+    },
+    {
+      "origin": "provided",
+      "path": "회전/rotated.jpg",
+      "bytes": 694,
+      "pillow": {
+        "format": "JPEG",
+        "size": [
+          8,
+          6
+        ],
+        "frames": 1,
+        "ifd0": {
+          "Orientation": 6
+        },
+        "exif_ifd": {},
+        "metadata_status": "read",
+        "verify": "ok",
+        "load": "ok",
+        "warnings": []
+      },
+      "exifread": {
+        "status": "returned",
+        "tag_count": 1,
+        "fields": {
+          "Image Orientation": "Rotated 90 CW"
+        },
+        "messages": []
+      },
+      "exifread_strict": {
+        "status": "returned",
+        "tag_count": 1,
+        "fields": {
+          "Image Orientation": "Rotated 90 CW"
+        },
+        "messages": []
+      }
+    },
+    {
+      "origin": "injected",
+      "path": "invalid_date.png",
+      "bytes": 185,
+      "pillow": {
+        "format": "PNG",
+        "size": [
+          12,
+          8
+        ],
+        "frames": 1,
+        "ifd0": {
+          "Orientation": 6
+        },
+        "exif_ifd": {
+          "DateTimeOriginal": "2020:99:99 99:99:99",
+          "OffsetTimeOriginal": "+09:00"
+        },
+        "metadata_status": "read",
+        "verify": "ok",
+        "load": "ok",
+        "warnings": []
+      },
+      "exifread": {
+        "status": "returned",
+        "tag_count": 4,
+        "fields": {
+          "Image Orientation": "Rotated 90 CW",
+          "EXIF DateTimeOriginal": "2020:99:99 99:99:99",
+          "EXIF OffsetTimeOriginal": "+09:00"
+        },
+        "messages": []
+      },
+      "exifread_strict": {
+        "status": "returned",
+        "tag_count": 4,
+        "fields": {
+          "Image Orientation": "Rotated 90 CW",
+          "EXIF DateTimeOriginal": "2020:99:99 99:99:99",
+          "EXIF OffsetTimeOriginal": "+09:00"
+        },
+        "messages": []
+      }
+    },
+    {
+      "origin": "injected",
+      "path": "jpeg_with_png_extension.png",
+      "bytes": 763,
+      "pillow": {
+        "format": "JPEG",
+        "size": [
+          8,
+          6
+        ],
+        "frames": 1,
+        "ifd0": {
+          "Orientation": 1
+        },
+        "exif_ifd": {
+          "DateTimeOriginal": "2024:07:15 10:20:30",
+          "OffsetTimeOriginal": "+09:00"
+        },
+        "metadata_status": "read",
+        "verify": "ok",
+        "load": "ok",
+        "warnings": []
+      },
+      "exifread": {
+        "status": "returned",
+        "tag_count": 4,
+        "fields": {
+          "Image Orientation": "Horizontal (normal)",
+          "EXIF DateTimeOriginal": "2024:07:15 10:20:30",
+          "EXIF OffsetTimeOriginal": "+09:00"
+        },
+        "messages": []
+      },
+      "exifread_strict": {
+        "status": "returned",
+        "tag_count": 4,
+        "fields": {
+          "Image Orientation": "Horizontal (normal)",
+          "EXIF DateTimeOriginal": "2024:07:15 10:20:30",
+          "EXIF OffsetTimeOriginal": "+09:00"
+        },
+        "messages": []
+      }
+    },
+    {
+      "origin": "injected",
+      "path": "metadata_survives_truncated_pixels.jpg",
+      "bytes": 743,
+      "pillow": {
+        "format": "JPEG",
+        "size": [
+          8,
+          6
+        ],
+        "frames": 1,
+        "ifd0": {
+          "Orientation": 1
+        },
+        "exif_ifd": {
+          "DateTimeOriginal": "2024:07:15 10:20:30",
+          "OffsetTimeOriginal": "+09:00"
+        },
+        "metadata_status": "read",
+        "verify": "ok",
+        "load": "OSError: image file is truncated (9 bytes not processed)",
+        "warnings": []
+      },
+      "exifread": {
+        "status": "returned",
+        "tag_count": 4,
+        "fields": {
+          "Image Orientation": "Horizontal (normal)",
+          "EXIF DateTimeOriginal": "2024:07:15 10:20:30",
+          "EXIF OffsetTimeOriginal": "+09:00"
+        },
+        "messages": []
+      },
+      "exifread_strict": {
+        "status": "returned",
+        "tag_count": 4,
+        "fields": {
+          "Image Orientation": "Horizontal (normal)",
+          "EXIF DateTimeOriginal": "2024:07:15 10:20:30",
+          "EXIF OffsetTimeOriginal": "+09:00"
+        },
+        "messages": []
+      }
+    },
+    {
+      "origin": "injected",
+      "path": "nested_date.jpg",
+      "bytes": 738,
+      "pillow": {
+        "format": "JPEG",
+        "size": [
+          12,
+          8
+        ],
+        "frames": 1,
+        "ifd0": {
+          "Orientation": 6
+        },
+        "exif_ifd": {
+          "DateTimeOriginal": "2020:02:03 04:05:06",
+          "OffsetTimeOriginal": "+09:00"
+        },
+        "metadata_status": "read",
+        "verify": "ok",
+        "load": "ok",
+        "warnings": []
+      },
+      "exifread": {
+        "status": "returned",
+        "tag_count": 4,
+        "fields": {
+          "Image Orientation": "Rotated 90 CW",
+          "EXIF DateTimeOriginal": "2020:02:03 04:05:06",
+          "EXIF OffsetTimeOriginal": "+09:00"
+        },
+        "messages": []
+      },
+      "exifread_strict": {
+        "status": "returned",
+        "tag_count": 4,
+        "fields": {
+          "Image Orientation": "Rotated 90 CW",
+          "EXIF DateTimeOriginal": "2020:02:03 04:05:06",
+          "EXIF OffsetTimeOriginal": "+09:00"
+        },
+        "messages": []
+      }
+    },
+    {
+      "origin": "injected",
+      "path": "nested_date.png",
+      "bytes": 185,
+      "pillow": {
+        "format": "PNG",
+        "size": [
+          12,
+          8
+        ],
+        "frames": 1,
+        "ifd0": {
+          "Orientation": 6
+        },
+        "exif_ifd": {
+          "DateTimeOriginal": "2020:02:03 04:05:06",
+          "OffsetTimeOriginal": "+09:00"
+        },
+        "metadata_status": "read",
+        "verify": "ok",
+        "load": "ok",
+        "warnings": []
+      },
+      "exifread": {
+        "status": "returned",
+        "tag_count": 4,
+        "fields": {
+          "Image Orientation": "Rotated 90 CW",
+          "EXIF DateTimeOriginal": "2020:02:03 04:05:06",
+          "EXIF OffsetTimeOriginal": "+09:00"
+        },
+        "messages": []
+      },
+      "exifread_strict": {
+        "status": "returned",
+        "tag_count": 4,
+        "fields": {
+          "Image Orientation": "Rotated 90 CW",
+          "EXIF DateTimeOriginal": "2020:02:03 04:05:06",
+          "EXIF OffsetTimeOriginal": "+09:00"
+        },
+        "messages": []
+      }
+    },
+    {
+      "origin": "injected",
+      "path": "nested_date.tiff",
+      "bytes": 510,
+      "pillow": {
+        "format": "TIFF",
+        "size": [
+          8,
+          12
+        ],
+        "frames": 1,
+        "ifd0": {
+          "Orientation": 6
+        },
+        "exif_ifd": {
+          "DateTimeOriginal": "2020:02:03 04:05:06",
+          "OffsetTimeOriginal": "+09:00"
+        },
+        "metadata_status": "read",
+        "verify": "ok",
+        "load": "ok",
+        "warnings": []
+      },
+      "exifread": {
+        "status": "returned",
+        "tag_count": 14,
+        "fields": {
+          "Image Orientation": "Rotated 90 CW",
+          "EXIF DateTimeOriginal": "2020:02:03 04:05:06",
+          "EXIF OffsetTimeOriginal": "+09:00"
+        },
+        "messages": []
+      },
+      "exifread_strict": {
+        "status": "returned",
+        "tag_count": 14,
+        "fields": {
+          "Image Orientation": "Rotated 90 CW",
+          "EXIF DateTimeOriginal": "2020:02:03 04:05:06",
+          "EXIF OffsetTimeOriginal": "+09:00"
+        },
+        "messages": []
+      }
+    }
+  ],
+  "orientation": {
+    "formats/sample.tiff": {
+      "after_open": {
+        "size": [
+          6,
+          8
+        ],
+        "orientation": 8,
+        "ifd_width": 8,
+        "ifd_height": 6
+      },
+      "after_load": {
+        "size": [
+          6,
+          8
+        ],
+        "orientation": null,
+        "ifd_width": 8,
+        "ifd_height": 6
+      },
+      "loaded_pixels_sha256": "5187ed28218cd37820f346d48c22569499ba6cca49ddabec1b703c2e7ac90241",
+      "transpose_after_load": {
+        "size": [
+          6,
+          8
+        ],
+        "orientation": null,
+        "ifd_width": null,
+        "ifd_height": null
+      },
+      "transposed_pixels_sha256": "5187ed28218cd37820f346d48c22569499ba6cca49ddabec1b703c2e7ac90241",
+      "transpose_direct": {
+        "size": [
+          6,
+          8
+        ],
+        "orientation": null,
+        "ifd_width": null,
+        "ifd_height": null
+      }
+    },
+    "회전/rotated.jpg": {
+      "after_open": {
+        "size": [
+          8,
+          6
+        ],
+        "orientation": 6,
+        "ifd_width": null,
+        "ifd_height": null
+      },
+      "after_load": {
+        "size": [
+          8,
+          6
+        ],
+        "orientation": 6,
+        "ifd_width": null,
+        "ifd_height": null
+      },
+      "loaded_pixels_sha256": "6738666db2e1b5a83f20c59706f91b63052473770b4ceb29f1149ed649e264c2",
+      "transpose_after_load": {
+        "size": [
+          6,
+          8
+        ],
+        "orientation": null,
+        "ifd_width": null,
+        "ifd_height": null
+      },
+      "transposed_pixels_sha256": "0d2e5da6027d4f63c08cc1e57247fbf29f60e340823e9b30925681f6554ee0d9",
+      "transpose_direct": {
+        "size": [
+          6,
+          8
+        ],
+        "orientation": null,
+        "ifd_width": null,
+        "ifd_height": null
+      }
+    }
+  }
+}

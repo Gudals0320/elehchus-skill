@@ -1,0 +1,426 @@
+{
+  "schema": "photo-research-v1",
+  "read_only": true,
+  "pillow_version": "12.3.0",
+  "scope": "JPEG PNG TIFF; snapshots are not an atomic filesystem view",
+  "limits": {
+    "file_bytes": 67108864,
+    "total_bytes": 268435456,
+    "pixels_per_file": 20000000,
+    "frames_per_file": 32
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "size": 744,
+      "sha256": "b9e2ca5fe5662df027703234d9f5c56c18e7cab769214b7340b899fc48acc7fd",
+      "file_identity": [
+        4785643169335545083,
+        1125899908220626
+      ],
+      "filesystem_mtime_ns": 1788854622316258300,
+      "filesystem_time_is_capture_date": false,
+      "format": null,
+      "status": "not_image_or_unknown",
+      "decode_status": "not_attempted",
+      "verify_status": "not_attempted",
+      "warnings": [],
+      "errors": [
+        {
+          "stage": "open",
+          "type": "UnidentifiedImageError",
+          "message": "cannot identify image file <_io.BytesIO object at 0x00000204C835CCC0>"
+        }
+      ],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": null,
+      "stored_size": null,
+      "display_size": null,
+      "frame_count": null,
+      "decoded_frames": 0
+    },
+    {
+      "path": "broken/truncated.jpg",
+      "size": 32,
+      "sha256": "aa8b4cd7477ed2392383fc1196567875d3d5d6b733739c1ca1c9d866f8e9c0cc",
+      "file_identity": [
+        4785643169335545083,
+        1125899908220624
+      ],
+      "filesystem_mtime_ns": 1788854622315259300,
+      "filesystem_time_is_capture_date": false,
+      "format": null,
+      "status": "damaged_or_unreadable",
+      "decode_status": "not_attempted",
+      "verify_status": "not_attempted",
+      "warnings": [],
+      "errors": [
+        {
+          "stage": "open",
+          "type": "OSError",
+          "message": "Truncated File Read"
+        }
+      ],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": null,
+      "stored_size": null,
+      "display_size": null,
+      "frame_count": null,
+      "decoded_frames": 0
+    },
+    {
+      "path": "copies/duplicate.jpg",
+      "size": 763,
+      "sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "file_identity": [
+        4785643169335545083,
+        1125899908220617
+      ],
+      "filesystem_mtime_ns": 1788854622313258700,
+      "filesystem_time_is_capture_date": false,
+      "format": "JPEG",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [
+        {
+          "tag": "DateTimeOriginal",
+          "source": "ExifIFD:DateTimeOriginal",
+          "raw": "2024:07:15 10:20:30",
+          "offset_raw": "+09:00",
+          "subsecond_raw": null,
+          "status": "valid",
+          "local": "2024-07-15T10:20:30",
+          "utc": "2024-07-15T01:20:30+00:00",
+          "timezone": "explicit_offset",
+          "issues": []
+        }
+      ],
+      "capture_date": {
+        "tag": "DateTimeOriginal",
+        "source": "ExifIFD:DateTimeOriginal",
+        "raw": "2024:07:15 10:20:30",
+        "offset_raw": "+09:00",
+        "subsecond_raw": null,
+        "status": "valid",
+        "local": "2024-07-15T10:20:30",
+        "utc": "2024-07-15T01:20:30+00:00",
+        "timezone": "explicit_offset",
+        "issues": []
+      },
+      "capture_conflict": false,
+      "orientation": 1,
+      "stored_size": [
+        8,
+        6
+      ],
+      "display_size": [
+        8,
+        6
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "header_size": [
+        8,
+        6
+      ],
+      "display_rgba_sha256": "97ed69baa6479e1e92dfb0d6e5b329bcb0c82fc299cae38eccb8cc392e72d2e7"
+    },
+    {
+      "path": "formats/sample.tiff",
+      "size": 328,
+      "sha256": "1f29eec7d335ebdc98d141a01357962565e58413fedc9c6e06773134606b580b",
+      "file_identity": [
+        4785643169335545083,
+        1125899908220622
+      ],
+      "filesystem_mtime_ns": 1788854622314258300,
+      "filesystem_time_is_capture_date": false,
+      "format": "TIFF",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [
+        {
+          "tag": "DateTime",
+          "source": "IFD0:DateTime",
+          "raw": "2024:07:15 10:20:30",
+          "offset_raw": null,
+          "subsecond_raw": null,
+          "status": "valid",
+          "local": "2024-07-15T10:20:30",
+          "utc": null,
+          "timezone": "unknown",
+          "issues": []
+        }
+      ],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": 8,
+      "stored_size": [
+        8,
+        6
+      ],
+      "display_size": [
+        6,
+        8
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "header_size": [
+        6,
+        8
+      ],
+      "display_rgba_sha256": "46503d5c9dc88a20f35bedb7c8170c422b9450828f622de494d7bb9d3cf3652e"
+    },
+    {
+      "path": "notes.txt",
+      "size": 27,
+      "sha256": "9e504f69e20609699c0a98bafdc24514b658a5da8b3f56138b994bf163e1a39f",
+      "file_identity": [
+        4785643169335545083,
+        1125899908220625
+      ],
+      "filesystem_mtime_ns": 1788854622315259300,
+      "filesystem_time_is_capture_date": false,
+      "format": null,
+      "status": "not_image_or_unknown",
+      "decode_status": "not_attempted",
+      "verify_status": "not_attempted",
+      "warnings": [],
+      "errors": [
+        {
+          "stage": "open",
+          "type": "UnidentifiedImageError",
+          "message": "cannot identify image file <_io.BytesIO object at 0x00000204C835CCC0>"
+        }
+      ],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": null,
+      "stored_size": null,
+      "display_size": null,
+      "frame_count": null,
+      "decoded_frames": 0
+    },
+    {
+      "path": "plain.png",
+      "size": 187,
+      "sha256": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+      "file_identity": [
+        4785643169335545083,
+        1125899908220620
+      ],
+      "filesystem_mtime_ns": 1788854622314258300,
+      "filesystem_time_is_capture_date": false,
+      "format": "PNG",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": null,
+      "stored_size": [
+        8,
+        6
+      ],
+      "display_size": [
+        8,
+        6
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "header_size": [
+        8,
+        6
+      ],
+      "display_rgba_sha256": "cd561ee63e4a500564b3eae740d060009611e813a27d64f35e57f22bf9e736b2"
+    },
+    {
+      "path": "session A/dated.jpg",
+      "size": 763,
+      "sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "file_identity": [
+        4785643169335545083,
+        1125899908220615
+      ],
+      "filesystem_mtime_ns": 1788854622312260200,
+      "filesystem_time_is_capture_date": false,
+      "format": "JPEG",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [
+        {
+          "tag": "DateTimeOriginal",
+          "source": "ExifIFD:DateTimeOriginal",
+          "raw": "2024:07:15 10:20:30",
+          "offset_raw": "+09:00",
+          "subsecond_raw": null,
+          "status": "valid",
+          "local": "2024-07-15T10:20:30",
+          "utc": "2024-07-15T01:20:30+00:00",
+          "timezone": "explicit_offset",
+          "issues": []
+        }
+      ],
+      "capture_date": {
+        "tag": "DateTimeOriginal",
+        "source": "ExifIFD:DateTimeOriginal",
+        "raw": "2024:07:15 10:20:30",
+        "offset_raw": "+09:00",
+        "subsecond_raw": null,
+        "status": "valid",
+        "local": "2024-07-15T10:20:30",
+        "utc": "2024-07-15T01:20:30+00:00",
+        "timezone": "explicit_offset",
+        "issues": []
+      },
+      "capture_conflict": false,
+      "orientation": 1,
+      "stored_size": [
+        8,
+        6
+      ],
+      "display_size": [
+        8,
+        6
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "header_size": [
+        8,
+        6
+      ],
+      "display_rgba_sha256": "97ed69baa6479e1e92dfb0d6e5b329bcb0c82fc299cae38eccb8cc392e72d2e7"
+    },
+    {
+      "path": "회전/rotated.jpg",
+      "size": 694,
+      "sha256": "c60c3c84e584d5c7c74484eb67f5c9b343f8e63035cf2c3a5c65e2cf6fdf8aed",
+      "file_identity": [
+        4785643169335545083,
+        1125899908220619
+      ],
+      "filesystem_mtime_ns": 1788854622313258700,
+      "filesystem_time_is_capture_date": false,
+      "format": "JPEG",
+      "status": "ok",
+      "decode_status": "passed",
+      "verify_status": "passed",
+      "warnings": [],
+      "errors": [],
+      "dates": [],
+      "capture_date": null,
+      "capture_conflict": false,
+      "orientation": 6,
+      "stored_size": [
+        8,
+        6
+      ],
+      "display_size": [
+        6,
+        8
+      ],
+      "frame_count": 1,
+      "decoded_frames": 1,
+      "header_size": [
+        8,
+        6
+      ],
+      "display_rgba_sha256": "1f600aa0d53b1201640d6cf238a932dd6a43b355e945ab010b02f3bb2322ed6b"
+    }
+  ],
+  "scan_errors": [],
+  "exact_duplicates": [
+    {
+      "sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "paths": [
+        "copies/duplicate.jpg",
+        "session A/dated.jpg"
+      ],
+      "evidence": "same_size_sha256_and_snapshot_bytes",
+      "unique_file_objects": 2
+    }
+  ],
+  "candidates": [
+    {
+      "kind": "exact_duplicate_review",
+      "paths": [
+        "copies/duplicate.jpg",
+        "session A/dated.jpg"
+      ],
+      "sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "reason": "same_size_sha256_and_snapshot_bytes",
+      "unique_file_objects": 2
+    },
+    {
+      "kind": "input_review",
+      "path": "README.md",
+      "reason": "not_image_or_unknown"
+    },
+    {
+      "kind": "input_review",
+      "path": "broken/truncated.jpg",
+      "reason": "damaged_or_unreadable"
+    },
+    {
+      "kind": "date_bucket_candidate",
+      "path": "copies/duplicate.jpg",
+      "bucket": "2024/07/15",
+      "basis": "ExifIFD:DateTimeOriginal",
+      "calendar_basis": "recorded_local_date",
+      "timezone": "explicit_offset",
+      "sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491"
+    },
+    {
+      "kind": "metadata_review",
+      "path": "formats/sample.tiff",
+      "reasons": [
+        "no_valid_capture_date"
+      ]
+    },
+    {
+      "kind": "input_review",
+      "path": "notes.txt",
+      "reason": "not_image_or_unknown"
+    },
+    {
+      "kind": "metadata_review",
+      "path": "plain.png",
+      "reasons": [
+        "no_valid_capture_date"
+      ]
+    },
+    {
+      "kind": "date_bucket_candidate",
+      "path": "session A/dated.jpg",
+      "bucket": "2024/07/15",
+      "basis": "ExifIFD:DateTimeOriginal",
+      "calendar_basis": "recorded_local_date",
+      "timezone": "explicit_offset",
+      "sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491"
+    },
+    {
+      "kind": "metadata_review",
+      "path": "회전/rotated.jpg",
+      "reasons": [
+        "no_valid_capture_date"
+      ]
+    }
+  ]
+}

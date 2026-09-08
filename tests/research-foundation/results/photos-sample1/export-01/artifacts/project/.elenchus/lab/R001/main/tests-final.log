@@ -1,0 +1,32 @@
+test_actual_date_offset_and_no_mtime_fallback (test_photo_materials.MaterialsTests.test_actual_date_offset_and_no_mtime_fallback) ... ok
+test_actual_tiff_not_double_rotated (test_photo_materials.MaterialsTests.test_actual_tiff_not_double_rotated) ... ok
+test_all_eight_orientation_sizes_png_and_tiff (test_photo_materials.MaterialsTests.test_all_eight_orientation_sizes_png_and_tiff) ... ok
+test_all_inputs_and_actual_duplicate (test_photo_materials.MaterialsTests.test_all_inputs_and_actual_duplicate) ... ok
+test_bad_png_crc_rejected (test_photo_materials.MaterialsTests.test_bad_png_crc_rejected) ... ok
+test_change_after_enumeration_detected (test_photo_materials.MaterialsTests.test_change_after_enumeration_detected) ... ok
+test_cli_output_guard_and_no_overwrite (test_photo_materials.MaterialsTests.test_cli_output_guard_and_no_overwrite) ... ok
+test_conflicting_ifd_dates_not_grouped (test_photo_materials.MaterialsTests.test_conflicting_ifd_dates_not_grouped) ... ok
+test_content_format_over_extension (test_photo_materials.MaterialsTests.test_content_format_over_extension) ... ok
+test_digitized_and_modified_not_capture (test_photo_materials.MaterialsTests.test_digitized_and_modified_not_capture) ... ok
+test_hardlink_is_alias_not_extra_copy (test_photo_materials.MaterialsTests.test_hardlink_is_alias_not_extra_copy) ... ok
+test_hash_collision_still_requires_equal_bytes (test_photo_materials.MaterialsTests.test_hash_collision_still_requires_equal_bytes) ... ok
+test_inputs_and_product_unchanged (test_photo_materials.MaterialsTests.test_inputs_and_product_unchanged) ... ok
+test_invalid_and_zero_date (test_photo_materials.MaterialsTests.test_invalid_and_zero_date) ... ok
+test_invalid_offset_and_subsecond (test_photo_materials.MaterialsTests.test_invalid_offset_and_subsecond) ... ok
+test_invalid_orientation_is_explicit (test_photo_materials.MaterialsTests.test_invalid_orientation_is_explicit) ... ok
+test_jpeg_verify_pass_does_not_guarantee_decode (test_photo_materials.MaterialsTests.test_jpeg_verify_pass_does_not_guarantee_decode) ... ok
+test_metadata_only_change_not_exact (test_photo_materials.MaterialsTests.test_metadata_only_change_not_exact) ... ok
+test_multiframe_all_frames_or_explicit_limit (test_photo_materials.MaterialsTests.test_multiframe_all_frames_or_explicit_limit) ... ok
+test_offset_crosses_day_retains_subseconds (test_photo_materials.MaterialsTests.test_offset_crosses_day_retains_subseconds) ... ok
+test_pixel_file_and_total_limits (test_photo_materials.MaterialsTests.test_pixel_file_and_total_limits) ... ok
+test_png_metadata_verify_order_regression (test_photo_materials.MaterialsTests.test_png_metadata_verify_order_regression) ... ok
+test_read_error_isolated (test_photo_materials.MaterialsTests.test_read_error_isolated) ... ok
+test_repeatability_and_empty (test_photo_materials.MaterialsTests.test_repeatability_and_empty) ... ok
+test_symlink_skipped_when_platform_allows (test_photo_materials.MaterialsTests.test_symlink_skipped_when_platform_allows) ... skipped "symlink unavailable: [WinError 1314] Ŭ���̾�Ʈ�� �ʿ��� ������ ������ ���� �ʽ��ϴ�: 'C:\\\\Codex\\\\Elenchus\\\\tests\\\\research-foundation\\\\.work\\\\photos-sample1\\\\project\\\\.elenchus\\\\lab\\\\R001\\\\main\\\\test-runs\\\\tmpz33hlqrm\\\\a.png' -> 'C:\\\\Codex\\\\Elenchus\\\\tests\\\\research-foundation\\\\.work\\\\photos-sample1\\\\project\\\\.elenchus\\\\lab\\\\R001\\\\main\\\\test-runs\\\\tmpz33hlqrm\\\\b.png'"
+test_unknown_offset_not_assumed (test_photo_materials.MaterialsTests.test_unknown_offset_not_assumed) ... ok
+test_unrecognized_is_not_false_codec_diagnosis (test_photo_materials.MaterialsTests.test_unrecognized_is_not_false_codec_diagnosis) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.424s
+
+OK (skipped=1)

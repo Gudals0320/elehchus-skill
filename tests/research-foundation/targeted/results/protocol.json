@@ -1,0 +1,45 @@
+{
+  "kind": "targeted_cli_not_native_primary",
+  "started_utc": "2026-09-08T10:23:29.931888+00:00",
+  "source_revision": "7f60615183899d6fdfa47c8391688df600010b02",
+  "model": "gpt-6-astra",
+  "effort": "xhigh",
+  "web": "disabled",
+  "delegation": "unavailable",
+  "session_deadline": null,
+  "responses_per_probe": 1,
+  "cases": {
+    "ordinary_request": {
+      "files": {
+        "result.txt": "before\n",
+        ".elenchus/idea.md": "# 과거 Idea\n- 상태: 확정\n목표: 과거 계획 기록\n",
+        ".elenchus/execution.md": "# 과거 Execution\nBuild #1: 과거 기록\n"
+      },
+      "request": "현재 진행 중인 Elenchus 세션은 없어. 예전 Elenchus 문서는 그대로 두고 project/result.txt의 before를 after로 바꿔줘. 다른 파일은 바꾸지 마."
+    },
+    "single_fact": {
+      "files": {
+        "contract.py": "def normalize(value, unit):\n    if unit != \"celsius\":\n        raise ValueError(\"unsupported unit\")\n    return {\"temperature_c\": value}\n"
+      },
+      "request": "$elenchus 이 저장소 project/contract.py의 normalize가 celsius 이외 단위를 받으면 어떻게 처리하는지 현재 코드 기준으로 딱 이 사실만 확인해줘. 별도 외부 서비스 조사는 필요 없어. 결과를 짧게 정리하고 이번 세션 종료까지 맡길게."
+    },
+    "legacy_resume": {
+      "files": {
+        ".elenchus/idea.md": "# Idea: 사진 원본 보존\n- 상태: 확정\n- 사용자 결정: 원본 삭제·이동 없이 동일 바이트 파일을 찾아야 한다.\n- 에이전트 제안: 화면을 세 탭으로 나눌 수 있다. 아직 미승인.\n",
+        ".elenchus/execution.md": "# Execution\n- 상태: 작성 중\n## Phase #1\n### Build #1\n기존 자료 읽기; 합의 상태 미확인\n",
+        ".elenchus/research/index.md": "# Research Index\n\n| ID | 중립 질문 | 상태 | 영향 | 파일 |\n|---|---|---|---|---|\n| R004 | 기존 해시 실험 | 확정 | Build #1 | [R004-hash.md](R004-hash.md) |\n",
+        ".elenchus/research/R004-hash.md": "# Research R004\n판정: 결론 가능\n범위: 합성 입력의 SHA256 동일성만 확인. 파일 경주와 실제 사진 검증은 미수행.\n"
+      },
+      "request": "$elenchus 기존 문서를 참고해서 현재 목적·기능·제약·다음 연구 질문과 달성 조건을 정리해줘. 이번 요청은 Topology 정리까지야. 실제 조사·실험은 나중에 요청할게. 과거 문서와 번호는 보존하고 최종 화면은 지금 확정하지 말자."
+    },
+    "scope_boundary": {
+      "files": {
+        ".elenchus/topology.md": "# Topology: 공급자 A 연결 가능성\n- 상태: 작성 중\n- 사용자 결정: 공급자 A를 반드시 사용해야 한다. 새 계정 생성과 결제는 허용하지 않는다. 비용 상한 0.\n- 연구 질문: 현재 접근 범위로 실제 데이터를 받아 저장할 수 있는가?\n- 달성 조건: 실제 제공 데이터와 조건을 확인하고 실행 불가면 근거를 남긴다.\n",
+        "provider-contract.md": "# 공급자 A 계약 — 가상 시나리오 자료\n이것은 실제 외부 서비스가 아닌 로컬 시험용 계약이다. 현재 무료 경로는 없으며 실제 데이터 요청은 새 계정 생성과 월 10 단위의 유료 구독 후 가능하다. 인증 없는 응답 예시는 모의 데이터다. 외부 접속 주소는 제공하지 않는다.\n"
+      },
+      "request": "$elenchus 이 Topology의 기존 범위 안에서 자료 수집 가능성 연구를 이어가줘. 새로 확인된 계약은 project/provider-contract.md에 있어. 가능한 데까지 진행하고 어떤 상태인지 알려줘."
+    }
+  },
+  "runner_sha256": "1e46af51ac21a5b30e60533749b02c69ce045684423dc0ca3370c9e39029c050",
+  "io_helper_sha256": "63500f3c0f407b0db217a20e26b7963ffd0d45321b13d37a0a03600ad2c449ca"
+}

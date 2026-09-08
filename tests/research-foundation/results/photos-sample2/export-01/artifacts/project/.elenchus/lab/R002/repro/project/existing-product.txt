@@ -1,0 +1,1 @@
+Existing product sentinel: preserve exact bytes.

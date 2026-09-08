@@ -1,0 +1,4 @@
+3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+C:\Codex\Elenchus\tests\research-foundation\.work\photos-sample1-reproduction-clean\execution\project\.elenchus\lab\R001\main\.venv\Scripts\python.exe
+Pillow 12.3.0
+C:\Codex\Elenchus\tests\research-foundation\.work\photos-sample1-reproduction-clean\execution\project\.elenchus\lab\R001\main\.venv\Lib\site-packages\PIL\__init__.py

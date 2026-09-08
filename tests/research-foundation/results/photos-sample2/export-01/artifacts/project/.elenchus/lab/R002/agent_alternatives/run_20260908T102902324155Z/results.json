@@ -1,0 +1,159 @@
+{
+  "time": "2026-09-08T10:29:02.493004+00:00",
+  "environment": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "pillow": "11.3.0",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "input_file_count": 8,
+  "input_preserved": true,
+  "synthetic_pairs": {
+    "metadata_only": {
+      "a": "generated\\pattern.png",
+      "b": "generated\\pattern_metadata.png",
+      "bytes_equal": false,
+      "sha256_equal": false,
+      "raw_first_frame_rgba_equal": true,
+      "oriented_first_frame_rgba_equal": true,
+      "all_raw_frames_rgba_equal": true,
+      "ahash_hamming_distance": 0
+    },
+    "orientation_equivalent": {
+      "a": "generated\\tag_orientation6.png",
+      "b": "generated\\physically_rotated.png",
+      "bytes_equal": false,
+      "sha256_equal": false,
+      "raw_first_frame_rgba_equal": false,
+      "oriented_first_frame_rgba_equal": true,
+      "all_raw_frames_rgba_equal": false,
+      "ahash_hamming_distance": 32
+    },
+    "perceptual_false_positive": {
+      "a": "generated\\solid_red.png",
+      "b": "generated\\solid_blue.png",
+      "bytes_equal": false,
+      "sha256_equal": false,
+      "raw_first_frame_rgba_equal": false,
+      "oriented_first_frame_rgba_equal": false,
+      "all_raw_frames_rgba_equal": false,
+      "ahash_hamming_distance": 0
+    },
+    "jpeg_reencode": {
+      "a": "generated\\pattern_q95.jpg",
+      "b": "generated\\pattern_q65.jpg",
+      "bytes_equal": false,
+      "sha256_equal": false,
+      "raw_first_frame_rgba_equal": false,
+      "oriented_first_frame_rgba_equal": false,
+      "all_raw_frames_rgba_equal": false,
+      "ahash_hamming_distance": 0
+    },
+    "first_frame_false_positive": {
+      "a": "generated\\two_frames_a.tiff",
+      "b": "generated\\two_frames_b.tiff",
+      "bytes_equal": false,
+      "sha256_equal": false,
+      "raw_first_frame_rgba_equal": true,
+      "oriented_first_frame_rgba_equal": true,
+      "all_raw_frames_rgba_equal": false,
+      "ahash_hamming_distance": 0
+    }
+  },
+  "truncated_lazy_decode": {
+    "open": "success",
+    "load": "failure",
+    "error_type": "OSError",
+    "error": "image file is truncated"
+  },
+  "similarity_chain_hamming_distances": {
+    "0-1": 1,
+    "0-2": 2,
+    "1-2": 1
+  },
+  "cache_probe": {
+    "same_inode": true,
+    "same_size": true,
+    "same_mtime_ns": true,
+    "same_ctime_ns": true,
+    "hash_changed": true,
+    "kind": "injected_same_size_content_mutation_and_timestamp_restore"
+  },
+  "hardlink_probe": {
+    "status": "success",
+    "samefile": true,
+    "nlink": 2,
+    "same_inode": true,
+    "alias_edit_visible_through_first_path": true
+  },
+  "synthetic_date_cases": [
+    {
+      "status": "missing",
+      "raw": null,
+      "utc": null
+    },
+    {
+      "status": "invalid",
+      "raw": "2024:02:30 12:00:00",
+      "utc": null
+    },
+    {
+      "raw": "2024:01:01 00:30:00",
+      "wall_time": "2024-01-01T00:30:00",
+      "raw_offset": null,
+      "status": "valid_wall_time_unknown_zone",
+      "utc": null
+    },
+    {
+      "raw": "2024:01:01 00:30:00",
+      "wall_time": "2024-01-01T00:30:00",
+      "raw_offset": "+09:00",
+      "status": "explicit_offset",
+      "utc": "2023-12-31T15:30:00+00:00"
+    },
+    {
+      "raw": "2024:01:01 00:30:00",
+      "wall_time": "2024-01-01T00:30:00",
+      "raw_offset": "-08:00",
+      "status": "explicit_offset",
+      "utc": "2024-01-01T08:30:00+00:00"
+    },
+    {
+      "raw": "2024:01:01 00:30:00",
+      "wall_time": "2024-01-01T00:30:00",
+      "raw_offset": "+99:99",
+      "status": "invalid_offset",
+      "utc": null
+    }
+  ],
+  "synthetic_digest_collision": {
+    "kind": "injected_constant_digest_prefilter",
+    "a": "AAAA",
+    "b": "BBBB",
+    "prefilter_equal": true,
+    "byte_comparison_equal": false
+  },
+  "checks": {
+    "metadata_does_not_imply_different_pixels": true,
+    "orientation_changes_pixel_identity_contract": true,
+    "zero_ahash_distance_is_not_pixel_equality": true,
+    "first_frame_is_not_whole_image": true,
+    "threshold_relation_is_not_transitive": true,
+    "size_mtime_inode_cache_can_miss_mutation": true,
+    "unknown_date_stays_unknown": true,
+    "invalid_date_rejected": true,
+    "byte_compare_rejects_injected_hash_prefilter_collision": true,
+    "input_content_size_mtime_unchanged": true
+  },
+  "all_checks_passed": true,
+  "unverified": [
+    "ICC/HDR/16-bit rendering equality",
+    "HEIC/RAW",
+    "real-photo similarity thresholds",
+    "large corpus performance",
+    "network filesystem semantics",
+    "symbolic link/junction traversal",
+    "concurrent mutation safety guarantee",
+    "real SHA-256 collision",
+    "Restic/fdupes executable integration"
+  ]
+}

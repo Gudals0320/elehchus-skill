@@ -1,0 +1,386 @@
+[
+  {
+    "station": "471080-99999",
+    "time_utc": 1704067200,
+    "temperature_c": 0.6,
+    "wind_m_s": 1.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704070800,
+    "temperature_c": 2.4,
+    "wind_m_s": 1.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704074400,
+    "temperature_c": 4.4,
+    "wind_m_s": 2.1,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704078000,
+    "temperature_c": 5.7,
+    "wind_m_s": 2.1,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704081600,
+    "temperature_c": 7.3,
+    "wind_m_s": 1.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704085200,
+    "temperature_c": 6.5,
+    "wind_m_s": 2.1,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704088800,
+    "temperature_c": 6.5,
+    "wind_m_s": 1.0,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704092400,
+    "temperature_c": 5.8,
+    "wind_m_s": 2.1,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704096000,
+    "temperature_c": 5.5,
+    "wind_m_s": 2.1,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704099600,
+    "temperature_c": 4.9,
+    "wind_m_s": 1.0,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704103200,
+    "temperature_c": 4.6,
+    "wind_m_s": 1.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704106800,
+    "temperature_c": 4.4,
+    "wind_m_s": 1.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704110400,
+    "temperature_c": 4.2,
+    "wind_m_s": 1.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704114000,
+    "temperature_c": 4.1,
+    "wind_m_s": 1.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704117600,
+    "temperature_c": 3.9,
+    "wind_m_s": 2.1,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704121200,
+    "temperature_c": 3.7,
+    "wind_m_s": 1.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "trace"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704124800,
+    "temperature_c": 3.5,
+    "wind_m_s": 1.0,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704128400,
+    "temperature_c": 3.3,
+    "wind_m_s": 2.1,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704132000,
+    "temperature_c": 3.0,
+    "wind_m_s": 2.0,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704135600,
+    "temperature_c": 2.8,
+    "wind_m_s": 0.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704139200,
+    "temperature_c": 2.4,
+    "wind_m_s": 0.0,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704142800,
+    "temperature_c": 2.3,
+    "wind_m_s": 0.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704146400,
+    "temperature_c": 2.2,
+    "wind_m_s": 0.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704150000,
+    "temperature_c": 2.3,
+    "wind_m_s": 1.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704153600,
+    "temperature_c": 2.2,
+    "wind_m_s": 1.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704157200,
+    "temperature_c": 2.7,
+    "wind_m_s": 2.1,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704160800,
+    "temperature_c": 3.1,
+    "wind_m_s": 1.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704164400,
+    "temperature_c": 3.6,
+    "wind_m_s": 1.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704168000,
+    "temperature_c": 4.0,
+    "wind_m_s": 1.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704171600,
+    "temperature_c": 4.1,
+    "wind_m_s": 1.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704175200,
+    "temperature_c": 4.0,
+    "wind_m_s": 2.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704178800,
+    "temperature_c": 4.0,
+    "wind_m_s": 2.1,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704182400,
+    "temperature_c": 3.5,
+    "wind_m_s": 1.0,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704186000,
+    "temperature_c": 3.2,
+    "wind_m_s": 1.0,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704189600,
+    "temperature_c": 2.9,
+    "wind_m_s": 1.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704193200,
+    "temperature_c": 2.4,
+    "wind_m_s": 1.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704196800,
+    "temperature_c": 2.2,
+    "wind_m_s": 2.0,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704200400,
+    "temperature_c": 2.3,
+    "wind_m_s": 2.1,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704204000,
+    "temperature_c": 2.3,
+    "wind_m_s": 1.0,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704207600,
+    "temperature_c": 2.4,
+    "wind_m_s": 1.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704211200,
+    "temperature_c": 2.3,
+    "wind_m_s": 1.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704214800,
+    "temperature_c": 2.2,
+    "wind_m_s": 1.0,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704218400,
+    "temperature_c": 2.1,
+    "wind_m_s": 0.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704222000,
+    "temperature_c": 2.0,
+    "wind_m_s": 0.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704225600,
+    "temperature_c": 2.2,
+    "wind_m_s": 1.0,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704229200,
+    "temperature_c": 2.2,
+    "wind_m_s": 0.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704232800,
+    "temperature_c": 2.2,
+    "wind_m_s": 1.0,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  },
+  {
+    "station": "471080-99999",
+    "time_utc": 1704236400,
+    "temperature_c": 2.3,
+    "wind_m_s": 1.5,
+    "precipitation_1h_mm": null,
+    "precipitation_1h_status": "missing"
+  }
+]

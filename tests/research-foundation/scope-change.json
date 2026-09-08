@@ -1,0 +1,18 @@
+{
+  "recorded_utc": "2026-09-08T10:43:39.111257+00:00",
+  "authority": "User explicitly stopped the remaining two-fields/two-runs evaluation and independent-review requirement and requested wrap-up, Draft PR, beta.2 prerelease, backup/install, then goal completion.",
+  "native_status": {
+    "weather-sample1": "closed; independent replay completed",
+    "photos-sample1": "closed; independent replay partial due portable mtime check; operator repair validated, further independent repair replay cancelled",
+    "weather-sample2": "closed; independent replay cancelled",
+    "photos-sample2": "first material result delivered; fixed follow-up and independent replay cancelled"
+  },
+  "further_model_evaluations": "cancelled; no further actor/independent-review turns will be started",
+  "remaining_work": [
+    "preserve records",
+    "fix identified issues and final deterministic checks",
+    "publish Draft PR and prerelease",
+    "backup/install",
+    "complete goal under amended scope"
+  ]
+}

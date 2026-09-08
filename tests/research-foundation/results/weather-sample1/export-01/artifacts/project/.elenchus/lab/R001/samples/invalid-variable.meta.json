@@ -1,0 +1,10 @@
+{
+  "time": "2026-09-08T08:14:33.402012+00:00",
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.5665&longitude=126.978&start_date=2024-01-01&end_date=2024-01-01&hourly=tempeture_2m&timezone=UTC&timeformat=unixtime",
+  "name": "invalid-variable",
+  "command": "python fetch_probe.py NAME URL",
+  "error": "HTTPError",
+  "status": 400,
+  "message": "HTTP Error 400: Bad Request",
+  "artifact": "samples\\invalid-variable.error.txt"
+}

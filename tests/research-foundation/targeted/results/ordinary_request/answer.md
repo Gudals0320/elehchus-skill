@@ -1,0 +1,1 @@
+`project/result.txt`의 `before`를 `after`로 변경하고 확인했습니다. 기존 Elenchus 문서를 포함한 다른 파일은 변경하지 않았습니다.

@@ -1,0 +1,14 @@
+{
+  "photo_materials.py": {
+    "copy_sha256": "263c4e70a5d638e4667b03c5fe87d4f0cbc6f06120304d7b52ee6631541d50be",
+    "source_sha256": "263c4e70a5d638e4667b03c5fe87d4f0cbc6f06120304d7b52ee6631541d50be"
+  },
+  "test_photo_materials.py": {
+    "copy_sha256": "193b7224af55c45abddba1bac8075409a78321cbf450a973f3420c9781232472",
+    "source_sha256": "193b7224af55c45abddba1bac8075409a78321cbf450a973f3420c9781232472"
+  },
+  "generate_fixtures.py": {
+    "copy_sha256": "ffaa49c3f9b953aa21963748b2cff316084f037500eb56d49eefd40eac21ac9f",
+    "source_sha256": "ffaa49c3f9b953aa21963748b2cff316084f037500eb56d49eefd40eac21ac9f"
+  }
+}
