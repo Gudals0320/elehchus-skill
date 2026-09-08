@@ -27,6 +27,23 @@ class HarnessTests(unittest.TestCase):
     def export(self, allowlist):
         return harness.export(self.root / "actor", self.root / "results", allowlist, self.root / "export")
 
+    def test_nested_git_runtime_extracts_install_relative_bytes_only(self):
+        repo = self.root / "repo"
+        repo.mkdir()
+        harness.git(repo, "init", "--quiet")
+        for name, data in self.source.items():
+            path = repo / "skills/elenchus" / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(data)
+        (repo / "docs").mkdir()
+        (repo / "docs/private-evaluation.md").write_bytes(b"not runtime")
+        (repo / ".gitattributes").write_bytes(b"* -text\n")
+        harness.git(repo, "add", ".")
+        harness.git(repo, "-c", "user.name=Test", "-c", "user.email=test@example.invalid",
+                    "-c", "commit.gpgsign=false", "commit", "--quiet", "-m", "fixture")
+        _, source = harness.runtime_blobs(repo, "HEAD", ["SKILL.md", "stages"], "skills/elenchus")
+        self.assertEqual(source, self.source)
+
     def test_freeze_preserves_crlf_blob_bytes_and_method_hashes(self):
         frozen = harness.validate_freeze(self.root / "freeze")
         self.assertEqual((self.root / "freeze/runtime/SKILL.md").read_bytes(), self.source["SKILL.md"])

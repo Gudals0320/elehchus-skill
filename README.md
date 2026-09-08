@@ -18,11 +18,30 @@ Topology ↔ Research
 
 ## 설치
 
-현재 개발 브랜치는 `codex/research-foundation-beta2`다. 원하는 커밋의 `SKILL.md`, `agents/`, `stages/`, `LICENSE`를 Codex 스킬 경로의 `elenchus/`에 복사하고 새 작업에서 호출한다. 저장소의 `tests/`와 `docs/`는 개발·평가 자료이므로 설치할 필요가 없다.
+설치 대상은 저장소 루트가 아닌 **`skills/elenchus`**다. Codex의 skill-installer에 다음과 같이 요청한다.
+
+```text
+Gudals0320/elehchus-skill 저장소의 codex/research-foundation-beta2 브랜치에서
+skills/elenchus 경로를 elenchus 스킬로 설치해 줘.
+```
+
+설치기 인자는 `--repo Gudals0320/elehchus-skill --path skills/elenchus --ref codex/research-foundation-beta2`다. 수동 설치도 해당 폴더만 Codex 스킬 경로의 `elenchus/`에 복사한다. 설치 후 새 작업에서 호출한다.
+
+```text
+skills/elenchus/     # 설치 대상
+  SKILL.md
+  agents/
+  stages/
+  LICENSE
+docs/               # 설계 문서
+tests/              # 개발 검사·평가 기록
+```
+
+`docs/`와 `tests/`는 설치 대상 폴더 밖에 있으므로 설치본에 포함되지 않는다. 설치기의 다운로드 단계에서는 저장소 전체를 임시로 받을 수 있지만 실제 설치 폴더에는 지정한 경로만 복사한다.
 
 이 브랜치에는 자동 업데이트가 없다. 버전 교체는 원하는 소스를 직접 설치한다. 기존 설치가 있으면 스킬 검색 경로 밖에 백업한 뒤 폴더를 교체한다.
 
-게시된 [Releases](https://github.com/Gudals0320/elehchus-skill/releases)는 각 태그 당시의 소스다. 자동 업데이트·구버전 호환 제거는 `v1.1.0-beta.2` 게시 이후의 브랜치 변경이며 해당 태그에는 포함되지 않는다.
+게시된 [Releases](https://github.com/Gudals0320/elehchus-skill/releases)는 각 태그 당시의 소스다. 설치 경로 분리와 자동 업데이트·구버전 호환 제거는 `v1.1.0-beta.2` 게시 이후의 브랜치 변경이며 해당 태그에는 포함되지 않는다.
 
 ## 사용
 
@@ -47,8 +66,8 @@ skill:Elenchus 로 기존 탐구를 재개해 줘.
    └─ R001/
 ```
 
-- [Topology](stages/topology.md)는 현재 목적과 연구 계획의 기준이다. [Research](stages/research.md)는 독립 질문별 근거·판정을 기록하며 [Discovery](stages/discovery.md)와 [Web Evidence](stages/web-evidence-loop.md)를 필요한 조사에서 읽는다.
-- [Lab](stages/lab.md)은 독립 실행할 코드·데이터·fixture·테스트와 재현 방법을 만드는 작업장이다. 기존 제품과 원본 데이터는 읽기 전용으로 두고 실제 연결은 독립 코드나 사본에서 검증한다.
+- [Topology](skills/elenchus/stages/topology.md)는 현재 목적과 연구 계획의 기준이다. [Research](skills/elenchus/stages/research.md)는 독립 질문별 근거·판정을 기록하며 [Discovery](skills/elenchus/stages/discovery.md)와 [Web Evidence](skills/elenchus/stages/web-evidence-loop.md)를 필요한 조사에서 읽는다.
+- [Lab](skills/elenchus/stages/lab.md)은 독립 실행할 코드·데이터·fixture·테스트와 재현 방법을 만드는 작업장이다. 기존 제품과 원본 데이터는 읽기 전용으로 두고 실제 연결은 독립 코드나 사본에서 검증한다.
 - 작동한 부분·실제 실패·주입한 실패·모의 처리·미검증을 구분한다. 기능 구현 실패를 충분한 근거의 부정적 연구 결론과 혼동하지 않는다.
 
 ## 개발과 평가

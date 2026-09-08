@@ -5,7 +5,8 @@
   "reasoning_effort_requested": "xhigh",
   "context": "native fresh actor context; no prior turns or evaluator files",
   "session_limits": {"seconds": null, "responses": null},
-  "runtime_paths": ["SKILL.md", "stages", "agents"],
+  "runtime_root": "skills/elenchus",
+  "runtime_paths": ["SKILL.md", "stages", "agents", "LICENSE"],
   "runs": [
     {"id": "weather-sample1", "case": "weather", "sample": 1},
     {"id": "photos-sample1", "case": "photos", "sample": 1},

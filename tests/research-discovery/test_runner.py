@@ -12,6 +12,18 @@ import runner
 
 
 class ArchiveAndFixtureTests(unittest.TestCase):
+    def test_current_worktree_runtime_is_install_relative_and_excludes_development(self):
+        source = runner.runtime_bytes()
+        self.assertEqual(source["SKILL.md"], (runner.REPO / "skills/elenchus/SKILL.md").read_bytes())
+        self.assertIn("stages/topology.md", source)
+        self.assertFalse(any(name.startswith(("skills/", "docs/", "tests/")) for name in source))
+
+    def test_historical_baseline_reads_original_runtime_layout(self):
+        source = runner.runtime_bytes(runner.MANIFEST["baseline_revision"])
+        self.assertIn("SKILL.md", source)
+        self.assertNotIn("stages/topology.md", source)
+        self.assertIn("stages/idea.md", source)
+
     def test_archive_paths_reject_traversal_and_windows_drives(self):
         for path in ("../auth.json", "/etc/passwd", "C:/private.txt", "stages/../../config", "stages\\file"):
             self.assertFalse(runner.safe_member(path), path)

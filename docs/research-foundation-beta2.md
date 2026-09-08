@@ -21,7 +21,7 @@
 
 ## 현재 구성
 
-실행 지침은 SKILL과 Topology·Research·Discovery·Web Evidence Loop·Lab으로 구성한다. 전체 제품 개발 계획이나 종합 UX 확정을 별도 단계로 요구하지 않는다.
+설치 대상은 `skills/elenchus/`이며 `docs/`와 `tests/`는 저장소 루트에 둔다. 실행 지침은 SKILL과 Topology·Research·Discovery·Web Evidence Loop·Lab으로 구성한다. 전체 제품 개발 계획이나 종합 UX 확정을 별도 단계로 요구하지 않는다.
 
 beta.2 게시 이후 현재 브랜치에서 자동 업데이트 코드·진입 절차, Idea·Execution 호환 파일과 구판 문서 이전 규칙을 제거했다. 설치는 수동으로 수행한다. 패키지 검사는 현재 지침의 파일 존재·로컬 링크·진입 경로를 확인하며 구판 설치기 호환성을 요구하지 않는다.
 

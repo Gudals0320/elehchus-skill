@@ -5,6 +5,7 @@ import unittest
 from urllib.parse import unquote, urlsplit
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+SKILL_ROOT = REPO_ROOT / "skills/elenchus"
 GUIDES = {f"stages/{name}.md" for name in (
     "topology", "research", "discovery", "web-evidence-loop", "lab"
 )}
@@ -22,13 +23,25 @@ class CurrentPackageTests(unittest.TestCase):
     def test_current_runtime_files_exist(self):
         for name in {"LICENSE", "SKILL.md", "agents/openai.yaml"} | GUIDES:
             with self.subTest(file=name):
-                self.assertTrue((REPO_ROOT / name).is_file(), name)
+                self.assertTrue((SKILL_ROOT / name).is_file(), name)
+
+    def test_install_directory_contains_only_runtime_and_license(self):
+        files = {p.relative_to(SKILL_ROOT).as_posix() for p in SKILL_ROOT.rglob("*") if p.is_file()}
+        self.assertEqual(files, {"LICENSE", "SKILL.md", "agents/openai.yaml"} | GUIDES)
+        self.assertEqual((SKILL_ROOT / "LICENSE").read_bytes(), (REPO_ROOT / "LICENSE").read_bytes())
+
+    def test_current_readme_links_resolve(self):
+        for link in markdown_links(REPO_ROOT / "README.md"):
+            parsed = urlsplit(link)
+            if not parsed.scheme and not parsed.netloc and parsed.path:
+                with self.subTest(link=link):
+                    self.assertTrue((REPO_ROOT / unquote(parsed.path)).is_file())
 
     def test_local_guide_links_resolve_and_all_stages_are_reachable(self):
         graph = {}
-        documents = [REPO_ROOT / "SKILL.md", *(REPO_ROOT / "stages").glob("*.md")]
+        documents = [SKILL_ROOT / "SKILL.md", *(SKILL_ROOT / "stages").glob("*.md")]
         for document in documents:
-            name = document.relative_to(REPO_ROOT).as_posix()
+            name = document.relative_to(SKILL_ROOT).as_posix()
             graph[name] = set()
             for link in markdown_links(document):
                 with self.subTest(document=name, link=link):
@@ -40,9 +53,9 @@ class CurrentPackageTests(unittest.TestCase):
                     relative = Path(unquote(parsed.path))
                     self.assertFalse(relative.is_absolute(), link)
                     target = (document.parent / relative).resolve()
-                    self.assertTrue(target.is_relative_to(REPO_ROOT), link)
+                    self.assertTrue(target.is_relative_to(SKILL_ROOT), link)
                     self.assertTrue(target.is_file(), link)
-                    graph[name].add(target.relative_to(REPO_ROOT).as_posix())
+                    graph[name].add(target.relative_to(SKILL_ROOT).as_posix())
         self.assertTrue({"stages/topology.md", "stages/research.md"} <= graph["SKILL.md"])
         pending, reached = ["SKILL.md"], set()
         while pending:

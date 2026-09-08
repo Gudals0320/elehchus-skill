@@ -88,17 +88,19 @@ def git(repo: Path, *args: str) -> bytes:
     return subprocess.run(["git", *args], cwd=repo, capture_output=True, check=True).stdout
 
 
-def runtime_blobs(repo: Path, revision: str, runtime_paths: list[str]) -> tuple[str, dict[str, bytes]]:
+def runtime_blobs(repo: Path, revision: str, runtime_paths: list[str], runtime_root: str) -> tuple[str, dict[str, bytes]]:
     # Blob transport is binary. No archive/export attributes, checkout conversion or text mode.
     commit = git(repo, "rev-parse", "--verify", revision + "^{commit}").decode("ascii").strip()
     result = {}
-    entries = git(repo, "ls-tree", "-rz", commit, "--", *runtime_paths).split(b"\0")
+    prefix = PurePosixPath(safe_relative(runtime_root))
+    paths = [(prefix / safe_relative(path)).as_posix() for path in runtime_paths]
+    entries = git(repo, "ls-tree", "-rz", commit, "--", *paths).split(b"\0")
     for entry in entries:
         if not entry:
             continue
         metadata, raw_name = entry.split(b"\t", 1)
         mode, kind, object_id = metadata.split(b" ")
-        name = safe_relative(raw_name.decode("utf-8"))
+        name = PurePosixPath(safe_relative(raw_name.decode("utf-8"))).relative_to(prefix).as_posix()
         if mode not in {b"100644", b"100755"} or kind != b"blob":
             raise ValueError("runtime must contain ordinary Git blobs only")
         result[name] = git(repo, "cat-file", "blob", object_id.decode("ascii"))
@@ -118,7 +120,7 @@ def freeze(repo: Path, revision: str, output: Path) -> dict:
     if output.exists():
         raise ValueError("freeze destination already exists; choose a new label")
     manifest = load(HERE / "manifest.json")
-    commit, source = runtime_blobs(repo, revision, manifest["runtime_paths"])
+    commit, source = runtime_blobs(repo, revision, manifest["runtime_paths"], manifest["runtime_root"])
     output.mkdir(parents=True)
     for name, data in source.items():
         write(output / "runtime" / name, data)

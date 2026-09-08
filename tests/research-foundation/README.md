@@ -58,7 +58,7 @@ export는 개별 누락·읽기 실패·금지 경로를 기록하고 성공 파
 
 ## 무결성과 검사
 
-freeze는 Git blob의 정확한 바이트를 바이너리로 추출한다. `git archive`나 checkout 텍스트 변환을 사용하지 않으며 CRLF와 LF 수를 각 source 파일에 기록한다. 결과 해시는 원문/공개 파일의 바이트 해시이고, native prompt의 wire bytes나 모델 내부 정규화에 대한 주장은 하지 않는다. 이 폴더의 `.gitattributes`는 평가 자료의 저장 바이트를 유지한다.
+새 freeze는 `skills/elenchus/`에서 설치 대상만 추출하고 폴더 내부 상대 경로로 저장한다. 과거 고정 스냅샷은 당시 경로·바이트를 보존한다. freeze는 Git blob의 정확한 바이트를 바이너리로 추출한다. `git archive`나 checkout 텍스트 변환을 사용하지 않으며 CRLF와 LF 수를 각 source 파일에 기록한다. 결과 해시는 원문/공개 파일의 바이트 해시이고, native prompt의 wire bytes나 모델 내부 정규화에 대한 주장은 하지 않는다. 이 폴더의 `.gitattributes`는 평가 자료의 저장 바이트를 유지한다.
 
 ```powershell
 python -m unittest discover -s tests/research-foundation -p "test_*.py"

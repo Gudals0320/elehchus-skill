@@ -71,8 +71,20 @@ def safe_member(name: str) -> bool:
 
 
 def runtime_bytes(revision: str | None = None) -> dict[str, bytes]:
+    skill_root = REPO / "skills/elenchus"
     if revision:
-        archive = subprocess.run(["git", "archive", "--format=tar", revision, *MANIFEST["runtime_paths"]],
+        # Historical evaluation revisions retain their original root layout.
+        nested = subprocess.run(
+            ["git", "ls-tree", "--name-only", revision, "--", "skills/elenchus"],
+            cwd=REPO, check=True, capture_output=True).stdout.strip()
+        prefix = "skills/elenchus/" if nested else ""
+        requested = ["skills/elenchus"] if nested else MANIFEST["runtime_paths"]
+        paths = subprocess.run(
+            ["git", "ls-tree", "-z", "--name-only", revision, "--", *requested],
+            cwd=REPO, check=True, capture_output=True).stdout.decode("utf-8").strip("\0").split("\0")
+        if not paths or not paths[0]:
+            raise ValueError("No runtime paths in revision")
+        archive = subprocess.run(["git", "archive", "--format=tar", revision, "--", *paths],
                                  cwd=REPO, check=True, capture_output=True).stdout
         result = {}
         with tarfile.open(fileobj=io.BytesIO(archive)) as stream:
@@ -80,16 +92,16 @@ def runtime_bytes(revision: str | None = None) -> dict[str, bytes]:
                 if not safe_member(member.name) or member.issym() or member.islnk():
                     raise ValueError("Unsafe Git archive member")
                 if member.isfile():
-                    result[member.name] = stream.extractfile(member).read()
-        return result
-    result = {}
-    for relative in MANIFEST["runtime_paths"]:
-        entry = REPO / relative
-        for path in ([entry] if entry.is_file() else sorted(entry.rglob("*"))):
+                    result[member.name.removeprefix(prefix)] = stream.extractfile(member).read()
+    else:
+        result = {}
+        for path in sorted(skill_root.rglob("*")):
+            if path.is_symlink():
+                raise ValueError("Runtime symlinks are not supported")
             if path.is_file() and "__pycache__" not in path.parts and path.suffix != ".pyc":
-                if path.is_symlink():
-                    raise ValueError("Runtime symlinks are not supported")
-                result[path.relative_to(REPO).as_posix()] = path.read_bytes()
+                result[path.relative_to(skill_root).as_posix()] = path.read_bytes()
+    if "SKILL.md" not in result:
+        raise ValueError("Runtime lacks SKILL.md")
     return result
 
 
