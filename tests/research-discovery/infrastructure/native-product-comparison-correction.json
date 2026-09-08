@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-09-07T06:50:15.461723+00:00",
+  "reason": "LF/CRLF collector comparison; no product file mutated by this correction",
+  "records": [
+    {
+      "case": "casino",
+      "prior_manifest_sha256": "369f8a18d6a40190574e650317ccd1ed9f05637ba1f2c410737e263c053d6e03",
+      "prior_product_unchanged": false,
+      "corrected_manifest_sha256": "4a116583aa706fc6e740b15e63d7b24a9dccf2c54dda783b3a10ddc82e71394a",
+      "current_equals_seed_bytes": true,
+      "current_hex": "554e494d504c454d454e5445440d0a"
+    },
+    {
+      "case": "photo-organizer",
+      "prior_manifest_sha256": "d9e476a802ed3a6883b2d329d497d7eb6b48bb5463320a6fab429d368df488e5",
+      "prior_product_unchanged": false,
+      "corrected_manifest_sha256": "f8b6bed09fabb947c4831e90a6d85524531cf2559ba57a7a908a619f3ecfa9f3",
+      "current_equals_seed_bytes": true,
+      "current_hex": "554e494d504c454d454e5445440d0a"
+    }
+  ]
+}

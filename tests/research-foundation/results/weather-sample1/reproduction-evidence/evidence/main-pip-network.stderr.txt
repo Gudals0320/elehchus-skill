@@ -1,0 +1,3 @@
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: C:\Codex\Elenchus\tests\research-foundation\.work\weather-sample1-reproduction-clean\run\project\.elenchus\lab\R002\.venv\Scripts\python.exe -m pip install --upgrade pip

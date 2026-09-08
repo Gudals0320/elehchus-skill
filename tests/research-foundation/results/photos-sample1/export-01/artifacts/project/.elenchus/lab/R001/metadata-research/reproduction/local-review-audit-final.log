@@ -1,0 +1,1 @@
+{"checks": {"original_ten_unchanged": true, "copy_ten_unchanged": true, "cli_render_matches_function_and_saved_source_review": true, "twelve_local_probe_checks_pass": true, "python_socket_calls_zero": true, "core_scanner_still_matches_source": true}, "subsecond_raw_visible": true}

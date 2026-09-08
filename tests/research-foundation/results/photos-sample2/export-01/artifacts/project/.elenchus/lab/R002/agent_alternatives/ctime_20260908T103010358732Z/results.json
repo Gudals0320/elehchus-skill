@@ -1,0 +1,45 @@
+{
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "path_before": {
+    "st_dev": 4785643169335545083,
+    "st_ino": 844424931541468,
+    "st_size": 20,
+    "st_mtime_ns": 946684800000000000,
+    "st_ctime_ns": 1788863410358732500,
+    "st_birthtime_ns": 1788863410358732500
+  },
+  "handle_before": {
+    "st_dev": 4785643169335545083,
+    "st_ino": 844424931541468,
+    "st_size": 20,
+    "st_mtime_ns": 946684800000000000,
+    "st_ctime_ns": 1788863410358732500,
+    "st_birthtime_ns": 1788863410358732500
+  },
+  "path_after": {
+    "st_dev": 4785643169335545083,
+    "st_ino": 844424931541468,
+    "st_size": 20,
+    "st_mtime_ns": 946684800000000000,
+    "st_ctime_ns": 1788863410358732500,
+    "st_birthtime_ns": 1788863410358732500
+  },
+  "handle_after": {
+    "st_dev": 4785643169335545083,
+    "st_ino": 844424931541468,
+    "st_size": 20,
+    "st_mtime_ns": 946684800000000000,
+    "st_ctime_ns": 1788863410358732500,
+    "st_birthtime_ns": 1788863410358732500
+  },
+  "same_api_path_fields_stable": true,
+  "same_api_handle_fields_stable": true,
+  "cross_api_fields_equal": {
+    "st_dev": true,
+    "st_ino": true,
+    "st_size": true,
+    "st_mtime_ns": true,
+    "st_ctime_ns": true,
+    "st_birthtime_ns": true
+  }
+}

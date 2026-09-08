@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "engine": {
+    "name": "Pillow",
+    "version": "12.3.0"
+  },
+  "policy": {
+    "identity": "size+sha256+byte_comparison",
+    "date_bucket": "valid DateTimeOriginal local day only",
+    "writes_to_input": false,
+    "max_file_bytes": 16777216,
+    "max_total_bytes": 67108864,
+    "max_pixels": 20000000,
+    "max_frames": 64
+  },
+  "summary": {
+    "files": 0,
+    "statuses": {},
+    "exact_groups": 0,
+    "snapshot_bytes": 0
+  },
+  "records": [],
+  "exact_groups": [],
+  "candidates": []
+}

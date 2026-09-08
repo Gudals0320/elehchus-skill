@@ -1,0 +1,38 @@
+[
+  {
+    "path": "test.log",
+    "sha256": "575824750c62395cb8cdfa9ab257e0407b7c82880e20f31577e88e5e03aba2d3"
+  },
+  {
+    "path": "replay.log",
+    "sha256": "259b90c07a7f6aebe2b41b187b5106fb9eb08d002a07673b51beeedde8a5cbd9"
+  },
+  {
+    "path": "review-summary.json",
+    "sha256": "e7a9a40a166925d624c52a67faf47b05c94536bbc8ded243f2a05434fed67914"
+  },
+  {
+    "path": "review.log",
+    "sha256": "6b85e227dec48ba4121b71ddf879ad7918a33e9b4020e9ed311806bc6f718fef"
+  },
+  {
+    "path": "input-manifest.json",
+    "sha256": "8972a40aea8bede0e183d5a4a712bc367d11531c7465cc98be380577a0b48ff6"
+  },
+  {
+    "path": "input-after-manifest.json",
+    "sha256": "a904c7570dd0c9043196083e35a225eec5af2fa0f379563f90b9c15e74c50318"
+  },
+  {
+    "path": "lab/R002/output/requested-run-summary.json",
+    "sha256": "20a5023293fb3d054b89fe5b7a9f8d8d951c76d1e48b5f4ef6d3437a74af7e88"
+  },
+  {
+    "path": "lab/R002/output/requested-seoul-query.json",
+    "sha256": "8aeee5c50945fd4c74a7d9ad2b2b872ec2b3d1d26cf48cbfb7302160ae0548d9"
+  },
+  {
+    "path": "lab/R002/output/requested-weather.sqlite",
+    "sha256": "0e900b652cf0ccfe9b0b24792f3d6d7a5ed1f77094f003c8c272501a441e05bd"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "command": [
+    "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample1-reproduction-clean\\execution\\project\\.elenchus\\lab\\R001\\main\\.venv\\Scripts\\python.exe",
+    "-B",
+    "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample1-reproduction-clean\\execution\\project\\.elenchus\\lab\\R002\\identity-research\\review_main.py",
+    "--main-lab",
+    "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample1-reproduction-clean\\execution\\project\\.elenchus\\lab\\R001\\main"
+  ],
+  "cwd": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample1-reproduction-clean\\execution\\project",
+  "started_utc": "2026-09-08T09:28:15.477034+00:00",
+  "finished_utc": "2026-09-08T09:28:15.624026+00:00",
+  "exit_code": 1,
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONIOENCODING": "utf-8",
+    "TEMP": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample1-reproduction-clean\\execution\\tmp",
+    "TMP": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample1-reproduction-clean\\execution\\tmp"
+  }
+}

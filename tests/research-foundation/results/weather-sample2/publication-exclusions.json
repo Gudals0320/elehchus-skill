@@ -1,0 +1,14 @@
+[
+  {
+    "path": "project/.elenchus/lab/R002/.pip-cache",
+    "reason": "environment/cache/link; original retained"
+  },
+  {
+    "path": "project/.elenchus/lab/R002/.venv",
+    "reason": "environment/cache/link; original retained"
+  },
+  {
+    "path": "project/.elenchus/lab/R002/__pycache__",
+    "reason": "environment/cache/link; original retained"
+  }
+]

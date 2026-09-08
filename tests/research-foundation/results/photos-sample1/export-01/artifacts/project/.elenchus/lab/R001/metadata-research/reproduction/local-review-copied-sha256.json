@@ -1,0 +1,18 @@
+{
+  "render_review.py": {
+    "copy_sha256": "46dfe5fb0abc0f42c87e9c824d88378c2f2bbbd973d42352bed304985f212813",
+    "source_sha256": "46dfe5fb0abc0f42c87e9c824d88378c2f2bbbd973d42352bed304985f212813"
+  },
+  "review.md": {
+    "copy_sha256": "1cdaa3ec84948733ce49690df8badb5cbac51c76b00681499aade412a9629287",
+    "source_sha256": "1cdaa3ec84948733ce49690df8badb5cbac51c76b00681499aade412a9629287"
+  },
+  "probe_local_review.py": {
+    "copy_sha256": "b927cb8a3ca498138a7a8ac678e7d491a8d90f561d5a7ba1533f948164d90499",
+    "source_sha256": "b927cb8a3ca498138a7a8ac678e7d491a8d90f561d5a7ba1533f948164d90499"
+  },
+  "local-review-results.json": {
+    "copy_sha256": "f5f7e62684eb716568a28fc9cac095755eb89807382c6578e524f2c37af16496",
+    "source_sha256": "f5f7e62684eb716568a28fc9cac095755eb89807382c6578e524f2c37af16496"
+  }
+}

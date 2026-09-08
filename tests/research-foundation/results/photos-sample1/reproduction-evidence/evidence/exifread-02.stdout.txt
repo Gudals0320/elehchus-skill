@@ -1,0 +1,386 @@
+{
+  "time_utc": "2026-09-08T09:30:18.303085+00:00",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "exifread_version": "3.5.1",
+  "parser_input": "BytesIO copy; original files opened for reading only",
+  "baseline_match": true,
+  "input_hashes_unchanged": true,
+  "results": [
+    {
+      "path": "README.md",
+      "bytes": 744,
+      "sha256": "b9e2ca5fe5662df027703234d9f5c56c18e7cab769214b7340b899fc48acc7fd",
+      "strict_false": {
+        "returned": "empty",
+        "tags": {},
+        "warnings": [
+          "WARNING: File format not recognized."
+        ]
+      },
+      "strict_true": {
+        "returned": "empty",
+        "tags": {},
+        "warnings": [
+          "WARNING: File format not recognized."
+        ]
+      }
+    },
+    {
+      "path": "broken/truncated.jpg",
+      "bytes": 32,
+      "sha256": "aa8b4cd7477ed2392383fc1196567875d3d5d6b733739c1ca1c9d866f8e9c0cc",
+      "strict_false": {
+        "returned": "empty",
+        "tags": {},
+        "warnings": []
+      },
+      "strict_true": {
+        "returned": "empty",
+        "tags": {},
+        "warnings": []
+      }
+    },
+    {
+      "path": "copies/duplicate.jpg",
+      "bytes": 763,
+      "sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "strict_false": {
+        "returned": "tags",
+        "tags": {
+          "Image Orientation": {
+            "display": "Horizontal (normal)",
+            "raw": [
+              1
+            ]
+          },
+          "Image ExifOffset": {
+            "display": "38",
+            "raw": [
+              38
+            ]
+          },
+          "EXIF DateTimeOriginal": {
+            "display": "2024:07:15 10:20:30",
+            "raw": "2024:07:15 10:20:30"
+          },
+          "EXIF OffsetTimeOriginal": {
+            "display": "+09:00",
+            "raw": "+09:00"
+          }
+        },
+        "warnings": []
+      },
+      "strict_true": {
+        "returned": "tags",
+        "tags": {
+          "Image Orientation": {
+            "display": "Horizontal (normal)",
+            "raw": [
+              1
+            ]
+          },
+          "Image ExifOffset": {
+            "display": "38",
+            "raw": [
+              38
+            ]
+          },
+          "EXIF DateTimeOriginal": {
+            "display": "2024:07:15 10:20:30",
+            "raw": "2024:07:15 10:20:30"
+          },
+          "EXIF OffsetTimeOriginal": {
+            "display": "+09:00",
+            "raw": "+09:00"
+          }
+        },
+        "warnings": []
+      }
+    },
+    {
+      "path": "formats/sample.tiff",
+      "bytes": 328,
+      "sha256": "1f29eec7d335ebdc98d141a01357962565e58413fedc9c6e06773134606b580b",
+      "strict_false": {
+        "returned": "tags",
+        "tags": {
+          "Image ImageWidth": {
+            "display": "8",
+            "raw": [
+              8
+            ]
+          },
+          "Image ImageLength": {
+            "display": "6",
+            "raw": [
+              6
+            ]
+          },
+          "Image BitsPerSample": {
+            "display": "[8, 8, 8]",
+            "raw": [
+              8,
+              8,
+              8
+            ]
+          },
+          "Image Compression": {
+            "display": "Uncompressed",
+            "raw": [
+              1
+            ]
+          },
+          "Image PhotometricInterpretation": {
+            "display": "2",
+            "raw": [
+              2
+            ]
+          },
+          "Image StripOffsets": {
+            "display": "184",
+            "raw": [
+              184
+            ]
+          },
+          "Image Orientation": {
+            "display": "Rotated 90 CCW",
+            "raw": [
+              8
+            ]
+          },
+          "Image SamplesPerPixel": {
+            "display": "3",
+            "raw": [
+              3
+            ]
+          },
+          "Image RowsPerStrip": {
+            "display": "6",
+            "raw": [
+              6
+            ]
+          },
+          "Image StripByteCounts": {
+            "display": "144",
+            "raw": [
+              144
+            ]
+          },
+          "Image PlanarConfiguration": {
+            "display": "1",
+            "raw": [
+              1
+            ]
+          },
+          "Image DateTime": {
+            "display": "2024:07:15 10:20:30",
+            "raw": "2024:07:15 10:20:30"
+          }
+        },
+        "warnings": []
+      },
+      "strict_true": {
+        "returned": "tags",
+        "tags": {
+          "Image ImageWidth": {
+            "display": "8",
+            "raw": [
+              8
+            ]
+          },
+          "Image ImageLength": {
+            "display": "6",
+            "raw": [
+              6
+            ]
+          },
+          "Image BitsPerSample": {
+            "display": "[8, 8, 8]",
+            "raw": [
+              8,
+              8,
+              8
+            ]
+          },
+          "Image Compression": {
+            "display": "Uncompressed",
+            "raw": [
+              1
+            ]
+          },
+          "Image PhotometricInterpretation": {
+            "display": "2",
+            "raw": [
+              2
+            ]
+          },
+          "Image StripOffsets": {
+            "display": "184",
+            "raw": [
+              184
+            ]
+          },
+          "Image Orientation": {
+            "display": "Rotated 90 CCW",
+            "raw": [
+              8
+            ]
+          },
+          "Image SamplesPerPixel": {
+            "display": "3",
+            "raw": [
+              3
+            ]
+          },
+          "Image RowsPerStrip": {
+            "display": "6",
+            "raw": [
+              6
+            ]
+          },
+          "Image StripByteCounts": {
+            "display": "144",
+            "raw": [
+              144
+            ]
+          },
+          "Image PlanarConfiguration": {
+            "display": "1",
+            "raw": [
+              1
+            ]
+          },
+          "Image DateTime": {
+            "display": "2024:07:15 10:20:30",
+            "raw": "2024:07:15 10:20:30"
+          }
+        },
+        "warnings": []
+      }
+    },
+    {
+      "path": "notes.txt",
+      "bytes": 27,
+      "sha256": "9e504f69e20609699c0a98bafdc24514b658a5da8b3f56138b994bf163e1a39f",
+      "strict_false": {
+        "returned": "empty",
+        "tags": {},
+        "warnings": [
+          "WARNING: File format not recognized."
+        ]
+      },
+      "strict_true": {
+        "returned": "empty",
+        "tags": {},
+        "warnings": [
+          "WARNING: File format not recognized."
+        ]
+      }
+    },
+    {
+      "path": "plain.png",
+      "bytes": 187,
+      "sha256": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+      "strict_false": {
+        "returned": "empty",
+        "tags": {},
+        "warnings": [
+          "WARNING: PNG file does not have exif data."
+        ]
+      },
+      "strict_true": {
+        "returned": "empty",
+        "tags": {},
+        "warnings": [
+          "WARNING: PNG file does not have exif data."
+        ]
+      }
+    },
+    {
+      "path": "session A/dated.jpg",
+      "bytes": 763,
+      "sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "strict_false": {
+        "returned": "tags",
+        "tags": {
+          "Image Orientation": {
+            "display": "Horizontal (normal)",
+            "raw": [
+              1
+            ]
+          },
+          "Image ExifOffset": {
+            "display": "38",
+            "raw": [
+              38
+            ]
+          },
+          "EXIF DateTimeOriginal": {
+            "display": "2024:07:15 10:20:30",
+            "raw": "2024:07:15 10:20:30"
+          },
+          "EXIF OffsetTimeOriginal": {
+            "display": "+09:00",
+            "raw": "+09:00"
+          }
+        },
+        "warnings": []
+      },
+      "strict_true": {
+        "returned": "tags",
+        "tags": {
+          "Image Orientation": {
+            "display": "Horizontal (normal)",
+            "raw": [
+              1
+            ]
+          },
+          "Image ExifOffset": {
+            "display": "38",
+            "raw": [
+              38
+            ]
+          },
+          "EXIF DateTimeOriginal": {
+            "display": "2024:07:15 10:20:30",
+            "raw": "2024:07:15 10:20:30"
+          },
+          "EXIF OffsetTimeOriginal": {
+            "display": "+09:00",
+            "raw": "+09:00"
+          }
+        },
+        "warnings": []
+      }
+    },
+    {
+      "path": "회전/rotated.jpg",
+      "bytes": 694,
+      "sha256": "c60c3c84e584d5c7c74484eb67f5c9b343f8e63035cf2c3a5c65e2cf6fdf8aed",
+      "strict_false": {
+        "returned": "tags",
+        "tags": {
+          "Image Orientation": {
+            "display": "Rotated 90 CW",
+            "raw": [
+              6
+            ]
+          }
+        },
+        "warnings": []
+      },
+      "strict_true": {
+        "returned": "tags",
+        "tags": {
+          "Image Orientation": {
+            "display": "Rotated 90 CW",
+            "raw": [
+              6
+            ]
+          }
+        },
+        "warnings": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "case": "weather",
+  "freeze_sha256": "4e57aa045ce97050fa989dd4e04fd39570d98c4903ceb35888316e8b004faff0",
+  "input_digest_basis": "SHA-256 of exact UTF-8 input.md bytes. Native tool wire bytes/model internal normalization are not observed.",
+  "model_observed": null,
+  "model_requested": "gpt-6-astra",
+  "prepared_utc": "2026-09-08T08:03:41.959479+00:00",
+  "product_protection": "separate generated workspace and prompt boundary; no technical sandbox or ACL isolation claimed",
+  "reasoning_effort_observed": null,
+  "reasoning_effort_requested": "xhigh",
+  "reproduction_input_sha256": "d47b6c0fe6cf67411c348e647ed545a850deec1fdba694529a18c72c673c414e",
+  "run_id": "weather-sample1",
+  "sample": 1,
+  "schema_version": 1,
+  "session_limits": {
+    "responses": null,
+    "seconds": null
+  },
+  "source_revision": "7f60615183899d6fdfa47c8391688df600010b02",
+  "source_sha256": {
+    "SKILL.md": "57b58f13cf7e983bcab8b16dd1c4694f4879784f0e629e4b818c3091bdd090ac",
+    "agents/openai.yaml": "0d0b57c93efe5fe5524c7bddba3789b53fb31b97fc6ed32478577d08f2a3864d",
+    "scripts/release_update.py": "f228a2e904ba06b02277184c9520e10677677ec5e78322371f9a118998587b12",
+    "stages/discovery.md": "d064e9b91309c92b55cc340159193620b3b5757fd2ed6d1376803a586043d622",
+    "stages/execution.md": "da4be980b04fc06cd9e94510634f539b4d3572ec6465228d6421d573b663b2e3",
+    "stages/idea.md": "da7390eabcb71dab0351e0013c8a4c3ed2c716b80880af31d72d1354af29b8fa",
+    "stages/lab.md": "9f2faa694d0a5843c02718eb3fe79622f9f408481914cac00187f803b83e35c8",
+    "stages/research.md": "feb023ee5a5683e0cf4736ebfa3d15c2314fb0320df5825e379cf251884a6b74",
+    "stages/topology.md": "d03b09b89bd2fd11a85545f58f77c12e2f00a007dc2a6e7bb45306f65e6bdb9a",
+    "stages/web-evidence-loop.md": "fc92fa0481f575d2989fa728d1dea3e19700eb21405cc3a3490dad9211d12902"
+  },
+  "status": "prepared_not_started",
+  "tokens": null,
+  "workspace_initial_sha256": {
+    "input.md": "00f3f633e98373de57b60d0b0ee61e8092f38f93f7b3952ca0b4d3a0cdd8eeaa",
+    "project/README.md": "41d7512f7506b4b0191b7ba61d94fa488cee97d66c2def128f40f644d7a71122",
+    "project/existing-product.txt": "53f0c7f7a926d9252540a73f22338b37ab5d4323fdc4c68041a7ac7ad795fb71",
+    "skill/SKILL.md": "57b58f13cf7e983bcab8b16dd1c4694f4879784f0e629e4b818c3091bdd090ac",
+    "skill/agents/openai.yaml": "0d0b57c93efe5fe5524c7bddba3789b53fb31b97fc6ed32478577d08f2a3864d",
+    "skill/scripts/release_update.py": "f228a2e904ba06b02277184c9520e10677677ec5e78322371f9a118998587b12",
+    "skill/stages/discovery.md": "d064e9b91309c92b55cc340159193620b3b5757fd2ed6d1376803a586043d622",
+    "skill/stages/execution.md": "da4be980b04fc06cd9e94510634f539b4d3572ec6465228d6421d573b663b2e3",
+    "skill/stages/idea.md": "da7390eabcb71dab0351e0013c8a4c3ed2c716b80880af31d72d1354af29b8fa",
+    "skill/stages/lab.md": "9f2faa694d0a5843c02718eb3fe79622f9f408481914cac00187f803b83e35c8",
+    "skill/stages/research.md": "feb023ee5a5683e0cf4736ebfa3d15c2314fb0320df5825e379cf251884a6b74",
+    "skill/stages/topology.md": "d03b09b89bd2fd11a85545f58f77c12e2f00a007dc2a6e7bb45306f65e6bdb9a",
+    "skill/stages/web-evidence-loop.md": "fc92fa0481f575d2989fa728d1dea3e19700eb21405cc3a3490dad9211d12902"
+  }
+}

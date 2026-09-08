@@ -1,0 +1,85 @@
+{
+  "kind": "original_batch_observation",
+  "recorded_utc": "2026-09-07T06:24:52.827524+00:00",
+  "actual_started_samples": 4,
+  "not_started_samples": [
+    "baseline-casino-sample2",
+    "candidate-v1-casino-sample2",
+    "baseline-photo-organizer-sample2",
+    "candidate-v1-photo-organizer-sample2"
+  ],
+  "runs": [
+    {
+      "name": "baseline-casino-sample1",
+      "recorded_status": "timeout",
+      "responses": 2,
+      "original_summary_sha256": "d4c69a25a8d5306e47e68c1640b2aac3ddf5b01fbe5b902852faee3dea4cafbb",
+      "artifact_collection": "unobserved_with_original_non_strict_collector",
+      "use": "visible_trace_only_excluded_from_uniform_repaired_comparison"
+    },
+    {
+      "name": "candidate-v1-casino-sample1",
+      "recorded_status": "timeout",
+      "responses": 2,
+      "original_summary_sha256": "ae5b0e210a29f56c9746280f283d9dceb606e9ff6894945055df38c8d82d8259",
+      "artifact_collection": "unobserved_with_original_non_strict_collector",
+      "use": "visible_trace_only_excluded_from_uniform_repaired_comparison"
+    },
+    {
+      "name": "baseline-photo-organizer-sample1",
+      "recorded_status": "timeout",
+      "responses": 2,
+      "original_summary_sha256": "60e1637a73626d06e9c90498a5a92585cce5d67918a7cf6542b1e5def1784084",
+      "artifact_collection": "unobserved_with_original_non_strict_collector",
+      "use": "visible_trace_only_excluded_from_uniform_repaired_comparison"
+    },
+    {
+      "name": "candidate-v1-photo-organizer-sample1",
+      "recorded_status": "timeout",
+      "responses": 1,
+      "original_summary_sha256": "14866ba58a8744682c92a6eb53df19134135709772671703c46aac3b0d5f99c0",
+      "artifact_collection": "unobserved_with_original_non_strict_collector",
+      "use": "visible_trace_only_excluded_from_uniform_repaired_comparison"
+    }
+  ],
+  "utf8_checks": [
+    {
+      "file": "results/baseline-casino-sample1/turn-01/events.jsonl",
+      "replacement_character_count": 0,
+      "hangul_codepoints": 6052
+    },
+    {
+      "file": "results/baseline-casino-sample1/turn-02/events.jsonl",
+      "replacement_character_count": 0,
+      "hangul_codepoints": 19544
+    },
+    {
+      "file": "results/candidate-v1-casino-sample1/turn-01/events.jsonl",
+      "replacement_character_count": 0,
+      "hangul_codepoints": 6180
+    },
+    {
+      "file": "results/candidate-v1-casino-sample1/turn-02/events.jsonl",
+      "replacement_character_count": 0,
+      "hangul_codepoints": 36028
+    },
+    {
+      "file": "results/baseline-photo-organizer-sample1/turn-01/events.jsonl",
+      "replacement_character_count": 0,
+      "hangul_codepoints": 5451
+    },
+    {
+      "file": "results/baseline-photo-organizer-sample1/turn-02/events.jsonl",
+      "replacement_character_count": 0,
+      "hangul_codepoints": 20506
+    },
+    {
+      "file": "results/candidate-v1-photo-organizer-sample1/turn-01/events.jsonl",
+      "replacement_character_count": 0,
+      "hangul_codepoints": 24620
+    }
+  ],
+  "unicode_diagnostic": "Saved UTF-8 logs contain no replacement characters. Mojibake observed through a host display command was a diagnostic false alarm, not established model input corruption.",
+  "artifact_limit": "Original rglob omitted inaccessible sandbox-created directories; empty artifacts and unchanged-file claims are not complete observation.",
+  "batch_end": "Outer report printing encountered cp949 UnicodeEncodeError after actual model logs were saved."
+}

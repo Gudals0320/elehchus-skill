@@ -1,0 +1,34 @@
+{
+  "command": [
+    "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample1-reproduction-clean\\execution\\project\\.elenchus\\lab\\R001\\main\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "pip",
+    "--isolated",
+    "install",
+    "--target",
+    "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample1-reproduction-clean\\execution\\project\\.elenchus\\lab\\R001\\metadata-research\\deps",
+    "--cache-dir",
+    "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample1-reproduction-clean\\execution\\project\\.elenchus\\lab\\R001\\metadata-research\\pip-cache",
+    "--disable-pip-version-check",
+    "--retries",
+    "0",
+    "--timeout",
+    "20",
+    "--no-compile",
+    "--only-binary=:all:",
+    "--require-hashes",
+    "-r",
+    "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample1-reproduction-clean\\execution\\project\\.elenchus\\lab\\R001\\metadata-research\\requirements.txt"
+  ],
+  "cwd": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample1-reproduction-clean\\execution\\project",
+  "started_utc": "2026-09-08T09:28:11.850913+00:00",
+  "finished_utc": "2026-09-08T09:28:12.872748+00:00",
+  "exit_code": 0,
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONIOENCODING": "utf-8",
+    "TEMP": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample1-reproduction-clean\\execution\\tmp",
+    "TMP": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample1-reproduction-clean\\execution\\tmp"
+  }
+}

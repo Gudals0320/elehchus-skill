@@ -1,0 +1,420 @@
+{
+  "schema_version": 1,
+  "engine": {
+    "name": "Pillow",
+    "version": "12.3.0"
+  },
+  "policy": {
+    "identity": "size+sha256+byte_comparison",
+    "date_bucket": "valid DateTimeOriginal local day only",
+    "writes_to_input": false,
+    "max_file_bytes": 16777216,
+    "max_total_bytes": 67108864,
+    "max_pixels": 20000000,
+    "max_frames": 64
+  },
+  "summary": {
+    "files": 8,
+    "statuses": {
+      "invalid_image": 1,
+      "non_image_or_unsupported": 2,
+      "ok": 5
+    },
+    "exact_groups": 1,
+    "snapshot_bytes": 3538
+  },
+  "records": [
+    {
+      "path": "README.md",
+      "size": 744,
+      "sha256": "b9e2ca5fe5662df027703234d9f5c56c18e7cab769214b7340b899fc48acc7fd",
+      "filesystem_mtime_ns": 1788854622051326000,
+      "status": "non_image_or_unsupported",
+      "errors": [
+        {
+          "stage": "identify",
+          "type": "UnidentifiedImageError",
+          "message": "cannot identify image file <_io.BytesIO object at 0x000002293543C9F0>"
+        }
+      ],
+      "warnings": [],
+      "format": null,
+      "encoded_size": null,
+      "reported_size": null,
+      "display_size": null,
+      "orientation": null,
+      "orientation_status": "missing",
+      "dates": [],
+      "capture": null,
+      "frames": null,
+      "validated_frames": 0,
+      "metadata_status": "not_read",
+      "verify_status": "not_run",
+      "decode_status": "not_run"
+    },
+    {
+      "path": "broken/truncated.jpg",
+      "size": 32,
+      "sha256": "aa8b4cd7477ed2392383fc1196567875d3d5d6b733739c1ca1c9d866f8e9c0cc",
+      "filesystem_mtime_ns": 1788854622050291200,
+      "status": "invalid_image",
+      "errors": [
+        {
+          "stage": "identify",
+          "type": "OSError",
+          "message": "Truncated File Read"
+        }
+      ],
+      "warnings": [],
+      "format": null,
+      "encoded_size": null,
+      "reported_size": null,
+      "display_size": null,
+      "orientation": null,
+      "orientation_status": "missing",
+      "dates": [],
+      "capture": null,
+      "frames": null,
+      "validated_frames": 0,
+      "metadata_status": "not_read",
+      "verify_status": "not_run",
+      "decode_status": "not_run"
+    },
+    {
+      "path": "copies/duplicate.jpg",
+      "size": 763,
+      "sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "filesystem_mtime_ns": 1788854622048222500,
+      "status": "ok",
+      "errors": [],
+      "warnings": [],
+      "format": "JPEG",
+      "encoded_size": [
+        8,
+        6
+      ],
+      "reported_size": [
+        8,
+        6
+      ],
+      "display_size": [
+        8,
+        6
+      ],
+      "orientation": 1,
+      "orientation_status": "valid",
+      "dates": [
+        {
+          "source": "ExifIFD.DateTimeOriginal",
+          "meaning": "capture",
+          "raw": "2024:07:15 10:20:30",
+          "offset_raw": "+09:00",
+          "subsecond_raw": null,
+          "local": "2024-07-15T10:20:30",
+          "utc": "2024-07-15T01:20:30Z",
+          "status": "offset_known",
+          "warnings": []
+        }
+      ],
+      "capture": {
+        "source": "ExifIFD.DateTimeOriginal",
+        "meaning": "capture",
+        "raw": "2024:07:15 10:20:30",
+        "offset_raw": "+09:00",
+        "subsecond_raw": null,
+        "local": "2024-07-15T10:20:30",
+        "utc": "2024-07-15T01:20:30Z",
+        "status": "offset_known",
+        "warnings": []
+      },
+      "frames": 1,
+      "validated_frames": 1,
+      "metadata_status": "ok",
+      "verify_status": "passed",
+      "decode_status": "passed"
+    },
+    {
+      "path": "formats/sample.tiff",
+      "size": 328,
+      "sha256": "1f29eec7d335ebdc98d141a01357962565e58413fedc9c6e06773134606b580b",
+      "filesystem_mtime_ns": 1788854622049776400,
+      "status": "ok",
+      "errors": [],
+      "warnings": [],
+      "format": "TIFF",
+      "encoded_size": [
+        8,
+        6
+      ],
+      "reported_size": [
+        6,
+        8
+      ],
+      "display_size": [
+        6,
+        8
+      ],
+      "orientation": 8,
+      "orientation_status": "valid",
+      "dates": [
+        {
+          "source": "IFD0.DateTime",
+          "meaning": "modified",
+          "raw": "2024:07:15 10:20:30",
+          "offset_raw": null,
+          "subsecond_raw": null,
+          "local": "2024-07-15T10:20:30",
+          "utc": null,
+          "status": "timezone_unknown",
+          "warnings": []
+        }
+      ],
+      "capture": null,
+      "frames": 1,
+      "validated_frames": 1,
+      "metadata_status": "ok",
+      "verify_status": "passed",
+      "decode_status": "passed"
+    },
+    {
+      "path": "notes.txt",
+      "size": 27,
+      "sha256": "9e504f69e20609699c0a98bafdc24514b658a5da8b3f56138b994bf163e1a39f",
+      "filesystem_mtime_ns": 1788854622050810600,
+      "status": "non_image_or_unsupported",
+      "errors": [
+        {
+          "stage": "identify",
+          "type": "UnidentifiedImageError",
+          "message": "cannot identify image file <_io.BytesIO object at 0x0000022936641FD0>"
+        }
+      ],
+      "warnings": [],
+      "format": null,
+      "encoded_size": null,
+      "reported_size": null,
+      "display_size": null,
+      "orientation": null,
+      "orientation_status": "missing",
+      "dates": [],
+      "capture": null,
+      "frames": null,
+      "validated_frames": 0,
+      "metadata_status": "not_read",
+      "verify_status": "not_run",
+      "decode_status": "not_run"
+    },
+    {
+      "path": "plain.png",
+      "size": 187,
+      "sha256": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+      "filesystem_mtime_ns": 1788854622049260800,
+      "status": "ok",
+      "errors": [],
+      "warnings": [],
+      "format": "PNG",
+      "encoded_size": [
+        8,
+        6
+      ],
+      "reported_size": [
+        8,
+        6
+      ],
+      "display_size": [
+        8,
+        6
+      ],
+      "orientation": null,
+      "orientation_status": "missing",
+      "dates": [],
+      "capture": null,
+      "frames": 1,
+      "validated_frames": 1,
+      "metadata_status": "ok",
+      "verify_status": "passed",
+      "decode_status": "passed"
+    },
+    {
+      "path": "session A/dated.jpg",
+      "size": 763,
+      "sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "filesystem_mtime_ns": 1788854622047703200,
+      "status": "ok",
+      "errors": [],
+      "warnings": [],
+      "format": "JPEG",
+      "encoded_size": [
+        8,
+        6
+      ],
+      "reported_size": [
+        8,
+        6
+      ],
+      "display_size": [
+        8,
+        6
+      ],
+      "orientation": 1,
+      "orientation_status": "valid",
+      "dates": [
+        {
+          "source": "ExifIFD.DateTimeOriginal",
+          "meaning": "capture",
+          "raw": "2024:07:15 10:20:30",
+          "offset_raw": "+09:00",
+          "subsecond_raw": null,
+          "local": "2024-07-15T10:20:30",
+          "utc": "2024-07-15T01:20:30Z",
+          "status": "offset_known",
+          "warnings": []
+        }
+      ],
+      "capture": {
+        "source": "ExifIFD.DateTimeOriginal",
+        "meaning": "capture",
+        "raw": "2024:07:15 10:20:30",
+        "offset_raw": "+09:00",
+        "subsecond_raw": null,
+        "local": "2024-07-15T10:20:30",
+        "utc": "2024-07-15T01:20:30Z",
+        "status": "offset_known",
+        "warnings": []
+      },
+      "frames": 1,
+      "validated_frames": 1,
+      "metadata_status": "ok",
+      "verify_status": "passed",
+      "decode_status": "passed"
+    },
+    {
+      "path": "회전/rotated.jpg",
+      "size": 694,
+      "sha256": "c60c3c84e584d5c7c74484eb67f5c9b343f8e63035cf2c3a5c65e2cf6fdf8aed",
+      "filesystem_mtime_ns": 1788854622048740600,
+      "status": "ok",
+      "errors": [],
+      "warnings": [],
+      "format": "JPEG",
+      "encoded_size": [
+        8,
+        6
+      ],
+      "reported_size": [
+        8,
+        6
+      ],
+      "display_size": [
+        6,
+        8
+      ],
+      "orientation": 6,
+      "orientation_status": "valid",
+      "dates": [],
+      "capture": null,
+      "frames": 1,
+      "validated_frames": 1,
+      "metadata_status": "ok",
+      "verify_status": "passed",
+      "decode_status": "passed"
+    }
+  ],
+  "exact_groups": [
+    {
+      "id": "exact-001",
+      "sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "size": 763,
+      "evidence": "sha256_and_equal_bytes",
+      "members": [
+        "copies/duplicate.jpg",
+        "session A/dated.jpg"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "path": "README.md",
+      "date_bucket": null,
+      "date_source": null,
+      "exact_group": null,
+      "review_reasons": [
+        "non_image_or_unsupported"
+      ],
+      "action": "review_only"
+    },
+    {
+      "path": "broken/truncated.jpg",
+      "date_bucket": null,
+      "date_source": null,
+      "exact_group": null,
+      "review_reasons": [
+        "invalid_image"
+      ],
+      "action": "review_only"
+    },
+    {
+      "path": "copies/duplicate.jpg",
+      "date_bucket": "2024-07-15",
+      "date_source": "ExifIFD.DateTimeOriginal",
+      "exact_group": "exact-001",
+      "review_reasons": [
+        "exact_byte_duplicate"
+      ],
+      "action": "review_only"
+    },
+    {
+      "path": "formats/sample.tiff",
+      "date_bucket": null,
+      "date_source": null,
+      "exact_group": null,
+      "review_reasons": [
+        "capture_date_missing",
+        "orientation_transform_for_display"
+      ],
+      "action": "review_only"
+    },
+    {
+      "path": "notes.txt",
+      "date_bucket": null,
+      "date_source": null,
+      "exact_group": null,
+      "review_reasons": [
+        "non_image_or_unsupported"
+      ],
+      "action": "review_only"
+    },
+    {
+      "path": "plain.png",
+      "date_bucket": null,
+      "date_source": null,
+      "exact_group": null,
+      "review_reasons": [
+        "capture_date_missing",
+        "orientation_missing"
+      ],
+      "action": "review_only"
+    },
+    {
+      "path": "session A/dated.jpg",
+      "date_bucket": "2024-07-15",
+      "date_source": "ExifIFD.DateTimeOriginal",
+      "exact_group": "exact-001",
+      "review_reasons": [
+        "exact_byte_duplicate"
+      ],
+      "action": "review_only"
+    },
+    {
+      "path": "회전/rotated.jpg",
+      "date_bucket": null,
+      "date_source": null,
+      "exact_group": null,
+      "review_reasons": [
+        "capture_date_missing",
+        "orientation_transform_for_display"
+      ],
+      "action": "review_only"
+    }
+  ]
+}

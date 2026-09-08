@@ -1,0 +1,28 @@
+{
+  "path": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample2\\project\\.elenchus\\lab\\R002\\replay_alternatives\\run_20260908T103243670358Z\\results.json",
+  "checks": {
+    "metadata_does_not_imply_different_pixels": true,
+    "orientation_changes_pixel_identity_contract": true,
+    "zero_ahash_distance_is_not_pixel_equality": true,
+    "first_frame_is_not_whole_image": true,
+    "threshold_relation_is_not_transitive": true,
+    "size_mtime_inode_cache_can_miss_mutation": true,
+    "unknown_date_stays_unknown": true,
+    "invalid_date_rejected": true,
+    "byte_compare_rejects_injected_hash_prefilter_collision": true,
+    "input_content_size_mtime_unchanged": true
+  },
+  "hardlink": {
+    "status": "success",
+    "samefile": true,
+    "nlink": 2,
+    "same_inode": true,
+    "alias_edit_visible_through_first_path": true
+  },
+  "lazy_decode": {
+    "open": "success",
+    "load": "failure",
+    "error_type": "OSError",
+    "error": "image file is truncated"
+  }
+}

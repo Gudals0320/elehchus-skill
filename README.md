@@ -1,122 +1,87 @@
 # Elenchus
 
-Elenchus는 모호한 개발·연구 아이디어를 질문, 선택적 조사와 검증 가능한 실행 계획으로 확립하는 Codex 스킬이다.
-
-사용자의 답을 받아 적는 데서 멈추지 않는다. 현재 판단의 전제와 반례를 찾고, 사용자 경험을 바꾸는 빈틈을 질문 하나씩 추적한다. 계획이 합의되기 전에는 구현을 시작하지 않는다.
-
-## 흐름
+Elenchus는 Codex에서 사용자 목적을 구체화하고, 기능적 재료를 설계·구현·검증하는 한국어 탐구 스킬이다. 필요한 코드·데이터·테스트와 환경 제약·실패 경험을 확보해 이후 제작자에게 전달한다.
 
 ```text
-Idea
-→ Research (선택)
-→ Execution
-→ 계획 완료
-→ 일반 모드에서 구현 또는 후속 요청
+Topology ↔ Research
+→ 재료와 결론 전달
+→ 일반 Codex 작업
 ```
 
-- Idea는 문제, 해결 방향과 실제 사용자 경험을 하나의 문서에서 다룬다.
-- Research는 독립 질문별 파일에서 저장소, 적응형 Web Evidence, 승인형 Browser 관찰과 조건부 Lab으로 실행 계획의 불확실성을 줄인다.
-- Execution은 계획을 Phase로 묶고 모든 Build의 사용자 행동과 Approve 조건을 합의한다.
+## 2.0.0의 방향
 
-## 주요 특징
-
-- 사용자에게 한 번에 질문 하나만 제시한다.
-- 의미가 명확한 답변은 반영 내용을 알리고 이어가며, 새로운 해석이나 충돌은 확인한다. 사용자가 허용한 독립적 저위험 Build는 전체 현재 내용을 제시한 뒤 묶음으로 합의할 수 있다.
-- 목표·제약·성공 기준·맥락의 공백을 추적하고, 사용자 결과와 선행 결정에 미치는 영향이 큰 질문부터 다룬다. 미뤄둔 필수 항목도 끝까지 확인한다.
-- 저장소와 문서에서 확인할 수 있는 사실은 먼저 조사한다.
-- External evidence는 결정에 필요한 Claim을 먼저 나누고 공개 접근 경로와 근거 공백을 반복 검증한 뒤 닫는다.
-- 로그인·개인화 환경은 사용자가 지정한 브라우저 탭에서 observation-only로 확인하고 현재 계정·권한·시점에만 적용한다.
-- 비개발자가 화면, 파일, 행동, 비용과 실패 결과를 보고 결정할 수 있게 설명한다.
-- 기능 추가뿐 아니라 유지·축소·연기·제거·만들지 않기를 같은 선택지로 다룬다.
-- 모든 Phase 경계와 Build가 합의되고 전체 closure를 통과하기 전에는 계획을 완료하지 않는다.
-- `[Elenchus · 진행 중]`인 동안만 계획 전용 상태를 유지하고 완료 뒤에는 같은 작업을 일반 모드로 전환한다.
+- **Topology — 탐구의 지형:** 목적·기능·입출력·환경 제약·연구 질문·달성 조건과 조사/실험 방향을 준비한다.
+- **넓은 Research:** 비단순 조사에서는 실제 웹과 독립 질문을 맡은 탐색 agent 두 명을 기본으로 직접 해법·다른 방식/인접 분야·실패 경험을 찾는다. 좁은 사실 확인과 실제 도구 미지원은 구분한다.
+- **실전적 재료:** 기능을 구현·연결하고 실제 실패를 재현·수정한다. 막힌 조건은 다시 웹에서 조사하며 같은 목적의 추가 Research를 열 수 있다.
+- **제작자의 재량:** 기능의 입출력·동작·연결은 설계하지만 최종 화면·전체 동선·제품 중심 개념은 이후 제작자에게 남긴다. CLI·진단 화면·데모도 기능을 확인하는 데 자유롭게 쓴다.
+- **선택적 handoff:** 요청 시 Pro 또는 다른 제작자에게 목적·코드·데이터·테스트·증거·열린 선택을 묶어 준다. Pro 사용이나 자동 업로드를 필수로 만들지 않는다.
 
 ## 설치
 
-Codex에 다음과 같이 요청할 수 있다.
+설치 대상은 저장소 루트가 아닌 **`skills/elenchus`**다. Codex의 skill-installer에 다음과 같이 요청한다.
 
 ```text
-$skill-installer를 사용해 Gudals0320/elehchus-skill 저장소의 루트 스킬을 elenchus라는 이름으로 설치해 줘.
+Gudals0320/elehchus-skill 저장소의 v2.0.0 태그에서
+skills/elenchus 경로를 elenchus 스킬로 설치해 줘.
 ```
 
-설치 스크립트를 직접 사용할 때는 다음과 같이 실행한다.
+설치기 인자는 `--repo Gudals0320/elehchus-skill --path skills/elenchus --ref v2.0.0`다. 수동 설치도 해당 폴더만 Codex 스킬 경로의 `elenchus/`에 복사한다. 설치 후 새 작업에서 호출한다.
 
-```powershell
-py "$env:USERPROFILE\.codex\skills\.system\skill-installer\scripts\install-skill-from-github.py" `
-  --repo Gudals0320/elehchus-skill `
-  --path . `
-  --name elenchus
+```text
+skills/elenchus/     # 설치 대상
+  SKILL.md
+  agents/
+  stages/
+  LICENSE
+docs/               # 설계 문서
+tests/              # 개발 검사·평가 기록
 ```
 
-기존 `~/.codex/skills/elenchus`가 있으면 설치 스크립트는 덮어쓰지 않고 중단한다.
+`docs/`와 `tests/`는 설치 대상 폴더 밖에 있으므로 설치본에 포함되지 않는다. 설치기의 다운로드 단계에서는 저장소 전체를 임시로 받을 수 있지만 실제 설치 폴더에는 지정한 경로만 복사한다.
+
+자동 업데이트는 제공하지 않는다. 버전 교체는 원하는 소스를 직접 설치한다. 기존 설치가 있으면 스킬 검색 경로 밖에 백업한 뒤 폴더를 교체한다.
+
+[정식 릴리스](https://github.com/Gudals0320/elehchus-skill/releases/tag/v2.0.0)의 `elenchus-v2.0.0.zip`에는 설치 대상만 담는다. ZIP의 `elenchus/` 폴더를 스킬 경로에 복사해도 된다.
 
 ## 사용
 
-새 세션을 시작하거나 완료된 세션에 재진입할 때 명시적으로 호출한다. 호출 토큰은 대소문자를 구분하지 않는다.
-
 ```text
-$elenchus 를 사용해 이 아이디어를 실행 전에 구체화해 줘.
-skill:Elenchus 로 기존 계획을 재검토해 줘.
+$elenchus 를 사용해 이 기능에 필요한 재료와 실제 제약을 조사·검증해 줘.
+skill:Elenchus 로 기존 탐구를 재개해 줘.
 ```
 
-일반적인 `Elenchus` 언급, `.elenchus/` 문서의 존재와 `Build`, `Phase`, `execution.md` 같은 용어는 호출로 취급하지 않는다. 진행 중인 세션은 호출 토큰을 반복하지 않아도 계속되지만 `[Elenchus · 완료]` 뒤에는 다시 명시적으로 호출해야 한다.
+명시적 호출의 대소문자·한국어 조사를 허용한다. 진행 중에는 호출을 반복하지 않아도 이어가며 `[Elenchus · 진행 중]`으로 표시한다. 결과 전달·종료 후에는 `[Elenchus · 완료]`로 끝내고 다음 일반 요청부터 표식 없이 작업한다. 과거 대화의 표식·파일 존재만으로 다시 진입하지 않는다.
 
-프로젝트 루트에는 진행 단계에 따라 다음 문서가 만들어진다.
+연구 목표와 중요한 범위를 합의한 뒤 내부 호출·같은 목적의 후속 실험을 매번 승인받지 않는다. 사용자 목적·중요한 제약·큰 비용·접근 범위가 바뀌면 해당 쟁점만 확인한다. 추론과 탐색 깊이는 모델·effort·도구 환경에 영향을 받으며 이번 평가 기준은 Astra/xhigh다.
+
+## 프로젝트 자료
 
 ```text
-./.elenchus/
-├─ idea.md
-├─ research/         선택
+.elenchus/
+├─ topology.md
+├─ research/
 │  ├─ index.md
-│  └─ R###-neutral-topic.md
-├─ lab/              조건부 Research 작업장
-│  └─ R###/
-└─ execution.md
+│  └─ R001-neutral-topic.md
+└─ lab/
+   └─ R001/
 ```
 
-`research/index.md`에는 각 조사의 ID·중립 질문·상태·영향·파일만 두고 상세 근거와 Verdict는 `R###` 파일에 기록한다. External evidence가 필요하면 Claim map, Retrieval plan, 접근 기록, Evidence matrix와 Web closure를 사용한다. 로그인된 사용자 환경이 결정에 필요하면 사용자가 지정한 탭에서만 Browser Evidence를 관찰하며 기존 탭을 임의로 탐색하거나 외부 상태를 변경하지 않는다.
+- [Topology](skills/elenchus/stages/topology.md)는 현재 목적과 연구 계획의 기준이다. [Research](skills/elenchus/stages/research.md)는 독립 질문별 근거·판정을 기록하며 [Discovery](skills/elenchus/stages/discovery.md)와 [Web Evidence](skills/elenchus/stages/web-evidence-loop.md)를 필요한 조사에서 읽는다.
+- [Lab](skills/elenchus/stages/lab.md)은 독립 실행할 코드·데이터·fixture·테스트와 재현 방법을 만드는 작업장이다. 기존 제품과 원본 데이터는 읽기 전용으로 두고 실제 연결은 독립 코드나 사본에서 검증한다.
+- 작동한 부분·실제 실패·주입한 실패·모의 처리·미검증을 구분한다. 기능 구현 실패를 충분한 근거의 부정적 연구 결론과 혼동하지 않는다.
 
-실제 데이터·하드웨어·API 동작을 격리해 관찰해야 할 때만 `.elenchus/lab/R###/`에서 제품 파일과 분리된 실험을 수행한다. Browser 시각 자료는 Verdict에 필수이고 사용자가 승인한 경우에만 비식별화해 해당 Lab 아래에 저장한다. Lab은 자동 삭제하거나 구현 코드로 승격하지 않으며 사용자가 언제든 삭제할 수 있다.
+## 개발과 평가
 
-procedure·API·라이브러리의 독립 탐색이 필요하면 Elenchus가 입력·출력·UX·확정 제약·객관적 환경 사실만 담은 neutral brief를 먼저 보여 준다. 사용자 승인 후에만 이전 대화 이력이 없는 solution explorer subagent 하나를 호출하며, subagent는 읽기 전용 탐색과 권장안까지만 담당한다. 실제 Lab 검증과 최종 Verdict는 메인 Elenchus 세션이 맡는다.
+[beta.2 아키텍처](docs/research-foundation-beta2.md)와 [평가 결과·수정·중단 범위](tests/research-foundation/RESULTS.md)를 참고한다. 네 실제 시도 중 세 세션을 종료했고, 외부 재현 두 번에서 발견한 재현 비교 문제를 별도 수정본으로 보완했다. 잔여 실제 평가·독립 검토는 사용자 요청으로 중단했다. 2.0.0은 이 한계를 공개한 상태로 배포한다. 전체 네 회차가 독립 검증을 통과했다고 주장하지 않는다.
 
-기존 `.elenchus/research.md`는 새 Research를 시작할 때 내용을 보존해 `research/R001-legacy.md` 또는 다음 빈 ID로 이전하고 기존 참조를 갱신한다. 단순히 프로젝트를 읽는 것만으로는 마이그레이션하지 않는다.
+기존 [beta.1 무제한 비교](tests/research-discovery/untimed/RESULTS.md) 및 [이전 전체 결과](tests/research-discovery/RESULTS.md)는 당시 소스·조건의 기록으로 보존한다. 고정 합성 자료 비교를 실제 웹 발견 능력이나 beta.2의 성공 근거로 대체하지 않는다.
 
-`idea.md`는 프로젝트 전체의 누적 의도 계약이며 Phase별 사본이나 별도 `contract.md`를 만들지 않는다. `execution.md`는 하나의 파일에서 다음 두 단계만 사용한다.
-
-```text
-Phase #1
-├─ Build #1
-└─ Build #2
-
-Phase #2
-├─ Build #3
-└─ Build #4
+```powershell
+python -B -m unittest discover -s tests -p 'test_*.py'
+python -B -m unittest discover -s tests/research-discovery -p 'test_*.py'
+python -B -m unittest discover -s tests/research-foundation -p 'test_*.py'
 ```
-
-Build 번호는 Phase마다 초기화하지 않는 프로젝트 전체 ID다. 기존 Phase 헤더 없는 계획은 Phase #1로 간주하고, 새 Phase의 Build는 기존 활성·폐기 Build 중 가장 큰 번호 다음부터 시작한다. Feature는 별도 계획 계층으로 만들지 않으며 기존 Feature의 의미는 하위 Build의 이름·범위·설계 근거에 보존한다.
-
-## Release 확인과 업데이트
-
-Elenchus는 새 Codex 작업에서 시작될 때 최신 정식 Release를 한 번 확인한다.
-
-- 새 버전이 없으면 바로 진행한다.
-- Windows 샌드박스가 네트워크를 차단하면 승인 가능한 네트워크 권한 상승으로 같은 확인을 한 번 재시도한다.
-- 권한 요청이 거절되거나 재시도·GitHub 확인이 실패하면 현재 버전으로 계속하며 같은 작업에서 반복하지 않는다.
-- 새 버전이 있으면 현재·최신 버전과 Release 링크를 보여 주고 업데이트 여부를 묻는다.
-- 명시적인 승인 없이는 설치본을 변경하지 않는다.
-- 업데이트가 완료되면 새 Codex 작업에서 다시 호출한다.
-
-## 범위
-
-Elenchus는 아이디어와 실행 계획을 확정하는 데서 끝난다. `[Elenchus · 진행 중]`인 동안에는 제품 코드 구현과 개발 진행 추적을 수행하지 않는다. `[Elenchus · 완료]` 응답 뒤에는 상태 표식을 제거하고 같은 작업의 후속 요청을 일반 모드로 처리한다.
-
-## 개발 검증
-
-기존 Python 패키지·업데이트 검사는 `python -B -m unittest discover -s tests`로 실행한다. 실제 대화 동작은 [평가 절차](tests/evaluation.md)와 [합성 입력](tests/evaluation-fixtures.md)으로 재실행할 수 있다.
-
-[평가 결과](tests/evaluation-results.md)는 동작 판정과 효용·비용 비교를 구분하며, [실행 기록](tests/evaluation-records.md)에 응답·호출·파일 변화를 연결한다. 시나리오 목록, 실제 모델 실행, 모의 도구와 호스트 검증을 서로의 증거로 대체하지 않는다.
 
 ## 라이선스
 
-MIT License
+[MIT](LICENSE)

@@ -1,0 +1,124 @@
+{
+  "main_code_sha256": "263c4e70a5d638e4667b03c5fe87d4f0cbc6f06120304d7b52ee6631541d50be",
+  "checks": {
+    "same_input_paths": true,
+    "same_core_observations": true,
+    "same_exact_groups": true,
+    "all_candidates_review_only": true,
+    "dated_pair_bucket_uses_capture": true,
+    "tiff_ifd0_date_preserved_not_capture": true,
+    "missing_capture_not_assigned_day": true,
+    "tiff_and_jpeg_transforms_explicit": true,
+    "variants_agree_on_format_decode_display": true,
+    "junction_has_reparse_attribute": true,
+    "junction_skipped": true,
+    "junction_target_not_traversed": true,
+    "junction_root_rejected": true,
+    "target_contents_unchanged": true,
+    "main_code_unchanged_during_review": true
+  },
+  "differences": [],
+  "variant_differences": [],
+  "tiff_ifd0_dates": [
+    {
+      "source": "IFD0.DateTime",
+      "meaning": "modified",
+      "raw": "2024:07:15 10:20:30",
+      "offset_raw": null,
+      "subsecond_raw": null,
+      "local": "2024-07-15T10:20:30",
+      "utc": null,
+      "status": "timezone_unknown",
+      "warnings": []
+    }
+  ],
+  "junction_lstat_attributes": 1040,
+  "junction_scan": {
+    "schema_version": 1,
+    "engine": {
+      "name": "Pillow",
+      "version": "12.3.0"
+    },
+    "policy": {
+      "identity": "size+sha256+byte_comparison",
+      "date_bucket": "valid DateTimeOriginal local day only",
+      "writes_to_input": false,
+      "max_file_bytes": 16777216,
+      "max_total_bytes": 67108864,
+      "max_pixels": 20000000,
+      "max_frames": 64
+    },
+    "summary": {
+      "files": 2,
+      "statuses": {
+        "non_image_or_unsupported": 1,
+        "skipped_link": 1
+      },
+      "exact_groups": 0,
+      "snapshot_bytes": 25
+    },
+    "records": [
+      {
+        "path": "direct.txt",
+        "size": 25,
+        "sha256": "b2fd10d7592744f741758afbd054cfbb50476e753ce21060203384e0cef4b7a9",
+        "filesystem_mtime_ns": 1788857919393050500,
+        "status": "non_image_or_unsupported",
+        "errors": [
+          {
+            "stage": "identify",
+            "type": "UnidentifiedImageError",
+            "message": "cannot identify image from byte snapshot"
+          }
+        ],
+        "warnings": [],
+        "format": null,
+        "encoded_size": null,
+        "reported_size": null,
+        "display_size": null,
+        "orientation": null,
+        "orientation_status": "missing",
+        "dates": [],
+        "capture": null,
+        "frames": null,
+        "validated_frames": 0,
+        "metadata_status": "not_read",
+        "verify_status": "not_run",
+        "decode_status": "not_run"
+      },
+      {
+        "path": "linked-target",
+        "size": 0,
+        "sha256": null,
+        "filesystem_mtime_ns": 1788857919408196500,
+        "status": "skipped_link",
+        "errors": [],
+        "warnings": []
+      }
+    ],
+    "exact_groups": [],
+    "candidates": [
+      {
+        "path": "direct.txt",
+        "date_bucket": null,
+        "date_source": null,
+        "exact_group": null,
+        "review_reasons": [
+          "non_image_or_unsupported"
+        ],
+        "action": "review_only"
+      },
+      {
+        "path": "linked-target",
+        "date_bucket": null,
+        "date_source": null,
+        "exact_group": null,
+        "review_reasons": [
+          "skipped_link"
+        ],
+        "action": "review_only"
+      }
+    ]
+  },
+  "junction_root_error": "input root must not be a symlink or reparse point"
+}

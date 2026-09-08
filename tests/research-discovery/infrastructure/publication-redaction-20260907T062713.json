@@ -1,0 +1,80 @@
+{
+  "kind": "publication-only-redaction",
+  "recorded_utc": "2026-09-07T06:27:13.823610+00:00",
+  "runs": [
+    "baseline-casino-sample1",
+    "candidate-v1-casino-sample1",
+    "baseline-photo-organizer-sample1",
+    "candidate-v1-photo-organizer-sample1"
+  ],
+  "not_model_input_corruption": true,
+  "original_model_input_answer_source_hashes_preserved": true,
+  "files": [
+    {
+      "file": "results/baseline-casino-sample1/summary.json",
+      "before_sha256": "d4c69a25a8d5306e47e68c1640b2aac3ddf5b01fbe5b902852faee3dea4cafbb",
+      "after_sha256": "3b16a426202ec09ea69812abf4fba1a5aaf71487ec8b35b3257f40c5154acbb4",
+      "change": "path redaction or published-hash metadata update"
+    },
+    {
+      "file": "results/baseline-casino-sample1/turn-01/events.jsonl",
+      "before_sha256": "83dd46fca757895608253987ced0b881eba991749c09d97bed48fd2ee2716d3e",
+      "after_sha256": "5ad4ea6ff4b1e7d92091d87fe953d5b277c420e5bbfe7247f74f4df38eb0db86",
+      "change": "path redaction or published-hash metadata update"
+    },
+    {
+      "file": "results/baseline-casino-sample1/turn-02/events.jsonl",
+      "before_sha256": "491f7adc88612d11c3ab9f5772c1de3767c7664edc6b402445a2a951c95fa4bb",
+      "after_sha256": "d2411c20a8c4d9d37ffa11af8c2083773298d3483e6ddbcf593fb22d8b70d096",
+      "change": "path redaction or published-hash metadata update"
+    },
+    {
+      "file": "results/candidate-v1-casino-sample1/summary.json",
+      "before_sha256": "ae5b0e210a29f56c9746280f283d9dceb606e9ff6894945055df38c8d82d8259",
+      "after_sha256": "3d42b42a9ea6ed310c1d27d643292577b09faf364a0935d8a51f1b78962b655d",
+      "change": "path redaction or published-hash metadata update"
+    },
+    {
+      "file": "results/candidate-v1-casino-sample1/turn-01/events.jsonl",
+      "before_sha256": "f4108e027e751191d5d40ddbea56477ad33c0991b012bf5fb5404e4775834fed",
+      "after_sha256": "6d0f87a01872fbf101841665ea2212ee65f79058f20bffe5c02fffaffbcebba2",
+      "change": "path redaction or published-hash metadata update"
+    },
+    {
+      "file": "results/candidate-v1-casino-sample1/turn-02/events.jsonl",
+      "before_sha256": "5ad22ac59a7e39c2a41b9001baa76588f3d3308ae5f92b4e0802b0c012f76c51",
+      "after_sha256": "fe138e60132b61e94a7e71f2dfbde518e50cd43c343b28137ef0ff5904605a4b",
+      "change": "path redaction or published-hash metadata update"
+    },
+    {
+      "file": "results/baseline-photo-organizer-sample1/summary.json",
+      "before_sha256": "60e1637a73626d06e9c90498a5a92585cce5d67918a7cf6542b1e5def1784084",
+      "after_sha256": "76150e95c169d4230c329519669073499bcc00ad26ff2ddc09ea4399d8bb9f65",
+      "change": "path redaction or published-hash metadata update"
+    },
+    {
+      "file": "results/baseline-photo-organizer-sample1/turn-01/events.jsonl",
+      "before_sha256": "215585915ee2f89f92b4ea483eac0576f7b1dec6575d16c0634c717690da516b",
+      "after_sha256": "dd6f5cc6c6b16f0d776df8ba94775771cc5aaf27769db767b12d18a025325fe8",
+      "change": "path redaction or published-hash metadata update"
+    },
+    {
+      "file": "results/baseline-photo-organizer-sample1/turn-02/events.jsonl",
+      "before_sha256": "abbcc1612726756a9e392f85187064408896b6253179130ab30214da56d8c102",
+      "after_sha256": "29d47634cefcce0265ec65b270195a121b3456291fa72645f0b0bc8aadb9545a",
+      "change": "path redaction or published-hash metadata update"
+    },
+    {
+      "file": "results/candidate-v1-photo-organizer-sample1/summary.json",
+      "before_sha256": "14866ba58a8744682c92a6eb53df19134135709772671703c46aac3b0d5f99c0",
+      "after_sha256": "13360609fda71f646eccb1fca92254a2182d0c52dc15e45369164b14f61a7cc8",
+      "change": "path redaction or published-hash metadata update"
+    },
+    {
+      "file": "results/candidate-v1-photo-organizer-sample1/turn-01/events.jsonl",
+      "before_sha256": "c6e15cdb82cc37164a53463bacf72e0b0f7e5ffa272a7c26f80f83534617f1f5",
+      "after_sha256": "1610e46211445f3aec06069e1984758886681e7563533635793e183f27434fd9",
+      "change": "path redaction or published-hash metadata update"
+    }
+  ]
+}

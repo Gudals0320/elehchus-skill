@@ -1,0 +1,1147 @@
+{
+  "kind": "published_digest_metadata_correction",
+  "recorded_utc": "2026-09-07T07:40:08.340262+00:00",
+  "mismatched_existing_fields": 52,
+  "new_metadata_fields": 67,
+  "evidence_files_checked_unchanged": 254,
+  "frozen_source_input_files_checked_unchanged": 38,
+  "protected_inputs_sha256": "fbed4719ac1139268862451e094e628d0da5004cf64ba9690345546605a9cdd0",
+  "input_and_answer_text_digests_preserved": true,
+  "model_wire_bytes_or_internal_normalization_claimed": false,
+  "corrections": [
+    {
+      "metadata": "results/baseline-casino-sample1/summary.json",
+      "before_sha256": "3b16a426202ec09ea69812abf4fba1a5aaf71487ec8b35b3257f40c5154acbb4",
+      "after_sha256": "ba8bd20d9e7b313168c0d925daa04f5df187b0f4dffe3181f9dbb6cf9e60510e",
+      "updates": [
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "results/baseline-photo-organizer-sample1/summary.json",
+      "before_sha256": "76150e95c169d4230c329519669073499bcc00ad26ff2ddc09ea4399d8bb9f65",
+      "after_sha256": "9b8abdd04099c491beeb4b9af4a9e09dd922abdb166664b3fbdc7d2ae7ce2131",
+      "updates": [
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "results/candidate-v1-casino-sample1/summary.json",
+      "before_sha256": "3d42b42a9ea6ed310c1d27d643292577b09faf364a0935d8a51f1b78962b655d",
+      "after_sha256": "4ffc81581fb4837bcf9d24204ab5ddcfb2d7044cc17813870e9efb38c9b48416",
+      "updates": [
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "results/candidate-v1-photo-organizer-sample1/summary.json",
+      "before_sha256": "13360609fda71f646eccb1fca92254a2182d0c52dc15e45369164b14f61a7cc8",
+      "after_sha256": "51f1eff5971916c8b5fc62d824c09b15184388f0629b3021d10e69ecc0a97dc8",
+      "updates": [
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "results/refined-candidate-v2-casino-sample1/summary.json",
+      "before_sha256": "52c813eb284ceed76c9072b67a1883c2bd7f0aca4d952607e67a4d562714f2b0",
+      "after_sha256": "0df72da52456f475fcdc5340c81c336680613eb3679d5e7c4e9a17ca61e100b6",
+      "updates": [
+        {
+          "field": "turns[0].published_input_sha256",
+          "before": "aac0ee360f6ecada135df6f9b1d0ae4d596d609f8c5cb7888f9233d479192cf0",
+          "after": "ecaea8dfa05a7082335464eddc31c01cfd6356678389049849bbdab5a2c72fda",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_answer_sha256",
+          "before": "343755b60e953c8f0e654a93ac45b33541ac41ff234d7a345472821e28cfd8fd",
+          "after": "de5729169e8f8d3ee606cf94c0a825b65258591207ac0f3f08193092caff41ed",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_events_sha256",
+          "before": null,
+          "after": "e96707e8855dfc78cb1c1dd3fd34e1d86a1aefe579ea0c8095a60abe78e78ddf",
+          "kind": "added"
+        },
+        {
+          "field": "turns[1].published_input_sha256",
+          "before": "a77bea37bc6695356731238fa3fc64857fb652729c56472e8bb75b377b22b2ef",
+          "after": "06ffb4b270db869514b959242b1868d3632c7bfae5b10cb2a969ac90844836ea",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[1].published_answer_sha256",
+          "before": "b297a14f9340e205ded3f33ca5672f8b69c37578eb60014ba4540ef6c1a1ec13",
+          "after": "441a16d3526ef4ea9bfa3f7c2edf0aee21a4178f050985ead0591615bf43ad31",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[1].published_events_sha256",
+          "before": null,
+          "after": "7ce3964b67615ac11f84b626eea772091e5688fc5c8c33950e24fcdf639731d1",
+          "kind": "added"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "results/refined-candidate-v2-casino-sample2/summary.json",
+      "before_sha256": "d24106c8e8caa58edf8efae3a9919f139c55ad6ebc1208a5d025af9470899e2c",
+      "after_sha256": "14108e6f3cf88adb11a9b63013067aa80fd09ee27d107e81a2a84c3520cee012",
+      "updates": [
+        {
+          "field": "turns[0].published_input_sha256",
+          "before": "aac0ee360f6ecada135df6f9b1d0ae4d596d609f8c5cb7888f9233d479192cf0",
+          "after": "ecaea8dfa05a7082335464eddc31c01cfd6356678389049849bbdab5a2c72fda",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_answer_sha256",
+          "before": "4d1cf26590989e48467cca9285954ff1690128f10da0493cda74fbf5fd1dd9bb",
+          "after": "8d76c6e323d7897b4f70ddc4e759b2b469fd4679b5e407031f54acc2b38791d4",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_events_sha256",
+          "before": null,
+          "after": "f397c806c3d78ec4776387ed091fcd95a382770df2742761d3efba27cdc082b2",
+          "kind": "added"
+        },
+        {
+          "field": "turns[1].published_input_sha256",
+          "before": "d9da091b787998c75ecbb9545ab2d837b657c7b2e6b33ffd55c32a44498dd29d",
+          "after": "476d8c24a3403669784584b3f0702ec7e84b39f03581e28ac3e61ce4d0ecbcd0",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[1].published_answer_sha256",
+          "before": "1ba35507bec700fced62082b3bc5cdbfcf87c6a71452a96e7846c52ec9185ab5",
+          "after": "b6d3fc27503eaf824148700adbfdfe27235703ed5856a9acd157973fcee56228",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[1].published_events_sha256",
+          "before": null,
+          "after": "86793f7506241c3abbf53798869bab8648ecab5d948ef689ed07f2b5c19d4189",
+          "kind": "added"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "results/refined-candidate-v2-photo-organizer-sample1/summary.json",
+      "before_sha256": "7b1de64fc332c9c6bc3641e08630d2e5dc8a319142d4ca3fcf2789d3c8c8b95e",
+      "after_sha256": "e685d156e3ac6f2fe4fc16f3827a95f8edcaa803ed4d8e40912580b88a008ae5",
+      "updates": [
+        {
+          "field": "turns[0].published_input_sha256",
+          "before": "65090c64a41116500369515046848c8c1173276c48263df71b6bf6722820693d",
+          "after": "47822a6fb15d3b9d5bcc27b38f0a102ee75a6ffe7f64cdb06c02738e7d7c8e37",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_answer_sha256",
+          "before": "8dbfc7fac11380363e22f40d2b325eab117422e15cde0fb5218ff3ceab8e02fe",
+          "after": "c8c6b37f102fc509a37c679ca8ba209ae83b8bb40ff7d847bfa2609f2d52dddd",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_events_sha256",
+          "before": null,
+          "after": "739568b9a769d8db68936056b6600c54a07b960ecf1b26387763eb2574fe860e",
+          "kind": "added"
+        },
+        {
+          "field": "turns[1].published_input_sha256",
+          "before": "74916d7c3e21f504e00e665641ff9127f03bd0b5c885c38f3df790811687bea3",
+          "after": "11431f7b81a2276c8d97e4ef9d208574c1cd3464fbe1ee5b12712fcb44aa9662",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[1].published_answer_sha256",
+          "before": "b260f561c794c64d54cb367e221b71c7c1f05fa58099a259240cc00192abfbe6",
+          "after": "bfcca807f2dd4af647b1addf827ff720b7248e46a251331b8de6c92c72f61d49",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[1].published_events_sha256",
+          "before": null,
+          "after": "fb71d5fe78b8a119b790ac3f08ba0da8a8daa88941f330931caeaa6f8fd02fb9",
+          "kind": "added"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "results/refined-candidate-v2-photo-organizer-sample2/summary.json",
+      "before_sha256": "c56271f2c42964da0450838d827706a6f24d74328f170bad7ffc2ea847efe577",
+      "after_sha256": "71e386c4fa1671e566575fca74f63494197204581516e9fed7e7f302b0f3afce",
+      "updates": [
+        {
+          "field": "turns[0].published_input_sha256",
+          "before": "65090c64a41116500369515046848c8c1173276c48263df71b6bf6722820693d",
+          "after": "47822a6fb15d3b9d5bcc27b38f0a102ee75a6ffe7f64cdb06c02738e7d7c8e37",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_answer_sha256",
+          "before": "7f2d980871acc407af4765fdcc89b73c439ed77379955c78c839b71ae192b068",
+          "after": "55ac2b2af0e9ae41c356c79abe2cfebd4c7f60b4a1c87eab70601c738b631ef4",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_events_sha256",
+          "before": null,
+          "after": "8c6a13a65e449bb3580e12be7b1946ee6053ee1c37b71c52b82fa75656b41e47",
+          "kind": "added"
+        },
+        {
+          "field": "turns[1].published_input_sha256",
+          "before": "e3c011874db07ac0aeb53072dc41b0cc786cb64894032ad338f73605946af781",
+          "after": "197ccb4b00ac1642da4a70897f386ece59a320f23c0a56a38b04877695f66559",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[1].published_answer_sha256",
+          "before": "d40a3673a3e1fb86a085dc362c4d007a3da68e586f262d7204584a051c8609eb",
+          "after": "9765f3675235f2cb3dcce3a78ce15b92718f279813c5a62fcc141d534fc0e064",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[1].published_events_sha256",
+          "before": null,
+          "after": "eb76a0e5e42113842d0aae1825748e2aafbba84206bd4a49c0f9d8c182f17fb7",
+          "kind": "added"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "results/repaired-baseline-casino-sample1/summary.json",
+      "before_sha256": "2735b2b53a780d90215839c2c60ed0da128225beccfa7cca9e6acb9d105a933d",
+      "after_sha256": "d20cf9de5dc9ba13f8915d12f141d6c403876f1df31c0dc8d5a7814e5f880cff",
+      "updates": [
+        {
+          "field": "turns[0].published_input_sha256",
+          "before": "aac0ee360f6ecada135df6f9b1d0ae4d596d609f8c5cb7888f9233d479192cf0",
+          "after": "ecaea8dfa05a7082335464eddc31c01cfd6356678389049849bbdab5a2c72fda",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_answer_sha256",
+          "before": "6d83ef45ca1e563d56d3148cde60c55a01b7a030553da763eb823dab0892f679",
+          "after": "9f8afa23fc9946ff01d322707e8f008efc150c906216be9faa639195f2684c45",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_events_sha256",
+          "before": null,
+          "after": "56dfa249b2f2093176266b9aa7e3eb001070e3669e86fe1314208676ac87315e",
+          "kind": "added"
+        },
+        {
+          "field": "turns[1].published_input_sha256",
+          "before": "10eda8b1e4a7e9f73d3b823d308355d12736e122934985467d915a80db0747d7",
+          "after": "b5dc5b030e0d73884c4a0c6bf62a483acf7b1e2aca0e822210949ebf6575164b",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[1].published_answer_sha256",
+          "before": "18b0166bb85246a250869ad64ecffcd5920be449916e022060bc3f529a7e7a46",
+          "after": "d46ef3ca3e46ef6196f34b21c513f2ab796d5f51e2bd4b446bd228875cbcb7b0",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[1].published_events_sha256",
+          "before": null,
+          "after": "128e6b8a8aff50125fe84e87e3e750c975d904f1a0c6edaea2f6099f1369c725",
+          "kind": "added"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "results/repaired-baseline-casino-sample2/summary.json",
+      "before_sha256": "2f6f6b44036113d5659866a58a5ee773f49b2aee96384349964b8f9c8c0f5b94",
+      "after_sha256": "ee07e640364b8a70180b1bcb6645fbcab563b02e929ee2c9b7899e36df053ad1",
+      "updates": [
+        {
+          "field": "turns[0].published_input_sha256",
+          "before": "aac0ee360f6ecada135df6f9b1d0ae4d596d609f8c5cb7888f9233d479192cf0",
+          "after": "ecaea8dfa05a7082335464eddc31c01cfd6356678389049849bbdab5a2c72fda",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_answer_sha256",
+          "before": "60d1846d3d830e5fd9f6f40df7de3c01c4c5058b13ca3401f8cb984420d82574",
+          "after": "22d54309913c8fd052ada87771ad7827212b2d5a531ca365d77c4ec91d7a79c5",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_events_sha256",
+          "before": null,
+          "after": "53b329db961e89a0a56dcd11c0278ef2420f73adfb53dd7f5ca221a66609ae5b",
+          "kind": "added"
+        },
+        {
+          "field": "turns[1].published_input_sha256",
+          "before": "0661426168bf7214fadd29a10bd9ad0b52e7bb50648c5c3886301cb69fc0e948",
+          "after": "fc61d0b42089ce9cc649bfdaf14084cf4058732ef7874c07288e71c0011e36eb",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[1].published_answer_sha256",
+          "before": "1af102a191a0b07f558bbfa3c9893694c2ac0efbc093188fdada2e882b1695b5",
+          "after": "9003a7fd68cba802ac0355a0374e0fc40e6635759c97be0d5c4fbd8eb3317e3e",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[1].published_events_sha256",
+          "before": null,
+          "after": "5846c73ce7db94249ae1864584f2f937768653457c382492fd421bfa527e4ae6",
+          "kind": "added"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "results/repaired-baseline-photo-organizer-sample1/summary.json",
+      "before_sha256": "55ded474930632256a7c004cd00d419ec14320ca72e3e9cdb923332306e078f2",
+      "after_sha256": "735f7b9439c0236a4fdc5632749565a66f84d636f3cf295142a33ede454be0a4",
+      "updates": [
+        {
+          "field": "turns[0].published_input_sha256",
+          "before": "65090c64a41116500369515046848c8c1173276c48263df71b6bf6722820693d",
+          "after": "47822a6fb15d3b9d5bcc27b38f0a102ee75a6ffe7f64cdb06c02738e7d7c8e37",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_answer_sha256",
+          "before": "44d1a6472b244184d3a946282ad096e77aec0d71902ad19a364ee76a78a4d2a6",
+          "after": "236d1f6ea572ed8eca14d8d93921a7545c518eeb61e0f226999ca8b656daeed7",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_events_sha256",
+          "before": null,
+          "after": "b082a3868e138b15618d1b7f28e5ff5daac336cb03c67a1eead4bd4ea8994507",
+          "kind": "added"
+        },
+        {
+          "field": "turns[1].published_input_sha256",
+          "before": "14f2c24fc506fff3c505983180dec57f1ec8afb9f1caab190739b858637320f0",
+          "after": "54f59023f3de5bf6025d1fec4c789db45ed91111444278af463e79a54358c0b6",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[1].published_answer_sha256",
+          "before": "7d377abaaae8dd86eccc90fd75cb1326c169c379a6caf35edae4c42a8e555a33",
+          "after": "12544e66d22ddd2717bdadeea0c142a72392e01f4f993b404d39eefedee40547",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[1].published_events_sha256",
+          "before": null,
+          "after": "867c484d4a5b75002f6b777232f15d71260dd4cf8cb967aa102dec3304db83d2",
+          "kind": "added"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "results/repaired-baseline-photo-organizer-sample2/summary.json",
+      "before_sha256": "b63d8345241b36653ed87ab88df6bfba3f4b4a8636d13bffbc7b9a63e9814ab8",
+      "after_sha256": "b6054d30d02dcb688c96fc41f4ac120929098117fedaec99d6c01d9be49ddfa9",
+      "updates": [
+        {
+          "field": "turns[0].published_input_sha256",
+          "before": "65090c64a41116500369515046848c8c1173276c48263df71b6bf6722820693d",
+          "after": "47822a6fb15d3b9d5bcc27b38f0a102ee75a6ffe7f64cdb06c02738e7d7c8e37",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_answer_sha256",
+          "before": "be235c19c014b81f6b92335a789716737b97a1b60086903ca6c0a2146d8bf579",
+          "after": "e8fc95a3ee055b176eab4d46317315c3e2dd7e3de5b1607a14cb6bf4833dcf00",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_events_sha256",
+          "before": null,
+          "after": "2a77d5acec4a9a888c22c61966af1883363598374a61188ca94e8242a9ed3398",
+          "kind": "added"
+        },
+        {
+          "field": "turns[1].published_input_sha256",
+          "before": "6343dc7eeb0e3d1ba366b6e9df84d02848a0143318fc1aea2d642579b4d13af8",
+          "after": "5a0f36f4dd1d6910554f9687720dd722427b88bb7231e2417fa3ecd251944677",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[1].published_answer_sha256",
+          "before": "3074952c5da625412b12219f49098982244b0eeb2e80ddb5152e6cf5364eab4d",
+          "after": "bd3a1deb599d83425ee29bbb96ad4dc45dbb8ed8d4b7eae8456443eda4ee61f2",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[1].published_events_sha256",
+          "before": null,
+          "after": "30c73fb30fe96bec3248198c19c4161504d39d9e02f3e4ece68e3854412658ee",
+          "kind": "added"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "results/repaired-candidate-v1-casino-sample1/summary.json",
+      "before_sha256": "06fe3907a0404ec9ad75e622fe34eb450ad69dfb84bd815b3ffc3abd0375a283",
+      "after_sha256": "b414957b10fd7819014ca75932783aee4c2c7c299393592c8235add31398a6c8",
+      "updates": [
+        {
+          "field": "turns[0].published_input_sha256",
+          "before": "aac0ee360f6ecada135df6f9b1d0ae4d596d609f8c5cb7888f9233d479192cf0",
+          "after": "ecaea8dfa05a7082335464eddc31c01cfd6356678389049849bbdab5a2c72fda",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_answer_sha256",
+          "before": "aea92b379cf19bdb568b4cc5477d63959d186376cb26cb07a4f95ffacc8a7cc5",
+          "after": "c3b72a7910e302248a9c840d5009a0310327632b23680556c13c21653255f698",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_events_sha256",
+          "before": null,
+          "after": "9a4ad27e469dd5f226167bd4e6b5dbbc87cd15dcd78b81caa6dfe189d2e03797",
+          "kind": "added"
+        },
+        {
+          "field": "turns[1].published_input_sha256",
+          "before": "46dd67101920ae331fd934284ab26658b4d6d142be2c62aacca53aba4859b4ac",
+          "after": "67806b1aa6f3d817cfe761372acabdda809012300f67b482fcd0c69cb49b809e",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[1].published_answer_sha256",
+          "before": "ae27e09aaa7abbe39bc9a3d61471c790800a49ae48597a4a61d018c95ec6849f",
+          "after": "3b36d85f709d739872ddf80792e8be67f2007d1395448c89f2d2b4188b86e579",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[1].published_events_sha256",
+          "before": null,
+          "after": "b77cc16e7016d11dc817dd0eedead73e2210d60cb1d3f8310cd03402482503b8",
+          "kind": "added"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "results/repaired-candidate-v1-casino-sample2/summary.json",
+      "before_sha256": "ce9909db4fdf4da021e2a59781d2c65d375db5b318f6a3f0eea694e66af8a6bf",
+      "after_sha256": "0ce077e2da563de1f48d66a65c4c274cdc324a3dcf28aa347083393458e25265",
+      "updates": [
+        {
+          "field": "turns[0].published_input_sha256",
+          "before": "aac0ee360f6ecada135df6f9b1d0ae4d596d609f8c5cb7888f9233d479192cf0",
+          "after": "ecaea8dfa05a7082335464eddc31c01cfd6356678389049849bbdab5a2c72fda",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_answer_sha256",
+          "before": "4072e1448e5891010d03161ae36af78db614a2d367685d173367a5b5a8fc5ed3",
+          "after": "b3feb98c8f6cdea541bd6691a792a96fae306fd4823ac4e3a1e37bd00e27f003",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_events_sha256",
+          "before": null,
+          "after": "687087531155fb63c97cb553cc292cb510bce180eace8307a51fdbe02c2b96a2",
+          "kind": "added"
+        },
+        {
+          "field": "turns[1].published_input_sha256",
+          "before": "a552d1d7777298010cf11d2dae4528b00828068ff1a2dccf1fdfacc89541723d",
+          "after": "0bd5778224bdf9ab306c15020ad60c0216bababd5b171c1e4b9afb01c323a743",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[1].published_answer_sha256",
+          "before": "a6d98ef861e0810f0736106deaf6232bc3ee90538573baf4bca03bbd8e23313a",
+          "after": "6c5dbb615c7119b2e894de8e932befec5856ac29c0ef776ad67e27179a7c7e11",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[1].published_events_sha256",
+          "before": null,
+          "after": "059b5b48aff3656cd3af57281b85a4b66ed2c42f995f75ec64b30b4b8122f107",
+          "kind": "added"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "results/repaired-candidate-v1-photo-organizer-sample1/summary.json",
+      "before_sha256": "52be48e81dd2296d8c7efa9e27ff996d1667f9a745e8a5417f702156f17b7c4a",
+      "after_sha256": "4c7d1a4f30aa9b5216d1f1249700c512c074998f7b7c4c8391ea2aa1ef2531b9",
+      "updates": [
+        {
+          "field": "turns[0].published_input_sha256",
+          "before": "65090c64a41116500369515046848c8c1173276c48263df71b6bf6722820693d",
+          "after": "47822a6fb15d3b9d5bcc27b38f0a102ee75a6ffe7f64cdb06c02738e7d7c8e37",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_answer_sha256",
+          "before": "d9ceb8be7ece72da6e4480b9ec25293edd994af859263e887752c66c4c59a6c6",
+          "after": "aef980b3b5fc71227f1a8ce8f2efc99c9c0ec7ebb3cfe1407c9dbd769c6194a2",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_events_sha256",
+          "before": null,
+          "after": "15f4e6d61f7d0eb902e0a3fca3cd7f00212817f417fa8a5bd5abae20ef154896",
+          "kind": "added"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "results/repaired-candidate-v1-photo-organizer-sample2/summary.json",
+      "before_sha256": "b2b827aac71eae83615bd1782ca804e1d3640da3c9fe354bd218726647092b94",
+      "after_sha256": "94461bcd636e3a0ce6894e031ba383c4f4097e4db0a9c0913d913f894b66387b",
+      "updates": [
+        {
+          "field": "turns[0].published_input_sha256",
+          "before": "65090c64a41116500369515046848c8c1173276c48263df71b6bf6722820693d",
+          "after": "47822a6fb15d3b9d5bcc27b38f0a102ee75a6ffe7f64cdb06c02738e7d7c8e37",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_answer_sha256",
+          "before": "45f6f27ee57b41684af5a1500c9481be1d5cd1ffbec3a8103148e3ca96f8ffd2",
+          "after": "0c4f57adc2ca6941560e255df74f93bd73c47e1fe98e2f0ba8904fc571b72627",
+          "kind": "corrected"
+        },
+        {
+          "field": "turns[0].published_events_sha256",
+          "before": null,
+          "after": "5bc6ba9b63e788ba4b6a6ee48008a5dacec04b9b2e9f37e1450bd8daea42ccd9",
+          "kind": "added"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "results/setup-tools-20260907T062037/summary.json",
+      "before_sha256": "bfe0fc69a9788121fc5e7c3965840b857caa787e928acfda12b5609d9f8ae7aa",
+      "after_sha256": "eb691962aaa63bb429bb216bb880bcdcfea879cbe05161e3b5072726096430bf",
+      "updates": [
+        {
+          "field": "published_input_sha256",
+          "before": null,
+          "after": "e8e0b908992f5c88278e5cfa53c4e8d3ac89c48b1806aea3ad0e92436da036e4",
+          "kind": "added"
+        },
+        {
+          "field": "published_answer_sha256",
+          "before": null,
+          "after": "a77630c17a044a3b51e693df578caf66e44290ff4653791a64690eb3677ace4c",
+          "kind": "added"
+        },
+        {
+          "field": "events_sha256",
+          "before": "be0bdd8284ed672f69403632e2704597a770f3f384d76596dd3c89979fceb2f9",
+          "after": "37a978d024597e659b4f17317a8fc409f37e50b7b00132e36656d8256215e01d",
+          "kind": "corrected"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "targeted/results/targeted-v1-active-plan-write/summary.json",
+      "before_sha256": "3f780a031b500773287a4c69d8b66b1f9f361845ef1e9ac792f34a07a462a95d",
+      "after_sha256": "9b8a72ad088427a6f00adf08bc2e3ad88476ff1aff33a73d3588040a054d183a",
+      "updates": [
+        {
+          "field": "published_input_sha256",
+          "before": null,
+          "after": "c26b237f4a29105b2a599d8c45488ceb4f338f897b853dd6c4f7e394f0e3f24e",
+          "kind": "added"
+        },
+        {
+          "field": "published_answer_sha256",
+          "before": "220e297e3428d8831f9425002fa608231eb7afd4556375d860248c4c1f068dec",
+          "after": "4a76762b8c36f2d503496ee6ed0c77ffee579a8c6c9e83697e4f19dc9b1b9880",
+          "kind": "corrected"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "targeted/results/targeted-v1-completed-write/summary.json",
+      "before_sha256": "1f1448bda1ed454412a452f0c5c7db01c88d8dacfd746375da3cb2abb44b7b00",
+      "after_sha256": "619f9ecd31e401d31ae6878db115c8becfab1efd55b5b4bf6a339366f4a3dcbf",
+      "updates": [
+        {
+          "field": "published_input_sha256",
+          "before": null,
+          "after": "aa910bee3fb02b5fc8d24554bbae83a3993beb62cf866fb8776d9e0bb56b18f1",
+          "kind": "added"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "targeted/results/targeted-v1-delegation-unavailable/summary.json",
+      "before_sha256": "75c8432e7b72a6e9fb2c366c2fcc2dc68bf6b79fdfc5ce8a45f7a63db43bbd46",
+      "after_sha256": "2eca344bc4f98fb47c2315afa04cca7149bc68720321eec59b797326821a0108",
+      "updates": [
+        {
+          "field": "published_input_sha256",
+          "before": null,
+          "after": "7789372a643657a0a8a7906e38fb55646607cdc9930b975203cb23c01948794d",
+          "kind": "added"
+        },
+        {
+          "field": "published_answer_sha256",
+          "before": "e44905c9b8866bdf8a4ddd6c178c2d34d7fd3b10f958ffb7f21a52f686285ee3",
+          "after": "236b26f5a32416b4f2f46c70e8ab4d4de6a10b37df8b18460821c728be6bc995",
+          "kind": "corrected"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "targeted/results/targeted-v1-inactive-document/summary.json",
+      "before_sha256": "ee6b98ea2911245153d89e27d51f529e58e8b36f149352183a5d2602f82aa114",
+      "after_sha256": "ab2338b64c381e55866527bffd707bd630f6bef7523306f803b4c8422d38073c",
+      "updates": [
+        {
+          "field": "published_input_sha256",
+          "before": null,
+          "after": "01d8cd297448b240328e8835637e3002128d26b7417c963c291c6c144361e3a4",
+          "kind": "added"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "targeted/results/targeted-v1-single-fact/summary.json",
+      "before_sha256": "1a79a20bf72376b5182c1df0b702323eb6662961b6ac17adbba68f430f8ba12a",
+      "after_sha256": "16d2aed343e9abeb84652f4441764162eb70d96470a0b6098dfeb0a2171610d7",
+      "updates": [
+        {
+          "field": "published_input_sha256",
+          "before": null,
+          "after": "f29b95fd6a5bee8036dfb4e4953f436aec8509e36ea085f897ecbc21f3f3869b",
+          "kind": "added"
+        },
+        {
+          "field": "published_answer_sha256",
+          "before": "76782a77002b868d85f1b678fc867f2c3639a7310cc12cdc46fce756899abe23",
+          "after": "ce402c27caca8ecdb9b222df680aa8c650ded2f3bc4ef7404c4087a25b37e1d2",
+          "kind": "corrected"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "targeted/results/targeted-v1-version-conflict/summary.json",
+      "before_sha256": "25058213c94bb051689d94fc85124520d5e0b66a2b02e798f597570a93c6fc5b",
+      "after_sha256": "6e7ce6d8c38aab5aa76734355618f16ab1e400bfb55902aaf9ffd3f654bd3147",
+      "updates": [
+        {
+          "field": "published_input_sha256",
+          "before": null,
+          "after": "933590710c0b831482a43a19e5c40c972224344642b2ff4f2ac49869b8e44ba6",
+          "kind": "added"
+        },
+        {
+          "field": "published_answer_sha256",
+          "before": "c166777829b3c7768f9ea2d8e562bbe1fe2f6007e509b8421e3cff9f4239284e",
+          "after": "bf276e8e442c7e44fd103375d2448317f6e21ada8dd7ae2f71f4e05a54b56ff0",
+          "kind": "corrected"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "targeted/results/targeted-v2-delegation-unavailable/summary.json",
+      "before_sha256": "144cc99ccae46972d02c20c9eb3325c60666973e8d678f3c9f4719ad066311f4",
+      "after_sha256": "74a2177ac320ea183783c0b50ee59c615feec59906ad58d96826114fa64ce710",
+      "updates": [
+        {
+          "field": "published_input_sha256",
+          "before": null,
+          "after": "7789372a643657a0a8a7906e38fb55646607cdc9930b975203cb23c01948794d",
+          "kind": "added"
+        },
+        {
+          "field": "published_answer_sha256",
+          "before": "451a81b05e25190386d62591fb07850471bd45237751eb30c85b0b1ab8b48081",
+          "after": "71e1d204c2ad934b5840325bffb25577f7a92e6deed97e0d7c1cc7a3e3126d01",
+          "kind": "corrected"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "targeted/results/targeted-v2-single-fact/summary.json",
+      "before_sha256": "d2c93c746cd2c5f8b361d98f513a179c8885318a65e807cfc35f50575bb9955a",
+      "after_sha256": "31881d128ed0646f66f58eb3d055dced9baa38f3a920a0caa5d92f1a8caf617b",
+      "updates": [
+        {
+          "field": "published_input_sha256",
+          "before": null,
+          "after": "f29b95fd6a5bee8036dfb4e4953f436aec8509e36ea085f897ecbc21f3f3869b",
+          "kind": "added"
+        },
+        {
+          "field": "published_answer_sha256",
+          "before": "488df0bf6f0355a8333af78434e7423862976196dd387b7211021f4220f34cd0",
+          "after": "82b4103d070bd0eaa75fa2cb0b89911f9723cb4e604e4abec2b8c27b749d3b59",
+          "kind": "corrected"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "targeted/results/targeted-v2-version-conflict/summary.json",
+      "before_sha256": "8c2459557c8582dac8c934c0041133a493e5a9e345728895e99d285876033b5a",
+      "after_sha256": "d5dd81be8e4609be621e22e9407b6ec3eb2d40d076417de5c34f5391cb149f0e",
+      "updates": [
+        {
+          "field": "published_input_sha256",
+          "before": null,
+          "after": "933590710c0b831482a43a19e5c40c972224344642b2ff4f2ac49869b8e44ba6",
+          "kind": "added"
+        },
+        {
+          "field": "published_answer_sha256",
+          "before": "645281897ad8711ee7b3182e6d4e4d449fcc7a2bbc86b06c4c5197f494642de2",
+          "after": "75ebadf847e5e015f8f78e17a90a096efa80030ce946b0b23f962394925f6321",
+          "kind": "corrected"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "phase-isolation/results/baseline-casino/summary.json",
+      "before_sha256": "3bb7c00cacd8fe03dcc7dc2fb9d03568c2d930c12272b78c1a714bd56f5a3311",
+      "after_sha256": "3401dd5e1003c3b969782c461a63c075114ba2450b67c0942f52da50453a775f",
+      "updates": [
+        {
+          "field": "published_input_sha256",
+          "before": null,
+          "after": "da06b2ddaf49cc2f26eb0ee6add18a5dd7c6ab8dd9c689bbed9480b16d8acb50",
+          "kind": "added"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "phase-isolation/results/baseline-photo-organizer/summary.json",
+      "before_sha256": "a62014b57aad22df38de39ce5305a47a4a7b3ea3a9d0f7f764075d5ed866b68c",
+      "after_sha256": "7bc379edf46f3afa75798d8ccde872aa6a9721a04550d2f30402648f35322a27",
+      "updates": [
+        {
+          "field": "published_input_sha256",
+          "before": null,
+          "after": "2150524b2363a428430e6fa599454cb745c1d60dd3f60135f0efde84e2d74e79",
+          "kind": "added"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "phase-isolation/results/candidate-v2-casino/summary.json",
+      "before_sha256": "e0edf5703d091b2c2c0e24cb44669a687b4a4806363a0b9cda11b487f4274361",
+      "after_sha256": "72317026996388544e208e38a835e2438756487784938794c24135e1612680db",
+      "updates": [
+        {
+          "field": "published_input_sha256",
+          "before": null,
+          "after": "da06b2ddaf49cc2f26eb0ee6add18a5dd7c6ab8dd9c689bbed9480b16d8acb50",
+          "kind": "added"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    },
+    {
+      "metadata": "phase-isolation/results/candidate-v2-photo-organizer/summary.json",
+      "before_sha256": "27d2724b39bb7c662edf08ffa796763917775f13eb2124a13f2aa21d035842f4",
+      "after_sha256": "8eb189d06352e95b0b209b559352355773eee7fce18992241c3a208448cf67c7",
+      "updates": [
+        {
+          "field": "published_input_sha256",
+          "before": null,
+          "after": "2150524b2363a428430e6fa599454cb745c1d60dd3f60135f0efde84e2d74e79",
+          "kind": "added"
+        },
+        {
+          "field": "digest_basis",
+          "before": null,
+          "after": {
+            "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+            "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+            "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+            "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+            "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+            "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+          },
+          "kind": "added"
+        }
+      ]
+    }
+  ]
+}

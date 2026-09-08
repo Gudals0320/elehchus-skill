@@ -1,7 +1,0 @@
-interface:
-  display_name: "Elenchus"
-  short_description: "질문과 필요한 근거 확인으로 사용자 의도·실행 계획 합의"
-  default_prompt: "$elenchus 를 사용해 이 아이디어의 사용자 경험과 실행 계획을 구현 전에 확정해 주세요."
-
-policy:
-  allow_implicit_invocation: false

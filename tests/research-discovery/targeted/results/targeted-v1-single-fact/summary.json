@@ -1,0 +1,170 @@
+{
+  "kind": "targeted-candidate-only",
+  "case": "single-fact",
+  "status": "response_observed",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "started_utc": "2026-09-07T06:32:29.297200+00:00",
+  "limits": {
+    "max_seconds": 180,
+    "max_responses": 1
+  },
+  "source_revision": "0217658b6626bce91c3973e6aac2ec1df9b9bb77",
+  "source_sha256": "ac3edb881eda879a8c7fe3effb91513b84770b67aee7795800da9d27f6dc690a",
+  "source_files": {
+    "SKILL.md": "1379018328aab9de08514659010faa464e6eca19465d34fdd44e5706a7df70c4",
+    "agents/openai.yaml": "d06dc00cbc87ee576a54a9442f6dc97f2496a22e9a9bff7caf3f8230524357cd",
+    "scripts/release_update.py": "e2702947f6914344d7a7ab6fa96b2c494cfc1496f99ca9707d56c348fe89a046",
+    "stages/discovery.md": "30ce4cd891f0e342b58f239a8ce822d2d7a8c98a6907aad4c494b8f5da84edf8",
+    "stages/execution.md": "04711713e1a6c17d0310d95fcaa234c37d8c59e5df22ccbca43597df0c28402c",
+    "stages/idea.md": "abcd6a105a17e2908bd596b8cd6ff71963cd287391a9c52fa86fb8195616bf14",
+    "stages/research.md": "46c0d300f86525cc5c5954b8ca1705cd1a2c26c92a63c0cd4be663f214d15650",
+    "stages/web-evidence-loop.md": "412b2a5165b54850cb7811a769a7ac7cb9cc50fe33ddf6acd9c98622232b9752"
+  },
+  "host_read_setup": {
+    "status": "host_read_ace_prepared",
+    "scope": "temporary project root, inheritable host read only",
+    "before_model_start": true,
+    "started_utc": "2026-09-07T06:32:29.229252+00:00",
+    "finished_utc": "2026-09-07T06:32:29.256280+00:00",
+    "exit_code": 0
+  },
+  "preparation_sha256": "177dad382d2e3c60d815e2622d1be1c45c9def73a178ef2ac6d82900f6f9ed08",
+  "input_sha256": "d9cc07dd0acd2a45a7744dbff9e2348e4ca6a1434831214b98a223ae8b85e75f",
+  "initial_files": {
+    "AGENTS.md": "7a5130e6657c5dec54d620ee7ae9c53a6d44d1e517ec18ede9d734b475860fdb",
+    "app.txt": "144b85c70a192b8c9e428e83cf57eae38bb98495b59a7c6e2108fd0f18b908a1",
+    ".elenchus/idea.md": "8718f66318051d1dfca27291be589f91455fb19d6d171000749cb1e862adfefe",
+    "evidence/current-manual.md": "bb769b05e444a7648c67c9930788c8bdf62ad2d880501d82789452b5bb1f6140",
+    "skill/SKILL.md": "1379018328aab9de08514659010faa464e6eca19465d34fdd44e5706a7df70c4",
+    "skill/agents/openai.yaml": "d06dc00cbc87ee576a54a9442f6dc97f2496a22e9a9bff7caf3f8230524357cd",
+    "skill/scripts/release_update.py": "e2702947f6914344d7a7ab6fa96b2c494cfc1496f99ca9707d56c348fe89a046",
+    "skill/stages/discovery.md": "30ce4cd891f0e342b58f239a8ce822d2d7a8c98a6907aad4c494b8f5da84edf8",
+    "skill/stages/execution.md": "04711713e1a6c17d0310d95fcaa234c37d8c59e5df22ccbca43597df0c28402c",
+    "skill/stages/idea.md": "abcd6a105a17e2908bd596b8cd6ff71963cd287391a9c52fa86fb8195616bf14",
+    "skill/stages/research.md": "46c0d300f86525cc5c5954b8ca1705cd1a2c26c92a63c0cd4be663f214d15650",
+    "skill/stages/web-evidence-loop.md": "412b2a5165b54850cb7811a769a7ac7cb9cc50fe33ddf6acd9c98622232b9752"
+  },
+  "quality_verdict": "not_automatically_graded",
+  "cli_version": "codex-cli 0.153.4",
+  "exit_code": 0,
+  "timed_out": false,
+  "elapsed_seconds": 87.563,
+  "command": [
+    "<user>/AppData/Local/OpenAI/Codex/bin/8e5b6932251c2c1c/codex.exe",
+    "-a",
+    "never",
+    "exec",
+    "--ignore-user-config",
+    "--ignore-rules",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "workspace-write",
+    "-c",
+    "web_search=\"disabled\"",
+    "-c",
+    "features.multi_agent=false",
+    "-m",
+    "gpt-6-astra",
+    "-c",
+    "model_reasoning_effort=\"xhigh\"",
+    "-C",
+    "<fixture>",
+    "--json",
+    "-o",
+    "<probe-temp>\\final.md",
+    "-c",
+    "windows.sandbox=\"elevated\"",
+    "-c",
+    "skills.config=[{path=\"<user>/.codex/skills/elenchus/SKILL.md\",enabled=false},{path=\"<user>/.codex/skills/elenchus-benchmark/SKILL.md\",enabled=false},{path=\"<user>/.codex/skills/elenchus-test/SKILL.md\",enabled=false}]",
+    "-"
+  ],
+  "excluded_event_types": {},
+  "usage": [
+    {
+      "input_tokens": 145494,
+      "cached_input_tokens": 122240,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1993,
+      "reasoning_output_tokens": 227
+    }
+  ],
+  "tool_calls": 7,
+  "answer_sha256": "70d9626b1952e1dd5b9113fba8a0e4232c8c6dcd1ee554b43125390a6cc6f002",
+  "published_answer_sha256": "ce402c27caca8ecdb9b222df680aa8c650ded2f3bc4ef7404c4087a25b37e1d2",
+  "events_sha256": "35aebb22c68e93d522421a5e07029eb4bce932cc3a198b278bd370e3f53fa350",
+  "final_files": {
+    "AGENTS.md": "7a5130e6657c5dec54d620ee7ae9c53a6d44d1e517ec18ede9d734b475860fdb",
+    "app.txt": "144b85c70a192b8c9e428e83cf57eae38bb98495b59a7c6e2108fd0f18b908a1",
+    ".elenchus/idea.md": "2fd33de2071e30c36cccc3ad99fbbfbd3299d73991810acccf76029c3c918dab",
+    ".elenchus/research/index.md": "f691462d755a8729a6bc4a732514077ee8bc1b65e066f0b9243ee3c49332f3be",
+    ".elenchus/research/R001-attachment-size-limit.md": "fa1c4934bbec3c499bd2fc7c9d4e0433c8a10c1f9817391e0a94333e3e958ffd",
+    "evidence/current-manual.md": "bb769b05e444a7648c67c9930788c8bdf62ad2d880501d82789452b5bb1f6140",
+    "skill/SKILL.md": "1379018328aab9de08514659010faa464e6eca19465d34fdd44e5706a7df70c4",
+    "skill/agents/openai.yaml": "d06dc00cbc87ee576a54a9442f6dc97f2496a22e9a9bff7caf3f8230524357cd",
+    "skill/scripts/release_update.py": "e2702947f6914344d7a7ab6fa96b2c494cfc1496f99ca9707d56c348fe89a046",
+    "skill/stages/discovery.md": "30ce4cd891f0e342b58f239a8ce822d2d7a8c98a6907aad4c494b8f5da84edf8",
+    "skill/stages/execution.md": "04711713e1a6c17d0310d95fcaa234c37d8c59e5df22ccbca43597df0c28402c",
+    "skill/stages/idea.md": "abcd6a105a17e2908bd596b8cd6ff71963cd287391a9c52fa86fb8195616bf14",
+    "skill/stages/research.md": "46c0d300f86525cc5c5954b8ca1705cd1a2c26c92a63c0cd4be663f214d15650",
+    "skill/stages/web-evidence-loop.md": "412b2a5165b54850cb7811a769a7ac7cb9cc50fe33ddf6acd9c98622232b9752"
+  },
+  "file_changes": [
+    {
+      "path": ".elenchus/idea.md",
+      "before": "8718f66318051d1dfca27291be589f91455fb19d6d171000749cb1e862adfefe",
+      "after": "2fd33de2071e30c36cccc3ad99fbbfbd3299d73991810acccf76029c3c918dab"
+    },
+    {
+      "path": ".elenchus/research/R001-attachment-size-limit.md",
+      "before": null,
+      "after": "fa1c4934bbec3c499bd2fc7c9d4e0433c8a10c1f9817391e0a94333e3e958ffd"
+    },
+    {
+      "path": ".elenchus/research/index.md",
+      "before": null,
+      "after": "f691462d755a8729a6bc4a732514077ee8bc1b65e066f0b9243ee3c49332f3be"
+    }
+  ],
+  "app_after_text": "OLD\n",
+  "app_after_sha256": "144b85c70a192b8c9e428e83cf57eae38bb98495b59a7c6e2108fd0f18b908a1",
+  "artifact_collection": "complete",
+  "artifacts": {
+    ".elenchus/idea.md": {
+      "sha256": "2fd33de2071e30c36cccc3ad99fbbfbd3299d73991810acccf76029c3c918dab",
+      "bytes": 307,
+      "published": true,
+      "published_sha256": "2fd33de2071e30c36cccc3ad99fbbfbd3299d73991810acccf76029c3c918dab"
+    },
+    ".elenchus/research/index.md": {
+      "sha256": "f691462d755a8729a6bc4a732514077ee8bc1b65e066f0b9243ee3c49332f3be",
+      "bytes": 244,
+      "published": true,
+      "published_sha256": "f691462d755a8729a6bc4a732514077ee8bc1b65e066f0b9243ee3c49332f3be"
+    },
+    ".elenchus/research/R001-attachment-size-limit.md": {
+      "sha256": "fa1c4934bbec3c499bd2fc7c9d4e0433c8a10c1f9817391e0a94333e3e958ffd",
+      "bytes": 3800,
+      "published": true,
+      "published_sha256": "fa1c4934bbec3c499bd2fc7c9d4e0433c8a10c1f9817391e0a94333e3e958ffd"
+    }
+  },
+  "finished_utc": "2026-09-07T06:33:57.071276+00:00",
+  "cleanup": {
+    "status": "retained_on_error",
+    "started_utc": "2026-09-07T06:33:57.071276+00:00",
+    "finished_utc": "2026-09-07T06:33:57.071276+00:00",
+    "error": "[WinError 5] 액세스가 거부되었습니다: '<user>\\\\AppData\\\\Local\\\\Temp\\\\elenchus-research-eval-targeted-single-fact-i7l99128\\\\project\\\\.elenchus\\\\research\\\\index.md'",
+    "retained_temp": "<os-temp>/elenchus-research-eval-targeted-single-fact-i7l99128"
+  },
+  "published_input_sha256": "f29b95fd6a5bee8036dfb4e4953f436aec8509e36ea085f897ecbc21f3f3869b",
+  "digest_basis": {
+    "input_sha256": "SHA-256 of UTF-8 prompt text before text-mode subprocess stdin transport; file reads use universal newlines. Wire bytes and model-internal normalization were not observed.",
+    "answer_sha256": "SHA-256 of UTF-8 prepublication answer text used by the harness; final files use universal-newline decoding and fallback visible-event text is retained as decoded. Not raw response wire or saved-file bytes.",
+    "published_input_sha256": "SHA-256 of exact published input.md bytes on disk.",
+    "published_answer_sha256": "SHA-256 of exact published answer.md bytes on disk.",
+    "published_events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk.",
+    "events_sha256": "SHA-256 of exact redacted public events.jsonl bytes on disk when that file is present."
+  }
+}

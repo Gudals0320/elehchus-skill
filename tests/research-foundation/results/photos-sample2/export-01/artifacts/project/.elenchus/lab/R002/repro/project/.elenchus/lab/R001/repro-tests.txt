@@ -1,0 +1,78 @@
+test_all_orientation_pixel_placements (test_material.MaterialTests.test_all_orientation_pixel_placements) ... ok
+test_candidates_retain_uncertainty (test_material.MaterialTests.test_candidates_retain_uncertainty) ... FAIL
+test_cli_rejects_input_or_existing_output (test_material.MaterialTests.test_cli_rejects_input_or_existing_output) ... ok
+test_conflicting_originals_require_review (test_material.MaterialTests.test_conflicting_originals_require_review) ... ok
+test_digest_collision_not_enough (test_material.MaterialTests.test_digest_collision_not_enough) ... ok
+test_format_detected_from_bytes (test_material.MaterialTests.test_format_detected_from_bytes) ... ok
+test_hardlinks_are_aliases_not_two_storage_objects (test_material.MaterialTests.test_hardlinks_are_aliases_not_two_storage_objects) ... ok
+test_invalid_date_and_offset (test_material.MaterialTests.test_invalid_date_and_offset) ... ok
+test_invalid_orientation (test_material.MaterialTests.test_invalid_orientation) ... ok
+test_metadata_and_verify_do_not_prove_decode (test_material.MaterialTests.test_metadata_and_verify_do_not_prove_decode) ... ok
+test_modify_offset_in_exif_ifd_does_not_mean_capture (test_material.MaterialTests.test_modify_offset_in_exif_ifd_does_not_mean_capture) ... ok
+test_multiple_frames_and_budget (test_material.MaterialTests.test_multiple_frames_and_budget) ... ok
+test_original_coverage_and_exact_group (test_material.MaterialTests.test_original_coverage_and_exact_group) ... FAIL
+test_original_date_provenance (test_material.MaterialTests.test_original_date_provenance) ... ERROR
+test_originals_match_manifest_and_baseline (test_material.MaterialTests.test_originals_match_manifest_and_baseline) ... ok
+test_read_failure_does_not_abort_scan (test_material.MaterialTests.test_read_failure_does_not_abort_scan) ... FAIL
+test_same_pixels_not_same_file (test_material.MaterialTests.test_same_pixels_not_same_file) ... ok
+test_scan_rerun_is_stable (test_material.MaterialTests.test_scan_rerun_is_stable) ... ok
+test_tiff_and_jpeg_orientation (test_material.MaterialTests.test_tiff_and_jpeg_orientation) ... 
+  test_tiff_and_jpeg_orientation (test_material.MaterialTests.test_tiff_and_jpeg_orientation) (name='formats/sample.tiff') ... ERROR
+  test_tiff_and_jpeg_orientation (test_material.MaterialTests.test_tiff_and_jpeg_orientation) (name='ȸ��/rotated.jpg') ... ERROR
+test_unknown_timezone_and_subseconds (test_material.MaterialTests.test_unknown_timezone_and_subseconds) ... ok
+
+======================================================================
+ERROR: test_original_date_provenance (test_material.MaterialTests.test_original_date_provenance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Codex\Elenchus\tests\research-foundation\.work\photos-sample2\project\.elenchus\lab\R002\repro\project\.elenchus\lab\R001\test_material.py", line 50, in test_original_date_provenance
+    date = self.files["session A/dated.jpg"]["capture_date"]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+KeyError: 'capture_date'
+
+======================================================================
+ERROR: test_tiff_and_jpeg_orientation (test_material.MaterialTests.test_tiff_and_jpeg_orientation) (name='formats/sample.tiff')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Codex\Elenchus\tests\research-foundation\.work\photos-sample2\project\.elenchus\lab\R002\repro\project\.elenchus\lab\R001\test_material.py", line 60, in test_tiff_and_jpeg_orientation
+    self.assertEqual(self.files[name]["stored_size"], [8, 6])
+                     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'stored_size'
+
+======================================================================
+ERROR: test_tiff_and_jpeg_orientation (test_material.MaterialTests.test_tiff_and_jpeg_orientation) (name='ȸ��/rotated.jpg')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Codex\Elenchus\tests\research-foundation\.work\photos-sample2\project\.elenchus\lab\R002\repro\project\.elenchus\lab\R001\test_material.py", line 60, in test_tiff_and_jpeg_orientation
+    self.assertEqual(self.files[name]["stored_size"], [8, 6])
+                     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'stored_size'
+
+======================================================================
+FAIL: test_candidates_retain_uncertainty (test_material.MaterialTests.test_candidates_retain_uncertainty)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Codex\Elenchus\tests\research-foundation\.work\photos-sample2\project\.elenchus\lab\R002\repro\project\.elenchus\lab\R001\test_material.py", line 163, in test_candidates_retain_uncertainty
+    self.assertEqual(sum(item["kind"] == "date_bucket_candidate" for item in candidates), 2)
+AssertionError: 0 != 2
+
+======================================================================
+FAIL: test_original_coverage_and_exact_group (test_material.MaterialTests.test_original_coverage_and_exact_group)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Codex\Elenchus\tests\research-foundation\.work\photos-sample2\project\.elenchus\lab\R002\repro\project\.elenchus\lab\R001\test_material.py", line 45, in test_original_coverage_and_exact_group
+    self.assertEqual(sum(record["status"] == "ok" for record in self.files.values()), 5)
+AssertionError: 0 != 5
+
+======================================================================
+FAIL: test_read_failure_does_not_abort_scan (test_material.MaterialTests.test_read_failure_does_not_abort_scan)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Codex\Elenchus\tests\research-foundation\.work\photos-sample2\project\.elenchus\lab\R002\repro\project\.elenchus\lab\R001\test_material.py", line 156, in test_read_failure_does_not_abort_scan
+    self.assertEqual(len(report["exact_duplicates"]), 1)
+AssertionError: 0 != 1
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.341s
+
+FAILED (failures=3, errors=3)

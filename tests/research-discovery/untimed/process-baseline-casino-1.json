@@ -1,0 +1,29 @@
+{
+  "source": "baseline",
+  "case": "casino",
+  "sample": 1,
+  "process_exit_code": 0,
+  "command": [
+    "C:\\Program Files\\Python312\\python.exe",
+    "-B",
+    "<repository>\\tests\\research-discovery\\runner.py",
+    "run",
+    "--snapshot",
+    "<repository>\\tests\\research-discovery\\snapshots\\baseline.json",
+    "--label",
+    "untimed-baseline",
+    "--case",
+    "casino",
+    "--sample",
+    "1",
+    "--cli",
+    "<user>/AppData/Local/OpenAI/Codex/bin/8e5b6932251c2c1c/codex.exe",
+    "--no-time-limit",
+    "--max-responses",
+    "0",
+    "--operator-review"
+  ],
+  "finished_utc": "2026-09-07T08:26:08.949435+00:00",
+  "stdout": "{\"run\": \"untimed-baseline-casino-sample1\", \"turn\": 1, \"elapsed_seconds\": 87.563, \"exit_code\": 0, \"timed_out\": false}\n{\"run\": \"untimed-baseline-casino-sample1\", \"turn\": 2, \"elapsed_seconds\": 906.844, \"exit_code\": 0, \"timed_out\": false}\n{\"run\": \"untimed-baseline-casino-sample1\", \"turn\": 2, \"status\": \"awaiting_operator_review\"}\n<repository>\\tests\\research-discovery\\results\\untimed-baseline-casino-sample1\n",
+  "stderr": ""
+}

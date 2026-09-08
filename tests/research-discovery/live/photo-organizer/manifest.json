@@ -1,0 +1,60 @@
+{
+  "source_revision": "0217658b6626bce91c3973e6aac2ec1df9b9bb77",
+  "source_hashes": {
+    "agents/openai.yaml": "d06dc00cbc87ee576a54a9442f6dc97f2496a22e9a9bff7caf3f8230524357cd",
+    "LICENSE": "6bdb34f11ff8fcc0bd702d1c946b41c6a5f2c0cf1e8104d8465b55936ae4fdb2",
+    "README.md": "38e941b83e679ef2570fab6df5c0ef3edae866b09b358ebb86f24a48b7443d26",
+    "scripts/release_update.py": "e2702947f6914344d7a7ab6fa96b2c494cfc1496f99ca9707d56c348fe89a046",
+    "SKILL.md": "1379018328aab9de08514659010faa464e6eca19465d34fdd44e5706a7df70c4",
+    "stages/discovery.md": "30ce4cd891f0e342b58f239a8ce822d2d7a8c98a6907aad4c494b8f5da84edf8",
+    "stages/execution.md": "04711713e1a6c17d0310d95fcaa234c37d8c59e5df22ccbca43597df0c28402c",
+    "stages/idea.md": "abcd6a105a17e2908bd596b8cd6ff71963cd287391a9c52fa86fb8195616bf14",
+    "stages/research.md": "46c0d300f86525cc5c5954b8ca1705cd1a2c26c92a63c0cd4be663f214d15650",
+    "stages/web-evidence-loop.md": "412b2a5165b54850cb7811a769a7ac7cb9cc50fe33ddf6acd9c98622232b9752"
+  },
+  "case": "photo-organizer",
+  "max_responses": 12,
+  "max_seconds": 1200,
+  "context": "native fresh agent, no prior conversation",
+  "evidence": "live public web, no fixed corpus",
+  "release_check": "pre-completed fixture context, outside measured Research interval",
+  "input_sha256": "65090c64a41116500369515046848c8c1173276c48263df71b6bf6722820693d",
+  "started_utc": "2026-09-07T06:19:03+00:00",
+  "artifact_finished_utc": "2026-09-07T06:38:34+00:00",
+  "elapsed_to_artifact_seconds": 1171,
+  "status": "research_recommendation_delivered_pending_user_choice",
+  "responses": 2,
+  "product_unchanged": true,
+  "artifacts": {
+    "response-1.md": {
+      "raw_sha256": "ce7ac05eebb70631dd4826dcca20ea4d6823b2d6afb271758bab00166a24785e",
+      "published_sha256": "ce7ac05eebb70631dd4826dcca20ea4d6823b2d6afb271758bab00166a24785e"
+    },
+    "response-2.md": {
+      "raw_sha256": "17556c38490f2e01d3178d12f678d7f17136f8d7f98606b91fb218d92a36f6b9",
+      "published_sha256": "fd9effe20de5bdfb88b8426fadea7a63431dc06559576886ed87db7dfa100e3e"
+    },
+    "observation-log.md": {
+      "raw_sha256": "21ef473b55f030c4bc173ce0461209eeb24d8e929663ff4ca32c65cf4593e0a1",
+      "published_sha256": "21ef473b55f030c4bc173ce0461209eeb24d8e929663ff4ca32c65cf4593e0a1"
+    },
+    ".elenchus/idea.md": {
+      "raw_sha256": "f724f79652b50250f0325ce5eff72cfb1ef5de243f31452e2d4f4645d1379716",
+      "published_sha256": "f724f79652b50250f0325ce5eff72cfb1ef5de243f31452e2d4f4645d1379716"
+    },
+    ".elenchus/research/index.md": {
+      "raw_sha256": "2cb1bdf3666dc8e2cf4282e493473f89c3f603ee122cefd4c7e9afdfb40b11e8",
+      "published_sha256": "2cb1bdf3666dc8e2cf4282e493473f89c3f603ee122cefd4c7e9afdfb40b11e8"
+    },
+    ".elenchus/research/R001-photo-organization-approaches.md": {
+      "raw_sha256": "7060115b8adc5dd165b4fe4bc29be0793c554118b07d5fabfbc430827cf2077a",
+      "published_sha256": "7060115b8adc5dd165b4fe4bc29be0793c554118b07d5fabfbc430827cf2077a"
+    }
+  },
+  "usage": "not exposed by native collaboration tool",
+  "trace_kind": "actor-authored public observation log and artifacts; not complete host tool trace",
+  "product_before_sha256": "2dc35057849e6a96a97b94e8b6528ec9377fb77837d433e1163d502284766c53",
+  "product_after_sha256": "2dc35057849e6a96a97b94e8b6528ec9377fb77837d433e1163d502284766c53",
+  "product_initial_hash_basis": "reconstructed from recorded deterministic Windows write_text seed; not independently captured before session",
+  "product_comparison_correction": "original collector compared LF literal with CRLF fixture, causing false mismatch"
+}

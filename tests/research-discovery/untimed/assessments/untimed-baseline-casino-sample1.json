@@ -1,0 +1,37 @@
+{
+  "run": "untimed-baseline-casino-sample1",
+  "reviewed_utc": "2026-09-07T08:26:08.455568+00:00",
+  "reviewed_turn": 2,
+  "execution_outcome": "research_result_delivered",
+  "scope": "합성 문서 기반 비교 결과 전달, 실제 시각/구현 검증은 보류",
+  "criteria": {
+    "approach_comparison": "충족: 네 사례·UI 역할·축소 대안과 범위 밖 공간형을 비교",
+    "evidence_fit": "부분 충족: 원문/재게시/버전/시간 단위를 구분하고 실제 시각 자료 부재를 명시",
+    "applicability": "충족: 명령-상태-표현, 블랙잭의 미입력 행동 보존, 37포켓 실제 검증 조건 제시",
+    "decision_impact": "충족: 권고는 후보로 유지하고 사용자 취향·구현 도입을 확정하지 않음",
+    "closure_reason": "충족: 문서 비교의 결론 가능과 UX/실제 제작의 보류를 분리"
+  },
+  "evidence": [
+    "turn-02/answer.md",
+    "turn-02/artifacts/.elenchus/research/R001-table-presentation.md",
+    "turn-02/artifacts/.elenchus/research/R002-animation-method.md"
+  ],
+  "remaining_checks": [],
+  "final_checks": {
+    "artifact_collection": "complete",
+    "product_unchanged": true,
+    "out_of_plan_changes": [],
+    "processing_seconds": 906.766,
+    "operator_wait_seconds": 92.578,
+    "cleanup": {
+      "status": "retained_on_error",
+      "started_utc": "2026-09-07T08:26:08.939197+00:00",
+      "finished_utc": "2026-09-07T08:26:08.939197+00:00",
+      "error": "[WinError 5] 액세스가 거부되었습니다: '<user>\\\\AppData\\\\Local\\\\Temp\\\\elenchus-research-eval-g1gb45cs\\\\project\\\\.elenchus\\\\research\\\\index.md'",
+      "retained_temp": "<os-temp>/elenchus-research-eval-g1gb45cs"
+    }
+  },
+  "published_answer_sha256": "ea0e1c6b818850e5389bcf575a6506886c633f1bb3f46dbb8e41ca8b23b017aa",
+  "first_comparison_turn": 2,
+  "first_comparison_evidence": "turn-02/answer.md"
+}

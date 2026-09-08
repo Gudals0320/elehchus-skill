@@ -1,0 +1,30 @@
+[
+  {
+    "path": "project/.elenchus/lab/R001/main/.pip-cache",
+    "reason": "environment/cache/link; retained in actor workspace"
+  },
+  {
+    "path": "project/.elenchus/lab/R001/main/.venv",
+    "reason": "environment/cache/link; retained in actor workspace"
+  },
+  {
+    "path": "project/.elenchus/lab/R001/metadata-research/deps",
+    "reason": "environment/cache/link; retained in actor workspace"
+  },
+  {
+    "path": "project/.elenchus/lab/R001/metadata-research/pip-cache",
+    "reason": "environment/cache/link; retained in actor workspace"
+  },
+  {
+    "path": "project/.elenchus/lab/R001/metadata-research/reproduction/pip-cache",
+    "reason": "environment/cache/link; retained in actor workspace"
+  },
+  {
+    "path": "project/.elenchus/lab/R001/metadata-research/reproduction/project/.elenchus/lab/R001/main/.venv",
+    "reason": "environment/cache/link; retained in actor workspace"
+  },
+  {
+    "path": "project/.elenchus/lab/R002/identity-research/junction-fixtures/source/linked-target",
+    "reason": "environment/cache/link; retained in actor workspace"
+  }
+]

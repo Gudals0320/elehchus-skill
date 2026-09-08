@@ -1,0 +1,42 @@
+{
+  "recorded_utc": "2026-09-08T09:47:37.848702+00:00",
+  "kind": "operator_material_repair",
+  "scope": "Verification portability only; no skill runtime change. Original actor workspace and export preserved.",
+  "changed_provided_files": [
+    "project/.elenchus/HANDOFF.md",
+    "project/.elenchus/lab/R001/main/README.md",
+    "project/.elenchus/lab/R001/main/local-review-results.json",
+    "project/.elenchus/lab/R001/main/probe_local_review.py",
+    "project/.elenchus/material-manifest.json"
+  ],
+  "new_files": [
+    "review_contract.py",
+    "test_review_portability.py"
+  ],
+  "protected_byte_files": [
+    "project/.elenchus/lab/R001/main/photo_materials.py",
+    "project/.elenchus/lab/R001/main/render_review.py",
+    "project/existing-product.txt",
+    "project/inputs.sha256.json",
+    "project/inputs/README.md",
+    "project/inputs/broken/truncated.jpg",
+    "project/inputs/copies/duplicate.jpg",
+    "project/inputs/formats/sample.tiff",
+    "project/inputs/notes.txt",
+    "project/inputs/plain.png",
+    "project/inputs/session A/dated.jpg",
+    "project/inputs/회전/rotated.jpg"
+  ],
+  "validation_environment": "Reused independent replay venv for operator fix validation only; not claimed as a new independent replay.",
+  "tests": {
+    "collected": 31,
+    "passed": 30,
+    "skipped": 1,
+    "local_probe": {
+      "checks": 13,
+      "passed": 13
+    }
+  },
+  "independent_repair_replay": "pending",
+  "manifest_note": "Regenerated for this repaired selected-material copy; original manifest preserved separately and in original export."
+}

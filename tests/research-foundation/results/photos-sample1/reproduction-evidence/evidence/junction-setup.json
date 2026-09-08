@@ -1,0 +1,9 @@
+{
+  "command": "New-Item -ItemType Junction -Path <linkPath> -Target <targetPath>",
+  "linkPath": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample1-reproduction-clean\\execution\\project\\.elenchus\\lab\\R002\\identity-research\\junction-fixtures\\source\\linked-target",
+  "targetPath": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample1-reproduction-clean\\execution\\project\\.elenchus\\lab\\R002\\identity-research\\junction-fixtures\\target",
+  "attributes": "Directory, ReparsePoint",
+  "linkType": "Junction",
+  "source": "Supplied identity-research/notes.md, junction reconstruction instructions",
+  "exit_code": 0
+}

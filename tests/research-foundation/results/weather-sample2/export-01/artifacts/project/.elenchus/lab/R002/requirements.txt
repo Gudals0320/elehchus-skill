@@ -1,0 +1,2 @@
+# Core UTC data path is standard library only. IANA display and DST tests use:
+tzdata==2026.3

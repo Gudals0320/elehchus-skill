@@ -1,0 +1,47 @@
+{
+  "ordinary_request": {
+    "assessment": "supported",
+    "reason": "Only result.txt changed; old documents preserved and no session marker.",
+    "answer_sha256": "49fd4cfadbdec0a56656a1edbedcc020edf0941c24184b5be3e3a5698673d424",
+    "evidence": [
+      "results\\ordinary_request\\answer.md",
+      "results\\ordinary_request\\summary.json"
+    ]
+  },
+  "single_fact": {
+    "assessment": "supported",
+    "reason": "Correct one-fact answer with delegated completion; no extra project documents.",
+    "answer_sha256": "752d5c5656d1c954c8008720bc24b3f552ffa892478613267248fe1aaef9c30a",
+    "evidence": [
+      "results\\single_fact\\answer.md",
+      "results\\single_fact\\summary.json"
+    ]
+  },
+  "legacy_resume": {
+    "assessment": "supported",
+    "reason": "New Topology only; four legacy files and decisions preserved; no actual research or UX finalization.",
+    "answer_sha256": "a2f412905d08a04a3081fc1ac713302056a162ecf62da0b5a8946f8923c91531",
+    "evidence": [
+      "results\\legacy_resume\\answer.md",
+      "results\\legacy_resume\\summary.json"
+    ]
+  },
+  "scope_boundary": {
+    "assessment": "supported",
+    "reason": "Fictional contract/budget conflict distinguished from real data collection; no new account/payment.",
+    "answer_sha256": "c9877dc693dcda31b4e4c4bf307eb1d76b858dc1cd49402597bf76c1fae32cb9",
+    "evidence": [
+      "results\\scope_boundary\\answer.md",
+      "results\\scope_boundary\\summary.json"
+    ]
+  },
+  "dynamic-followup": {
+    "assessment": "supported",
+    "reason": "R004 source preserved and R005 created for independent access question; scope unchanged.",
+    "answer_sha256": "33a38a450ab76c16e7ac640cfdcac475ca5a78d2462102a49cec3fd42f823870",
+    "evidence": [
+      "dynamic-followup\\answer.md",
+      "dynamic-followup\\summary.json"
+    ]
+  }
+}

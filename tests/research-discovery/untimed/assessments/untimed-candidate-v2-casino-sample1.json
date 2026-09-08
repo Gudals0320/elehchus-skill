@@ -1,0 +1,37 @@
+{
+  "run": "untimed-candidate-v2-casino-sample1",
+  "reviewed_utc": "2026-09-07T08:24:14.945987+00:00",
+  "reviewed_turn": 2,
+  "execution_outcome": "research_result_delivered",
+  "scope": "고정 합성 문서에 근거한 Research 결과 전달. 실제 시각/제품 검증은 미완료.",
+  "criteria": {
+    "approach_comparison": "충족: Tablehaven·Flatfelt·Pileplay·Orbitroom의 차이·조건을 비교",
+    "evidence_fit": "부분 충족: 원문/재게시/버전/시간 단위 구분 정확, 없는 화면·영상은 보류",
+    "applicability": "충족: 별도 UI 연결 부담, 블랙잭 행동 단위, 룰렛 결과 계약과 자산/성능 한계 명시",
+    "decision_impact": "충족: 미승인 제안·제외 유지·열린 선택을 구분",
+    "closure_reason": "충족: 자료 범위의 결론과 전체 디자인/제작 검증의 보류를 분리, Build로 넘겨 완료라 하지 않음"
+  },
+  "evidence": [
+    "turn-02/answer.md",
+    "turn-02/artifacts/.elenchus/research/R001-table-presentation.md",
+    "turn-02/artifacts/.elenchus/research/R002-animation-production.md"
+  ],
+  "remaining_checks": [],
+  "final_checks": {
+    "artifact_collection": "complete",
+    "product_unchanged": true,
+    "out_of_plan_changes": [],
+    "processing_seconds": 780.328,
+    "operator_wait_seconds": 105.093,
+    "cleanup": {
+      "status": "retained_on_error",
+      "started_utc": "2026-09-07T08:24:15.017400+00:00",
+      "finished_utc": "2026-09-07T08:24:15.017400+00:00",
+      "error": "[WinError 5] 액세스가 거부되었습니다: '<user>\\\\AppData\\\\Local\\\\Temp\\\\elenchus-research-eval-ym7qn9gh\\\\project\\\\.elenchus\\\\research\\\\index.md'",
+      "retained_temp": "<os-temp>/elenchus-research-eval-ym7qn9gh"
+    }
+  },
+  "published_answer_sha256": "a6eeaa76429787459809a2c28df436fea1e46eb6f776d127ea43b353ff50b251",
+  "first_comparison_turn": 2,
+  "first_comparison_evidence": "turn-02/answer.md"
+}

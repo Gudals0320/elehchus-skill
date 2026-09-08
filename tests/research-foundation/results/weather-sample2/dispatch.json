@@ -1,0 +1,14 @@
+{
+  "recorded_utc": "2026-09-08T09:36:58.993906+00:00",
+  "agent": "/root/foundation_weather_2",
+  "fork_turns": "none",
+  "model_argument": "gpt-6-astra",
+  "reasoning_effort_argument": "xhigh",
+  "creation_result": "created",
+  "dispatch_sha256": "1d7a962764270b0b6a1e25a0b3aa8fd2e93a682f4a29101bb4b2f426a34733ee",
+  "host_runtime_model_telemetry": null,
+  "limits": {
+    "seconds": null,
+    "responses": null
+  }
+}

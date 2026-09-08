@@ -1,0 +1,11 @@
+{
+  "kind": "targeted-preparation-selection-extension",
+  "recorded_utc": "2026-09-07T06:49:46.396726+00:00",
+  "previous_script_sha256": "28cf3d1f5b0a69065c8d6c3867e888725097d41fe72bbcb94e0c9e035f186465",
+  "previous_script_archive": "targeted-before-preparation-labels.py.txt",
+  "new_script_sha256": "8afc7556471480e47af3b6b086240cfe7bc05269008f1dea12460733f0608272",
+  "original_frozen_sha256": "177dad382d2e3c60d815e2622d1be1c45c9def73a178ef2ac6d82900f6f9ed08",
+  "new_preparation": "targeted/preparations/targeted-v2.json",
+  "source_revision": "655f1c53342abdc8254f354ded168ebf17c6bf22",
+  "scope": "Backward-compatible optional snapshot/preparation label; original metadata and all model case inputs preserved. Case selection single-fact, version-conflict, delegation-unavailable only; independent180-second candidate-v2 observations."
+}

@@ -1,0 +1,226 @@
+{
+  "plain.png": {
+    "format": "PNG",
+    "top_tags": null,
+    "exif_ifd": null
+  },
+  "orientation-1.png": {
+    "format": "PNG",
+    "top_tags": {
+      "274": 1
+    },
+    "exif_ifd": null
+  },
+  "orientation-1.tiff": {
+    "format": "TIFF",
+    "top_tags": {
+      "274": 1
+    },
+    "exif_ifd": null
+  },
+  "orientation-2.png": {
+    "format": "PNG",
+    "top_tags": {
+      "274": 2
+    },
+    "exif_ifd": null
+  },
+  "orientation-2.tiff": {
+    "format": "TIFF",
+    "top_tags": {
+      "274": 2
+    },
+    "exif_ifd": null
+  },
+  "orientation-3.png": {
+    "format": "PNG",
+    "top_tags": {
+      "274": 3
+    },
+    "exif_ifd": null
+  },
+  "orientation-3.tiff": {
+    "format": "TIFF",
+    "top_tags": {
+      "274": 3
+    },
+    "exif_ifd": null
+  },
+  "orientation-4.png": {
+    "format": "PNG",
+    "top_tags": {
+      "274": 4
+    },
+    "exif_ifd": null
+  },
+  "orientation-4.tiff": {
+    "format": "TIFF",
+    "top_tags": {
+      "274": 4
+    },
+    "exif_ifd": null
+  },
+  "orientation-5.png": {
+    "format": "PNG",
+    "top_tags": {
+      "274": 5
+    },
+    "exif_ifd": null
+  },
+  "orientation-5.tiff": {
+    "format": "TIFF",
+    "top_tags": {
+      "274": 5
+    },
+    "exif_ifd": null
+  },
+  "orientation-6.png": {
+    "format": "PNG",
+    "top_tags": {
+      "274": 6
+    },
+    "exif_ifd": null
+  },
+  "orientation-6.tiff": {
+    "format": "TIFF",
+    "top_tags": {
+      "274": 6
+    },
+    "exif_ifd": null
+  },
+  "orientation-7.png": {
+    "format": "PNG",
+    "top_tags": {
+      "274": 7
+    },
+    "exif_ifd": null
+  },
+  "orientation-7.tiff": {
+    "format": "TIFF",
+    "top_tags": {
+      "274": 7
+    },
+    "exif_ifd": null
+  },
+  "orientation-8.png": {
+    "format": "PNG",
+    "top_tags": {
+      "274": 8
+    },
+    "exif_ifd": null
+  },
+  "orientation-8.tiff": {
+    "format": "TIFF",
+    "top_tags": {
+      "274": 8
+    },
+    "exif_ifd": null
+  },
+  "invalid-orientation.png": {
+    "format": "PNG",
+    "top_tags": {
+      "274": 9
+    },
+    "exif_ifd": null
+  },
+  "bad-date.jpg": {
+    "format": "JPEG",
+    "top_tags": null,
+    "exif_ifd": {
+      "36867": "2024:02:30 12:00:00"
+    }
+  },
+  "zero-date.jpg": {
+    "format": "JPEG",
+    "top_tags": null,
+    "exif_ifd": {
+      "36867": "0000:00:00 00:00:00"
+    }
+  },
+  "naive-date.jpg": {
+    "format": "JPEG",
+    "top_tags": null,
+    "exif_ifd": {
+      "36867": "2024:07:15 00:10:00"
+    }
+  },
+  "offset-date.jpg": {
+    "format": "JPEG",
+    "top_tags": null,
+    "exif_ifd": {
+      "36867": "2024:07:15 00:10:00",
+      "36881": "+09:00",
+      "37521": "123456789"
+    }
+  },
+  "bad-offset.jpg": {
+    "format": "JPEG",
+    "top_tags": null,
+    "exif_ifd": {
+      "36867": "2024:07:15 00:10:00",
+      "36881": "+99:00"
+    }
+  },
+  "conflicting-date.jpg": {
+    "format": "JPEG",
+    "top_tags": {
+      "36867": "2023:01:01 00:00:00"
+    },
+    "exif_ifd": {
+      "36867": "2024:07:15 00:10:00"
+    }
+  },
+  "digitized-only.jpg": {
+    "format": "JPEG",
+    "top_tags": null,
+    "exif_ifd": {
+      "36868": "2024:07:15 00:10:00"
+    }
+  },
+  "modified-only.tiff": {
+    "format": "TIFF",
+    "top_tags": {
+      "306": "2024:07:15 00:10:00"
+    },
+    "exif_ifd": null
+  },
+  "modified-offset.jpg": {
+    "format": "JPEG",
+    "top_tags": {
+      "306": "2024:07:15 00:10:00"
+    },
+    "exif_ifd": {
+      "36880": "+09:00",
+      "37520": "25"
+    }
+  },
+  "metadata-a.png": {
+    "format": "PNG",
+    "top_tags": {
+      "270": "version A"
+    },
+    "exif_ifd": null
+  },
+  "metadata-b.png": {
+    "format": "PNG",
+    "top_tags": {
+      "270": "version B"
+    },
+    "exif_ifd": null
+  },
+  "filename-is-wrong.jpg": {
+    "format": "PNG",
+    "top_tags": null,
+    "exif_ifd": null
+  },
+  "missing-jpeg-eoi.jpg": {
+    "injected_fault": "last two JPEG EOI bytes removed"
+  },
+  "bad-png-crc.png": {
+    "injected_fault": "IDAT CRC one bit flipped"
+  },
+  "two-frame.tiff": {
+    "format": "TIFF",
+    "frames": 2
+  }
+}

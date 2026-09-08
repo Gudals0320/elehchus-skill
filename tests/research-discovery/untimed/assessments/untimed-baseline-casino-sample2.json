@@ -1,0 +1,37 @@
+{
+  "run": "untimed-baseline-casino-sample2",
+  "reviewed_utc": "2026-09-07T09:16:42.887610+00:00",
+  "reviewed_turn": 2,
+  "first_comparison_turn": 2,
+  "first_comparison_evidence": "turn-02/answer.md",
+  "execution_outcome": "research_result_delivered",
+  "scope": "문서 범위 비교 결과 전달. 디자인 채택·실제 라이브러리·성능·완성 연출은 보류",
+  "published_answer_sha256": "e1b8d5c40d1c6e0f1736443e37e18945a4cb82c7edfa8a7103cbb959a4568dfc",
+  "criteria": {
+    "approach_comparison": "충족: 3D/HTML·CSS·인접 보드·홀/캐릭터 비교와 제작 방식의 대안",
+    "evidence_fit": "부분 충족: 합성 자료·재게시·버전 충돌·다른 측정 단위를 구분. 실제 시각·실행은 미관찰",
+    "applicability": "충족: 상태와 표현, 사용자 행동별 블랙잭 변화, 각도 함수와 실제 안착, 유지보수·37/24 포켓 구분",
+    "decision_impact": "충족: 우선 비교 후보와 미승인 제안·제외·보류 선택 구분",
+    "closure_reason": "충족: 문서 비교 가능 범위와 시각·실제 제작 검증 보류를 분리"
+  },
+  "evidence": [
+    "turn-02/answer.md",
+    "turn-02/artifacts/.elenchus/research/R001-table-interaction.md",
+    "turn-02/artifacts/.elenchus/research/R002-animation-method.md"
+  ],
+  "remaining_checks": [],
+  "final_checks": {
+    "artifact_collection": "complete",
+    "product_unchanged": true,
+    "out_of_plan_changes": [],
+    "processing_seconds": 831.609,
+    "operator_wait_seconds": 47.547,
+    "cleanup": {
+      "status": "retained_on_error",
+      "started_utc": "2026-09-07T09:16:43.027685+00:00",
+      "finished_utc": "2026-09-07T09:16:43.027685+00:00",
+      "error": "[WinError 5] 액세스가 거부되었습니다: '<user>\\\\AppData\\\\Local\\\\Temp\\\\elenchus-research-eval-aju3l5a7\\\\project\\\\.elenchus\\\\research\\\\index.md'",
+      "retained_temp": "<os-temp>/elenchus-research-eval-aju3l5a7"
+    }
+  }
+}

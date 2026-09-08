@@ -1,0 +1,26 @@
+[
+  {
+    "path": "project/.elenchus/lab/R001/.venv",
+    "reason": "environment/cache/link; original retained"
+  },
+  {
+    "path": "project/.elenchus/lab/R001/pip-cache",
+    "reason": "environment/cache/link; original retained"
+  },
+  {
+    "path": "project/.elenchus/lab/R001/agent_metadata/.cache",
+    "reason": "environment/cache/link; original retained"
+  },
+  {
+    "path": "project/.elenchus/lab/R001/agent_metadata/.venv",
+    "reason": "environment/cache/link; original retained"
+  },
+  {
+    "path": "project/.elenchus/lab/R002/agent_alternatives/.cache",
+    "reason": "environment/cache/link; original retained"
+  },
+  {
+    "path": "project/.elenchus/lab/R002/agent_alternatives/.venv",
+    "reason": "environment/cache/link; original retained"
+  }
+]

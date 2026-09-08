@@ -1,0 +1,6 @@
+{
+  "dataset_id": "26f3e14a2e18fc0d853e51be6b44705eb7c0146d24e69f0874262a1aa59abeb7",
+  "rows": 48,
+  "inserted": true,
+  "missing_rows": 0
+}

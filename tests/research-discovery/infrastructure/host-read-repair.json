@@ -1,0 +1,34 @@
+{
+  "kind": "infrastructure-observation-and-repair",
+  "not_model_quality_evidence": true,
+  "original_runner_sha256": "c34fa5549db391cbf25ec6f0eaa2ddf4ba4e4342670e793123fe007c65b5fd53",
+  "original_runner_archive": "runner-before-host-read.py.txt",
+  "original_method": "OS temporary project with inherited ACL; Path.glob/rglob could omit inaccessible child directories",
+  "observed": "Host could read its original fixture files but Get-ChildItem and icacls on sandbox-created .elenchus returned Access denied. Parent ACL showed CodexSandboxUsers Modify plus SYSTEM, Administrators and OWNER RIGHTS; no explicit host-user ACE.",
+  "inference": "A sandbox-created child may have a different owner; OWNER RIGHTS does not provide the original host identity read access. The unreadable child's ACL was not observed directly.",
+  "repairs": [
+    {
+      "temporary_root": "<os-temp>/elenchus-research-eval-gry0f1kt/project",
+      "identified_case": "candidate-v1 casino",
+      "skill_sha256": "1379018328aab9de08514659010faa464e6eca19465d34fdd44e5706a7df70c4",
+      "started_utc": "2026-09-07T06:12:06.2989335Z",
+      "finished_utc": "2026-09-07T06:12:06.3340276Z",
+      "action": "Add current host SID (OI)(CI)R ACE to the verified project root only",
+      "icacls_exit_code": 0,
+      "existing_elenchus_readable_after": false
+    },
+    {
+      "temporary_root": "<os-temp>/elenchus-research-eval-qoj1ou32/project",
+      "identified_case": "baseline casino",
+      "skill_sha256": "98dd89b337190d6127e273b2ef0b89c271590f0f44afc8097150445b42093bb0",
+      "started_utc": "2026-09-07T06:12:06.3372712Z",
+      "finished_utc": "2026-09-07T06:12:06.3594824Z",
+      "action": "Add current host SID (OI)(CI)R ACE to the verified project root only",
+      "icacls_exit_code": 0,
+      "existing_elenchus_readable_after": false
+    }
+  ],
+  "model_permissions_or_contents_changed": false,
+  "interpretation": "An empty artifact map from the original collector is not evidence of no writes. Artifact completeness and automatic stop detection are unobserved for these unreadable directories. Visible replies and already published events remain usable.",
+  "next_method": "Prepare inherited host read ACE on each new verified temporary project before starting the model; use strict os.walk with access errors propagated and explicit incomplete collection status. Recovery of pre-existing inaccessible artifacts is not claimed."
+}

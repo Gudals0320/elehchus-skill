@@ -1,0 +1,23 @@
+{
+  "kind": "setup",
+  "mode": "bounded_process_timeout",
+  "model_invoked": false,
+  "stderr": "",
+  "exit_code": 1,
+  "timed_out": true,
+  "elapsed_seconds": 1.063,
+  "deadline_seconds": 1,
+  "checks": {
+    "timed_out": true,
+    "prefix_output_preserved": true,
+    "artifact_preserved": true,
+    "returned_within_five_seconds": true
+  },
+  "setup_passed": true,
+  "runner_sha256": "2bbf04da79cce5498873a21b8a2008d4d96b62c2c63ff2e7e745dbd9a69312ff",
+  "cleanup": {
+    "status": "complete",
+    "started_utc": "2026-09-07T06:23:42.324551+00:00",
+    "finished_utc": "2026-09-07T06:23:42.324551+00:00"
+  }
+}

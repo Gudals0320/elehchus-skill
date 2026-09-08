@@ -1,0 +1,50 @@
+[
+  {
+    "path": "project/.elenchus/lab/R001/source-research/reproduction/lab/R002/.pip-cache",
+    "reason": "environment, cache or disposable failed-test workspace; retained in actor workspace"
+  },
+  {
+    "path": "project/.elenchus/lab/R001/source-research/reproduction/lab/R002/.venv",
+    "reason": "environment, cache or disposable failed-test workspace; retained in actor workspace"
+  },
+  {
+    "path": "project/.elenchus/lab/R001/source-research/reproduction/lab/R002/test-output",
+    "reason": "environment, cache or disposable failed-test workspace; retained in actor workspace"
+  },
+  {
+    "path": "project/.elenchus/lab/R001/source-research/reproduction-september/lab/R002/test-output",
+    "reason": "environment, cache or disposable failed-test workspace; retained in actor workspace"
+  },
+  {
+    "path": "project/.elenchus/lab/R002/.pip-cache",
+    "reason": "environment, cache or disposable failed-test workspace; retained in actor workspace"
+  },
+  {
+    "path": "project/.elenchus/lab/R002/.venv",
+    "reason": "environment, cache or disposable failed-test workspace; retained in actor workspace"
+  },
+  {
+    "path": "project/.elenchus/lab/R002/test-output",
+    "reason": "environment, cache or disposable failed-test workspace; retained in actor workspace"
+  },
+  {
+    "path": "project/.elenchus/lab/R002/alternative-research/.venv",
+    "reason": "environment, cache or disposable failed-test workspace; retained in actor workspace"
+  },
+  {
+    "path": "project/.elenchus/lab/R002/alternative-research/pip-cache",
+    "reason": "environment, cache or disposable failed-test workspace; retained in actor workspace"
+  },
+  {
+    "path": "project/.elenchus/lab/R002/alternative-research/ghcnh-documentation-extracted.txt",
+    "reason": "generated cache or external documentation mirror; source URL/notes retained; original remains in actor workspace"
+  },
+  {
+    "path": "project/.elenchus/lab/R002/alternative-research/ghcnh_DOCUMENTATION.pdf",
+    "reason": "generated cache or external documentation mirror; source URL/notes retained; original remains in actor workspace"
+  },
+  {
+    "path": "project/.elenchus/lab/R002/alternative-research/noaa-service-change.html",
+    "reason": "generated cache or external documentation mirror; source URL/notes retained; original remains in actor workspace"
+  }
+]

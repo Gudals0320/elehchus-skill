@@ -1,0 +1,29 @@
+{
+  "checks": {
+    "no_python_network_entry_points_used": true,
+    "same_scanner_output_as_verified_sample": true,
+    "local_review_deterministic": true,
+    "matches_saved_review": true,
+    "original_ten_files_unchanged": true,
+    "date_day_groups_present": true,
+    "only_dated_pair_assigned_day": true,
+    "raw6_interpreted_clockwise90": true,
+    "raw8_interpreted_counterclockwise90": true,
+    "tiff_actual_display_and_raw_dimensions_distinct": true,
+    "all_candidates_review_only": true,
+    "synthetic_subsecond_evidence_visible": true
+  },
+  "network_calls": [],
+  "summary": {
+    "files": 8,
+    "statuses": {
+      "invalid_image": 1,
+      "non_image_or_unsupported": 2,
+      "ok": 5
+    },
+    "exact_groups": 1,
+    "snapshot_bytes": 3538
+  },
+  "review_sha256": "c714ad042c76ac56a137a6ee917768cbdcecf9aea741d68f36047ef4cc48e34a",
+  "scope": "Python socket entry points denied during existing local scan and Markdown rendering; not OS network isolation proof"
+}

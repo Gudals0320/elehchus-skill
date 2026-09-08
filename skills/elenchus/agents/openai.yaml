@@ -1,0 +1,7 @@
+interface:
+  display_name: "Elenchus"
+  short_description: "Topology와 실제 Research로 재사용할 기능적 재료 확보"
+  default_prompt: "$elenchus 를 사용해 목적과 연구 목표를 정리하고, 실제 시행착오로 코드·데이터·테스트 등 활용할 재료를 확보해 주세요."
+
+policy:
+  allow_implicit_invocation: false

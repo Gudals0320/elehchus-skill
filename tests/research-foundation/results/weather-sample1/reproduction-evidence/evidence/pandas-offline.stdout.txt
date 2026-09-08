@@ -1,0 +1,18 @@
+{
+  "pandas_version": "3.0.3",
+  "rows": 8430,
+  "wind_nulls": 36,
+  "rain_nulls": 7824,
+  "rain_trace": 130,
+  "naive_precipitation_min_mm": -0.1,
+  "to_sql_auto_schema": "CREATE TABLE \"obs\" (\n\"station\" TEXT,\n  \"time\" INTEGER,\n  \"temperature_c\" REAL\n)",
+  "to_sql_append_repeat_rows": 2,
+  "to_sql_after_caller_rollback_rows": 1,
+  "mixed_offsets_default_error": "Mixed timezones detected. Pass utc=True in to_datetime or tz='UTC' in DatetimeIndex to convert to a common timezone.",
+  "mixed_offsets_utc": [
+    "2024-11-03 05:30:00+00:00",
+    "2024-11-03 06:30:00+00:00"
+  ],
+  "unit_epoch_ms_misread_as_ns": "1970-01-01 00:28:24.067200+00:00",
+  "unit_epoch_ms_explicit": "2024-01-01 00:00:00+00:00"
+}

@@ -1,0 +1,22 @@
+Collecting numpy==2.5.3 (from -r requirements-experiment.txt (line 1))
+  Downloading numpy-2.5.3-cp312-cp312-win_amd64.whl.metadata (6.6 kB)
+Collecting pandas==3.0.3 (from -r requirements-experiment.txt (line 2))
+  Downloading pandas-3.0.3-cp312-cp312-win_amd64.whl.metadata (19 kB)
+Collecting pypdf==6.8.0 (from -r requirements-experiment.txt (line 3))
+  Downloading pypdf-6.8.0-py3-none-any.whl.metadata (7.1 kB)
+Collecting python-dateutil==2.9.0.post0 (from -r requirements-experiment.txt (line 4))
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting six==1.17.0 (from -r requirements-experiment.txt (line 5))
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting tzdata==2026.3 (from -r requirements-experiment.txt (line 6))
+  Downloading tzdata-2026.3-py2.py3-none-any.whl.metadata (1.4 kB)
+Downloading numpy-2.5.3-cp312-cp312-win_amd64.whl (12.6 MB)
+   ---------------------------------------- 12.6/12.6 MB 56.4 MB/s eta 0:00:00
+Downloading pandas-3.0.3-cp312-cp312-win_amd64.whl (9.8 MB)
+   ---------------------------------------- 9.8/9.8 MB 46.8 MB/s eta 0:00:00
+Downloading pypdf-6.8.0-py3-none-any.whl (332 kB)
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading tzdata-2026.3-py2.py3-none-any.whl (348 kB)
+Installing collected packages: tzdata, six, pypdf, numpy, python-dateutil, pandas
+Successfully installed numpy-2.5.3 pandas-3.0.3 pypdf-6.8.0 python-dateutil-2.9.0.post0 six-1.17.0 tzdata-2026.3

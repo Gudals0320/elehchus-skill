@@ -1,0 +1,326 @@
+{
+  "checks": {
+    "comment_changes_bytes": true,
+    "comment_keeps_decoded_display_pixels": true,
+    "different_colors_different_pixels": true,
+    "different_colors_same_average_hash": true,
+    "exact_original_group_count_one": true,
+    "inputs_unchanged": true,
+    "orientation_normalization_changes_bytes": true,
+    "orientation_normalization_keeps_display_pixels": true,
+    "original_group_has_byte_confirmation": true,
+    "plain_png_decodes_after_order_fix": true,
+    "renamed_detects_jpeg_despite_png_suffix": true,
+    "renamed_still_exact_bytes": true,
+    "truncated_jpeg_does_not_decode": true
+  },
+  "input_files": [
+    {
+      "bytes": 32,
+      "decode": "error",
+      "error": "OSError: Truncated File Read",
+      "header_hex": "ffd8ffe000104a4649460001",
+      "path": "broken/truncated.jpg",
+      "sha256": "aa8b4cd7477ed2392383fc1196567875d3d5d6b733739c1ca1c9d866f8e9c0cc",
+      "suffix": ".jpg"
+    },
+    {
+      "bytes": 763,
+      "date_time_ifd0": null,
+      "date_time_original": "2024:07:15 10:20:30",
+      "decode": "ok",
+      "detected_format": "JPEG",
+      "display_ahash_demo": "000003071f3fffff",
+      "display_pixel_sha256": "d0f95eb8f035b0d1d66e8a2796a011dab0507c932923cc84d12f8b7f93f68fd1",
+      "display_size": [
+        8,
+        6
+      ],
+      "encoded_size": [
+        8,
+        6
+      ],
+      "header_hex": "ffd8ffe10067457869660000",
+      "offset_time_original": "+09:00",
+      "orientation": 1,
+      "orientation_after_transpose": 1,
+      "path": "copies/duplicate.jpg",
+      "raw_pixel_sha256": "d0f95eb8f035b0d1d66e8a2796a011dab0507c932923cc84d12f8b7f93f68fd1",
+      "sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "suffix": ".jpg"
+    },
+    {
+      "bytes": 328,
+      "date_time_ifd0": "2024:07:15 10:20:30",
+      "date_time_original": null,
+      "decode": "ok",
+      "detected_format": "TIFF",
+      "display_ahash_demo": "3f3f1f0f0f070303",
+      "display_pixel_sha256": "ff4c5e97fe746508b8d3b94044398ccedba65cef85881ee8db69303783a0fa77",
+      "display_size": [
+        6,
+        8
+      ],
+      "encoded_size": [
+        6,
+        8
+      ],
+      "header_hex": "49492a00080000000c000001",
+      "offset_time_original": null,
+      "orientation": null,
+      "orientation_after_transpose": null,
+      "path": "formats/sample.tiff",
+      "raw_pixel_sha256": "ff4c5e97fe746508b8d3b94044398ccedba65cef85881ee8db69303783a0fa77",
+      "sha256": "1f29eec7d335ebdc98d141a01357962565e58413fedc9c6e06773134606b580b",
+      "suffix": ".tiff"
+    },
+    {
+      "bytes": 27,
+      "decode": "error",
+      "error": "UnidentifiedImageError: cannot identify image file 'C:\\\\Codex\\\\Elenchus\\\\tests\\\\research-foundation\\\\.work\\\\photos-sample1\\\\project\\\\inputs\\\\notes.txt'",
+      "header_hex": "53796e746865746963206e6f",
+      "path": "notes.txt",
+      "sha256": "9e504f69e20609699c0a98bafdc24514b658a5da8b3f56138b994bf163e1a39f",
+      "suffix": ".txt"
+    },
+    {
+      "bytes": 187,
+      "date_time_ifd0": null,
+      "date_time_original": null,
+      "decode": "ok",
+      "detected_format": "PNG",
+      "display_ahash_demo": "000003071f3fffff",
+      "display_pixel_sha256": "b199d31378490e878ec9c9972079182b6eddc9a6307a6a2132f977e7e89cd6d0",
+      "display_size": [
+        8,
+        6
+      ],
+      "encoded_size": [
+        8,
+        6
+      ],
+      "header_hex": "89504e470d0a1a0a0000000d",
+      "offset_time_original": null,
+      "orientation": null,
+      "orientation_after_transpose": null,
+      "path": "plain.png",
+      "raw_pixel_sha256": "b199d31378490e878ec9c9972079182b6eddc9a6307a6a2132f977e7e89cd6d0",
+      "sha256": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+      "suffix": ".png"
+    },
+    {
+      "bytes": 744,
+      "decode": "error",
+      "error": "UnidentifiedImageError: cannot identify image file 'C:\\\\Codex\\\\Elenchus\\\\tests\\\\research-foundation\\\\.work\\\\photos-sample1\\\\project\\\\inputs\\\\README.md'",
+      "header_hex": "2320ec9e91ec9d8020ed95a9",
+      "path": "README.md",
+      "sha256": "b9e2ca5fe5662df027703234d9f5c56c18e7cab769214b7340b899fc48acc7fd",
+      "suffix": ".md"
+    },
+    {
+      "bytes": 763,
+      "date_time_ifd0": null,
+      "date_time_original": "2024:07:15 10:20:30",
+      "decode": "ok",
+      "detected_format": "JPEG",
+      "display_ahash_demo": "000003071f3fffff",
+      "display_pixel_sha256": "d0f95eb8f035b0d1d66e8a2796a011dab0507c932923cc84d12f8b7f93f68fd1",
+      "display_size": [
+        8,
+        6
+      ],
+      "encoded_size": [
+        8,
+        6
+      ],
+      "header_hex": "ffd8ffe10067457869660000",
+      "offset_time_original": "+09:00",
+      "orientation": 1,
+      "orientation_after_transpose": 1,
+      "path": "session A/dated.jpg",
+      "raw_pixel_sha256": "d0f95eb8f035b0d1d66e8a2796a011dab0507c932923cc84d12f8b7f93f68fd1",
+      "sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "suffix": ".jpg"
+    },
+    {
+      "bytes": 694,
+      "date_time_ifd0": null,
+      "date_time_original": null,
+      "decode": "ok",
+      "detected_format": "JPEG",
+      "display_ahash_demo": "c0c0e0f0f0f8fcfc",
+      "display_pixel_sha256": "1e820f608ca355c555e0c9bcdcdf65bbcead91330ba215e3b68a173ad8f39ec0",
+      "display_size": [
+        6,
+        8
+      ],
+      "encoded_size": [
+        8,
+        6
+      ],
+      "header_hex": "ffd8ffe10022457869660000",
+      "offset_time_original": null,
+      "orientation": 6,
+      "orientation_after_transpose": null,
+      "path": "회전/rotated.jpg",
+      "raw_pixel_sha256": "d0f95eb8f035b0d1d66e8a2796a011dab0507c932923cc84d12f8b7f93f68fd1",
+      "sha256": "c60c3c84e584d5c7c74484eb67f5c9b343f8e63035cf2c3a5c65e2cf6fdf8aed",
+      "suffix": ".jpg"
+    }
+  ],
+  "input_hashes": {
+    "README.md": "b9e2ca5fe5662df027703234d9f5c56c18e7cab769214b7340b899fc48acc7fd",
+    "broken/truncated.jpg": "aa8b4cd7477ed2392383fc1196567875d3d5d6b733739c1ca1c9d866f8e9c0cc",
+    "copies/duplicate.jpg": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "formats/sample.tiff": "1f29eec7d335ebdc98d141a01357962565e58413fedc9c6e06773134606b580b",
+    "notes.txt": "9e504f69e20609699c0a98bafdc24514b658a5da8b3f56138b994bf163e1a39f",
+    "plain.png": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+    "session A/dated.jpg": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "회전/rotated.jpg": "c60c3c84e584d5c7c74484eb67f5c9b343f8e63035cf2c3a5c65e2cf6fdf8aed"
+  },
+  "original_exact_groups": [
+    {
+      "byte_comparison_equal": true,
+      "paths": [
+        "copies/duplicate.jpg",
+        "session A/dated.jpg"
+      ],
+      "sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491"
+    }
+  ],
+  "pixel_normalization": "RGB8 + width/height + EXIF transpose; ICC not applied",
+  "runtime": {
+    "pillow": "12.3.0"
+  },
+  "synthesized_variants": [
+    {
+      "bytes": 813,
+      "date_time_ifd0": null,
+      "date_time_original": "2024:07:15 10:20:30",
+      "decode": "ok",
+      "detected_format": "JPEG",
+      "display_ahash_demo": "000003071f3fffff",
+      "display_pixel_sha256": "d0f95eb8f035b0d1d66e8a2796a011dab0507c932923cc84d12f8b7f93f68fd1",
+      "display_size": [
+        8,
+        6
+      ],
+      "encoded_size": [
+        8,
+        6
+      ],
+      "header_hex": "ffd8fffe00306964656e7469",
+      "offset_time_original": "+09:00",
+      "orientation": 1,
+      "orientation_after_transpose": 1,
+      "path": "jpeg_with_comment.jpg",
+      "raw_pixel_sha256": "d0f95eb8f035b0d1d66e8a2796a011dab0507c932923cc84d12f8b7f93f68fd1",
+      "sha256": "b9e92e2d7c0ef9d9448eb8d70129c4bb0ad34a1e087af34806b4a74fc524918f",
+      "suffix": ".jpg"
+    },
+    {
+      "bytes": 763,
+      "date_time_ifd0": null,
+      "date_time_original": "2024:07:15 10:20:30",
+      "decode": "ok",
+      "detected_format": "JPEG",
+      "display_ahash_demo": "000003071f3fffff",
+      "display_pixel_sha256": "d0f95eb8f035b0d1d66e8a2796a011dab0507c932923cc84d12f8b7f93f68fd1",
+      "display_size": [
+        8,
+        6
+      ],
+      "encoded_size": [
+        8,
+        6
+      ],
+      "header_hex": "ffd8ffe10067457869660000",
+      "offset_time_original": "+09:00",
+      "orientation": 1,
+      "orientation_after_transpose": 1,
+      "path": "jpeg_with_png_extension.png",
+      "raw_pixel_sha256": "d0f95eb8f035b0d1d66e8a2796a011dab0507c932923cc84d12f8b7f93f68fd1",
+      "sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+      "suffix": ".png"
+    },
+    {
+      "bytes": 192,
+      "date_time_ifd0": null,
+      "date_time_original": null,
+      "decode": "ok",
+      "detected_format": "PNG",
+      "display_ahash_demo": "c0c0e0f0f0f8fcfc",
+      "display_pixel_sha256": "1e820f608ca355c555e0c9bcdcdf65bbcead91330ba215e3b68a173ad8f39ec0",
+      "display_size": [
+        6,
+        8
+      ],
+      "encoded_size": [
+        6,
+        8
+      ],
+      "header_hex": "89504e470d0a1a0a0000000d",
+      "offset_time_original": null,
+      "orientation": null,
+      "orientation_after_transpose": null,
+      "path": "normalized_rotated.png",
+      "raw_pixel_sha256": "1e820f608ca355c555e0c9bcdcdf65bbcead91330ba215e3b68a173ad8f39ec0",
+      "sha256": "7bb076725cbd18db4bded92da6015aa4b9fac4c01babce3c605c69a5d4d02e6f",
+      "suffix": ".png"
+    },
+    {
+      "bytes": 83,
+      "date_time_ifd0": null,
+      "date_time_original": null,
+      "decode": "ok",
+      "detected_format": "PNG",
+      "display_ahash_demo": "0000000000000000",
+      "display_pixel_sha256": "cb184b43a96b8729d0252d0a25ff11abab9592eaea4b753343ca2ad9c02352c9",
+      "display_size": [
+        16,
+        12
+      ],
+      "encoded_size": [
+        16,
+        12
+      ],
+      "header_hex": "89504e470d0a1a0a0000000d",
+      "offset_time_original": null,
+      "orientation": null,
+      "orientation_after_transpose": null,
+      "path": "solid_blue.png",
+      "raw_pixel_sha256": "cb184b43a96b8729d0252d0a25ff11abab9592eaea4b753343ca2ad9c02352c9",
+      "sha256": "c3bbdeb351869352f2ff61ad9acf7c30e4ffd612a12d5ede4dacc5c6ddc5a965",
+      "suffix": ".png"
+    },
+    {
+      "bytes": 81,
+      "date_time_ifd0": null,
+      "date_time_original": null,
+      "decode": "ok",
+      "detected_format": "PNG",
+      "display_ahash_demo": "0000000000000000",
+      "display_pixel_sha256": "cea9d5582edf7b249e36498dde545524a00c5d1e280ae2067875bb3af2162d84",
+      "display_size": [
+        16,
+        12
+      ],
+      "encoded_size": [
+        16,
+        12
+      ],
+      "header_hex": "89504e470d0a1a0a0000000d",
+      "offset_time_original": null,
+      "orientation": null,
+      "orientation_after_transpose": null,
+      "path": "solid_red.png",
+      "raw_pixel_sha256": "cea9d5582edf7b249e36498dde545524a00c5d1e280ae2067875bb3af2162d84",
+      "sha256": "211f24cb4d19fee58970bdd6052ba796ee252e1a7621c839b4dfc27d42b02a7c",
+      "suffix": ".png"
+    }
+  ],
+  "wrong_order_png_failure": {
+    "error": "RuntimeError: verify must be called directly after open",
+    "status": "reproduced"
+  }
+}

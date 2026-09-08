@@ -1,0 +1,14 @@
+{
+  "inputs": {
+    "broken/truncated.jpg": "aa8b4cd7477ed2392383fc1196567875d3d5d6b733739c1ca1c9d866f8e9c0cc",
+    "copies/duplicate.jpg": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "formats/sample.tiff": "1f29eec7d335ebdc98d141a01357962565e58413fedc9c6e06773134606b580b",
+    "notes.txt": "9e504f69e20609699c0a98bafdc24514b658a5da8b3f56138b994bf163e1a39f",
+    "plain.png": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+    "README.md": "b9e2ca5fe5662df027703234d9f5c56c18e7cab769214b7340b899fc48acc7fd",
+    "session A/dated.jpg": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "\ud68c\uc804/rotated.jpg": "c60c3c84e584d5c7c74484eb67f5c9b343f8e63035cf2c3a5c65e2cf6fdf8aed"
+  },
+  "existing-product.txt": "53f0c7f7a926d9252540a73f22338b37ab5d4323fdc4c68041a7ac7ad795fb71",
+  "inputs.sha256.json": "f2b326afdb7243a190767a37d735fff8e5ccab105ca0ac0ded6887b9f54ad398"
+}

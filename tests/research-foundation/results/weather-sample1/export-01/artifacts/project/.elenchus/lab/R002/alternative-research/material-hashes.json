@@ -1,0 +1,22 @@
+{
+  "471080-99999-2024.gz": "2619321a2fbaf7a472757b9de2b4d777d3c0b2a89d5ee4886a4dd2b5f886c220",
+  "archive-results.json": "747e0e579c011ba1ec2a7d3ad8ab5c74d481e673129c1ac3595f65ee761546a2",
+  "archive_sqlite.py": "cf23a2bdf80f2735e410453b7c6381aa0b8d59dd4c503692578ca71eb5cf21b5",
+  "failure-results.json": "fe1f6fb6040df18d7855168488b26a01f4bdab949bd471498983edb40647d77c",
+  "failure_probes.py": "1f0024c621fcd9360da6e37c3f0f6d8c853b8324c03fc35d8984fa0c9c58c32e",
+  "fetch_probe.py": "21cbe2c8cc2e49ad2e45131227b6cc0fc8dec896a84867fed35ddda12ff0536a",
+  "finalize_records.py": "a9339622d464dd2666d93bd985472361d2f6b21880e073c84b09c3613f84a276",
+  "ghcnh-2023-prefix.psv": "0ac539ecb8180585ea6c107b5d468f3e64bf5f7b32d13949da3fcfd1b895b0b4",
+  "ghcnh-documentation-extracted.txt": "15bf09227fdb04d22ec5f9341ace89574dcff093740b5c621b653324c110f01f",
+  "ghcnh-probe-results.json": "37d3209f8e1c9d3d295b3bf14890d1b43abfb7292e93acee947d68dc54651cef",
+  "ghcnh_DOCUMENTATION.pdf": "df5694efdc2d498f006a343165bae65701d14809174b9bed660149bd4fe591b7",
+  "ghcnh_probe.py": "b854e9b065762ae20b663d5c45504919c370b3b5527880f4e03e8c0e401f81fe",
+  "noaa-service-change.html": "942e3bcab020eecf87e3ec7ec1f2cef328368e0637791899ab02a25915bd1c6b",
+  "observations.sqlite3": "85761a483264c580df2b9661c18a565f5dcd5aff0d2da600ff02c386b6ab53f5",
+  "pandas-results.json": "72e9ff70174f3c0feaeac076cf422beb6cbf466708720795ab04d497d9164d6f",
+  "pandas_probe.py": "d190fb48600dd0e71c7f4a8947069b8fece49a87f68384002e20896eb95bb3f7",
+  "pip-install.log": "5437fcd5004c6695d62b1fda01c06799b13f3d2253ab6ea901361bbf7b782d14",
+  "query-48h.json": "8479d4decd81bac1b538dee02f123219b734d5e59b2e695987cdf1499dad701e",
+  "README.md": "ea776688d9f75fea52a752fc359aa87e1762cd8beb31211e2cadde0f4410436b",
+  "requirements-experiment.txt": "01a37551ab486d49cd72729f7f5b695ca5a7dbff2ed85bc3c3a8d8155c41064e"
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "harness-cleanup-and-local-command-decoding-repair",
+  "not_model_quality_evidence": true,
+  "previous_runner_sha256": "2bbf04da79cce5498873a21b8a2008d4d96b62c2c63ff2e7e745dbd9a69312ff",
+  "previous_runner_archive": "runner-before-explicit-cleanup.py.txt",
+  "observed": [
+    "First repaired casino baseline/candidate samples each reached the measured 600-second deadline and saved strict artifact collection as complete before an outer TemporaryDirectory finalizer raised PermissionError.",
+    "The original repaired runner used ignore_cleanup_errors=True but Python's internal permission-reset path could still raise during automatic cleanup.",
+    "Localized OS-command output could be decoded as UTF-8 under PYTHONUTF8 and raise UnicodeDecodeError outside the model event stream."
+  ],
+  "changes": [
+    "Use mkdtemp with one explicit try/finally cleanup in controlled samples and basic setup probes; no automatic TemporaryDirectory finalizer remains in the runner.",
+    "Save cleanup status or retained_on_error separately after public model results and artifact hashes have been persisted.",
+    "Keep whoami/icacls/taskkill capture as bytes; decode only the ASCII SID token with replacement errors. Decode Git/CLI version strings explicitly with replacement errors."
+  ],
+  "model_source_fixtures_permissions_or_limits_changed": false,
+  "comparison_limit": "A cleanup failure after complete strict collection does not invalidate the preserved model evidence. Do not reclassify the actual 600-second timeout as success or rerun the comparison solely for cleanup. Earlier runner hashes identify samples that used the automatic-finalizer method.",
+  "recorded_utc": "2026-09-07T06:42:30.426025+00:00",
+  "repaired_runner_sha256": "fcd84b97b6586892ee4a063cb5eb069fe67d828f9c1b7d8a53e5a9e96f738f9a",
+  "deterministic_checks": "19 unit/packaging checks passed, including localized non-UTF8 ACL output and preservation of a completed sample when explicit cleanup reports access denied"
+}

@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "C:\Codex\Elenchus\tests\research-foundation\.work\photos-sample1-reproduction-clean\execution\project\.elenchus\lab\R002\identity-research\review_main.py", line 91, in <module>
+    main()
+  File "C:\Codex\Elenchus\tests\research-foundation\.work\photos-sample1-reproduction-clean\execution\project\.elenchus\lab\R002\identity-research\review_main.py", line 55, in main
+    junction_stat = junction.lstat()
+                    ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pathlib.py", line 847, in lstat
+    return self.stat(follow_symlinks=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\pathlib.py", line 840, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다: 'C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\photos-sample1-reproduction-clean\\execution\\project\\.elenchus\\lab\\R002\\identity-research\\junction-fixtures\\source\\linked-target'

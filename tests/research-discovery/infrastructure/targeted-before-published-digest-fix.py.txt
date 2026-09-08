@@ -1,0 +1,204 @@
+#!/usr/bin/env python3
+"""Six separate real-model regression probes; expectations never enter model input."""
+from __future__ import annotations
+
+import argparse
+from datetime import datetime, timezone
+import json
+import os
+from pathlib import Path
+import re
+import subprocess
+import tempfile
+import time
+
+import runner
+
+TARGET = runner.HERE / "targeted"
+CONFIG = json.loads((TARGET / "manifest.json").read_text(encoding="utf-8"))
+FIXTURES = json.loads((TARGET / "fixtures.json").read_text(encoding="utf-8"))
+
+
+def preparation_path(label: str | None = None) -> Path:
+    if label is None:
+        return TARGET / "frozen.json"
+    if not re.fullmatch(r"[A-Za-z0-9_-]+", label):
+        raise ValueError("Use a plain preparation label")
+    return TARGET / "preparations" / f"{label}.json"
+
+
+def prepare(snapshot_path: Path | None = None, preparation_label: str | None = None) -> Path:
+    snapshot_path = snapshot_path or runner.HERE / CONFIG["source_snapshot"]
+    snapshot = json.loads(snapshot_path.read_text(encoding="utf-8"))
+    runner.verify_snapshot(snapshot)
+    record = {"kind": CONFIG["kind"], "source_snapshot": snapshot,
+              "files": {name: runner.sha((TARGET / name).read_bytes())
+                        for name in ("manifest.json", "fixtures.json", "protocol.md")},
+              "script_sha256": runner.sha(Path(__file__).read_bytes()),
+              "shared_runner_sha256": runner.sha((runner.HERE / "runner.py").read_bytes())}
+    if preparation_label is not None:
+        record["preparation_label"] = preparation_label
+        record["selected_snapshot_sha256"] = runner.sha(snapshot_path.read_bytes())
+    path = preparation_path(preparation_label)
+    if path.exists() and json.loads(path.read_text(encoding="utf-8")) != record:
+        raise FileExistsError("Targeted preparation already frozen with different bytes")
+    runner.write_json(path, record)
+    return path
+
+
+def verified_source(snapshot_path: Path | None = None, preparation_label: str | None = None) -> tuple[dict, dict[str, bytes]]:
+    frozen = json.loads(preparation_path(preparation_label).read_text(encoding="utf-8"))
+    if snapshot_path is not None and json.loads(snapshot_path.read_text(encoding="utf-8")) != frozen["source_snapshot"]:
+        raise ValueError("Selected source snapshot differs from this frozen preparation")
+    for name, expected in frozen["files"].items():
+        if runner.sha((TARGET / name).read_bytes()) != expected:
+            raise ValueError("Targeted inputs/protocol changed after freeze")
+    if runner.sha(Path(__file__).read_bytes()) != frozen["script_sha256"]:
+        raise ValueError("Targeted runner changed after freeze")
+    if runner.sha((runner.HERE / "runner.py").read_bytes()) != frozen["shared_runner_sha256"]:
+        raise ValueError("Shared runner changed after targeted freeze")
+    return frozen, runner.verify_snapshot(frozen["source_snapshot"])
+
+
+def create_project(project: Path, source: dict[str, bytes], case: str) -> None:
+    for name, data in source.items():
+        path = project / "skill" / name
+        runner.under(project, path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(data)
+    for name, content in FIXTURES[case]["files"].items():
+        path = project / name
+        runner.under(project, path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(content, encoding="utf-8", newline="")
+    (project / "AGENTS.md").write_text(
+        "한국어로 현재 사용자 요청에 답하세요. 이 프로젝트의 Elenchus 사본은 skill/SKILL.md입니다. "
+        "그 파일을 읽어 적용 여부와 최신 세션 상태를 판단하고 필요한 단계 지침을 같은 사본에서 읽으세요. "
+        "다른 설치본·프로젝트 밖 스킬을 탐색하거나 이 버전에 없는 규칙을 보충하지 마세요. "
+        "인증정보와 사용자 설정을 읽거나 출력하지 마세요.\n"
+        "Elenchus가 적용되는 사례는 최초 Release 확인이 이전 턴에 이미 완료됐고 현재 버전 사용이 선택됐습니다. "
+        "Release 확인·업데이트·설치는 반복할 필요가 없습니다.\n"
+        "현재 도구에는 웹·브라우저·subagent가 제공되지 않습니다. 제공된 evidence 파일이 있다면 "
+        "명시된 가상 제품의 원문 보관본입니다. 현재 사례의 파일만 읽으세요.\n", encoding="utf-8")
+
+
+def strict_tree_hashes(root: Path) -> dict[str, str]:
+    """Unlike rglob, do not silently turn inaccessible sandbox files into an empty tree."""
+    output = {}
+
+    def fail(error):
+        raise error
+
+    for current, directories, names in os.walk(root, onerror=fail, followlinks=False):
+        directories[:] = [name for name in directories if not (Path(current) / name).is_symlink()]
+        for name in names:
+            path = Path(current) / name
+            if not path.is_symlink():
+                output[path.relative_to(root).as_posix()] = runner.sha(path.read_bytes())
+    return output
+
+
+def run_case(case: str, cli: str, label: str, snapshot_path: Path | None = None,
+             preparation_label: str | None = None) -> Path:
+    frozen, source = verified_source(snapshot_path, preparation_label)
+    output = TARGET / "results" / f"{label}-{case}"
+    output.mkdir(parents=True, exist_ok=False)
+    temporary = Path(tempfile.mkdtemp(prefix=f"elenchus-research-eval-targeted-{case}-")).resolve()
+    runner.under(Path(tempfile.gettempdir()), temporary)
+    project = temporary / "project"
+    project.mkdir()
+    host_read_setup = runner.prepare_host_read(project)
+    redactor = runner.Redactor({str(project): "<fixture>", str(temporary): "<probe-temp>",
+                                str(runner.REPO): "<repository>", str(Path.home()): "<user>"})
+    create_project(project, source, case)
+    before = strict_tree_hashes(project)
+    prompt = FIXTURES[case]["prompt"]
+    (output / "input.md").write_text(redactor.text(prompt), encoding="utf-8")
+    summary = {"kind": CONFIG["kind"], "case": case, "status": "running",
+               "model": CONFIG["model"], "reasoning_effort": CONFIG["reasoning_effort"],
+               "started_utc": datetime.now(timezone.utc).isoformat(), "limits": {"max_seconds": 180, "max_responses": 1},
+               "source_revision": frozen["source_snapshot"]["revision"],
+               "source_sha256": frozen["source_snapshot"]["source_sha256"],
+               "source_files": frozen["source_snapshot"]["files"],
+               "host_read_setup": host_read_setup,
+               "preparation_sha256": runner.sha(preparation_path(preparation_label).read_bytes()),
+               "preparation_label": preparation_label,
+               "input_sha256": runner.sha(prompt.encode("utf-8")),
+               "initial_files": before, "quality_verdict": "not_automatically_graded"}
+    runner.write_json(output / "summary.json", summary)
+    final = temporary / "final.md"
+    command = runner.cli_command(cli, project, final, CONFIG["model"], CONFIG["reasoning_effort"])
+    summary["cli_version"] = subprocess.run([cli, "--version"], capture_output=True,
+                                            encoding="utf-8", errors="replace", check=False).stdout.strip()
+    started = time.monotonic()
+    result = runner.call_cli(command, prompt, CONFIG["max_seconds"])
+    events, excluded = runner.public_events(result.pop("stdout"), redactor)
+    stderr = redactor.text(result.pop("stderr"))
+    event_bytes = "".join(json.dumps(event, ensure_ascii=False) + "\n" for event in events).encode("utf-8")
+    (output / "events.jsonl").write_bytes(event_bytes)
+    (output / "stderr.txt").write_text(stderr, encoding="utf-8")
+    answer = final.read_text(encoding="utf-8", errors="replace") if final.exists() else ""
+    if not answer:
+        visible = [event["item"].get("text", "") for event in events if event.get("type") == "item.completed"
+                   and event.get("item", {}).get("type") == "agent_message"]
+        answer = visible[-1] if visible else ""
+    published_answer = redactor.text(answer)
+    (output / "answer.md").write_text(published_answer, encoding="utf-8")
+    status = "timeout" if result["timed_out"] else "cli_error" if result["exit_code"] != 0 or any(
+        event.get("type") == "turn.failed" for event in events) else "response_observed" if answer else "empty_response"
+    summary.update({**result, "status": status, "elapsed_seconds": round(time.monotonic() - started, 3),
+                    "command": redactor.apply(command), "excluded_event_types": excluded,
+                    "usage": [event["usage"] for event in events if event.get("type") == "turn.completed" and "usage" in event],
+                    "tool_calls": sum(event.get("type") == "item.completed" and event.get("item", {}).get("type") in
+                                      {"command_execution", "file_change", "mcp_tool_call", "web_search"} for event in events),
+                    "answer_sha256": runner.sha(answer.encode("utf-8")),
+                    "published_answer_sha256": runner.sha(published_answer.encode("utf-8")),
+                    "events_sha256": runner.sha(event_bytes)})
+    fully_collected = True
+    try:
+        after = strict_tree_hashes(project)
+        changes = [{"path": name, "before": before.get(name), "after": after.get(name)}
+                   for name in sorted(before.keys() | after.keys()) if before.get(name) != after.get(name)]
+        app_bytes = (project / "app.txt").read_bytes()
+        summary.update({"final_files": after, "file_changes": changes,
+                        "app_after_text": redactor.text(app_bytes.decode("utf-8", errors="replace")),
+                        "app_after_sha256": runner.sha(app_bytes), "artifact_collection": "complete",
+                        "artifacts": runner.collect_artifacts(project, output, redactor)})
+    except OSError as error:
+        fully_collected = False
+        summary.update({"artifact_collection": "incomplete", "collection_error": redactor.text(str(error)),
+                        "retained_temp": "<os-temp>/" + temporary.name})
+    summary["finished_utc"] = datetime.now(timezone.utc).isoformat()
+    runner.write_json(output / "summary.json", summary)
+    if fully_collected:
+        summary["cleanup"] = redactor.apply(runner.cleanup_temporary(temporary))
+        runner.write_json(output / "summary.json", summary)
+    print(json.dumps({"case": case, "status": status, "elapsed_seconds": summary["elapsed_seconds"],
+                      "artifact_collection": summary.get("artifact_collection"), "result": str(output)}, ensure_ascii=True), flush=True)
+    return output
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    commands = parser.add_subparsers(dest="command", required=True)
+    prepare_command = commands.add_parser("prepare", help="Freeze targeted fixtures/protocol and runner hashes")
+    prepare_command.add_argument("--snapshot", type=Path, help="Explicit source snapshot; defaults to the original manifest")
+    prepare_command.add_argument("--preparation-label", help="Separate metadata under targeted/preparations; defaults to frozen.json")
+    run = commands.add_parser("run", help="One actual candidate model response per selected case")
+    run.add_argument("--case", choices=["all", *CONFIG["cases"]], required=True)
+    run.add_argument("--cli", default="codex")
+    run.add_argument("--label", default="targeted-v1")
+    run.add_argument("--snapshot", type=Path, help="Verify this explicit snapshot matches the selected preparation")
+    run.add_argument("--preparation-label", help="Use separate frozen metadata; defaults to frozen.json")
+    args = parser.parse_args()
+    if args.command == "prepare":
+        print(str(prepare(args.snapshot, args.preparation_label)))
+        return
+    if not args.label.replace("-", "").replace("_", "").isalnum():
+        raise ValueError("Use a plain label identifier")
+    for case in CONFIG["cases"] if args.case == "all" else [args.case]:
+        run_case(case, args.cli, args.label, args.snapshot, args.preparation_label)
+
+
+if __name__ == "__main__":
+    main()

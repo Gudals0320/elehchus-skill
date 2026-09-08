@@ -1,0 +1,35 @@
+{
+  "time_utc": "2026-09-08T09:15:15.324348+00:00",
+  "checks": {
+    "original_ten_unchanged": true,
+    "copy_ten_unchanged": true,
+    "cli_render_matches_function_and_saved_source_review": true,
+    "twelve_local_probe_checks_pass": true,
+    "python_socket_calls_zero": true,
+    "core_scanner_still_matches_source": true
+  },
+  "core_scanner_sha256": "263c4e70a5d638e4667b03c5fe87d4f0cbc6f06120304d7b52ee6631541d50be",
+  "render_review_sha256": "4c02eda034dbeed72181c0b261b0ee4aba4aa3e67b433ee5564ca865ddcd847c",
+  "probe_local_review_sha256": "63a2720312c6d438d644091b5cc8c4e29cfb3009ef2acc980143eb046edbce40",
+  "rendered_review_sha256": "c714ad042c76ac56a137a6ee917768cbdcecf9aea741d68f36047ef4cc48e34a",
+  "subsecond_evidence_review": {
+    "existing_synthetic_fixture": "modified-offset.jpg",
+    "subsecond_raw_in_json": "25",
+    "date_evidence_rendered": "IFD0.DateTime [수정] = 2024:07:15 00:10:00; subsec=25; offset=+09:00; 상태=offset_known",
+    "raw_subsecond_text_is_visible": true,
+    "scope": "Existing synthetic fixture only; supplied eight inputs have no subsecond tag."
+  },
+  "original_after_sha256": {
+    "inputs/notes.txt": "9e504f69e20609699c0a98bafdc24514b658a5da8b3f56138b994bf163e1a39f",
+    "inputs/plain.png": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+    "inputs.sha256.json": "f2b326afdb7243a190767a37d735fff8e5ccab105ca0ac0ded6887b9f54ad398",
+    "inputs/회전/rotated.jpg": "c60c3c84e584d5c7c74484eb67f5c9b343f8e63035cf2c3a5c65e2cf6fdf8aed",
+    "inputs/README.md": "b9e2ca5fe5662df027703234d9f5c56c18e7cab769214b7340b899fc48acc7fd",
+    "inputs/session A/dated.jpg": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "inputs/formats/sample.tiff": "1f29eec7d335ebdc98d141a01357962565e58413fedc9c6e06773134606b580b",
+    "inputs/broken/truncated.jpg": "aa8b4cd7477ed2392383fc1196567875d3d5d6b733739c1ca1c9d866f8e9c0cc",
+    "inputs/copies/duplicate.jpg": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "existing-product.txt": "53f0c7f7a926d9252540a73f22338b37ab5d4323fdc4c68041a7ac7ad795fb71"
+  },
+  "scope": "Installed Windows Python execution; Python socket hooks only, not OS network isolation."
+}

@@ -1,0 +1,42 @@
+{
+  "broken/truncated.jpg": {
+    "sha256": "aa8b4cd7477ed2392383fc1196567875d3d5d6b733739c1ca1c9d866f8e9c0cc",
+    "size": 32,
+    "mtime_ns": 1788854622315259300
+  },
+  "copies/duplicate.jpg": {
+    "sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "size": 763,
+    "mtime_ns": 1788854622313258700
+  },
+  "formats/sample.tiff": {
+    "sha256": "1f29eec7d335ebdc98d141a01357962565e58413fedc9c6e06773134606b580b",
+    "size": 328,
+    "mtime_ns": 1788854622314258300
+  },
+  "notes.txt": {
+    "sha256": "9e504f69e20609699c0a98bafdc24514b658a5da8b3f56138b994bf163e1a39f",
+    "size": 27,
+    "mtime_ns": 1788854622315259300
+  },
+  "plain.png": {
+    "sha256": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+    "size": 187,
+    "mtime_ns": 1788854622314258300
+  },
+  "README.md": {
+    "sha256": "b9e2ca5fe5662df027703234d9f5c56c18e7cab769214b7340b899fc48acc7fd",
+    "size": 744,
+    "mtime_ns": 1788854622316258300
+  },
+  "session A/dated.jpg": {
+    "sha256": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "size": 763,
+    "mtime_ns": 1788854622312260200
+  },
+  "회전/rotated.jpg": {
+    "sha256": "c60c3c84e584d5c7c74484eb67f5c9b343f8e63035cf2c3a5c65e2cf6fdf8aed",
+    "size": 694,
+    "mtime_ns": 1788854622313258700
+  }
+}

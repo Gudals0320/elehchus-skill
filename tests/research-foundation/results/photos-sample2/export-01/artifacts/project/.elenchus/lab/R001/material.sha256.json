@@ -1,0 +1,13 @@
+{
+  "photo_material.py": "0130aac5e6e52894bdddcd997ad87ef48579028f84f35ff714c9878d25ebc951",
+  "generate_fixtures.py": "0211a3a33658a25c033900f1b2e51a960c6fd3d1fa4fede22852d238a26f6057",
+  "test_material.py": "6e58c30c49df82a85bc739fbbea65ddc1932a516f31c0e18789859e4833567ce",
+  "requirements.txt": "fc79afc216d13bc976d1a87f9fb161a012ba2cd7a30ead460bceabf054c1fc7b",
+  "baseline.json": "90738e1c32db9d25984a8a57e2244625fc840094b7df5b936bd5ac6f1290529f",
+  "README.md": "3e724186710efafc51327f18c0e93875d8711176dda04f700dd4350337d574ac",
+  "fixtures/manifest.json": "7da05b3f0024eb1cd14afede32557faf3e695b6508d62eb0af597a86df6213f9",
+  "results/original-scan-verified.json": "09abc411d22475dfef6871baa2b03c4764f3f89b26831f64175d75285512edb0",
+  "results/tests-final.txt": "ae325589ae696601bcfdb4e65054019591c59815ca21c80f05e87914cef99c93",
+  "results/preservation-final.json": "8bdf96da80de210c36b4162c214a7bf34b70d0d40efd459ae1c12482d0450edd",
+  "results/independent-replay-checks.json": "f5d7772ee64e9ea094953b09c7a38cdd6609da5d54f315feeada1b1661fc6f32"
+}

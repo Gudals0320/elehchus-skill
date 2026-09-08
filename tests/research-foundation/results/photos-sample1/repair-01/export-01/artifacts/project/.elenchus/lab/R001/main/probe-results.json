@@ -1,0 +1,124 @@
+{
+  "pillow": "12.3.0",
+  "rows": [
+    {
+      "path": "broken/truncated.jpg",
+      "error": "OSError: Truncated File Read"
+    },
+    {
+      "path": "copies/duplicate.jpg",
+      "format": "JPEG",
+      "size": [
+        8,
+        6
+      ],
+      "frames": 1,
+      "exif": {
+        "ExifOffset": "38",
+        "Orientation": "1"
+      },
+      "exif_ifd": {
+        "OffsetTimeOriginal": "+09:00",
+        "DateTimeOriginal": "2024:07:15 10:20:30"
+      },
+      "verify": "passed",
+      "decode": "passed",
+      "transposed_size": [
+        8,
+        6
+      ]
+    },
+    {
+      "path": "formats/sample.tiff",
+      "format": "TIFF",
+      "size": [
+        6,
+        8
+      ],
+      "frames": 1,
+      "exif": {
+        "ImageWidth": "8",
+        "ImageLength": "6",
+        "BitsPerSample": "(8, 8, 8)",
+        "Compression": "1",
+        "PhotometricInterpretation": "2",
+        "StripOffsets": "184",
+        "Orientation": "8",
+        "DateTime": "2024:07:15 10:20:30",
+        "SamplesPerPixel": "3",
+        "RowsPerStrip": "6",
+        "StripByteCounts": "144",
+        "PlanarConfiguration": "1"
+      },
+      "exif_ifd": {},
+      "verify": "passed",
+      "decode": "passed",
+      "transposed_size": [
+        6,
+        8
+      ]
+    },
+    {
+      "path": "notes.txt",
+      "error": "UnidentifiedImageError: cannot identify image file 'C:\\\\Codex\\\\Elenchus\\\\tests\\\\research-foundation\\\\.work\\\\photos-sample1\\\\project\\\\inputs\\\\notes.txt'"
+    },
+    {
+      "path": "plain.png",
+      "format": "PNG",
+      "size": [
+        8,
+        6
+      ],
+      "frames": 1,
+      "exif": {},
+      "exif_ifd": {},
+      "error": "RuntimeError: verify must be called directly after open"
+    },
+    {
+      "path": "README.md",
+      "error": "UnidentifiedImageError: cannot identify image file 'C:\\\\Codex\\\\Elenchus\\\\tests\\\\research-foundation\\\\.work\\\\photos-sample1\\\\project\\\\inputs\\\\README.md'"
+    },
+    {
+      "path": "session A/dated.jpg",
+      "format": "JPEG",
+      "size": [
+        8,
+        6
+      ],
+      "frames": 1,
+      "exif": {
+        "ExifOffset": "38",
+        "Orientation": "1"
+      },
+      "exif_ifd": {
+        "OffsetTimeOriginal": "+09:00",
+        "DateTimeOriginal": "2024:07:15 10:20:30"
+      },
+      "verify": "passed",
+      "decode": "passed",
+      "transposed_size": [
+        8,
+        6
+      ]
+    },
+    {
+      "path": "회전/rotated.jpg",
+      "format": "JPEG",
+      "size": [
+        8,
+        6
+      ],
+      "frames": 1,
+      "exif": {
+        "Orientation": "6"
+      },
+      "exif_ifd": {},
+      "verify": "passed",
+      "decode": "passed",
+      "transposed_size": [
+        6,
+        8
+      ]
+    }
+  ]
+}

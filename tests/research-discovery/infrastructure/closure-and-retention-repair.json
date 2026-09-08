@@ -1,0 +1,115 @@
+{
+  "kind": "reported-boundary-and-evidence-retention-repair",
+  "recorded_utc": "2026-09-07T07:01:34.388634+00:00",
+  "previous_runner_sha256": "fcd84b97b6586892ee4a063cb5eb069fe67d828f9c1b7d8a53e5a9e96f738f9a",
+  "previous_runner_archive": "runner-before-closure-retention.py.txt",
+  "new_runner_sha256": "d32a585aabb1abb987773f8de3e1d47619f4177971bea1d7e3aea290c3ab5d2c",
+  "model_inputs_source_and_permissions_changed": false,
+  "changes": [
+    "Skip cleanup entirely after incomplete artifact collection or host infrastructure error and preserve the actual temporary workspace.",
+    "Require a selected document conclusion, an explicit public conclusion signal, and delivery of the first preference packet before heuristic reported-boundary stop.",
+    "Support natural Korean conclusion sections; reject unresolved choice enums and TODO/TBD placeholders. Generic gap wording alone is not a conclusion signal."
+  ],
+  "deterministic_checks": "25 checks passed, including exact draft enum/TODO and gap-text reproduction, Korean conclusion, first-packet guard and retained workspace after forced collection failure.",
+  "audit": {
+    "rows": [
+      {
+        "result": "baseline-casino-sample1",
+        "status": "timeout",
+        "collection": null
+      },
+      {
+        "result": "baseline-photo-organizer-sample1",
+        "status": "timeout",
+        "collection": null
+      },
+      {
+        "result": "candidate-v1-casino-sample1",
+        "status": "timeout",
+        "collection": null
+      },
+      {
+        "result": "candidate-v1-photo-organizer-sample1",
+        "status": "timeout",
+        "collection": null
+      },
+      {
+        "result": "refined-candidate-v2-casino-sample1",
+        "status": "timeout",
+        "collection": "complete"
+      },
+      {
+        "result": "refined-candidate-v2-casino-sample2",
+        "status": "running",
+        "collection": null
+      },
+      {
+        "result": "refined-candidate-v2-photo-organizer-sample1",
+        "status": "timeout",
+        "collection": "complete"
+      },
+      {
+        "result": "refined-candidate-v2-photo-organizer-sample2",
+        "status": "running",
+        "collection": null
+      },
+      {
+        "result": "repaired-baseline-casino-sample1",
+        "status": "timeout",
+        "collection": "complete"
+      },
+      {
+        "result": "repaired-baseline-casino-sample2",
+        "status": "running",
+        "collection": null
+      },
+      {
+        "result": "repaired-baseline-photo-organizer-sample1",
+        "status": "timeout",
+        "collection": "complete"
+      },
+      {
+        "result": "repaired-baseline-photo-organizer-sample2",
+        "status": "timeout",
+        "collection": "complete"
+      },
+      {
+        "result": "repaired-candidate-v1-casino-sample1",
+        "status": "timeout",
+        "collection": "complete"
+      },
+      {
+        "result": "repaired-candidate-v1-casino-sample2",
+        "status": "running",
+        "collection": null
+      },
+      {
+        "result": "repaired-candidate-v1-photo-organizer-sample1",
+        "status": "timeout",
+        "collection": "complete"
+      },
+      {
+        "result": "repaired-candidate-v1-photo-organizer-sample2",
+        "status": "timeout",
+        "collection": "complete"
+      }
+    ],
+    "automatic_stop_results": [],
+    "incomplete_collection_results": [],
+    "as_of_only": true
+  },
+  "interpretation": "No semantic quality is graded by the stop heuristic. Manually identify the first user-visible research result separately from possible harness continuation overhead. Preserve in-flight and earlier records and do not repeat unaffected samples solely because collection-complete cleanup failed.",
+  "final_core_audit": {
+    "as_of_utc": "2026-09-07T07:18:53.638466+00:00",
+    "recorded_runs": 16,
+    "unfinished": [],
+    "automatic_stop_results": [],
+    "explicit_incomplete_collection_results": [],
+    "legacy_collection_unobserved": [
+      "baseline-casino-sample1",
+      "baseline-photo-organizer-sample1",
+      "candidate-v1-casino-sample1",
+      "candidate-v1-photo-organizer-sample1"
+    ]
+  }
+}

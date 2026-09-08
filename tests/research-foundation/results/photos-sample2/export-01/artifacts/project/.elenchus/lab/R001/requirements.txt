@@ -1,0 +1,2 @@
+Pillow==12.3.0
+ExifRead==3.5.1

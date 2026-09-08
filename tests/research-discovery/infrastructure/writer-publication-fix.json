@@ -1,0 +1,73 @@
+{
+  "kind": "scoped-verdict-and-published-byte-integrity-fix",
+  "recorded_utc": "2026-09-07T07:42:10.413308+00:00",
+  "writers": [
+    {
+      "current_file": "runner.py",
+      "before_archive": "infrastructure/runner-before-published-digest-fix.py.txt",
+      "before_sha256": "d32a585aabb1abb987773f8de3e1d47619f4177971bea1d7e3aea290c3ab5d2c",
+      "after_sha256": "7b74c14d7c61b58a1710b55b7d57dc99acc2dc5b6f54ed92ac7fcfe19377aa14"
+    },
+    {
+      "current_file": "targeted.py",
+      "before_archive": "infrastructure/targeted-before-published-digest-fix.py.txt",
+      "before_sha256": "8afc7556471480e47af3b6b086240cfe7bc05269008f1dea12460733f0608272",
+      "after_sha256": "92f91b1ca6cc12d12a41acc4b63ce7f6747f4359aa12032b329fd3687f6bac3c"
+    },
+    {
+      "current_file": "phase_isolation.py",
+      "before_archive": "infrastructure/phase-before-published-digest-fix.py.txt",
+      "before_sha256": "17c5f3077ea6b2cc62982ae5cfa104914a1441766c3b14f11a44d2a9890ce76f",
+      "after_sha256": "9bdd8185307d6bd3a4e443ebdfac427f1192d656eae05fc8ab03e7a86d97ffca"
+    }
+  ],
+  "frozen_writer_references": [
+    {
+      "record": "targeted/frozen.json",
+      "field": "script_sha256",
+      "sha256": "28cf3d1f5b0a69065c8d6c3867e888725097d41fe72bbcb94e0c9e035f186465",
+      "archive": "infrastructure/targeted-before-preparation-labels.py.txt"
+    },
+    {
+      "record": "targeted/frozen.json",
+      "field": "shared_runner_sha256",
+      "sha256": "2bbf04da79cce5498873a21b8a2008d4d96b62c2c63ff2e7e745dbd9a69312ff",
+      "archive": "infrastructure/runner-before-explicit-cleanup.py.txt"
+    },
+    {
+      "record": "targeted/preparations/targeted-v2.json",
+      "field": "script_sha256",
+      "sha256": "8afc7556471480e47af3b6b086240cfe7bc05269008f1dea12460733f0608272",
+      "archive": "infrastructure/targeted-before-published-digest-fix.py.txt"
+    },
+    {
+      "record": "targeted/preparations/targeted-v2.json",
+      "field": "shared_runner_sha256",
+      "sha256": "fcd84b97b6586892ee4a063cb5eb069fe67d828f9c1b7d8a53e5a9e96f738f9a",
+      "archive": "infrastructure/runner-before-closure-retention.py.txt"
+    },
+    {
+      "record": "phase-isolation/frozen.json",
+      "field": "script_sha256",
+      "sha256": "17c5f3077ea6b2cc62982ae5cfa104914a1441766c3b14f11a44d2a9890ce76f",
+      "archive": "infrastructure/phase-before-published-digest-fix.py.txt"
+    },
+    {
+      "record": "phase-isolation/frozen.json",
+      "field": "shared_runner_sha256",
+      "sha256": "d32a585aabb1abb987773f8de3e1d47619f4177971bea1d7e3aea290c3ab5d2c",
+      "archive": "infrastructure/runner-before-published-digest-fix.py.txt"
+    }
+  ],
+  "all_frozen_writer_references_resolve": true,
+  "mixed_verdict_regression": "phase-isolation/results/candidate-v2-casino/artifacts/.elenchus/research/R002-animation-production.md:73; accept separate discovery and verification judgments, reject actual unselected alternatives.",
+  "publication_audit": "infrastructure/publication-digest-audit-20260907T074008.json",
+  "corrected_existing_published_digest_fields": 52,
+  "metadata_files_changed": 30,
+  "unchanged_evidence_files": 254,
+  "unchanged_frozen_source_input_files": 38,
+  "post_correction_digest_mismatches": 0,
+  "input_and_answer_pretransport_prepublication_text_digests_preserved": true,
+  "test_result": "28 deterministic harness/packaging tests passed. Package-copy fixture now creates its destination explicitly, matching the existing copy helper contract; no production updater change.",
+  "no_additional_model_runs": true
+}

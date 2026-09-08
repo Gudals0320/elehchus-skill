@@ -1,0 +1,14 @@
+{
+  "recorded_utc": "2026-09-08T08:45:08.685553+00:00",
+  "agent": "/root/foundation_photos_1",
+  "fork_turns": "none",
+  "model_argument": "gpt-6-astra",
+  "reasoning_effort_argument": "xhigh",
+  "creation_result": "created",
+  "dispatch_sha256": "e03da38b57bb3e8b9bee37c50089e06c444a81470cc9f4d859cc852f797df834",
+  "host_runtime_model_telemetry": null,
+  "limits": {
+    "seconds": null,
+    "responses": null
+  }
+}

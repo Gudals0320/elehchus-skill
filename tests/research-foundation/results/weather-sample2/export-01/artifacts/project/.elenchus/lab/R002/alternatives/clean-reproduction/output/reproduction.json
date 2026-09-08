@@ -1,0 +1,61 @@
+{
+  "python": "3.12.10",
+  "sqlite": "3.49.1",
+  "runs": [
+    {
+      "import_id": 1,
+      "processed": 216,
+      "rows_total": 216,
+      "missing": 0,
+      "series_key": "1d114a366932d1ce8d24abf4143aa79b237933730c03d416c273fdc13be5d1b2"
+    },
+    {
+      "import_id": 2,
+      "processed": 216,
+      "rows_total": 432,
+      "missing": 0,
+      "series_key": "1d114a366932d1ce8d24abf4143aa79b237933730c03d416c273fdc13be5d1b2"
+    },
+    {
+      "import_id": 1,
+      "processed": 216,
+      "rows_total": 432,
+      "missing": 0,
+      "series_key": "1d114a366932d1ce8d24abf4143aa79b237933730c03d416c273fdc13be5d1b2"
+    }
+  ],
+  "measurements": 432,
+  "summaries": [
+    {
+      "series_key": "1d114a366932d1ce8d24abf4143aa79b237933730c03d416c273fdc13be5d1b2",
+      "variable": "precipitation",
+      "unit": "mm",
+      "rows": 144,
+      "valid": 144,
+      "missing": 0,
+      "mean": 1.3215055555555555,
+      "sum_available": 190.2968
+    },
+    {
+      "series_key": "1d114a366932d1ce8d24abf4143aa79b237933730c03d416c273fdc13be5d1b2",
+      "variable": "temperature_2m",
+      "unit": "degC",
+      "rows": 144,
+      "valid": 144,
+      "missing": 0,
+      "mean": 11.23179012345679,
+      "sum_available": null
+    },
+    {
+      "series_key": "1d114a366932d1ce8d24abf4143aa79b237933730c03d416c273fdc13be5d1b2",
+      "variable": "wind_speed_10m",
+      "unit": "m/s",
+      "rows": 144,
+      "valid": 144,
+      "missing": 0,
+      "mean": 2.5738143086419756,
+      "sum_available": null
+    }
+  ],
+  "database": "C:\\Codex\\Elenchus\\tests\\research-foundation\\.work\\weather-sample2\\project\\.elenchus\\lab\\R002\\alternatives\\clean-reproduction\\output\\weather.sqlite"
+}

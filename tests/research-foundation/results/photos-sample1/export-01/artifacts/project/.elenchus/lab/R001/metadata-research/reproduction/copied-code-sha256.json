@@ -1,0 +1,26 @@
+{
+  "original-before.json": {
+    "source_sha256": "2f5bb41c780205a123bb5ad5b29c3adf0bf46c1dca39a65c5eadf9b41b4b4273",
+    "copy_sha256": "2f5bb41c780205a123bb5ad5b29c3adf0bf46c1dca39a65c5eadf9b41b4b4273"
+  },
+  "README.md": {
+    "source_sha256": "0c5419564b7d9113e7557141de716b87b17761918ae0347dab1b06d3113b6197",
+    "copy_sha256": "0c5419564b7d9113e7557141de716b87b17761918ae0347dab1b06d3113b6197"
+  },
+  "photo_materials.py": {
+    "source_sha256": "e2b05ee0b7ddaad7c4e47b4849312af3dec4d9ee2ebe55ad5cd051ca433aff2e",
+    "copy_sha256": "e2b05ee0b7ddaad7c4e47b4849312af3dec4d9ee2ebe55ad5cd051ca433aff2e"
+  },
+  "test_photo_materials.py": {
+    "source_sha256": "9e34be31b1bc3faefc04da9784896ce13174f5a5f06f14972b90063ef8061848",
+    "copy_sha256": "9e34be31b1bc3faefc04da9784896ce13174f5a5f06f14972b90063ef8061848"
+  },
+  "requirements.txt": {
+    "source_sha256": "41b54a6fb2918667ca47a61d73b522629d84490f3d78f0f20b21135faba10d35",
+    "copy_sha256": "41b54a6fb2918667ca47a61d73b522629d84490f3d78f0f20b21135faba10d35"
+  },
+  "generate_fixtures.py": {
+    "source_sha256": "9cf346a7d23e3e5b6b1d6dedf02c84a0fb8377d08bedcc54fb814484c3bdc702",
+    "copy_sha256": "9cf346a7d23e3e5b6b1d6dedf02c84a0fb8377d08bedcc54fb814484c3bdc702"
+  }
+}

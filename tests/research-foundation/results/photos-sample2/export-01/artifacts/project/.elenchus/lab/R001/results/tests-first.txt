@@ -1,0 +1,25 @@
+test_all_orientation_pixel_placements (test_material.MaterialTests.test_all_orientation_pixel_placements) ... ok
+test_candidates_retain_uncertainty (test_material.MaterialTests.test_candidates_retain_uncertainty) ... ok
+test_cli_rejects_input_or_existing_output (test_material.MaterialTests.test_cli_rejects_input_or_existing_output) ... ok
+test_conflicting_originals_require_review (test_material.MaterialTests.test_conflicting_originals_require_review) ... ok
+test_digest_collision_not_enough (test_material.MaterialTests.test_digest_collision_not_enough) ... ok
+test_format_detected_from_bytes (test_material.MaterialTests.test_format_detected_from_bytes) ... ok
+test_hardlinks_are_aliases_not_two_storage_objects (test_material.MaterialTests.test_hardlinks_are_aliases_not_two_storage_objects) ... ok
+test_invalid_date_and_offset (test_material.MaterialTests.test_invalid_date_and_offset) ... ok
+test_invalid_orientation (test_material.MaterialTests.test_invalid_orientation) ... ok
+test_metadata_and_verify_do_not_prove_decode (test_material.MaterialTests.test_metadata_and_verify_do_not_prove_decode) ... ok
+test_modify_offset_in_exif_ifd_does_not_mean_capture (test_material.MaterialTests.test_modify_offset_in_exif_ifd_does_not_mean_capture) ... ok
+test_multiple_frames_and_budget (test_material.MaterialTests.test_multiple_frames_and_budget) ... ok
+test_original_coverage_and_exact_group (test_material.MaterialTests.test_original_coverage_and_exact_group) ... ok
+test_original_date_provenance (test_material.MaterialTests.test_original_date_provenance) ... ok
+test_originals_match_manifest_and_baseline (test_material.MaterialTests.test_originals_match_manifest_and_baseline) ... ok
+test_read_failure_does_not_abort_scan (test_material.MaterialTests.test_read_failure_does_not_abort_scan) ... ok
+test_same_pixels_not_same_file (test_material.MaterialTests.test_same_pixels_not_same_file) ... ok
+test_scan_rerun_is_stable (test_material.MaterialTests.test_scan_rerun_is_stable) ... ok
+test_tiff_and_jpeg_orientation (test_material.MaterialTests.test_tiff_and_jpeg_orientation) ... ok
+test_unknown_timezone_and_subseconds (test_material.MaterialTests.test_unknown_timezone_and_subseconds) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.602s
+
+OK

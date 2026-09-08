@@ -1,0 +1,22 @@
+test_all_missing_is_not_zero_aggregate (test_weather_pipeline.WeatherTests.test_all_missing_is_not_zero_aggregate) ... ok
+test_changed_response_retains_distinct_snapshot (test_weather_pipeline.WeatherTests.test_changed_response_retains_distinct_snapshot) ... ok
+test_dst_fall_back_preserves_two_instants (test_weather_pipeline.WeatherTests.test_dst_fall_back_preserves_two_instants) ... ok
+test_duplicate_or_ambiguous_times_are_rejected (test_weather_pipeline.WeatherTests.test_duplicate_or_ambiguous_times_are_rejected) ... ok
+test_empty_response_has_no_fabricated_values (test_weather_pipeline.WeatherTests.test_empty_response_has_no_fabricated_values) ... ok
+test_http_429_retry_then_success_and_400_no_retry (test_weather_pipeline.WeatherTests.test_http_429_retry_then_success_and_400_no_retry) ... ok
+test_incomplete_edge_window_not_marked_complete (test_weather_pipeline.WeatherTests.test_incomplete_edge_window_not_marked_complete) ... ok
+test_korean_day_uses_explicit_offset_bounds (test_weather_pipeline.WeatherTests.test_korean_day_uses_explicit_offset_bounds) ... ok
+test_missing_timestamp_flag_without_interpolation (test_weather_pipeline.WeatherTests.test_missing_timestamp_flag_without_interpolation) ... ok
+test_naive_query_bounds_rejected (test_weather_pipeline.WeatherTests.test_naive_query_bounds_rejected) ... ok
+test_nonstandard_json_numbers_rejected (test_weather_pipeline.WeatherTests.test_nonstandard_json_numbers_rejected) ... ok
+test_null_and_zero_remain_distinct (test_weather_pipeline.WeatherTests.test_null_and_zero_remain_distinct) ... ok
+test_real_imperial_agrees_with_si_with_provider_rounding (test_weather_pipeline.WeatherTests.test_real_imperial_agrees_with_si_with_provider_rounding) ... ok
+test_real_response_round_trip_and_reingestion (test_weather_pipeline.WeatherTests.test_real_response_round_trip_and_reingestion) ... ok
+test_strict_table_rejects_text_measurement (test_weather_pipeline.WeatherTests.test_strict_table_rejects_text_measurement) ... ok
+test_tampered_raw_hash_is_rejected_before_write (test_weather_pipeline.WeatherTests.test_tampered_raw_hash_is_rejected_before_write) ... ok
+test_unknown_unit_and_malformed_arrays_do_not_change_database (test_weather_pipeline.WeatherTests.test_unknown_unit_and_malformed_arrays_do_not_change_database) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.146s
+
+OK

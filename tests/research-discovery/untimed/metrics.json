@@ -1,0 +1,190 @@
+{
+  "runs": [
+    {
+      "run": "untimed-baseline-casino-sample1",
+      "source": "baseline",
+      "case": "casino",
+      "sample": 1,
+      "responses": 2,
+      "first_comparison_turn": 2,
+      "first_comparison_processing_seconds": 906.766,
+      "model_processing_seconds": 906.766,
+      "operator_wait_seconds": 92.578,
+      "elapsed_seconds": 999.438,
+      "usage": {
+        "input_tokens": 469895,
+        "cached_input_tokens": 393472,
+        "output_tokens": 27439,
+        "reasoning_output_tokens": 4526
+      },
+      "tool_calls": 25,
+      "question_line_candidates": 2,
+      "cleanup_status": "retained_on_error",
+      "summary_sha256": "caa8221620a6919012f2d71cfa6a1d74d1e3ccbe4a8978a61b4c1a6d2ad5f322",
+      "assessment_sha256": "79d5a5ad619e25aa9967bfbc9d6385cf7f376d9c1e6da4792226fc79726c3f0a"
+    },
+    {
+      "run": "untimed-candidate-v2-casino-sample1",
+      "source": "candidate-v2",
+      "case": "casino",
+      "sample": 1,
+      "responses": 2,
+      "first_comparison_turn": 2,
+      "first_comparison_processing_seconds": 780.328,
+      "model_processing_seconds": 780.328,
+      "operator_wait_seconds": 105.093,
+      "elapsed_seconds": 885.516,
+      "usage": {
+        "input_tokens": 497700,
+        "cached_input_tokens": 432384,
+        "output_tokens": 22612,
+        "reasoning_output_tokens": 5042
+      },
+      "tool_calls": 25,
+      "question_line_candidates": 2,
+      "cleanup_status": "retained_on_error",
+      "summary_sha256": "255e47f28ba43a8ab9c44c487542edbff11681b017a6b3a7a21731107c76c266",
+      "assessment_sha256": "3829f1801f69f87f93aca4b9b5ae10ee95c787f59d4ba835a2b980a39233dcfd"
+    },
+    {
+      "run": "untimed-candidate-v2-photo-organizer-sample1",
+      "source": "candidate-v2",
+      "case": "photo-organizer",
+      "sample": 1,
+      "responses": 2,
+      "first_comparison_turn": 1,
+      "first_comparison_processing_seconds": 403.156,
+      "model_processing_seconds": 1020.75,
+      "operator_wait_seconds": 104.078,
+      "elapsed_seconds": 1124.937,
+      "usage": {
+        "input_tokens": 1018642,
+        "cached_input_tokens": 892032,
+        "output_tokens": 30628,
+        "reasoning_output_tokens": 5177
+      },
+      "tool_calls": 34,
+      "question_line_candidates": 2,
+      "cleanup_status": "retained_on_error",
+      "summary_sha256": "5bc653e24cdc48015407211dfd91807013fde43546e1a9535a96f1aed0c0e62f",
+      "assessment_sha256": "777477de441c6977686e6eef2cd35f47560718ab75363bb427dad85ad1de93a9"
+    },
+    {
+      "run": "untimed-baseline-photo-organizer-sample1",
+      "source": "baseline",
+      "case": "photo-organizer",
+      "sample": 1,
+      "responses": 2,
+      "first_comparison_turn": 2,
+      "first_comparison_processing_seconds": 890.547,
+      "model_processing_seconds": 890.547,
+      "operator_wait_seconds": 120.094,
+      "elapsed_seconds": 1010.735,
+      "usage": {
+        "input_tokens": 522349,
+        "cached_input_tokens": 458240,
+        "output_tokens": 27557,
+        "reasoning_output_tokens": 4493
+      },
+      "tool_calls": 21,
+      "question_line_candidates": 2,
+      "cleanup_status": "retained_on_error",
+      "summary_sha256": "b2d9ab61e1733b3981b2b6bf7ad797f0f2eb008c1e6a72fd66e1f308a82e758e",
+      "assessment_sha256": "a9bf407c89b54909792e7ca683491d0ce2d091b7293ec078932b67be89abe284"
+    },
+    {
+      "run": "untimed-baseline-photo-organizer-sample2",
+      "source": "baseline",
+      "case": "photo-organizer",
+      "sample": 2,
+      "responses": 2,
+      "first_comparison_turn": 2,
+      "first_comparison_processing_seconds": 1012.219,
+      "model_processing_seconds": 1012.219,
+      "operator_wait_seconds": 74.578,
+      "elapsed_seconds": 1086.906,
+      "usage": {
+        "input_tokens": 569989,
+        "cached_input_tokens": 498304,
+        "output_tokens": 31480,
+        "reasoning_output_tokens": 4088
+      },
+      "tool_calls": 22,
+      "question_line_candidates": 2,
+      "cleanup_status": "retained_on_error",
+      "summary_sha256": "444efd1b8041eaec79ac2a08ba55eeb18ee0bd5378aa6aee254fb38b8497382b",
+      "assessment_sha256": "bac3c886fe91ef4225546fbbbde76d68125dca07749f1b4f916dad99133f456c"
+    },
+    {
+      "run": "untimed-candidate-v2-photo-organizer-sample2",
+      "source": "candidate-v2",
+      "case": "photo-organizer",
+      "sample": 2,
+      "responses": 2,
+      "first_comparison_turn": 1,
+      "first_comparison_processing_seconds": 422.687,
+      "model_processing_seconds": 1060.531,
+      "operator_wait_seconds": 82.078,
+      "elapsed_seconds": 1142.703,
+      "usage": {
+        "input_tokens": 1117098,
+        "cached_input_tokens": 999040,
+        "output_tokens": 31170,
+        "reasoning_output_tokens": 4821
+      },
+      "tool_calls": 45,
+      "question_line_candidates": 2,
+      "cleanup_status": "retained_on_error",
+      "summary_sha256": "8674c1fd1b61a4e0c4ca87ad01252e255222894e4ca3727a50d0423b3e4756bf",
+      "assessment_sha256": "f974f2124473eecb6ee6e15e959320ad93f092fe9627890ffca02db0638d3333"
+    },
+    {
+      "run": "untimed-candidate-v2-casino-sample2",
+      "source": "candidate-v2",
+      "case": "casino",
+      "sample": 2,
+      "responses": 2,
+      "first_comparison_turn": 2,
+      "first_comparison_processing_seconds": 642.578,
+      "model_processing_seconds": 642.578,
+      "operator_wait_seconds": 69.562,
+      "elapsed_seconds": 712.235,
+      "usage": {
+        "input_tokens": 484558,
+        "cached_input_tokens": 391424,
+        "output_tokens": 18644,
+        "reasoning_output_tokens": 3526
+      },
+      "tool_calls": 24,
+      "question_line_candidates": 2,
+      "cleanup_status": "retained_on_error",
+      "summary_sha256": "1f079f7cc53bdd85766845be917ed47d668a09f721d4253a428fe8b2228049d1",
+      "assessment_sha256": "a0852ce846ea2980fe514f16d90bfdc6504f9d6709d837b0c702ff6a1213571c"
+    },
+    {
+      "run": "untimed-baseline-casino-sample2",
+      "source": "baseline",
+      "case": "casino",
+      "sample": 2,
+      "responses": 2,
+      "first_comparison_turn": 2,
+      "first_comparison_processing_seconds": 831.609,
+      "model_processing_seconds": 831.609,
+      "operator_wait_seconds": 47.547,
+      "elapsed_seconds": 879.25,
+      "usage": {
+        "input_tokens": 548883,
+        "cached_input_tokens": 430976,
+        "output_tokens": 25065,
+        "reasoning_output_tokens": 4311
+      },
+      "tool_calls": 23,
+      "question_line_candidates": 2,
+      "cleanup_status": "retained_on_error",
+      "summary_sha256": "e2671f99a27d08e6db226647827498c0301c80aa12f5be888dc8b0f6c26aa68e",
+      "assessment_sha256": "226c183e9c8198e0152b9b3131a4bb29291dbb82af0a0b27eb444ff568f757c2"
+    }
+  ],
+  "completed": 8,
+  "interpretation": "Operator-reviewed delivery of document-scoped findings; not live discovery or quality superiority."
+}

@@ -1,0 +1,29 @@
+{
+  "source": "candidate-v2",
+  "case": "photo-organizer",
+  "sample": 2,
+  "process_exit_code": 0,
+  "command": [
+    "C:\\Program Files\\Python312\\python.exe",
+    "-B",
+    "<repository>\\tests\\research-discovery\\runner.py",
+    "run",
+    "--snapshot",
+    "<repository>\\tests\\research-discovery\\snapshots\\candidate-v2.json",
+    "--label",
+    "untimed-candidate-v2",
+    "--case",
+    "photo-organizer",
+    "--sample",
+    "2",
+    "--cli",
+    "<user>/AppData/Local/OpenAI/Codex/bin/8e5b6932251c2c1c/codex.exe",
+    "--no-time-limit",
+    "--max-responses",
+    "0",
+    "--operator-review"
+  ],
+  "finished_utc": "2026-09-07T09:02:03.362331+00:00",
+  "stdout": "{\"run\": \"untimed-candidate-v2-photo-organizer-sample2\", \"turn\": 1, \"elapsed_seconds\": 422.718, \"exit_code\": 0, \"timed_out\": false}\n{\"run\": \"untimed-candidate-v2-photo-organizer-sample2\", \"turn\": 2, \"elapsed_seconds\": 1060.625, \"exit_code\": 0, \"timed_out\": false}\n{\"run\": \"untimed-candidate-v2-photo-organizer-sample2\", \"turn\": 2, \"status\": \"awaiting_operator_review\"}\n<repository>\\tests\\research-discovery\\results\\untimed-candidate-v2-photo-organizer-sample2\n",
+  "stderr": ""
+}

@@ -1,0 +1,51 @@
+{
+  "date_original": {
+    "copies/duplicate.jpg": "2024:07:15 10:20:30",
+    "session A/dated.jpg": "2024:07:15 10:20:30"
+  },
+  "duplicates": [
+    [
+      "copies/duplicate.jpg",
+      "session A/dated.jpg"
+    ]
+  ],
+  "invalid_image": [
+    "broken/truncated.jpg"
+  ],
+  "no_embedded_capture_date": [
+    "회전/rotated.jpg",
+    "plain.png"
+  ],
+  "non_image": [
+    "notes.txt"
+  ],
+  "not_tested": [
+    "camera fidelity",
+    "HEIC",
+    "RAW",
+    "large-library performance"
+  ],
+  "offset_time_original": {
+    "copies/duplicate.jpg": "+09:00",
+    "session A/dated.jpg": "+09:00"
+  },
+  "orientation": {
+    "copies/duplicate.jpg": 1,
+    "formats/sample.tiff": 8,
+    "session A/dated.jpg": 1,
+    "회전/rotated.jpg": 6
+  },
+  "provenance": "deterministic synthetic pixels and metadata; not user photos",
+  "sha256": {
+    "broken/truncated.jpg": "aa8b4cd7477ed2392383fc1196567875d3d5d6b733739c1ca1c9d866f8e9c0cc",
+    "copies/duplicate.jpg": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "formats/sample.tiff": "1f29eec7d335ebdc98d141a01357962565e58413fedc9c6e06773134606b580b",
+    "notes.txt": "9e504f69e20609699c0a98bafdc24514b658a5da8b3f56138b994bf163e1a39f",
+    "plain.png": "40f085a2f22605b5d3d9463db2c67ae89a67debea1e3d6e61d46a194c48c0acc",
+    "session A/dated.jpg": "98be3ae374a8913faf97f323ae964374945f54b0aa296958a929fb90e0113491",
+    "회전/rotated.jpg": "c60c3c84e584d5c7c74484eb67f5c9b343f8e63035cf2c3a5c65e2cf6fdf8aed"
+  },
+  "tiff_datetime_without_timezone": {
+    "formats/sample.tiff": "2024:07:15 10:20:30"
+  }
+}
