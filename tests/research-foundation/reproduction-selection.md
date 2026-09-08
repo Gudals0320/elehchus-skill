@@ -11,3 +11,5 @@ python -B tests/research-foundation/prepare_reproduction.py --export EXPORT --wo
 ```
 
 처음 선택 도우미의 단위 검사에서는 시험용 export fixture에 필수 `copied_fixed_input` 상태를 빠뜨려 정상 복사 검사 1개가 실패했다. fixture를 실제 export 계약에 맞춘 뒤 4개 검사가 통과했다. 이 오류는 실제 데이터 수집·재현 실행 전에 발생했다.
+
+최종 마무리에서는 원래 harness의 reproduce-prepare도 선택 도우미를 호출하도록 수정했다. actor 로그가 포함됐는데 제공하지 않았다고 반환하는 경로를 없앴다. clean-reproduction/final-reproduction 폴더 및 ZIP 안의 제외 대상도 검사한다. 이 수정은 사용자 중단 뒤의 도구 보완이며 과거 모델 입력이나 결과를 소급 변경하지 않는다.

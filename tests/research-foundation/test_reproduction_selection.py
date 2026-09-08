@@ -1,7 +1,9 @@
 """A replay must receive selected materials, not nested actor activity logs."""
 from pathlib import Path
+import io
 import tempfile
 import unittest
+import zipfile
 
 import harness
 import prepare_reproduction
@@ -34,11 +36,32 @@ class SelectedReproductionTests(unittest.TestCase):
         self.assertEqual(result['withheld_project_files'], [self.log])
         self.assertFalse(result['actor_activity_and_observer_records_provided'])
 
+    def test_harness_compatibility_entry_withholds_nested_actor_log(self):
+        target = self.root / 'replay'
+        result = harness.reproduce(self.export, target)
+        self.assertEqual((target / self.code).read_bytes(), b'print(42)\n')
+        self.assertFalse((target / self.log).exists())
+        self.assertFalse(result['actor_activity_and_observer_records_provided'])
+
     def test_logs_and_paths_outside_project_rejected_before_copy(self):
-        for name in (self.log, 'records/final.md', '../outside.py', 'project/reproduction-old/summary.json'):
+        for name in (self.log, 'records/final.md', '../outside.py', 'project/reproduction-old/summary.json', 'project/clean-reproduction/summary.json'):
             with self.subTest(name=name), self.assertRaises(ValueError):
                 prepare_reproduction.prepare(self.export, self.root / 'replay', [name])
             self.assertFalse((self.root / 'replay').exists())
+
+    def test_archive_cannot_reintroduce_withheld_replay_records(self):
+        data = io.BytesIO()
+        with zipfile.ZipFile(data, 'w') as z:
+            z.writestr('materials/tool.py', 'print(42)')
+            z.writestr('materials/clean-reproduction/receipt.json', '{}')
+        name = 'project/delivery.zip'
+        harness.write(self.export / 'artifacts' / name, data.getvalue())
+        record = harness.load(self.export / 'export.json')
+        record['files'][name] = {'published_sha256': harness.sha(data.getvalue())}
+        (self.export / 'export.json').write_bytes(harness.json_bytes(record))
+        with self.assertRaisesRegex(ValueError, 'archive contains withheld'):
+            prepare_reproduction.prepare(self.export, self.root / 'replay', [name])
+        self.assertFalse((self.root / 'replay').exists())
 
     def test_mutated_prompt_rejected(self):
         (self.export / 'reproduction-input.md').write_bytes(b'changed prompt')

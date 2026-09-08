@@ -328,9 +328,20 @@ class PackagingTests(unittest.TestCase):
     def test_current_discovery_survives_existing_package_copy(self):
         version = re.search(r'version:\s*"([^"]+)"', (runner.REPO / "SKILL.md").read_text(encoding="utf-8")).group(1)
         with tempfile.TemporaryDirectory() as temporary:
+            # Exercise the package copier on the real runtime payload. The
+            # working repository may now contain large ignored live-evaluation
+            # workspaces/venvs, which are not part of a release source archive.
+            source = Path(temporary) / "source"
+            payload = runner.runtime_bytes()
+            for name in ("LICENSE", "README.md"):
+                payload[name] = (runner.REPO / name).read_bytes()
+            for name, data in payload.items():
+                path = source / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(data)
             destination = Path(temporary) / "package"
             destination.mkdir()
-            self.release._copy_package(runner.REPO, destination)
+            self.release._copy_package(source, destination)
             self.release._validate_package(destination, version)
             copied = destination / "stages/discovery.md"
             self.assertEqual(copied.read_bytes(), (runner.REPO / "stages/discovery.md").read_bytes())

@@ -2,3 +2,5 @@
 ** -text
 results/** -whitespace
 baseline/** -whitespace
+targeted/results/** -whitespace
+targeted/dynamic-followup/** -whitespace

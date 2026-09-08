@@ -108,7 +108,7 @@ def runtime_blobs(repo: Path, revision: str, runtime_paths: list[str]) -> tuple[
 
 
 def method_hashes() -> dict[str, str]:
-    files = [HERE / name for name in ("manifest.json", "harness.py", "fixtures.py", "README.md", ".gitattributes")]
+    files = [HERE / name for name in ("manifest.json", "harness.py", "prepare_reproduction.py", "fixtures.py", "README.md", ".gitattributes")]
     for folder in ("actor", "fixtures", "evaluator"):
         files.extend(p for p in (HERE / folder).rglob("*") if p.is_file())
     return {p.relative_to(HERE).as_posix(): sha(p.read_bytes()) for p in sorted(files)}
@@ -302,24 +302,18 @@ def verify(folder: Path) -> dict:
             "collection_status": record["status"], "initial_files_unchanged": record["initial_files_unchanged"]}
 
 
-def reproduce(export_dir: Path, workspace: Path) -> dict:
-    integrity = verify(export_dir)
-    if integrity["status"] != "verified":
+def reproduce(export_dir: Path, workspace: Path, materials: list[str] | None = None) -> dict:
+    from prepare_reproduction import prepare, withheld_record
+    if verify(export_dir)["status"] != "verified":
         raise ValueError("export integrity failed")
-    if workspace.exists():
-        raise ValueError("reproduction workspace already exists")
-    source = export_dir / "artifacts/project"
-    if not source.is_dir():
-        raise ValueError("export has no project materials")
-    tree(source)  # reject links/private configuration before copy
-    reproduction_input = checked_path(export_dir, "reproduction-input.md").read_bytes()
-    if sha(reproduction_input) != load(export_dir / "export.json")["reproduction_input"]["expected_sha256"]:
-        raise ValueError("fixed reproduction input changed during preparation")
-    workspace.mkdir(parents=True)
-    shutil.copytree(source, workspace / "project")
-    write(workspace / "input.md", reproduction_input)
-    return {"created_utc": stamp(), "input_sha256": sha((workspace / "input.md").read_bytes()), "project_sha256": tree(workspace / "project"),
-            "collection_status": integrity["collection_status"], "actor_activity_and_observer_records_provided": False}
+    if materials is None:
+        # Compatibility default remains a safe subset; explicit reviewed
+        # selections are preferable for real runs. Archives are checked by prepare.
+        materials = [name for name in load(export_dir / "export.json")["files"]
+                     if name.startswith("project/") and not withheld_record(name)]
+    result = prepare(export_dir, workspace, materials)
+    return {**result, "input_sha256": result["reproduction_input_sha256"],
+            "project_sha256": tree(workspace / "project"), "collection_status": "complete_allowlist_copy"}
 
 
 def main() -> None:
@@ -350,6 +344,7 @@ def main() -> None:
     p = commands.add_parser("reproduce-prepare")
     p.add_argument("--export", type=Path, required=True)
     p.add_argument("--workspace", type=Path, required=True)
+    p.add_argument("--materials", type=Path, help="Reviewed project-file JSON list; defaults to project files without activity/replay records")
     args = parser.parse_args()
     if args.command == "freeze":
         result = freeze(args.repo, args.revision, args.out)
@@ -362,7 +357,7 @@ def main() -> None:
     elif args.command == "verify":
         result = verify(args.export)
     else:
-        result = reproduce(args.export, args.workspace)
+        result = reproduce(args.export, args.workspace, load(args.materials) if args.materials else None)
     print(json.dumps(result, ensure_ascii=True, sort_keys=True))
     if result.get("status") in {"mismatch", "partial_collection"}:
         raise SystemExit(1)

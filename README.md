@@ -57,13 +57,14 @@ skill:Elenchus 로 기존 탐구를 재개해 줘.
 
 ## 개발과 평가
 
-[beta.2 아키텍처](docs/research-foundation-beta2.md)와 [실제 평가 준비·기록](tests/research-foundation/README.md)을 따른다. 독립 컨텍스트의 두 분야 각 2회에서 실제 웹·복수 agent·기능 실험과 재료 재현을 평가한다. 준비된 평가와 실제 완료한 실행은 구분한다.
+[beta.2 아키텍처](docs/research-foundation-beta2.md)와 [평가 결과·수정·중단 범위](tests/research-foundation/RESULTS.md)를 참고한다. 네 실제 시도 중 세 세션을 종료했고, 외부 재현 두 번에서 발견한 재현 비교 문제를 별도 수정본으로 보완했다. 사용자의 요청으로 잔여 실제 평가·독립 검토를 중단하고 시험 배포한다. 전체 네 회차가 독립 검증을 통과했다고 주장하지 않는다.
 
 기존 [beta.1 무제한 비교](tests/research-discovery/untimed/RESULTS.md) 및 [이전 전체 결과](tests/research-discovery/RESULTS.md)는 당시 소스·조건의 기록으로 보존한다. 고정 합성 자료 비교를 실제 웹 발견 능력이나 beta.2의 성공 근거로 대체하지 않는다.
 
 ```powershell
 python -B -m unittest discover -s tests -p 'test_*.py'
 python -B -m unittest discover -s tests/research-discovery -p 'test_*.py'
+python -B -m unittest discover -s tests/research-foundation -p 'test_*.py'
 ```
 
 ## 라이선스

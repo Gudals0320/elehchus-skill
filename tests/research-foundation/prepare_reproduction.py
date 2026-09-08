@@ -7,9 +7,17 @@ import argparse
 import json
 from pathlib import Path
 import sys
+import io
+import zipfile
 
 sys.dont_write_bytecode = True
 import harness
+
+
+def withheld_record(name: str) -> bool:
+    path = Path(name)
+    return (path.name == 'activity.jsonl' or path.suffix == '.log'
+            or any('reproduction' in p or p == 'verification' for p in path.parts[:-1]))
 
 
 def prepare(export_dir: Path, workspace: Path, materials: list[str]) -> dict:
@@ -27,11 +35,17 @@ def prepare(export_dir: Path, workspace: Path, materials: list[str]) -> dict:
         name = harness.safe_relative(name)
         if not name.startswith('project/'):
             raise ValueError('only project materials may enter reproduction')
-        parts = Path(name).parts
-        if (Path(name).name == 'activity.jsonl' or Path(name).suffix == '.log'
-                or any(p.startswith('reproduction') or p == 'verification' for p in parts)):
+        if withheld_record(name):
             raise ValueError('actor activity and prior replay records are withheld')
-        contents[name] = harness.checked_path(export_dir / 'artifacts', name).read_bytes()
+        data = harness.checked_path(export_dir / 'artifacts', name).read_bytes()
+        if Path(name).suffix.lower() == '.zip':
+            with zipfile.ZipFile(io.BytesIO(data)) as archive:
+                for member in archive.infolist():
+                    if not member.is_dir():
+                        member_name = harness.safe_relative(member.filename)
+                        if withheld_record(member_name):
+                            raise ValueError('archive contains withheld replay records; select loose materials')
+        contents[name] = data
     prompt = (export_dir / 'reproduction-input.md').read_bytes()
     record = harness.load(export_dir / 'export.json')
     if harness.sha(prompt) != record['reproduction_input']['expected_sha256']:

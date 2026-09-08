@@ -2,6 +2,12 @@
 
 beta.2의 Topology와 실전적 Research를 실제 웹·독립 agent·코드 실행이 있는 새 컨텍스트에서 네 번 평가하기 위한 입력과 기록 도구다. **이 폴더를 준비하거나 Python 테스트를 실행한 것만으로 실제 평가가 완료되지는 않는다.** 실제 결과는 실행 후 별도 `results/`에 추가한다. 과거 `tests/research-discovery/`의 자료를 수정하거나 다시 채점하지 않는다.
 
+## 이번 실행의 마무리
+
+사용자의 요청으로 잔여 실제 평가·독립 검토를 중단했다. [결과와 수정 사항](RESULTS.md), [범위 변경](scope-change.json)을 확인한다. 아래는 평가 재현/준비 절차이며 미실행을 완료로 간주하지 않는다.
+
+최초 소스는 baseline/primary/runtime.zip에 원래 Git blob bytes로 보존했다. runtime/ 디렉터리는 설치 payload에 중첩 SKILL 사본이 들어가지 않도록 Git에서 제외한다. 필요하면 해당 ZIP을 runtime/에 풀어 살펴볼 수 있다. 당시 평가 방법은 freeze에 기록한 커밋/해시를 기준으로 확인하며, 현재 보완된 도구로 재평가할 때는 새 freeze label을 사용한다.
+
 ## 구성과 경계
 
 - `actor/`: 두 원요구, 고정 사용자 답변과 종료/계속 응답. 수행 모델에게 개선 이유·rubric·기대 정답·사전 후보 목록을 주지 않는다.
@@ -39,10 +45,12 @@ python tests/research-foundation/harness.py event --out tests/research-foundatio
 ```powershell
 python tests/research-foundation/harness.py export --workspace tests/research-foundation/.work/weather-sample1 --run tests/research-foundation/results/weather-sample1 --allowlist tests/research-foundation/results/weather-sample1/allowlist.json --out tests/research-foundation/results/weather-sample1/export-01
 python tests/research-foundation/harness.py verify --export tests/research-foundation/results/weather-sample1/export-01
-python tests/research-foundation/harness.py reproduce-prepare --export tests/research-foundation/results/weather-sample1/export-01 --workspace tests/research-foundation/.work/weather-sample1-reproduction
+python tests/research-foundation/harness.py reproduce-prepare --export tests/research-foundation/results/weather-sample1/export-01 --workspace tests/research-foundation/.work/weather-sample1-reproduction --materials tests/research-foundation/results/weather-sample1/reproduction-materials.json
 ```
 
 export는 개별 누락·읽기 실패·금지 경로를 기록하고 성공 파일도 보존한다. 부분 수집이면 exit code 1이며 미완료 사실을 보고한다. 파일당 32 MiB 초과는 공개 크기 경계로만 적용되며 연구 세션 시간 제한이 아니다. 필요한 큰 자료는 별도 검토한 방법으로 보존하고 provenance를 기록한다. 작업 폴더 자동 삭제는 없다. snapshot의 input/runtime/원본 프로젝트·사진 해시 변화를 확인한다. 저장소 원본의 변경 여부는 root operator가 해당 파일 해시와 Git diff로 별도 확인한다.
+
+[재료 선택 보완](reproduction-selection.md)에 따라 actor 활동·과거 replay 폴더와 이를 포함한 ZIP은 재현 입력에서 제외한다. 현재 reproduce-prepare도 같은 선택 경로를 사용한다.
 
 재현 검토자는 `reproduction` 작업장의 `input.md`와 `project/`만 받는다. 재현 요청은 freeze 해시로 확인한 바이트를 prepare 시 operator 결과 폴더의 `reproduction-input.md`로 고정하고, export에서 같은 바이트와 해시를 보존한다. `reproduce-prepare`는 검증한 export 사본만 사용한다. 현재 지침 파일이 바뀌어도 과거 실행의 입력을 바꾸지 않으며, 고정 사본이 누락·변조됐으면 현재 파일로 대신 채우지 않고 실패를 기록한다. 이 파일은 수행 actor의 작업장에 제공하지 않는다.
 
