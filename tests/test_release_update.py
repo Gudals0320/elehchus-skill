@@ -36,6 +36,7 @@ def _write_valid_package(root: Path, version: str = "0.2.2") -> None:
         path.parent.mkdir(parents=True, exist_ok=True)
         content = (
             f'---\nname: elenchus\nmetadata:\n  version: "{version}"\n---\n'
+            '[Idea](stages/idea.md)\n[Research](stages/research.md)\n'
             if relative == "SKILL.md"
             else "fixture\n"
         )
@@ -172,24 +173,31 @@ class StableReleasePolicyTests(unittest.TestCase):
     def test_beta_installation_only_offered_newer_stable(self) -> None:
         with TemporaryDirectory() as folder:
             root = Path(folder)
-            _write_valid_package(root, "1.1.0-beta.1")
-            for tag, status in (("v1.0.0", "up_to_date"), ("v1.1.0", "update_available")):
-                with patch.object(release_update, "_request_json", return_value={"tag_name": tag}):
-                    result = release_update.check_release(root)
-                    self.assertEqual(result["status"], status)
-                    self.assertEqual(result["current_version"], "1.1.0-beta.1")
-                    self.assertEqual(result["latest_version"], tag[1:])
+            for current in ("1.1.0-beta.1", "1.1.0-beta.2"):
+                _write_valid_package(root, current)
+                for tag, status in (("v1.0.0", "up_to_date"), ("v1.1.0", "update_available")):
+                    with self.subTest(current=current, tag=tag), patch.object(
+                        release_update, "_request_json", return_value={"tag_name": tag}
+                    ):
+                        result = release_update.check_release(root)
+                        self.assertEqual(result["status"], status)
+                        self.assertEqual(result["current_version"], current)
+                        self.assertEqual(result["latest_version"], tag[1:])
 
     def test_explicit_beta_install_rejected_before_download(self) -> None:
         with TemporaryDirectory() as folder:
             root = Path(folder)
             _write_valid_package(root, "1.0.0")
-            for flagged in (True, False):
-                with patch.object(release_update, "_request_json", return_value={"tag_name": "v1.1.0-beta.1", "prerelease": flagged}), \
-                     patch.object(release_update, "_download_archive") as download:
-                    with self.assertRaises(release_update.UpdateError):
-                        release_update.install_release(root, "v1.1.0-beta.1")
-                    download.assert_not_called()
+            for tag in ("v1.1.0-beta.1", "v1.1.0-beta.2"):
+                for flagged in (True, False):
+                    with (
+                        self.subTest(tag=tag, prerelease=flagged),
+                        patch.object(release_update, "_request_json", return_value={"tag_name": tag, "prerelease": flagged}),
+                        patch.object(release_update, "_download_archive") as download,
+                    ):
+                        with self.assertRaises(release_update.UpdateError):
+                            release_update.install_release(root, tag)
+                        download.assert_not_called()
 
     def test_stable_upgrade_from_beta_and_downgrade_rejection(self) -> None:
         with TemporaryDirectory() as folder:
@@ -254,7 +262,7 @@ class PackageValidationTests(unittest.TestCase):
         self.assertIn("stages/web-evidence-loop.md", str(raised.exception))
 
     def test_current_package_validates(self) -> None:
-        release_update._validate_package(REPO_ROOT, "1.1.0-beta.1")
+        release_update._validate_package(REPO_ROOT, "1.1.0-beta.2")
 
     def test_current_layout_remains_compatible_with_v021_updater(self) -> None:
         self.assertFalse((REPO_ROOT / "references").exists())

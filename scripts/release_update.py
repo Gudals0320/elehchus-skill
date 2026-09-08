@@ -13,7 +13,7 @@ import stat
 import tempfile
 from typing import Any
 from urllib.error import HTTPError, URLError
-from urllib.parse import quote
+from urllib.parse import quote, unquote, urlsplit
 from urllib.request import Request, urlopen
 import zipfile
 
@@ -233,6 +233,75 @@ def _validate_package(root: Path, expected_version: str) -> None:
     for entry in root.rglob("*"):
         if entry.is_symlink():
             raise UpdateError(f"symbolic link는 설치할 수 없습니다: {entry.relative_to(root)}")
+    _validate_stage_links(root)
+
+
+def _markdown_links(document: Path) -> list[str]:
+    """Read inline Markdown destinations, excluding fenced output examples.
+
+    Runtime guides use inline links for package dependencies. This is not a
+    general Markdown renderer; link labels, prose, and heading fragments do not
+    define the package layout.
+    """
+    lines = []
+    fence = ""
+    for line in document.read_text(encoding="utf-8").splitlines():
+        marker = re.match(r"^ {0,3}(`{3,}|~{3,})", line)
+        if marker:
+            current = marker.group(1)
+            if not fence:
+                fence = current
+            elif current[0] == fence[0] and len(current) >= len(fence):
+                fence = ""
+            continue
+        if not fence:
+            lines.append(line)
+    pattern = re.compile(r'\]\(\s*(?:<([^>\n]+)>|([^\s)]+))(?:\s+"[^"\n]*")?\s*\)')
+    return [match.group(1) or match.group(2) for match in pattern.finditer("\n".join(lines))]
+
+
+def _validate_stage_links(root: Path) -> None:
+    """Validate actual guide dependencies instead of guessing from versions.
+
+    Old 3.0.0 metadata was a numbering mistake. Historical Idea/Execution
+    packages remain valid; a Topology entrypoint requires its Lab guide to be
+    reachable. Legacy shim files remain mandatory for old installed updaters.
+    """
+    package_root = root.resolve()
+    documents = [root / "SKILL.md", *sorted((root / "stages").rglob("*.md"))]
+    graph: dict[str, set[str]] = {}
+    for document in documents:
+        name = document.relative_to(root).as_posix()
+        destinations: set[str] = set()
+        for link in _markdown_links(document):
+            parsed = urlsplit(link)
+            if parsed.scheme == "file" or re.match(r"^[A-Za-z]:[\\/]", link):
+                raise UpdateError(f"패키지 밖의 로컬 참조입니다: {name} → {link}")
+            if parsed.scheme or parsed.netloc or not parsed.path:
+                continue
+            target = (document.parent / unquote(parsed.path).replace("\\", "/")).resolve()
+            if target != package_root and package_root not in target.parents:
+                raise UpdateError(f"패키지 밖의 로컬 참조입니다: {name} → {link}")
+            if not target.is_file():
+                raise UpdateError(f"Release의 로컬 참조 파일이 없습니다: {name} → {link}")
+            destinations.add(target.relative_to(package_root).as_posix())
+        graph[name] = destinations
+
+    entry_links = graph["SKILL.md"]
+    if "stages/research.md" not in entry_links or not entry_links.intersection(
+        {"stages/idea.md", "stages/topology.md"}
+    ):
+        raise UpdateError("SKILL.md의 시작 단계와 Research 라우팅이 없습니다.")
+    if "stages/topology.md" in entry_links:
+        pending = ["SKILL.md"]
+        reachable: set[str] = set()
+        while pending:
+            name = pending.pop()
+            if name not in reachable:
+                reachable.add(name)
+                pending.extend(graph.get(name, set()) - reachable)
+        if "stages/lab.md" not in reachable:
+            raise UpdateError("Topology 패키지에서 Lab 지침으로 가는 라우팅이 없습니다.")
 
 
 def _clear_package(root: Path) -> None:
