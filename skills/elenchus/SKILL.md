@@ -2,7 +2,7 @@
 name: elenchus
 description: $elenchus 또는 skill:elenchus로 명시적으로 시작하는 한국어 탐구 세션. Topology로 목적·기능·연구 목표를 잡고, 넓은 탐색과 실제 시행착오로 코드·데이터·테스트 등 다음 제작자가 사용할 재료를 확보한다.
 metadata:
-  version: "2.0.0"
+  version: "2.0.1"
   repository: "https://github.com/Gudals0320/elehchus-skill"
 ---
 

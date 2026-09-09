@@ -8,7 +8,7 @@ Topology ↔ Research
 → 일반 Codex 작업
 ```
 
-## 2.0.0의 방향
+## 2.0 계열의 방향
 
 - **Topology — 탐구의 지형:** 목적·기능·입출력·환경 제약·연구 질문·달성 조건과 조사/실험 방향을 준비한다.
 - **넓은 Research:** 비단순 조사에서는 실제 웹과 독립 질문을 맡은 탐색 agent 두 명을 기본으로 직접 해법·다른 방식/인접 분야·실패 경험을 찾는다. 좁은 사실 확인과 실제 도구 미지원은 구분한다.
@@ -16,16 +16,18 @@ Topology ↔ Research
 - **제작자의 재량:** 기능의 입출력·동작·연결은 설계하지만 최종 화면·전체 동선·제품 중심 개념은 이후 제작자에게 남긴다. CLI·진단 화면·데모도 기능을 확인하는 데 자유롭게 쓴다.
 - **선택적 handoff:** 요청 시 Pro 또는 다른 제작자에게 목적·코드·데이터·테스트·증거·열린 선택을 묶어 준다. Pro 사용이나 자동 업로드를 필수로 만들지 않는다.
 
+2.0.1은 사용자 답변·연구 결과·실험 실패의 피드백을 다음 질문이나 실행으로 연결하는 지침을 보완한다. 합의 범위의 작업은 재승인 없이 이어가고, 목표 달성·사용자 중단·실제 차단은 구분한다. [이슈 #15](https://github.com/Gudals0320/elehchus-skill/issues/15)의 실제 대화 전후 비교는 아직 남아 있다.
+
 ## 설치
 
 설치 대상은 저장소 루트가 아닌 **`skills/elenchus`**다. Codex의 skill-installer에 다음과 같이 요청한다.
 
 ```text
-Gudals0320/elehchus-skill 저장소의 v2.0.0 태그에서
+Gudals0320/elehchus-skill 저장소의 v2.0.1 태그에서
 skills/elenchus 경로를 elenchus 스킬로 설치해 줘.
 ```
 
-설치기 인자는 `--repo Gudals0320/elehchus-skill --path skills/elenchus --ref v2.0.0`다. 수동 설치도 해당 폴더만 Codex 스킬 경로의 `elenchus/`에 복사한다. 설치 후 새 작업에서 호출한다.
+설치기 인자는 `--repo Gudals0320/elehchus-skill --path skills/elenchus --ref v2.0.1`다. 수동 설치도 해당 폴더만 Codex 스킬 경로의 `elenchus/`에 복사한다. 설치 후 다음 턴부터 사용할 수 있다.
 
 ```text
 skills/elenchus/     # 설치 대상
@@ -41,7 +43,7 @@ tests/              # 개발 검사·평가 기록
 
 자동 업데이트는 제공하지 않는다. 버전 교체는 원하는 소스를 직접 설치한다. 기존 설치가 있으면 스킬 검색 경로 밖에 백업한 뒤 폴더를 교체한다.
 
-[정식 릴리스](https://github.com/Gudals0320/elehchus-skill/releases/tag/v2.0.0)의 `elenchus-v2.0.0.zip`에는 설치 대상만 담는다. ZIP의 `elenchus/` 폴더를 스킬 경로에 복사해도 된다.
+[정식 릴리스](https://github.com/Gudals0320/elehchus-skill/releases/tag/v2.0.1)의 `elenchus-v2.0.1.zip`에는 설치 대상만 담는다. ZIP의 `elenchus/` 폴더를 스킬 경로에 복사해도 된다.
 
 ## 사용
 
